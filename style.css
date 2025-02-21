@@ -138,6 +138,7 @@
 
 .photo {
     display: flex;
+    align-items: center;
     justify-content: center;
 
     height: 75%;
@@ -155,8 +156,8 @@
     border: 3px solid var(--borders);
     border-radius: 50%;
 
-    height: 325px;
-    width: 325px;
+    height: 300px;
+    width: 300px;
 }
 
 .photo-box img {
@@ -164,24 +165,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 960px) {
-    .photo-box {
-        height: 250px;
-        width: 250px;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .photo-box {
-        height: 175px;
-        width: 175px;
-    }
-}
-
 .information {
-    font-size: 15pt;
-    text-align: justify;
-
     padding: 3%;
 
     height: 100%;
@@ -193,6 +177,9 @@
     border-radius: 10px;
     padding: 5%;
     overflow: auto;
+
+    font-size: 14pt;
+    text-align: justify;
 
     height: 100%;
     width: 100%;
@@ -231,4 +218,49 @@
 
 #social-links a i {
     font-size: 45px;
+}
+
+@media screen and (max-width: 960px) {
+    #about {
+        height: 400px;
+    }
+
+    .photo-box {
+        height: 250px;
+        width: 250px;
+    }
+
+    .information p {
+        font-size: 13pt;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    #about {
+        height: 300px;
+    }
+
+    .photo-box {
+        height: 200px;
+        width: 200px;
+    }
+
+    .information p {
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about {
+        height: 250px;
+    }
+
+    .photo-box {
+        height: 150px;
+        width: 150px;
+    }
+
+    .information p {
+        font-size: 11pt;
+    }
 }
