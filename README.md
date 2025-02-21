@@ -16,5 +16,9 @@ Coded in [Visual Studio Code](https://code.visualstudio.com), using the [Live Se
 
 ## Run 🖥️
 
+Open [Prlw's Personal Website](https://DimitryGonzales.github.io) in any browser.
+
+### or
+
 1. Clone this repository with `git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git`
 2. Open `index.html` in any browser.
