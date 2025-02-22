@@ -1,7 +1,7 @@
 :root {
     --background: #121212;
-    --background2: rgba(30, 30, 30, 0.9);
     --surface: #1E1E1E;
+    --surface2: rgba(30, 30, 30, 0.9);
     --text: #E0E0E0;
 
     --accent1: #4A90E2;
@@ -54,7 +54,7 @@ a:hover {
     display: flex;
     align-items: center;
 
-    background-color: var(--background2);
+    background-color: var(--surface2);
     backdrop-filter: blur(5px);
     border-radius: 50px;
     border: 3px solid var(--borders);
@@ -70,7 +70,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0);
     border-style: none;
 
-    font-size: 15pt;
+    font-size: 18pt;
 
     transition: background-color 50ms linear;
 
@@ -114,6 +114,9 @@ a:hover {
     background-color: var(--surface);
     border-radius: 15px;
     border: 3px solid var(--borders);
+
+    min-width: 1109px;
+    max-width: 1109px;
 }
 
 #about {
@@ -136,13 +139,13 @@ a:hover {
     align-items: center;
     justify-content: center;
 
-    font-size: 20pt;
-
     height: 25%;
     width: 100%;
 }
 
 .name p {
+    font-size: 20pt;
+
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 15px;
@@ -187,7 +190,7 @@ a:hover {
 }
 
 .information p {
-    background-color: var(--background2);
+    background-color: var(--surface2);
     border: 3px solid var(--borders);
     border-radius: 10px;
     padding: 5%;
@@ -237,38 +240,29 @@ a:hover {
 }
 
 #skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
     margin-top: 10px;
+    gap: 10px;
 
-    padding: 2%;
+    padding: 5%;
     
     height: auto;
     width:100%;
 }
 
-.skills-line {
-    display: flex;
-
-    margin: 10px 0;
-
-    overflow-x: scroll;
-    white-space: nowrap;
-    gap: 10px;
-
-    height: 200px;
-    width: 100%;
-}
-
 .skill {
-    background-color: var(--background2);
+    background-color: var(--surface2);
     border: 3px solid var(--borders);
     border-radius: 10px;
 
-    overflow: hidden;
-
-    height: 100%;
-    min-width: 345px;
-    max-width: 345px;
-    width: 100%;
+    min-height: 200px;
+    height: 200px;
+    min-width: 300px;
+    width: 300px;
 }
 
 .skill-title {
@@ -276,7 +270,7 @@ a:hover {
 
     border-bottom: 3px solid var(--borders);
 
-    height: 30%;
+    height: 50px;
     width: 100%;
 }
 
@@ -286,15 +280,12 @@ a:hover {
     justify-content: center;
 
     border-right: 3px solid var(--borders);
-
-    overflow: hidden;
-
     height: 100%;
-    width: 55.2px;
+    width: 50px;
 }
 
 .skill-icon i {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .skill-name {
@@ -303,27 +294,38 @@ a:hover {
 
     padding-left: 10px;
 
-    font-size: 15pt;
-
-    height: 100%;
-    width: auto;
-}
-
-.skill-information {
-    padding: 5%;
-
-    text-align: justify;
     font-size: 13pt;
 
-    overflow-wrap: break-word;
+    height: 100%;
+    width: 250px;
+}
 
-    height: 70%;
+.skill-info {
+    padding: 30px;
+    
+    font-size: 12pt;
+
+    height: 150px;
     width: 100%;
 }
 
+@media screen and (max-width: 1500px) {
+    .content-box {
+        min-width: 0;
+    }
+}
+
 @media screen and (max-width: 960px) {
+    .top-bar-button {
+        font-size: 17pt;
+    }
+
     #about {
         height: 400px;
+    }
+
+    .name p {
+        font-size: 19pt;
     }
 
     .photo-frame {
@@ -337,8 +339,16 @@ a:hover {
 }
 
 @media screen and (max-width: 640px) {
+    .top-bar-button {
+        font-size: 16pt;
+    }
+
     #about {
         height: 300px;
+    }
+
+    .name p {
+        font-size: 18pt;
     }
 
     .photo-frame {
@@ -352,8 +362,16 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+    .top-bar-button {
+        font-size: 15pt;
+    }
+    
     #about {
         height: 250px;
+    }
+
+    .name p {
+        font-size: 17pt;
     }
 
     .photo-frame {
@@ -363,5 +381,38 @@ a:hover {
 
     .information p {
         font-size: 11pt;
+    }
+
+    .skill {
+        min-height: 150px;
+        height: 150px;
+        min-width: 250px;
+        width: 250px;
+    }
+
+    .skill-title {
+        height: 37.5px;
+    }
+    
+    .skill-icon {
+        width: 37.5px;
+    }
+    
+    .skill-icon i {
+        font-size: 25px;
+    }
+    
+    .skill-name {
+        font-size: 12pt;
+    
+        width: 212.5px;
+    }
+    
+    .skill-info {
+        padding: 20px;
+        
+        font-size: 11pt;
+    
+        height: 112.5px;
     }
 }
