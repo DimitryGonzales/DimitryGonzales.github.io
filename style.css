@@ -31,6 +31,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 .top-bar-box {
     display: flex;
     align-items: center;
