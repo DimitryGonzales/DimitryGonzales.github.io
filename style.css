@@ -276,6 +276,13 @@ a:hover {
     font-size: 15pt;
 }
 
+/*Fix scroll when height its too low*/
+@media screen and (max-height: 600px) {
+    .main {
+        height: auto;
+    }
+}
+
 /*Fullscreen navbar when is on top of something*/
 @media screen and (max-width: 1190px) {
     #navbar {
