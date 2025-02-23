@@ -20,15 +20,30 @@
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+
+    /*Firefox scrollbar*/
+    scrollbar-width: 20px;
+    scrollbar-color: var(--accent) var(--surface);
 }
+  
+  /*Chrome, Edge, and Safari scrollbar width*/
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /*Chrome, Edge, and Safari scrollbar track color*/
+  *::-webkit-scrollbar-track {
+    background: var(--surface);
+  }
+  
+  /*Chrome, Edge, and Safari scrollbar color*/
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+  }
 
 a {
     color: var(--accent);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 ::selection {
@@ -114,7 +129,6 @@ a:hover {
     justify-content: center;
 
     color: var(--text1);
-    text-decoration: none;
 
     height: 100%;
     width: 100%;
