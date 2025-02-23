@@ -1,6 +1,6 @@
 # Personal Website 👤
 
-Beginner portfolio-style website, made by prlw.
+Beginner personal website, made by prlw.
 
 ## About ℹ️
 
@@ -16,7 +16,7 @@ Coded in [Visual Studio Code](https://code.visualstudio.com), using the [Live Se
 
 ## Run 🖥️
 
-Open [Prlw's Personal Website](https://DimitryGonzales.github.io) in any browser.
+Open [Prlw's Website](https://DimitryGonzales.github.io) in any browser.
 
 ### or
 
