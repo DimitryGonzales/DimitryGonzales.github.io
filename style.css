@@ -236,37 +236,26 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    overflow: hidden;
+    gap: 10px;
 
     height: 30%;
     width: 100%;
 }
 
 .social-button {
-    transition: background-color 100ms linear;
-
-    height: 83.5167px;
-    width: 83.5167px;
-}
-
-.social-button:hover {
-    background-color: var(--hover);
-}
-
-.social-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     text-decoration: none;
 
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
 }
 
 .social-button i {
+    transition: color 100ms linear;
     font-size: 40px;
+}
+
+.social-button i:hover {
+    color: var(--hover);
 }
 
 .about-website {
@@ -290,23 +279,58 @@ a {
     font-size: 15pt;
 }
 
-/*Fix scroll when height its too low*/
-@media screen and (max-height: 600px) {
-    .main {
-        height: auto;
-    }
-}
-
 /*Fullscreen navbar when is on top of something*/
 @media screen and (max-width: 1190px) {
     #navbar {
         border: none;
         width: 100%;
     }
+
+    @media screen and (max-width: 600px), screen and (max-height: 600px) {
+        #navbar {
+            border-right: 3px solid var(--border);
+            width: 300px;
+        }
+
+        @media screen and (max-width: 1090px) {
+            #navbar {
+                border: none;
+                width: 100%;
+            }
+
+            @media screen and (max-width: 500px), screen and (max-height: 500px) {
+                #navbar {
+                    border-right: 3px solid var(--border);
+                    width: 300px;
+                }
+
+                @media screen and (max-width: 990px) {
+                    #navbar {
+                        border: none;
+                        width: 100%;
+                    }
+
+                    @media screen and (max-width: 400px), screen and (max-height: 400px) {
+                        #navbar {
+                            border-right: 3px solid var(--border);
+                            width: 300px;
+                        }
+
+                        @media screen and (max-width: 890px) {
+                            #navbar {
+                                border: none;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*PC Screen Resize*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
     .presentation {
         height: 500px;
         width: 500px;
@@ -324,13 +348,8 @@ a {
         font-size: 11pt;
     }
 
-    .social-button {
-        height: 68.6px;
-        width: 68.6px;
-    }
-
     .social-button i {
-        font-size: 34.3px;
+        font-size: 35px;
     }
 
     #website-info {
@@ -343,7 +362,7 @@ a {
 }
 
 /*PC Screen Resized, Tablet, Big Phone, Normal Phone*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), screen and (max-height: 500px) {
     .presentation {
         height: 400px;
         width: 400px;
@@ -361,13 +380,8 @@ a {
         font-size: 10pt;
     }
 
-    .social-button {
-        height: 53.5px;
-        width: 53.5px;
-    }
-
     .social-button i {
-        font-size: 26.75px;
+        font-size: 25px;
     }
 
     #website-info {
@@ -380,7 +394,7 @@ a {
 }
 
 /*Normal Phone, Small Phone*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 400px), screen and (max-height: 400px) {
     .presentation {
         height: 300px;
         width: 300px;
@@ -398,13 +412,8 @@ a {
         font-size: 6pt;
     }
 
-    .social-button {
-        height: 38.05px;
-        width: 38.05px;
-    }
-
     .social-button i {
-        font-size: 19.025px;
+        font-size: 20px;
     }
 
     #website-info {
@@ -413,5 +422,11 @@ a {
 
     #website-info p {
         font-size: 8pt;
+    }
+}
+
+@media screen and (max-height: 300px) {
+    .main {
+        height: auto;
     }
 }
