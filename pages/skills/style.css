@@ -161,43 +161,139 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 
     background-color: var(--primary);
-
-    font-size: 25pt;
-
-    height: 100vh;
-    width: 100%;
-}
-
-.main span {
-    margin-bottom: 25px;
-}
-
-.home-button {
-    background-color: var(--surface);
-    border: 3px solid var(--border);
-    border-radius: 5px;
-
-    transition: border-color 100ms linear;
-
-    height: 50px;
-    width: 125px;
-}
-
-.home-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--text1);
-    text-decoration: none;
+    padding-top: 25px;
 
     height: 100%;
     width: 100%;
 }
 
-.home-button:hover {
-    border-color: var(--hover);
+h1 {
+    font-size: 30pt;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+
+    margin-bottom: 150px;
+}
+
+.skills-container {
+    margin-bottom: 100px;
+
+    height: auto;
+    width: 1250px;
+}
+
+#skills-category {
+    display: flex;
+    align-items: center;
+
+    font-size: 13pt;
+
+    padding-left: 25px;
+    margin-bottom: 25px;
+
+    height: 75px;
+    width: 100%;
+}
+
+#skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    padding: 25px;
+
+    height: auto;
+    width: 100%;
+}
+
+#skills {
+    height: 200px;
+    width: 325px;
+}
+
+.skills-title {
+    display: flex;
+
+    border-bottom: 3px solid var(--border);
+
+    height: 30%;
+    width: 100%;
+}
+
+.skills-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 3px solid var(--border);
+    height: 100%;
+    width: 55.2px;
+}
+
+.skills-icon i {
+    font-size: 35px;
+}
+
+.skills-name {
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+
+    height: 100%;
+    width: auto;
+}
+
+.skills-about {
+    font-size: 15pt;
+
+    padding: 25px;
+
+    height: 70%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+    .skills-container {
+        width: 937.5px;
+    }
+
+    @media screen and (max-width: 937.5px) {
+        .skills-container {
+            width: 625px;
+        }
+
+        @media screen and (max-width: 625px) {
+            .skills-container {
+                width: 430px;
+            }
+
+            @media screen and (max-width: 430px) {
+                .main {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                h1 {
+                    margin-bottom: 75px;
+                }
+
+                .skills-container {
+                    width: 100%;
+                }
+
+                #skills-box {
+                    padding: 10px;
+                }
+
+                #skills {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
