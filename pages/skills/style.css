@@ -178,7 +178,7 @@ h1 {
 }
 
 .skills-container {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 
     height: auto;
     width: 1250px;
@@ -283,6 +283,7 @@ h1 {
                 }
 
                 .skills-container {
+                    margin-bottom: 75px;
                     width: 100%;
                 }
 
