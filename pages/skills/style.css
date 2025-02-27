@@ -150,7 +150,7 @@ a:hover {
     width: 100%;
 }
 
-@media screen and (max-width: 885px) {
+@media screen and (max-width: 1850px) {
     #navbar {
         border: none;
         width: 100%;
