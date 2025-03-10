@@ -145,6 +145,7 @@ a:hover {
     justify-content: center;
 
     color: var(--text1);
+    text-decoration: none;
 
     height: 100%;
     width: 100%;
