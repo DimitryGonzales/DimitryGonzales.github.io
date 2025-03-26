@@ -1,6 +1,19 @@
+/* Catppuccin Mocha - https://catppuccin.com/palette/ */
 :root {
-    --primary: #1E1619;
-    --background: #0E0B0D;
+    --background: #1e1e2e;  /*Base*/
+    --background2: #181825; /*Mantle*/
+    --surface: #313244;     /*Surface 0*/
+    --border: #6c7086;      /*Overlay 0*/
+    --accent: #89b4fa;      /*Blue*/
+    --text1: #cdd6f4;       /*Text*/
+    --disabled: #a6adc8;    /*Subtext 0*/
+    --hover: #b4befe;       /*Lavender*/
+}
+
+/* Wine based palette */
+:root:has(#wine:checked) {
+    --background: #1E1619;
+    --background2: #181214;
     --surface: #2A2024;
     --border: #45353B;
     --accent: #A35C79;
@@ -63,7 +76,7 @@ a {
 }
 
 #navbartoggle {
-    display: flexs;
+    display: flex;
     align-items: center;
     justify-content: center;
 
@@ -151,7 +164,7 @@ a {
     align-items: center;
     justify-content: center;
 
-    background-color: var(--primary);
+    background-color: var(--background);
 
     height: 100vh;
     width: 100%;
@@ -429,4 +442,66 @@ a {
     .main {
         height: auto;
     }
+}
+
+.theme-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12pt;
+
+    position: absolute;
+    bottom: 25px;
+
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background2);
+
+    padding: 25px;
+    
+    width: 100%;
+}
+
+.colorpicker > fieldset {
+    display: flex;
+
+    gap: 25px;
+    padding: 25px;
+
+    font-size: 12pt;
+}
+
+.theme-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.colorpicker input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+
+    outline: 2px solid var(--hover);
+    outline-offset: 2px;
+    
+    width: 10px;
+    height: 10px;
+}
+
+.colorpicker input[type="radio"]:checked {
+    background-color: var(--hover);
+}
+
+.colorpicker input[type="radio"]:hover {
+    cursor: pointer;
 }
