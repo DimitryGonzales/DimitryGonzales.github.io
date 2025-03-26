@@ -64,7 +64,7 @@ a:hover {
 }
 
 ::selection {
-    background: #B09AA1;
+    background: var(--hover);
 }
 
 .default-box {
