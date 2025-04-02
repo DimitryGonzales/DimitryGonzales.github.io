@@ -30,14 +30,13 @@
     color: var(--text1);
 
     font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
 
     transition: all 100ms linear;
 
     /*Firefox scrollbar*/
-    scrollbar-width: 20px;
+    scrollbar-width: auto;
     scrollbar-color: var(--accent) var(--surface);
 }
 
@@ -80,7 +79,7 @@ a:hover {
 }
 
 #navbartoggle {
-    display: flexs;
+    display: flex;
     align-items: center;
     justify-content: center;
 
