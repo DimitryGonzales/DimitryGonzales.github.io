@@ -131,29 +131,16 @@ a {
 }
 
 .navbar-button {
-    background-color: var(--surface);
-    border: 3px solid var(--border);
-    border-radius: 5px;
-
-    margin-bottom: 10px;
-
-    height: 50px;
-    width: 200px;
-}
-
-.navbar-button:hover {
-    border-color: var(--hover);
-}
-
-.navbar-button a {
     display: flex;
     align-items: center;
     justify-content: center;
 
     color: var(--text1);
 
-    height: 100%;
-    width: 100%;
+    margin-bottom: 10px;
+
+    height: 50px;
+    width: 200px;
 }
 
 .main {

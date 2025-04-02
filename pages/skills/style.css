@@ -135,9 +135,11 @@ a:hover {
 }
 
 .navbar-button {
-    background-color: var(--surface);
-    border: 3px solid var(--border);
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text1);
 
     margin-bottom: 10px;
 
@@ -146,19 +148,7 @@ a:hover {
 }
 
 .navbar-button:hover {
-    border-color: var(--hover);
-}
-
-.navbar-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--text1);
     text-decoration: none;
-
-    height: 100%;
-    width: 100%;
 }
 
 @media screen and (max-width: 1850px) {
@@ -195,7 +185,7 @@ h1 {
     width: 1250px;
 }
 
-#skills-category {
+.skills-category {
     display: flex;
     align-items: center;
 
@@ -208,7 +198,7 @@ h1 {
     width: 100%;
 }
 
-#skills-box {
+.skills-box {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -221,7 +211,7 @@ h1 {
     width: 100%;
 }
 
-#skills {
+.skills {
     height: 200px;
     width: 325px;
 }
@@ -298,11 +288,11 @@ h1 {
                     width: 100%;
                 }
 
-                #skills-box {
+                .skills-box {
                     padding: 10px;
                 }
 
-                #skills {
+                .skills {
                     width: 100%;
                 }
             }
