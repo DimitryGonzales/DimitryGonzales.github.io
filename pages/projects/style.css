@@ -22,16 +22,19 @@
     --hover: #7F3E5E;
 }
 
+html {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
     color: var(--text1);
-
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    font-style: normal;
 
     transition: all 100ms linear;
 
@@ -58,10 +61,6 @@
 a {
     color: var(--accent);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 ::selection {
@@ -150,7 +149,7 @@ a:hover {
     text-decoration: none;
 }
 
-@media screen and (max-width: 885px) {
+@media screen and (max-width: 1850px) {
     #navbar {
         border: none;
         width: 100%;
@@ -165,48 +164,113 @@ a:hover {
 
     background-color: var(--background);
 
-    font-size: 25pt;
+    padding: 125px 0;
 
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
 }
 
-.main span {
-    text-align: center;
-    
+.project-container {
+    height: auto;
+    width: 1250px;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+
+    font-size: 13pt;
+
+    padding-left: 25px;
     margin-bottom: 25px;
+
+    height: 75px;
+    width: 100%;
 }
 
-.home-button {
+.project-box {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 25px;
 
-    color: var(--text1);
-    font-size: 1rem;
+    padding: 25px;
 
-    height: 50px;
-    width: 125px;
+    height: auto;
+    width: 100%;
 }
 
-.home-button:hover {
-    text-decoration: none;
+.project {
+    height: 200px;
+    width: 325px;
 }
 
-.home-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.project-photo {
+    border-bottom: 3px solid var(--border);
+    
+    height: 75%;
+    width: 100%;
+}
 
-    color: var(--text1);
-    text-decoration: none;
-
+.project-photo img {
     height: 100%;
     width: 100%;
 }
 
-.home-button:hover {
-    border-color: var(--hover);
+.project-name {
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+
+    height: 25%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+    .project-container {
+        width: 937.5px;
+    }
+
+    @media screen and (max-width: 937.5px) {
+        .project-container {
+            width: 625px;
+        }
+
+        @media screen and (max-width: 625px) {
+            .project-container {
+                width: 430px;
+            }
+
+            @media screen and (max-width: 430px) {
+                .main {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+
+                .project-container {
+                    margin-bottom: 75px;
+                    width: 100%;
+                }
+
+                .project-title {
+                    justify-content: center;
+
+                    padding: 0;
+                }
+
+                .project-box {
+                    padding: 10px;
+                }
+
+                .project {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 .theme-indicator {

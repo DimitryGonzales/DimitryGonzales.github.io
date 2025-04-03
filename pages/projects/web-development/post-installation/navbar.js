@@ -5,4 +5,4 @@ navbartoggle.onclick= function(e){
     return nav.style.display = "none";
   
   else return nav.style.display="flex";
-  };
+};
