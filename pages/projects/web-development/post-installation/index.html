@@ -97,12 +97,21 @@
         </div>
 
         <p class="alert">
-            ⚠️ This guide considers that you have finished the Arch Linux installation!
+            ⚠️ This guide was created for personal reference, documenting the steps I take after installing Linux.
+            
+            <br>
+            <br>
+            
+            Feel free to use it on your own system, but proceed at your own risk.
+        </p>
+
+        <p class="info">
+            ℹ️ The commands in this guide assume a root environment.
 
             <br>
             <br>
 
-            ⚠️ It's preferable that you install the packages using "sudo" on a user other than root!
+            If you're using a non-root user, you'll likely need a privilege escalation tool (e.g., sudo) for most of them.
         </p>
 
         <!--Pacman-->
@@ -524,7 +533,7 @@
                     <br>
                     <br>
 
-                    Install it with <code>sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si</code>.
+                    Install it with <code>pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si</code>.
                 </p>
 
                 <br>
@@ -540,7 +549,7 @@
                     <br>
                     <br>
 
-                    Install it with <code>sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si</code>.
+                    Install it with <code>pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si</code>.
                 </p>
             </div>
     

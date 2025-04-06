@@ -182,6 +182,16 @@ h1 {
     padding: 25px;
 }
 
+.info {
+    background-color: #151d36;
+    border: 1px solid #495673;
+    border-radius: 5px;
+
+    color: #bfdbfe;
+
+    padding: 25px;
+}
+
 hr {
     border: none;
 }
