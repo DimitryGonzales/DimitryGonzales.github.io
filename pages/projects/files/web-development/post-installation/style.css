@@ -1,0 +1,329 @@
+:root {
+    --background: #111111;
+    --surface: #1b1d1d;
+    --code: #0f0f0f;
+    --hover: #282829;
+    --border: #292929;
+    --text: #f3f4f6;
+    --subtext: #9ca3af;
+    --disabled: #404040;
+    
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+
+    padding-top: 75px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    transition: all 200ms linear;
+}
+
+a {
+    color: #00cfe6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: var(--text);
+
+    text-align: justify;
+}
+
+#navbartoggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100%;
+
+    color: var(--disabled);
+
+    position: fixed;
+    z-index: 2;
+    top: 25px;
+    left: 25px;
+
+    height: 50px;
+    width: 50px;
+}
+
+#navbartoggle:hover {
+    color: var(--text);
+
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+
+    position: fixed;
+    top: 0;
+
+    height: 75px;
+    width: 100%;
+}
+
+.navbar-redirect-button {
+    display: flex;
+    align-items: center;
+    
+    background-color: transparent;
+    border: none;
+    border-radius: 50px;
+
+    color: var(--disabled);
+    font-size: 1rem;
+    font-weight: bold;
+
+    overflow: hidden;
+
+    padding-right: 17.5px;
+
+    height: 50px;
+    max-width: 50px;
+}
+
+.navbar-redirect-button:hover {
+    background-color: var(--hover);
+
+    color: var(--text);
+    text-decoration: none;
+
+    cursor: pointer;
+    max-width: 175px;
+}
+
+.navbar-redirect-button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    min-width: 50px;
+    width: 50px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    padding: 0 25%;
+
+    height: auto;
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    color: var(--text);
+
+    height: calc(100vh - 75px);
+    width: 100%;
+}
+
+.home a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: normal;
+
+    text-align: center;
+}
+
+.home-subtext {
+    color: var(--subtext);
+
+    font-size: 2rem;
+
+    text-align: center;
+}
+
+.alert {
+    background-color: #3c290e;
+    border: 1px solid #776534;
+    border-radius: 5px;
+
+    color: #fef08a;
+
+    padding: 25px;
+}
+
+.info {
+    background-color: #151d36;
+    border: 1px solid #495673;
+    border-radius: 5px;
+
+    color: #bfdbfe;
+
+    padding: 25px;
+}
+
+hr {
+    border: none;
+}
+
+code {
+    background-color: var(--code);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    padding: 0 5px;
+}
+
+.section {
+    color: var(--text);
+
+    height: auto;
+    width: 100%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+
+    height: 50px;
+    width: 100%;
+}
+
+h2 {
+    color: white;
+
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.section-content {
+    padding: 25px 0;
+    
+    height: auto;
+    width: 100%;
+}
+
+h3 {
+    color: white;
+    font-size: 1.25rem;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--border);
+}
+
+.section-next {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    height: 75px;
+    width: 100%;
+}
+
+.redirect-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--surface);
+    border: none;
+    border-radius: 5px;
+
+    color: var(--disabled);
+    font-size: 0.85rem;
+
+    height: 50px;
+    width: 125px;
+}
+
+.redirect-button:hover {
+    background-color: var(--hover);
+
+    color: var(--text);
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+    .main {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    .main {
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        padding: 0;
+    }
+
+    #navbartoggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+
+        border: none;
+
+        flex-direction: column;
+
+        height: 100%;
+    }
+
+    .navbar-redirect-button {
+        max-width: 125px;
+        width: 125px;
+    }
+
+    .navbar-redirect-button:hover {
+        background-color: transparent;
+    }
+
+    .main {
+        padding: 0 2.5%;
+    }
+
+    .home {
+        height: 100vh;
+    }
+}

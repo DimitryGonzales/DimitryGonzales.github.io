@@ -1,0 +1,228 @@
+:root {
+    --background: #111111;
+    --surface: #1b1d1d;
+    --code: #0f0f0f;
+    --hover: #282829;
+    --border: #292929;
+    --text: #f3f4f6;
+    --subtext: #9ca3af;
+    --disabled: #404040;
+    
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 25px;
+
+    background-color: var(--background);
+
+    padding: 100px 1%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    transition: all 200ms linear;
+}
+
+a {
+    color: #00cfe6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    color: var(--text);
+}
+
+.return-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 100%;
+
+    color: var(--disabled);
+
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    height: 50px;
+    width: 50px;
+}
+
+.return-button:hover {
+    cursor: pointer;
+
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text);
+    font-size: 2.5rem;
+    
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--border);
+    
+    height: 75px;
+    width: 100%;
+}
+
+.app {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    height: 225px;
+    width: 250px;
+}
+
+.app-photo {
+    border-bottom: 1px solid var(--border);
+
+    overflow: hidden;
+
+    height: 70%;
+    width: 100%;
+}
+
+.app-photo img {
+    border-radius: 5px 5px 0 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+.app-info {
+    height: 30%;
+    width: 100%;
+}
+
+.package-name {
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+
+    white-space: nowrap;
+
+    padding-left: 10px;
+
+    height: 50%;
+    width: 100%;
+}
+
+.package-type {
+    display: flex;
+    align-items: center;
+
+    padding-left: 10px;
+
+    height: 50%;
+    width: 100%;
+}
+
+code {
+    background-color: var(--code);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    padding: 0 5px;
+}
+
+.install-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text);
+    
+    width: 100%;
+}
+
+@media screen and (max-width: 555px) {
+    body {
+        gap: 22.5px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .app {
+        height: 175px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        gap: 20px;
+    }
+
+    p {
+        font-size: 0.7rem;
+    }
+
+    .app {
+        height: 150px;
+        width: 175px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    body {
+        gap: 17.5px;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
+
+    .app {
+        height: 125px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    body {
+        gap: 15px;
+    }
+
+    p {
+        font-size: 0.5rem;
+    }
+
+    .app {
+        height: 100px;
+        width: 125px;
+    }
+}
