@@ -6,14 +6,6 @@ Beginner personal website, made by Dimitry Gonzales.
 
 Coded in [Visual Studio Code](https://code.visualstudio.com), using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension.
 
-## Languages ⌨️
-
-- [HTML](https://github.com/DimitryGonzales/DimitryGonzales.github.io/blob/main/index.html)
-  
-- [CSS](https://github.com/DimitryGonzales/DimitryGonzales.github.io/blob/main/style.css)
-  
-- [JavaScript](https://github.com/DimitryGonzales/DimitryGonzales.github.io/blob/main/script.js)
-
 ## Run 🖥️
 
 Open [Dimitry's Website](https://DimitryGonzales.github.io) in any browser.
