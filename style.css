@@ -341,28 +341,12 @@ body {
     opacity: 1;
 }
 
-#discord {
-    background-color: #5865f2;
+.social-button {
+    background-color: var(--surface);
 }
 
-#discord i {
-    color: #ffffff;
-}
-
-#email {
-    background-color: #ffffff;
-}
-
-#email i {
-    color: #000000;
-}
-
-#github {
-    background-color: #f0f6fc;
-}
-
-#github i {
-    color: #010409;
+.social-button i {
+    color: var(--text);
 }
 
 #social-toggle:checked + #label-social-toggle ~ a:nth-of-type(1) {
@@ -375,6 +359,14 @@ body {
 
 #social-toggle:checked + #label-social-toggle ~ a:nth-of-type(3) {
     transform: translateY(calc(66.25px * 3));
+}
+
+#social-toggle:checked + #label-social-toggle ~ a:nth-of-type(4) {
+    transform: translateY(calc(66.25px * 4));
+}
+
+#social-toggle:checked + #label-social-toggle ~ a:nth-of-type(5) {
+    transform: translateY(calc(66.25px * 5));
 }
 
 @media (max-width: 666px) {
