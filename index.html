@@ -39,11 +39,11 @@
             Me
         </a>
         
-        <a class="navbar-button" href="">
+        <a class="navbar-button" href="#skills">
             Skills
         </a>
 
-        <a class="navbar-button" href="">
+        <a class="navbar-button" href="#projects">
             Projects
         </a>
 
@@ -68,6 +68,106 @@
         <span class="tooltip-social-button">GitHub</span>
     </a>
 
+    <div class="main">
+        <span style="color: red; font-size: 2rem; font-weight: bold; margin: 150px auto;">Work in Progress!</span>
+
+        <hr class="section-division" id="skills">
+
+        <div class="skills">
+            <h2 data-aos="fade-up">Skills</h2>
+
+            <div class="skills-box">
+                <div class="skills-column" id="skills-column-1" data-aos="fade-right">
+                    <input type="checkbox" id="skill-toggle-html">
+                    <div class="skill">
+                        <div class="skill-titlebar">
+                            <label for="skill-toggle-html" class="label-skill-toggle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            
+                            <img src="images/html.png" alt="html-icon" class="skill-icon">
+
+                            <span class="skill-name">HTML</span>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="skill-toggle-css">
+                    <div class="skill">
+                        <div class="skill-titlebar">
+                            <label for="skill-toggle-css" class="label-skill-toggle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            
+                            <img src="images/css.png" alt="html-icon" class="skill-icon">
+
+                            <span class="skill-name">CSS</span>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="skill-toggle-javascript">
+                    <div class="skill">
+                        <div class="skill-titlebar">
+                            <label for="skill-toggle-javascript" class="label-skill-toggle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            
+                            <img src="images/javascript.png" alt="html-icon" class="skill-icon">
+
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-column" id="skills-column-2" data-aos="fade-left">
+                    <input type="checkbox" id="skill-toggle-typescript">
+                    <div class="skill">
+                        <div class="skill-titlebar">
+                            <label for="skill-toggle-typescript" class="label-skill-toggle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            
+                            <img src="images/typescript.png" alt="html-icon" class="skill-icon">
+
+                            <span class="skill-name">TypeScript</span>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="skill-toggle-c">
+                    <div class="skill">
+                        <div class="skill-titlebar">
+                            <label for="skill-toggle-c" class="label-skill-toggle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            
+                            <img src="images/c.png" alt="html-icon" class="skill-icon">
+
+                            <span class="skill-name">C</span>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="skill-toggle-python">
+                    <div class="skill">
+                        <div class="skill-titlebar">
+                            <label for="skill-toggle-python" class="label-skill-toggle">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </label>
+                            
+                            <img src="images/python.png" alt="html-icon" class="skill-icon">
+
+                            <span class="skill-name">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-division" id="projects">
+
+        <div class="projects" data-aos="fade-up">
+            <h2>Projects</h2>
+        </div>
+    </div>
+
     <script src="scripts/check-scroll.js"></script>
 
     <script src="scripts/uncheck-when-clicked.js"></script>
@@ -78,5 +178,7 @@
     <script>
         AOS.init();
     </script>
+
+    <script src="scripts/change-aos.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 :root {
     /* Light theme variables */
     --accent: #3D5AFE;
-    --background: #f0f0f0;
+    --background: #e0e0e0;
     --border: #E0E0E0;
     --disabled: #BDBDBD;
     --hover: #F0F0FF;
@@ -45,11 +45,13 @@ html {
     font-size: 1rem;
     font-weight: normal;
     font-style: normal;
+
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--background);
-    height: 110vh;
+    height: 100vh;
 }
 
 #theme-toggle {
@@ -77,6 +79,9 @@ body {
 
 #label-theme-toggle.scrolled {
     background-color: var(--surface-translucent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
     top: 32.5px;
     left: 32.5px;
 
@@ -122,6 +127,8 @@ body {
     justify-content: center;
 
     background-color: var(--surface-translucent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 25px;
     
     cursor: pointer;
@@ -249,6 +256,9 @@ body {
 
 #label-social-toggle.scrolled {
     background-color: var(--surface-translucent);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
     top: 32.5px;
     right: 32.5px;
 
@@ -367,6 +377,148 @@ body {
 
 #social-toggle:checked + #label-social-toggle ~ a:nth-of-type(5) {
     transform: translateY(calc(66.25px * 5));
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    margin-top: 65px;
+    
+    height: 200vh;
+    width: 100%;
+}
+
+.section-division {
+    border: none;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    
+    margin-bottom: 50px;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: auto;
+    width: 100%;
+}
+
+.skills-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
+    background-color: var(--surface-translucent);
+    border-radius: 25px;
+
+    height: 50px;
+    width: 300px;
+}
+
+.skill:hover {
+    background-color: var(--surface);
+    box-shadow: 0 4px 8px -4px var(--shadow);
+}
+
+#skill-toggle-html:checked + .skill,
+#skill-toggle-css:checked + .skill,
+#skill-toggle-javascript:checked + .skill,
+#skill-toggle-typescript:checked + .skill,
+#skill-toggle-c:checked + .skill,
+#skill-toggle-python:checked + .skill {
+    background-color: var(--surface);
+    height: 300px;
+}
+
+.skill-titlebar {
+    display: flex;
+    gap: 10px;
+
+    height: 50px;
+    width: 100%;
+}
+
+#skill-toggle-html,
+#skill-toggle-css,
+#skill-toggle-javascript,
+#skill-toggle-typescript,
+#skill-toggle-c,
+#skill-toggle-python {
+    display: none;
+}
+
+.label-skill-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.label-skill-toggle i {
+    color: var(--text);
+    
+    position: absolute;
+    font-size: 1.25rem;
+}
+
+#skill-toggle-html:checked + .skill .skill-titlebar .label-skill-toggle i,
+#skill-toggle-css:checked + .skill .skill-titlebar .label-skill-toggle i,
+#skill-toggle-javascript:checked + .skill .skill-titlebar .label-skill-toggle i,
+#skill-toggle-typescript:checked + .skill .skill-titlebar .label-skill-toggle i,
+#skill-toggle-c:checked + .skill .skill-titlebar .label-skill-toggle i,
+#skill-toggle-python:checked + .skill .skill-titlebar .label-skill-toggle i {
+    transform: rotate(180deg);
+}
+
+.skill-icon {
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    height: 100%;
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: auto;
+    width: 100%;
+}
+
+@media (max-width: 710px) {
+    .skills-box {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 666px) {
