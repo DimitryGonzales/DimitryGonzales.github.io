@@ -467,6 +467,8 @@ h2 {
 #skill-toggle-c:checked + .skill,
 #skill-toggle-python:checked + .skill {
     background-color: var(--hover);
+    box-shadow: 0 4px 8px -4px var(--shadow);
+    
     height: 300px;
 }
 
@@ -745,6 +747,7 @@ h2 {
 
 .project-button:hover {
     background-color: var(--hover-alternative);
+    box-shadow: 0 4px 8px -4px var(--shadow);
 }
 
 .contacts {
@@ -777,6 +780,7 @@ h2 {
 
 .contact:hover {
     background-color: var(--hover);
+    box-shadow: 0 4px 8px -4px var(--shadow);
 }
 
 .contact i,
@@ -826,6 +830,7 @@ footer {
 
 footer:hover {
     background-color: var(--hover);
+    box-shadow: 0 -4px 8px -4px var(--shadow);
 }
 
 @media (max-width: 710px) {
