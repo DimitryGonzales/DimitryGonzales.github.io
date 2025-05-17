@@ -28,6 +28,8 @@
         <i class="fa-solid fa-moon dark-theme-icon"></i>
     </label>
 
+    <script src="scripts/theme-toggle.js"></script>
+
     <input type="checkbox" id="navbar-toggle">
     <label for="navbar-toggle" id="label-navbar-toggle">
         <i class="fa-solid fa-bars closed-navbar-icon"></i>
@@ -35,7 +37,7 @@
     </label>
 
     <nav id="navbar">
-        <a class="navbar-button" href="">
+        <a class="navbar-button" href="#">
             Me
         </a>
         
@@ -47,10 +49,12 @@
             Projects
         </a>
 
-        <a class="navbar-button" href="">
-            Contact
+        <a class="navbar-button" href="#contacts">
+            Contacts
         </a>
     </nav>
+
+    <script src="scripts/uncheck-when-clicked.js"></script>
 
     <input type="checkbox" id="social-toggle">
     <label for="social-toggle" id="label-social-toggle">
@@ -68,8 +72,12 @@
         <span class="tooltip-social-button">GitHub</span>
     </a>
 
+    <script src="scripts/check-scroll.js"></script>
+
     <div class="main">
-        <span style="color: red; font-size: 2rem; font-weight: bold; margin: 300px auto;">Work in Progress!</span>
+        <div class="me" data-aos="fade-up">
+            <span>Work in Progress!<br>Scroll to see the rest of the page!</span>
+        </div>
 
         <hr class="section-division" id="skills">
 
@@ -323,6 +331,44 @@
             </div>
         </div>
 
+        <script src="scripts/scroll-projects.js"></script>
+
+        <hr class="section-division" id="contacts">
+
+        <div class="contacts" data-aos="fade-up">
+            <h2>Contacts</h2>
+
+            <div class="contacts-box" data-aos="fade-up">
+                <a class="contact" href="mailto:dimitrygonzales@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div class="contact-info">
+                        <span class="contact-info-service">
+                            Email
+                        </span>
+
+                        <span class="contact-info-name">
+                            dimitrygonzales@gmail.com
+                        </span>
+                    </div>
+                </a>
+
+                <a class="contact" href="https://github.com/DimitryGonzales">
+                    <i class="fa-brands fa-github"></i>
+
+                    <div class="contact-info">
+                        <span class="contact-info-service">
+                            Github
+                        </span>
+
+                        <span class="contact-info-name">
+                            prlw(Dimitry Gonzales)
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
         <hr class="section-division">
     </div>
 
@@ -330,13 +376,8 @@
         <span>Made by <a href="https://github.com/DimitryGonzales">Dimitry</a></span>
     </footer>
 
-    <script src="scripts/check-scroll.js"></script>
-
-    <script src="scripts/uncheck-when-clicked.js"></script>
-
-    <script src="scripts/theme-toggle.js"></script>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <script>
         AOS.init();
     </script>

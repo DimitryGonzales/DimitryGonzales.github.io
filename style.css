@@ -408,6 +408,22 @@ h2 {
     margin-bottom: 50px;
 }
 
+.me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: calc(100vh - 65px);
+    width: 100%;
+}
+
+.me span {
+    text-align: center;
+    
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .skills {
     display: flex;
     align-items: center;
@@ -559,7 +575,7 @@ h2 {
     padding: 10px;
 
     height: 100%;
-    width: 60%;
+    width: 100%;
 }
 
 .skill-button {
@@ -568,7 +584,7 @@ h2 {
     justify-content: center;
 
     height: 100%;
-    width: 40%;
+    aspect-ratio: 1/1;
 }
 
 .skill-button i {
@@ -592,6 +608,9 @@ h2 {
     display: flex;
     gap: 10px;
 
+    cursor: grab;
+    user-select: none;
+
     overflow-x: scroll;
 
     height: auto;
@@ -599,16 +618,25 @@ h2 {
     max-width: 80%;
 }
 
+.projects-box:active {
+    cursor: grabbing;
+}
+
 .project {
     background-color: var(--surface);
     border-radius: 25px;
 
-    cursor: default;
+    cursor: grab;
+    
     overflow: hidden;
 
     height: 450px;
     min-width: 300px;
     max-width: 300px;
+}
+
+.project:active {
+    cursor: grabbing;
 }
 
 .project-image {
@@ -719,6 +747,87 @@ h2 {
     background-color: var(--hover-alternative);
 }
 
+.contacts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: auto;
+    width: 100%;
+}
+
+.contacts-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+
+    max-width: 95%;
+}
+
+.contact {
+    display: flex;
+
+    background-color: var(--surface);
+    border-radius: 30px;
+
+    height: 60px;
+    width: 300px;
+}
+
+.contact:hover {
+    background-color: var(--hover);
+}
+
+.contact i,
+.contact img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.75rem;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.contact-info {
+    height: 100%;
+}
+
+.contact-info-service {
+    display: flex;
+    align-items: end;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    height: 50%;
+}
+
+.contact-info-name {
+    display: flex;
+
+    color: var(--text-muted);
+
+    height: 50%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+
+    height: 300px;
+    width: 100%;
+}
+
+footer:hover {
+    background-color: var(--hover);
+}
+
 @media (max-width: 710px) {
     .skills-box {
         flex-direction: column;
@@ -788,21 +897,6 @@ h2 {
         top: 32.5px;
         right: 32.5px; 
     }
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--surface);
-
-    height: 300px;
-    width: 100%;
-}
-
-footer:hover {
-    background-color: var(--hover);
 }
 
 @media (max-width:390px) {
