@@ -433,6 +433,8 @@ h2 {
     background-color: var(--surface);
     border-radius: 25px;
 
+    overflow: hidden;
+
     height: 50px;
     width: 300px;
 }
@@ -511,6 +513,70 @@ h2 {
     font-weight: bold;
 
     height: 100%;
+}
+
+.skill-content {
+    display: flex;
+    flex-direction: column;
+
+    height: 250px;
+    width: 100%;
+}
+
+.skill-visual {
+    display: flex;
+
+    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    
+    height: 50%;
+    width: 100%;
+}
+
+.skill-visual iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.skill-visual img {
+    margin: 0 auto;
+
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+.skill-info {
+    display: flex;
+
+    height: 50%;
+    width: 100%;
+}
+
+.skill-about {
+    border-right: 1px solid var(--border);
+    overflow-y: scroll;
+
+    padding: 10px;
+
+    height: 100%;
+    width: 60%;
+}
+
+.skill-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 40%;
+}
+
+.skill-button i {
+    font-size: 1.75rem;
+}
+
+.skill-button:hover {
+    background-color: var(--hover-alternative);
 }
 
 .projects {
@@ -621,6 +687,7 @@ h2 {
 .project-button-box {
     display: flex;
     justify-content: end;
+    gap: 10px;
 
     padding: 5%;
 
