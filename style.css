@@ -984,6 +984,12 @@ footer:hover {
     }
 }
 
+@media (max-height: 520px) {
+    .me {
+        align-items: start;
+    }
+}
+
 @media (max-width: 450px) {
     #label-navbar-toggle {
         display: flex;
