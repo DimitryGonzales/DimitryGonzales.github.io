@@ -551,6 +551,7 @@ body {
     border-radius: 25px;
 
     cursor: default;
+    user-select: none;
 
     overflow: hidden;
 
@@ -578,6 +579,8 @@ body {
 .skill-titlebar {
     display: flex;
     gap: 10px;
+
+    cursor: pointer;
 
     height: 50px;
     width: 100%;
