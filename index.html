@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal website where I showcase my skills, share the projects I’ve worked on, and track my growth as a programmer. As I learn and improve, I update it with new and refined projects.">
     <title>Dimitry's Website</title>
     
     <!--CSS-->
@@ -22,7 +23,7 @@
 </head>
 
 <body>
-    <input type="checkbox" id="theme-toggle">
+    <input type="checkbox" id="theme-toggle" aria-label="Toggle theme">
     <label for="theme-toggle" id="label-theme-toggle">
         <i class="fa-solid fa-sun light-theme-icon"></i>
         <i class="fa-solid fa-moon dark-theme-icon"></i>
@@ -30,7 +31,7 @@
 
     <script src="scripts/theme-toggle.js"></script>
 
-    <input type="checkbox" id="navbar-toggle">
+    <input type="checkbox" id="navbar-toggle" aria-label="Toggle navigation bar">
     <label for="navbar-toggle" id="label-navbar-toggle">
         <i class="fa-solid fa-bars closed-navbar-icon"></i>
         <i class="fa-solid fa-xmark opened-navbar-icon"></i>
@@ -57,17 +58,17 @@
     <script src="scripts/uncheck-when-clicked.js"></script>
 
     <input type="checkbox" id="social-toggle">
-    <label for="social-toggle" id="label-social-toggle">
+    <label for="social-toggle" id="label-social-toggle" aria-label="Toggle social links">
         <i class="fa-solid fa-share-nodes closed-social-icon"></i>
         <i class="fa-solid fa-xmark opened-social-icon"></i>
     </label>
 
-    <a class="social-button" id="email" href="mailto:dimitrygonzales@gmail.com">
+    <a class="social-button" id="email" href="mailto:dimitrygonzales@gmail.com" aria-label="Send email to dimitrygonzales@gmail.com">
         <i class="fa-solid fa-envelope"></i>
         <span class="tooltip-social-button">Email</span>
     </a>
 
-    <a class="social-button" id="github" href="https://github.com/DimitryGonzales">
+    <a class="social-button" id="github" href="https://github.com/DimitryGonzales" aria-label="Open the github page of Dimitry">
         <i class="fa-brands fa-github"></i>
         <span class="tooltip-social-button">GitHub</span>
     </a>
@@ -76,13 +77,49 @@
 
     <div class="main">
         <div class="me" data-aos="fade-up">
-            <span>Work in Progress!<br>Scroll to see the rest of the page!</span>
+            <div class="me-box">
+                <div class="me-image-box">
+                    <img src="assets/user.png" alt="Dimitry's Photo">
+                </div>
+
+                <div class="me-info">
+                    <div class="me-info-data-box">
+                        <div class="me-info-data">
+                            <i class="fa-solid fa-signature"></i>
+
+                            <span class="me-info-data-content">Dimitry</span>
+                        </div>
+
+                        <div class="me-info-data">
+                            <i class="fa-solid fa-calendar-days"></i>
+
+                            <span class="me-info-data-content">xx</span>
+                        </div>
+
+                        <div class="me-info-data">
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <span class="me-info-data-content">America</span>
+                        </div>
+
+                        <div class="me-info-data">
+                            <i class="fa-solid fa-briefcase"></i>
+
+                            <span class="me-info-data-content">Student</span>
+                        </div>
+                    </div>
+
+                    <p class="me-info-about">
+                        Hi, I’m a beginner programmer aspiring to be a software engineer. I'm currently exploring web development (HTML, CSS, and JavaScript) and expanding into some programming languages (C and Python).
+                    </p>
+                </div>
+            </div>
         </div>
 
         <hr class="section-division" id="skills">
 
-        <div class="skills">
-            <h2 data-aos="fade-up">Skills</h2>
+        <section class="skills">
+            <h1 class="section-title" data-aos="fade-up">Skills</h1>
 
             <div class="skills-box">
                 <div class="skills-column" id="skills-column-1" data-aos="fade-right">
@@ -95,7 +132,7 @@
                             
                             <img src="assets/html.svg" alt="html-icon" class="skill-icon">
 
-                            <span class="skill-name">HTML</span>
+                            <h2 class="skill-name">HTML</h2>
                         </div>
 
                         <div class="skill-content">
@@ -105,10 +142,10 @@
 
                             <div class="skill-info">
                                 <div class="skill-about">
-                                    Learning with <strong>Otavio Miranda</strong>'s course in Udemy.
+                                    Learning with <strong>Otavio Miranda</strong>'s course in Youtube.
                                 </div>
 
-                                <a class="skill-button" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa">
+                                <a class="skill-button" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa" aria-label="Open Otavio Miranda's course in Youtube">
                                     <i class="fa-brands fa-youtube"></i>
                                 </a>
                             </div>
@@ -122,9 +159,9 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </label>
                             
-                            <img src="assets/css.svg" alt="html-icon" class="skill-icon">
+                            <img src="assets/css.svg" alt="css-icon" class="skill-icon">
 
-                            <span class="skill-name">CSS</span>
+                            <h2 class="skill-name">CSS</h2>
                         </div>
 
                         <div class="skill-content">
@@ -134,10 +171,10 @@
 
                             <div class="skill-info">
                                 <div class="skill-about">
-                                    Learning with <strong>Otavio Miranda</strong>'s course in Udemy.
+                                    Learning with <strong>Otavio Miranda</strong>'s course in Youtube.
                                 </div>
 
-                                <a class="skill-button" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa">
+                                <a class="skill-button" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa" aria-label="Open Otavio Miranda's course in Youtube">
                                     <i class="fa-brands fa-youtube"></i>
                                 </a>
                             </div>
@@ -151,14 +188,14 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </label>
                             
-                            <img src="assets/javascript.svg" alt="html-icon" class="skill-icon">
+                            <img src="assets/javascript.svg" alt="javascript-icon" class="skill-icon">
 
-                            <span class="skill-name">JavaScript</span>
+                            <h2 class="skill-name">JavaScript</h2>
                         </div>
 
                         <div class="skill-content">
                             <div class="skill-visual">
-                                <img src="https://img-c.udemycdn.com/course/240x135/2575266_c184_4.jpg" alt="Udemy Course Thumbnail">
+                                <img src="https://img-c.udemycdn.com/course/240x135/2575266_c184_4.jpg" alt="Otavio Miranda's Udemy Course Thumbnail">
                             </div>
 
                             <div class="skill-info">
@@ -166,7 +203,7 @@
                                     Learning with <strong>Otavio Miranda</strong>'s course in Udemy.
                                 </div>
 
-                                <a class="skill-button" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB">
+                                <a class="skill-button" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB" aria-label="Open Otavio Miranda's course in Udemy">
                                     <i class="fa-solid fa-globe"></i>
                                 </a>
                             </div>
@@ -182,14 +219,14 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </label>
                             
-                            <img src="assets/typescript.svg" alt="html-icon" class="skill-icon">
+                            <img src="assets/typescript.svg" alt="typescript-icon" class="skill-icon">
 
-                            <span class="skill-name">TypeScript</span>
+                            <h2 class="skill-name">TypeScript</h2>
                         </div>
 
                         <div class="skill-content">
                             <div class="skill-visual">
-                                <img src="https://img-c.udemycdn.com/course/240x135/2575266_c184_4.jpg" alt="Udemy Course Thumbnail">
+                                <img src="https://img-c.udemycdn.com/course/240x135/2575266_c184_4.jpg" alt="Otavio Miranda's Udemy Course Thumbnail">
                             </div>
 
                             <div class="skill-info">
@@ -197,7 +234,7 @@
                                     Learning with <strong>Otavio Miranda</strong>'s course in Udemy.
                                 </div>
 
-                                <a class="skill-button" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB">
+                                <a class="skill-button" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB" aria-label="Open Otavio Miranda's course in Udemy">
                                     <i class="fa-solid fa-globe"></i>
                                 </a>
                             </div>
@@ -211,9 +248,9 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </label>
                             
-                            <img src="assets/c.svg" alt="html-icon" class="skill-icon">
+                            <img src="assets/c.svg" alt="c-icon" class="skill-icon">
 
-                            <span class="skill-name">C</span>
+                            <h2 class="skill-name">C</h2>
                         </div>
 
                         <div class="skill-content">
@@ -226,7 +263,7 @@
                                     Learning by researching it myself.
                                 </div>
 
-                                <a class="skill-button" href="https://en.wikipedia.org/wiki/C_(programming_language)">
+                                <a class="skill-button" href="https://en.wikipedia.org/wiki/C_(programming_language)" aria-label="Open the wikipedia page of C programming language">
                                     <i class="fa-solid fa-globe"></i>
                                 </a>
                             </div>
@@ -240,9 +277,9 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </label>
                             
-                            <img src="assets/python.svg" alt="html-icon" class="skill-icon">
+                            <img src="assets/python.svg" alt="python-icon" class="skill-icon">
 
-                            <span class="skill-name">Python</span>
+                            <h2 class="skill-name">Python</h2>
                         </div>
 
                         <div class="skill-content">
@@ -255,7 +292,7 @@
                                     Learning by researching it myself.
                                 </div>
 
-                                <a class="skill-button" href="https://www.python.org/">
+                                <a class="skill-button" href="https://www.python.org/" aria-label="Open the website of Python">
                                     <i class="fa-solid fa-globe"></i>
                                 </a>
                             </div>
@@ -263,23 +300,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <hr class="section-division" id="projects">
 
-        <div class="projects" data-aos="fade-up">
-            <h2>Projects</h2>
+        <section class="projects">
+            <h1 class="section-title" data-aos="fade-up">Projects</h1>
 
-            <div class="projects-box" data-aos="fade-up">
+            <div class="projects-box" data-aos="fade-left">
                 <div class="project">
-                    <div class="project-image">
-                        No image.
-                    </div>
+                    <img class="project-image" src="" alt="Screenshot of Personal Website">
 
                     <div class="project-info">
-                        <div class="project-name">
-                            <span>Personal Website</span>
-                        </div>
+                        <h2 class="project-name">Personal Website</h2>
 
                         <div class="project-icons">
                             <i class="fa-brands fa-html5"></i>
@@ -293,25 +326,21 @@
                     </div>
 
                     <div class="project-button-box">
-                        <a class="project-button" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io">
+                        <a class="project-button" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" aria-label="Open the github page of personal website">
                             <i class="fa-brands fa-github"></i>
                         </a>
 
-                        <a class="project-button" href="https://dimitrygonzales.github.io/">
+                        <a class="project-button" href="https://dimitrygonzales.github.io/" aria-label="Open the personal website">
                             <i class="fa-solid fa-globe"></i>
                         </a>
                     </div>
                 </div>
 
                 <div class="project">
-                    <div class="project-image">
-                        <img src="https://github.com/DimitryGonzales/dotfiles/blob/main/source/examples/catppuccin-mocha-lavender/catppuccin-mocha-lavender-1.png?raw=true" alt="Linux Customization Example">
-                    </div>
+                    <img class="project-image" src="https://github.com/DimitryGonzales/dotfiles/blob/main/source/examples/catppuccin-mocha-lavender/catppuccin-mocha-lavender-1.png?raw=true" alt="Screenshot of Linux Customization">
 
                     <div class="project-info">
-                        <div class="project-name">
-                            <span>Dotfiles</span>
-                        </div>
+                        <h2 class="project-name">Dotfiles</h2>
 
                         <div class="project-icons">
                             <i class="fa-brands fa-linux"></i>
@@ -323,51 +352,51 @@
                     </div>
 
                     <div class="project-button-box">
-                        <a class="project-button" href="https://github.com/DimitryGonzales/dotfiles">
+                        <a class="project-button" href="https://github.com/DimitryGonzales/dotfiles" aria-label="Open the github page of dotfiles ">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <script src="scripts/scroll-projects.js"></script>
 
         <hr class="section-division" id="contacts">
 
-        <div class="contacts" data-aos="fade-up">
-            <h2>Contacts</h2>
+        <section class="contacts">
+            <h1 class="section-title" data-aos="fade-up">Contacts</h1>
 
             <div class="contacts-box" data-aos="fade-up">
-                <a class="contact" href="mailto:dimitrygonzales@gmail.com">
+                <a class="contact" href="mailto:dimitrygonzales@gmail.com" aria-label="Send email to dimitrygonzales@gmail.com">
                     <i class="fa-solid fa-envelope"></i>
 
                     <div class="contact-info">
-                        <span class="contact-info-service">
+                        <h2 class="contact-info-name">
                             Email
-                        </span>
+                        </h2>
 
-                        <span class="contact-info-name">
+                        <h3 class="contact-info-content">
                             dimitrygonzales@gmail.com
-                        </span>
+                        </h3>
                     </div>
                 </a>
 
-                <a class="contact" href="https://github.com/DimitryGonzales">
+                <a class="contact" href="https://github.com/DimitryGonzales" aria-label="Open the github page of Dimitry">
                     <i class="fa-brands fa-github"></i>
 
                     <div class="contact-info">
-                        <span class="contact-info-service">
+                        <h2 class="contact-info-name">
                             Github
-                        </span>
+                        </h2>
 
-                        <span class="contact-info-name">
+                        <h3 class="contact-info-content">
                             prlw(Dimitry Gonzales)
-                        </span>
+                        </h3>
                     </div>
                 </a>
             </div>
-        </div>
+        </section>
 
         <hr class="section-division">
     </div>
