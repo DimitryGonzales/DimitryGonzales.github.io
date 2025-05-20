@@ -53,6 +53,10 @@ a {
     scrollbar-width: auto;
 }
 
+::webkit-scrollbar-button { 
+    display: none;
+}
+
 html {
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
