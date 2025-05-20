@@ -48,6 +48,9 @@ a {
     color: var(--text);
 
     transition: all 150ms linear;
+
+    scrollbar-color: var(--text) transparent;
+    scrollbar-width: auto;
 }
 
 html {
