@@ -908,7 +908,7 @@ body {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
     .label-navbar-toggle {
         display: flex;
     }
@@ -935,6 +935,10 @@ body {
 
     #navbar-toggle:checked ~ .navbar {
         display: flex;
+    }
+
+    #top-navbar:checked ~ #theme-selector-toggle:checked ~ #navbar-toggle ~ .navbar {
+        width: 100% !important;
     }
 
     .navbar-content {
