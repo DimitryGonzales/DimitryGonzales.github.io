@@ -9,11 +9,17 @@ window.addEventListener('DOMContentLoaded', () => {
     const storedMode = localStorage.getItem('theme-mode');
     const storedPalette = localStorage.getItem('theme-palette');
 
-    isDark = storedMode === 'dark';
-    currentPalette = storedPalette ?? '';
+    if (storedMode === null) {
+        isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        localStorage.setItem('theme-mode', isDark ? 'dark' : 'light');
+    } else {
+        isDark = storedMode === 'dark';
+    }
 
+    currentPalette = storedPalette ?? '';
     paletteSelect.value = currentPalette;
     brightnessToggle.checked = isDark;
+
     updateTheme();
 });
 
