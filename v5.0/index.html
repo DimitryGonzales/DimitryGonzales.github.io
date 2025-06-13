@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitry's Website</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--Font Awesome Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <!--Settings Checks-->
+    <input type="checkbox" class="settings-option-check" id="fullscreen">
+    <input type="checkbox" class="settings-option-check" id="top-navbar">
+
+    <!--Theme Selector Switch-->
+    <input type="checkbox" id="theme-selector-toggle">
+    <label for="theme-selector-toggle" class="label-theme-selector-toggle">
+        <i class="fa-solid fa-palette label-theme-selector-toggle-icon-closed"></i>
+        <i class="fa-solid fa-xmark label-theme-selector-toggle-icon-opened"></i>
+    </label>
+
+    <!--Theme Selector-->
+    <menu class="theme-selector">
+        <div class="theme-selector-top-bar">
+            <input type="checkbox" id="brightness-toggle">
+            <label for="brightness-toggle" class="label-brightness-toggle">
+                <i class="fa-solid fa-sun label-brightness-toggle-icon-bright"></i>
+                <i class="fa-solid fa-moon label-brightness-toggle-icon-dark"></i>
+            </label>
+        </div>
+
+        <div class="theme-selector-bottom-bar">
+            <select id="palette-select">
+                <option value="">Default</option>
+                <option value="catppuccin">Catppuccin</option>
+            </select>
+        </div>
+    </menu>
+
+    <script src="scripts/theme.js"></script>
+
+    <!--Settings Switch-->
+    <input type="checkbox" id="settings-toggle">
+    <label for="settings-toggle" class="label-settings-toggle">
+        <i class="fa-solid fa-gear label-settings-toggle-icon-closed"></i>
+        <i class="fa-solid fa-xmark label-settings-toggle-icon-opened"></i>
+    </label>
+
+    <!--Settings-->
+    <menu class="settings">
+        <label for="fullscreen" class="settings-option">
+            <span class="settings-option-title">Fullscreen</span>
+            <label for="fullscreen" class="settings-option-checkbox" id="fullscreen-checkbox">
+                <i class="fa-solid fa-check"></i>
+            </label>
+        </label>
+
+        <label for="top-navbar" class="settings-option">
+            <span class="settings-option-title">Top Navbar</span>
+            <label for="top-navbar" class="settings-option-checkbox" id="top-navbar-checkbox">
+                <i class="fa-solid fa-check"></i>
+            </label>
+        </label>
+    </menu>
+
+    <!--Navbar-->
+    <nav class="navbar">
+        <a class="navbar-button" href="">
+            <i class="fa-solid fa-house navbar-button-icon"></i>
+            <span class="navbar-button-content">Home</span>
+        </a>
+        <a class="navbar-button" href="">
+            <i class="fa-solid fa-book navbar-button-icon"></i>
+            <span class="navbar-button-content">Skills</span>
+        </a>
+        <a class="navbar-button" href="">
+            <i class="fa-solid fa-screwdriver-wrench navbar-button-icon"></i>
+            <span class="navbar-button-content">Projects</span>
+        </a>
+        <a class="navbar-button" href="">
+            <i class="fa-solid fa-phone navbar-button-icon"></i>
+            <span class="navbar-button-content">Contact</span>
+        </a>
+    </nav>
+
+    <!--Content Area-->
+    <main class="main">
+        <div class="item">
+            <div class="item-info">
+                <span class="item-info-title">
+                    Gruvbox Dark
+                </span>
+
+                <div class="item-info-tools">
+                    <i class="fa-brands fa-linux"></i>
+                </div>
+
+                <span class="item-info-about">
+                    Linux theme based on Gruvbox Dark palette.
+                </span>
+            </div>
+
+            <div class="item-links">
+                <a class="item-links-button" href="https://github.com/DimitryGonzales/dotfiles"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
