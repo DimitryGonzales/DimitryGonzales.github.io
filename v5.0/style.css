@@ -1,3 +1,4 @@
+/* Colors */
 :root {
     /* Colors */
     --blue: #0088ff;
@@ -70,6 +71,84 @@ body.dark {
 
     --text: #ffffff;
     --text-inverse: #000000;
+}
+
+body.catppuccin {
+    /* Catppuccin Latte */
+
+    /* Colors */
+    --blue: #1e66f5;   /* Blue */
+    --brown: #dc8a78;  /* Rosewater */
+    --cyan: #04a5e5;   /* Sky */
+    --green: #40a02b;  /* Green */
+    --indigo: #7287fd; /* Lavender */
+    --mint: #179299;   /* Teal */
+    --orange: #fe640b; /* Peach */
+    --pink: #ea76cb;   /* Pink */
+    --purple: #8839ef; /* Mauve */
+    --red: #d20f39;    /* Red */
+    --teal: #209fb5;   /* Sapphire */
+    --yellow: #df8e1d; /* Yellow */
+
+    /* Elements */
+    --background: #dce0e8; /* Crust */
+    --background-translucent: rgba(220, 224, 232, 0.5);
+
+    --background-inverse: #11111b; /* Crust from Mocha */
+    --background-inverse-translucent: rgba(17, 17, 27, 0.5);
+
+    --hover: #acb0be; /* Surface 2 */
+
+    --shadow: #7c7f93; /* Overlay 2 */
+
+    --surface: #e6e9ef; /* Mantle */
+    --surface-translucent: rgba(230, 233, 239, 0.5);
+    --surface2: #eff1f5; /* Base */
+    --surface2-translucent: rgba(239, 241, 245, 0.5);
+    --surface3: #ccd0da; /* Surface 0 */
+    --surface3-translucent: rgba(204, 208, 218, 0.5);
+
+    --text: #4c4f69; /* Text */
+    --text-inverse: #cdd6f4; /* Text from Mocha */
+}
+
+body.catppuccin.dark {
+    /* Catppuccin Mocha */
+
+    /* Colors */
+    --blue: #89b4fa;   /* Blue */
+    --brown: #f5e0dc;  /* Rosewater */
+    --cyan: #89dceb;   /* Sky */
+    --green: #a6e3a1;  /* Green */
+    --indigo: #b4befe; /* Lavender */
+    --mint: #94e2d5;   /* Teal */
+    --orange: #fab387; /* Peach */
+    --pink: #f5c2e7;   /* Pink */
+    --purple: #cba6f7; /* Mauve */
+    --red: #f38ba8;    /* Red */
+    --teal: #74c7ec;   /* Sapphire */
+    --yellow: #f9e2af; /* Yellow */
+
+    /* Elements */
+    --background: #11111b; /* Crust */
+    --background-translucent: rgba(17, 17, 27, 0.5);
+
+    --background-inverse: #dce0e8; /* Crust from Latte */
+    --background-inverse-translucent: rgba(220, 224, 232, 0.5);
+
+    --hover: #585b70; /* Surface 2 */
+
+    --shadow: rgba(147, 153, 178, 0); /* Overlay 2 */
+
+    --surface: #181825; /* Mantle */
+    --surface-translucent: rgba(24, 24, 37, 0.5);
+    --surface2: #1e1e2e; /* Base */
+    --surface2-translucent: rgba(30, 30, 46, 0.5);
+    --surface3: #313244; /* Surface 0 */
+    --surface3-translucent: rgba(49, 50, 68, 0.5);
+
+    --text: #cdd6f4; /* Text */
+    --text-inverse: #4c4f69; /* Text from Latte */
 }
 
 * {
@@ -421,6 +500,53 @@ body {
     opacity: 1;
 }
 
+#navbar-toggle {
+    display: none;
+}
+
+.label-navbar-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    box-shadow: 0 4px 8px -4px var(--shadow);
+    border-radius: 25px;
+    cursor: pointer;
+
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 3;
+
+    height: 50px;
+    width: 50px;
+}
+
+.label-navbar-toggle i {
+    position: absolute;
+}
+
+.label-navbar-toggle-icon-closed {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.label-navbar-toggle-icon-opened {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+#navbar-toggle:checked + .label-navbar-toggle .label-navbar-toggle-icon-closed {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+#navbar-toggle:checked + .label-navbar-toggle .label-navbar-toggle-icon-opened {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -450,6 +576,10 @@ body {
 
 #theme-selector-toggle:checked ~ #settings-toggle:checked ~ .navbar {
     height: calc(100% - (25px + 110px + 25px) - (25px + 150px + 25px));
+}
+
+#top-navbar:checked ~ .navbar .navbar-content {
+    display: flex;
 }
 
 .navbar-button {
@@ -666,10 +796,10 @@ body {
 }
 
 #fullscreen:checked + #top-navbar:checked ~ .main {
-    margin: 0;
+    margin: 0 !important;
 
-    height: 100vh;
-    width: 100%;
+    height: 100vh !important;
+    width: 100% !important;
 }
 
 /* Top Navbar Settings */
@@ -703,6 +833,7 @@ body {
     left: calc(25px + 150px + 25px);
     width: calc(100% - (25px + 150px + 25px) - (25px + 50px + 25px));
 }
+
 #top-navbar:checked ~ #settings-toggle:checked ~ .navbar {
     width: calc(100% - (25px + 50px + 25px) - (25px + 200px + 25px));
 }
@@ -751,4 +882,76 @@ body {
 #top-navbar:checked ~ #settings-toggle:checked ~ .main {
     margin-top: calc(25px + 150px + 25px);
     height: calc(100vh - (25px + 150px + 25px) - 25px);
+}
+
+@media (max-width: 625px) {
+    .label-settings-toggle {
+        display: none;
+    }
+
+    .settings {
+        display: none;
+    }
+
+    .navbar {
+        width: calc(100% - (25px + 50px + 25px) - 25px) !important;
+    }
+
+    #top-navbar:checked ~ #theme-selector-toggle:checked ~ .navbar {
+        width: calc(100% - (25px + 150px + 25px) - 25px) !important;
+    }
+
+    .navbar-button {
+        overflow: hidden;
+
+        max-width: 50px !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .label-navbar-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--surface-translucent);
+        backdrop-filter: blue(8px);
+        border-radius: 0;
+
+        position: fixed;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        height: 100vh !important;
+        width: 100% !important;
+    }
+
+    #navbar-toggle:checked ~ .navbar {
+        display: flex;
+    }
+
+    .navbar-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-button {
+        align-items: center;
+        justify-content: center;
+        
+        background-color: var(--surface2);
+
+        max-width: 1000px !important;
+    }
+
+    .navbar-button-content {
+        opacity: 1;
+    }
 }
