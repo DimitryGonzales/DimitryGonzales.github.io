@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (checkboxes.length === 0) return;
 
-    const widthQuery = window.matchMedia('(max-width: 625px)');
+    const widthQuery = window.matchMedia('(max-width: 750px)');
     const heightQuery = window.matchMedia('(max-height: 450px)');
 
     function handleResize() {

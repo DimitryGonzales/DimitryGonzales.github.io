@@ -99,7 +99,7 @@ body.catppuccin {
 
     --hover: #acb0be; /* Surface 2 */
 
-    --shadow: #7c7f93; /* Overlay 2 */
+    --shadow: rgba(124, 127, 147, 1); /* Overlay 2 */
 
     --surface: #e6e9ef; /* Mantle */
     --surface-translucent: rgba(230, 233, 239, 0.5);
@@ -192,7 +192,7 @@ body {
     position: fixed;
     top: 25px;
     left: 25px;
-    z-index: 3;
+    z-index: 4;
 
     height: 50px;
     width: 50px;
@@ -252,7 +252,7 @@ body {
     position: fixed;
     top: 25px;
     left: 25px;
-    z-index: 2;
+    z-index: 3;
 
     padding: 10px;
 
@@ -366,7 +366,7 @@ body {
     position: fixed;
     bottom: 25px;
     left: 25px;
-    z-index: 3;
+    z-index: 4;
 
     height: 50px;
     width: 50px;
@@ -424,7 +424,7 @@ body {
     position: fixed;
     bottom: 25px;
     left: 25px;
-    z-index: 2;
+    z-index: 3;
 
     user-select: none;
     overflow: hidden;
@@ -560,6 +560,7 @@ body {
     position: fixed;
     top: calc(25px + 50px + 25px);
     left: 25px;
+    z-index: 2;
 
     height: calc(100% - (25px + 50px + 25px) - (25px + 50px + 25px));
     width: 50px;
@@ -576,10 +577,6 @@ body {
 
 #theme-selector-toggle:checked ~ #settings-toggle:checked ~ .navbar {
     height: calc(100% - (25px + 110px + 25px) - (25px + 150px + 25px));
-}
-
-#top-navbar:checked ~ .navbar .navbar-content {
-    display: flex;
 }
 
 .navbar-button {
@@ -797,6 +794,7 @@ body {
 
 #fullscreen:checked + #top-navbar:checked ~ .main {
     margin: 0 !important;
+    padding-top: calc(25px + 50px + 25px);
 
     height: 100vh !important;
     width: 100% !important;
@@ -809,18 +807,22 @@ body {
     bottom: auto;
     left: auto;
 }
+
 #top-navbar:checked ~ .settings {
     top: 25px;
     right: 25px;
     bottom: auto;
     left: auto;
 }
+
 #top-navbar:checked ~ #settings-toggle:checked ~ .settings {
     padding-top: calc(50px + 10px);
 }
 
 #top-navbar:checked ~ .navbar {
     flex-direction: row;
+
+    box-shadow: 0px 4px 8px -4px var(--shadow);
 
     top: 25px;
     left: calc(25px + 50px + 25px);
@@ -841,6 +843,10 @@ body {
 #top-navbar:checked ~ #theme-selector-toggle:checked ~ #settings-toggle:checked ~.navbar {
     height: 50px;
     width: calc(100% - (25px + 150px + 25px) - (25px + 200px + 25px));
+}
+
+#top-navbar:checked ~ .navbar .navbar-content {
+    display: flex;
 }
 
 #top-navbar:checked ~ .navbar .navbar-button {
@@ -884,7 +890,8 @@ body {
     height: calc(100vh - (25px + 150px + 25px) - 25px);
 }
 
-@media (max-width: 625px),
+/* Medium Screen */
+@media (max-width: 750px),
 (max-height: 450px) {
     .label-settings-toggle {
         display: none;
@@ -909,6 +916,7 @@ body {
     }
 }
 
+/* Small Screen */
 @media (max-width: 500px) {
     .label-navbar-toggle {
         display: flex;
@@ -920,7 +928,8 @@ body {
         justify-content: center;
 
         background-color: var(--surface-translucent);
-        backdrop-filter: blue(8px);
+        backdrop-filter: blur(24px);
+
         border-radius: 0;
         opacity: 0;
 
