@@ -555,7 +555,7 @@ body {
 
     background-color: var(--surface);
     border-radius: 25px;
-    box-shadow: 4px 4px 8px -4px var(--shadow);
+    box-shadow: 0 4px 8px -2px var(--shadow);
     
     position: fixed;
     top: calc(25px + 50px + 25px);
@@ -640,7 +640,7 @@ body {
 /* Content Area */
 .main {
     background-color: var(--surface);
-    box-shadow: 4px 4px 8px -4px var(--shadow);
+    box-shadow: 0 4px 8px -2px var(--shadow);
     border-radius: 25px;
 
     overflow-y: auto;
