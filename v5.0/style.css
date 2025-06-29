@@ -766,6 +766,117 @@ section {
     text-align: center;
 }
 
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+
+    height: auto;
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 6.25px;
+
+    background-color: var(--surface2);
+    background-position: center;
+    background-size: 100%;
+    border-radius: 25px;
+    box-shadow: var(--shadow-normal);
+    filter: brightness(80%);
+
+    text-decoration: none;
+
+    overflow: hidden;
+    padding: 12.5px;
+
+    width: 445px;
+    aspect-ratio: 16/9;
+}
+
+.project:hover {
+    background-size: 110%;
+
+    filter: brightness(100%);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6.25px;
+
+    height: fit-content;
+    width: 100%;
+}
+
+.project-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface2);
+    border-radius: 25px;
+    box-shadow: var(--shadow-normal);
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    padding: 0 12.5px;
+
+    height: 50px;
+    width: fit-content;
+}
+
+.project-tools {
+    display: flex;
+    align-items: center;
+    gap: 12.5px;
+
+    background-color: var(--surface2);
+    border-radius: 20px;
+    box-shadow: var(--shadow-normal);
+
+    font-size: 1.1rem;
+
+    padding: 0 12.5px;
+
+    height: 40px;
+    min-width: 40px;
+    width: fit-content;
+}
+
+.project-about {
+    background-color: var(--surface2);
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    box-shadow: var(--shadow-normal);
+
+    font-size: 1rem;
+
+    transform: translateY(100%);
+
+    overflow-y: auto;
+    padding: 12.5px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.project:hover .project-about {
+    transform: translateY(0%);
+}
+
+#linux-customization {
+    background-image: url("assets/projects-images/linux-customization.png");
+}
+
+#personal-website {
+    background-image: url("assets/projects-images/personal-website-screenshot.png");
+}
+
 .socials-content {
     display: flex;
     flex-wrap: wrap;
@@ -841,114 +952,6 @@ section {
 
     color: var(--subtext);
     font-size: 1rem;
-}
-
-.projects-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-
-    height: auto;
-    width: 100%;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    gap: 6.25px;
-
-    background-color: var(--surface2);
-    background-position: center;
-    background-size: 100%;
-    border-radius: 25px;
-    box-shadow: var(--shadow-normal);
-    filter: brightness(80%);
-
-    text-decoration: none;
-
-    overflow: hidden;
-    padding: 12.5px;
-
-    width: 445px;
-    aspect-ratio: 16/9;
-}
-
-.project:hover {
-    background-size: 110%;
-
-    filter: brightness(100%);
-}
-
-.project-info {
-    display: flex;
-    flex-direction: column;
-    gap: 6.25px;
-
-    height: fit-content;
-    width: 100%;
-}
-
-.project-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--surface2);
-    border-radius: 25px;
-
-    font-size: 1.2rem;
-    font-weight: bold;
-
-    padding: 0 12.5px;
-
-    height: 50px;
-    width: fit-content;
-}
-
-.project-tools {
-    display: flex;
-    align-items: center;
-    gap: 12.5px;
-
-    background-color: var(--surface2);
-    border-radius: 20px;
-
-    font-size: 1.1rem;
-
-    padding: 0 12.5px;
-
-    height: 40px;
-    min-width: 40px;
-    width: fit-content;
-}
-
-.project-about {
-    background-color: var(--surface2);
-    backdrop-filter: blur(8px);
-    border-radius: 25px;
-
-    font-size: 1rem;
-
-    transform: translateY(100%);
-
-    overflow-y: auto;
-    padding: 12.5px;
-
-    height: 100%;
-    width: 100%;
-}
-
-.project:hover .project-about {
-    transform: translateY(0%);
-}
-
-#linux-customization {
-    background-image: url("assets/projects-images/linux-customization.png");
-}
-
-#personal-website {
-    background-image: url("assets/projects-images/personal-website-screenshot.png");
 }
 
 /* Fullscreen Settings */
