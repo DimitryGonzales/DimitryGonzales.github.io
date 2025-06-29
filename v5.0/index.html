@@ -13,8 +13,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <!--Nunito Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
     <!--Font Awesome Library-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!--Settings Checks-->
@@ -32,6 +40,7 @@
     <menu class="theme-selector">
         <div class="theme-selector-top-bar">
             <input type="checkbox" id="brightness-toggle">
+
             <label for="brightness-toggle" class="label-brightness-toggle">
                 <i class="fa-solid fa-sun label-brightness-toggle-icon-bright"></i>
                 <i class="fa-solid fa-moon label-brightness-toggle-icon-dark"></i>
@@ -59,6 +68,7 @@
     <menu class="settings">
         <label for="fullscreen" class="settings-option">
             <span class="settings-option-title">Fullscreen</span>
+
             <label for="fullscreen" class="settings-option-checkbox" id="fullscreen-checkbox">
                 <i class="fa-solid fa-check"></i>
             </label>
@@ -66,6 +76,7 @@
 
         <label for="top-navbar" class="settings-option">
             <span class="settings-option-title">Top Navbar</span>
+
             <label for="top-navbar" class="settings-option-checkbox" id="top-navbar-checkbox">
                 <i class="fa-solid fa-check"></i>
             </label>
@@ -81,48 +92,134 @@
     <!--Navbar-->
     <nav class="navbar">
         <div class="navbar-content">
-            <a class="navbar-button" href="">
+            <a class="navbar-button" href="#home">
                 <i class="fa-solid fa-house navbar-button-icon"></i>
                 <span class="navbar-button-content">Home</span>
             </a>
+
             <a class="navbar-button" href="">
                 <i class="fa-solid fa-book navbar-button-icon"></i>
                 <span class="navbar-button-content">Skills</span>
             </a>
-            <a class="navbar-button" href="">
+
+            <a class="navbar-button" href="#projects">
                 <i class="fa-solid fa-screwdriver-wrench navbar-button-icon"></i>
                 <span class="navbar-button-content">Projects</span>
             </a>
-            <a class="navbar-button" href="">
-                <i class="fa-solid fa-phone navbar-button-icon"></i>
-                <span class="navbar-button-content">Contact</span>
+
+            <a class="navbar-button" href="#social">
+                <i class="fa-solid fa-link navbar-button-icon"></i>
+                <span class="navbar-button-content">Social</span>
             </a>
         </div>
     </nav>
 
     <!--Content Area-->
     <main class="main">
-        <div class="item">
-            <div class="item-info">
-                <span class="item-info-title">
-                    Gruvbox Dark
-                </span>
+        <hr class="section-division" id="home">
+        
+        <span class="wip">Work in Progress!</span>
+        
+        <hr class="section-division" id="projects">
 
-                <div class="item-info-tools">
-                    <i class="fa-brands fa-linux"></i>
-                </div>
+        <section>
+            <h1 class="section-title">
+                Projects
+            </h1>
 
-                <span class="item-info-about">
-                    Linux theme based on Gruvbox Dark palette.
-                </span>
+            <div class="projects-content">
+                <a class="project" id="linux-customization" href="https://github.com/DimitryGonzales/dotfiles" target="_blank">
+                    <div class="project-info">
+                        <span class="project-name">
+                            Dotfiles
+                        </span>
+
+                        <div class="project-tools">
+                            <i class="fa-brands fa-linux"></i>
+                        </div>
+                    </div>
+
+                    <p class="project-about">
+                        My personal Linux configuration/customization.
+
+                        <br>
+                        <br>
+
+                        Features the following themes: Catppuccin Mocha Lavender, Gruvbox Dark & Minimalist.
+                    </p>
+                </a>
+
+                <a class="project" id="personal-website" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank">
+                    <div class="project-info">
+                        <span class="project-name">
+                            Personal Website
+                        </span>
+
+                        <div class="project-tools">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css"></i>
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                    </div>
+
+                    <p class="project-about">
+                        A website where I showcase my skills, share the projects I’ve worked on, and track my growth as a programmer. As I learn and improve, I update it with new and refined projects.
+                    </p>
+                </a>
             </div>
+        </section>
 
-            <div class="item-links">
-                <a class="item-links-button" href="https://github.com/DimitryGonzales/dotfiles"><i class="fa-brands fa-github"></i></a>
+        <hr class="section-division" id="social">
+
+        <section>
+            <h1 class="section-title">
+                Social
+            </h1>
+
+            <div class="socials-content">
+                <a class="social" href="mailto:dimitrygonzales@gmail.com" target="_blank">
+                    <div class="social-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div class="social-content">
+                        <span class="social-title">
+                            Email
+                        </span>
+
+                        <span class="social-source">
+                            dimitrygonzales@gmail.com
+                        </span>
+                    </div>
+                </a>
+
+                <a class="social" href="https://github.com/DimitryGonzales" target="_blank">
+                    <div class="social-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div class="social-content">
+                        <span class="social-title">
+                            Github
+                        </span>
+
+                        <span class="social-source">
+                            DimitryGonzales
+                        </span>
+                    </div>
+                </a>
             </div>
-        </div>
+        </section>
+
+        <hr class="section-division">
     </main>
 
     <script src="scripts/detectSmallScreen.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
