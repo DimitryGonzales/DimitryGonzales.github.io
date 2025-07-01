@@ -1,4 +1,6 @@
-/* Colors */
+/* Palettes */
+
+/* Default */
 :root {
     /* Colors */
     --blue: #0088ff;
@@ -14,20 +16,23 @@
     --teal: #00c3d0;
     --yellow: #ffcc00;
 
-    /* Elements */
+    /* Background */
     --background: #ffffff;
     --background-translucent: rgba(255, 255, 255, 0.5);
 
     --background-inverse: #000000;
     --background-inverse-translucent: rgba(0, 0, 0, 0.5);
 
+    /* Hover */
     --hover: #aeaeb2;
     --hover2: #8e8e93;
 
+    /* Shadow */
     --shadow-color: rgba(0, 0, 0, 0.5);
     --shadow-normal: 0 4px 8px -4px var(--shadow-color);
     --shadow-big: 0 4px 8px -2px var(--shadow-color);
 
+    /* Surface */
     --surface: #f2f2f7;
     --surface-translucent: rgba(242, 242, 247, 0.5);
     --surface2: #e5e5ea;
@@ -37,6 +42,7 @@
     --surface4: #c7c7cc;
     --surface4-translucent: rgba(199, 199, 204, 0.5);
     
+    /* Text */
     --text: #000000;
     --subtext: #5a5a5a;
     --text-inverse: #ffffff;
@@ -49,6 +55,7 @@
     --surface4-original: #c7c7cc;
 }
 
+/* Default Dark */
 body.dark {
     /* Colors */
     --blue: #0091ff;
@@ -64,20 +71,23 @@ body.dark {
     --teal: #00d2e0;
     --yellow: #ffd600;
 
-    /* Elements */
+    /* Background */
     --background: #000000;
     --background-translucent: rgba(0, 0, 0, 0.5);
 
     --background-inverse: #ffffff;
     --background-inverse-translucent: rgba(255, 255, 255, 0.5);
 
+    /* Hover */
     --hover: #636366;
     --hover2: #8e8e93;
 
+    /* Shadow */
     --shadow-color: rgba(0, 0, 0, 0.5);
     --shadow-normal: 0 4px 8px -4px var(--shadow-color);
     --shadow-big: 0 4px 8px -2px var(--shadow-color);
 
+    /* Surface */
     --surface: #1c1c1e;
     --surface-translucent: rgba(28, 28, 30, 0.5);
     --surface2: #2c2c2e;
@@ -87,6 +97,7 @@ body.dark {
     --surface4: #48484a;
     --surface4-translucent: rgba(72, 72, 74, 0.5);
 
+    /* Text */
     --text: #ffffff;
     --subtext: #aaaaaa;
     --text-inverse: #000000;
@@ -99,9 +110,8 @@ body.dark {
     --surface4-original: #48484a;
 }
 
+/* Catppuccin Latte */
 body.catppuccin {
-    /* Catppuccin Latte */
-
     /* Colors */
     --blue: #1e66f5;   /* Blue */
     --brown: #dc8a78;  /* Rosewater */
@@ -116,20 +126,23 @@ body.catppuccin {
     --teal: #209fb5;   /* Sapphire */
     --yellow: #df8e1d; /* Yellow */
 
-    /* Elements */
+    /* Background */
     --background: #dce0e8; /* Crust */
     --background-translucent: rgba(220, 224, 232, 0.5);
 
     --background-inverse: #11111b; /* Crust from Mocha */
     --background-inverse-translucent: rgba(17, 17, 27, 0.5);
 
+    /* Hover */
     --hover: #acb0be;  /* Surface 2 */
     --hover2: #9ca0b0; /* Overlay 0 */
 
+    /* Shadow */
     --shadow-color: rgba(124, 127, 147, 1); /* Overlay 2 */
     --shadow-normal: 0 4px 8px -4px var(--shadow-color);
     --shadow-big: 0 4px 8px -2px var(--shadow-color);
 
+    /* Surface */
     --surface: #e6e9ef; /* Mantle */
     --surface-translucent: rgba(230, 233, 239, 0.5);
     --surface2: #eff1f5; /* Base */
@@ -139,6 +152,7 @@ body.catppuccin {
     --surface4: #bcc0cc; /* Surface 1 */
     --surface4-translucent: rgba(188, 192, 204, 0.5);
 
+    /* Text */
     --text: #4c4f69;         /* Text */
     --subtext: #6c6f85;      /* Subtext 0 */
     --text-inverse: #cdd6f4; /* Text from Mocha */
@@ -151,9 +165,8 @@ body.catppuccin {
     --surface4-original: #bcc0cc; /* Surface 1 */
 }
 
+/* Catppuccin Mocha */
 body.catppuccin.dark {
-    /* Catppuccin Mocha */
-
     /* Colors */
     --blue: #89b4fa;   /* Blue */
     --brown: #f5e0dc;  /* Rosewater */
@@ -168,20 +181,23 @@ body.catppuccin.dark {
     --teal: #74c7ec;   /* Sapphire */
     --yellow: #f9e2af; /* Yellow */
 
-    /* Elements */
+    /* Background */
     --background: #11111b; /* Crust */
     --background-translucent: rgba(17, 17, 27, 0.5);
 
     --background-inverse: #dce0e8; /* Crust from Latte */
     --background-inverse-translucent: rgba(220, 224, 232, 0.5);
 
+    /* Hover */
     --hover: #585b70;  /* Surface 2 */
     --hover2: #6c7086; /* Overlay 0 */
 
+    /* Shadow */
     --shadow-color: rgba(147, 153, 178, 0); /* Overlay 2 */
     --shadow-normal: 0 4px 8px -4px var(--shadow-color);
     --shadow-big: 0 4px 8px -2px var(--shadow-color);
 
+    /* Surface */
     --surface: #181825; /* Mantle */
     --surface-translucent: rgba(24, 24, 37, 0.5);
     --surface2: #1e1e2e; /* Base */
@@ -191,6 +207,7 @@ body.catppuccin.dark {
     --surface4: #45475a; /* Surface 1 */
     --surface4-translucent: rgba(69, 71, 90, 0.5);
 
+    /* Text */
     --text: #cdd6f4;         /* Text */
     --subtext: #a6adc8;      /* Subtext 0 */
     --text-inverse: #4c4f69; /* Text from Latte */
@@ -203,6 +220,7 @@ body.catppuccin.dark {
     --surface4-original: #45475a; /* Surface 1 */
 }
 
+/* General */
 * {
     box-sizing: border-box;
 
@@ -213,9 +231,13 @@ body.catppuccin.dark {
 
     scroll-behavior: smooth;
 
+    scrollbar-color: var(--text) transparent;
+    scrollbar-width: auto;
+
     transition: all 300ms ease;
 }
 
+/* Page */
 html {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
@@ -224,15 +246,16 @@ html {
     font-weight: normal;
 }
 
+/* Page Body */
 body {
     background-color: var(--background);
 }
 
+/* Theme Selector Switch */
 #theme-selector-toggle {
     display: none;
 }
 
-/* Theme Selector Switch */
 .label-theme-selector-toggle {
     display: flex;
     align-items: center;
@@ -330,6 +353,7 @@ body {
     width: 100%;
 }
 
+/* Brightness Toggle */
 #brightness-toggle {
     display: none;
 }
@@ -384,6 +408,7 @@ body {
     transform: rotate(0deg);
 }
 
+/* Palette Selector */
 .theme-selector-bottom-bar {
     height: 50px;
     width: 100%;
@@ -408,11 +433,11 @@ body {
     background-color: var(--hover);
 }
 
+/* Settings Switch */
 #settings-toggle {
     display: none;
 }
 
-/* Settings Switch */
 .label-settings-toggle {
     display: flex;
     align-items: center;
@@ -504,6 +529,7 @@ body {
     width: 200px;
 }
 
+/* Settings Option */
 .settings-option {
     display: flex;
     align-items: center;
@@ -566,6 +592,7 @@ body {
     opacity: 1;
 }
 
+/* Navbar Switch */
 #navbar-toggle {
     display: none;
 }
@@ -647,6 +674,7 @@ body {
     height: calc(100% - (25px + 110px + 25px) - (25px + 150px + 25px));
 }
 
+/* Navbar Button */
 .navbar-button {
     display: flex;
     align-items: center;
@@ -744,6 +772,7 @@ body {
     width: 100%;
 }
 
+/* Sections */
 section {
     display: flex;
     flex-direction: column;
@@ -766,6 +795,7 @@ section {
     text-align: center;
 }
 
+/* Projects */
 .projects-content {
     display: flex;
     flex-wrap: wrap;
@@ -856,7 +886,9 @@ section {
 
     font-size: 1rem;
 
+    clip-path: inset(0 0 0.01px 0); /* Fixes chromium rendering hidden objects with delay */
     transform: translateY(100%);
+    will-change: transform;
 
     overflow-y: auto;
     padding: 12.5px;
@@ -866,6 +898,7 @@ section {
 }
 
 .project:hover .project-about {
+    clip-path: inset(0 0 0 0); /* Fixes chromium rendering hidden objects with delay */
     transform: translateY(0%);
 }
 
@@ -877,6 +910,7 @@ section {
     background-image: url("assets/projects-images/personal-website-screenshot.png");
 }
 
+/* Social */
 .socials-content {
     display: flex;
     flex-wrap: wrap;
