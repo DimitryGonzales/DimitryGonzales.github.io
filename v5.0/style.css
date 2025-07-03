@@ -882,7 +882,6 @@ section {
     background-color: var(--surface2);
     backdrop-filter: blur(8px);
     border-radius: 25px;
-    box-shadow: var(--shadow-normal);
 
     font-size: 1rem;
 
