@@ -1,0 +1,388 @@
+/* Palettes */
+
+/* Default */
+:root {
+    /* Background */
+    --background: #f3e7d1;
+
+    /* Hover */
+    --hover: #ccaa6c;
+
+    /* Shadow */
+    --shadow-color: #ccaa6c;
+    --shadow: 0 3px 0px 0px var(--shadow-color);
+    --shadow-text: 0 3px 0 var(--shadow-color);
+
+    /* Surface */
+    --surface: #fcd389;
+    
+    /* Text */
+    --text: #3b2f25;
+    --subtext: #7a6b5a;
+
+    /* Top */
+    --top: #ac7f5e;
+}
+
+/* Default Dark */
+body.dark {
+    /* Background */
+    --background: #1e1a16;
+
+    /* Hover */
+    --hover: #816848;
+
+    /* Shadow */
+    --shadow-color: #816848;
+    --shadow: 0 3px 0px 0px var(--shadow-color);
+    --shadow-text: 1px 1px 0 var(--shadow-color);
+
+    /* Surface */
+    --surface: #a87f51;
+    
+    /* Text */
+    --text: #f3e7d1;
+    --subtext: #bda37f;
+
+    /* Top */
+    --top: #6b4631;
+}
+
+/* General */
+* {
+    box-sizing: border-box;
+
+    color: var(--text);
+    
+    margin: 0;
+    padding: 0;
+
+    transition: all 300ms ease;
+}
+
+/* Page */
+html {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Page Body */
+body {
+    background-color: var(--background);
+}
+
+#navbar-toggle {
+    display: none;
+}
+
+.label-navbar-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
+
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+
+    height: 50px;
+    width: 50px;
+}
+
+.label-navbar-toggle:hover {
+    background-color: var(--hover);
+}
+
+nav {
+    display: flex;
+
+    background-color: var(--top);
+
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    user-select: none;
+
+    padding: 12.5px;
+
+    height: 70px;
+    width: 100%;
+}
+
+.navbar-logo-box {
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    padding: 12.5px;
+
+    height: 100%;
+    width: fit-content;
+}
+
+.navbar-buttons-box {
+    display: flex;
+    justify-content: center;
+    gap: 12.5px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6.25px;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    padding: 12.5px;
+
+    height: 100%;
+    width: 125px;
+}
+
+.navbar-button:hover {
+    background-color: var(--hover);
+}
+
+#theme-switcher {
+    display: none;
+}
+
+.theme-switcher-box {
+    display: flex;
+    justify-content: end;
+
+    height: 100%;
+    width: 100%;
+}
+
+.label-theme-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.label-theme-switcher:hover {
+    background-color: var(--hover);
+}
+
+.label-theme-switcher i {
+    font-size: 1.1rem;
+    position: absolute;
+}
+
+.label-theme-switcher-icon-bright {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.label-theme-switcher-icon-dark {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+#theme-switcher:checked + .theme-switcher-box .label-theme-switcher .label-theme-switcher-icon-bright {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+#theme-switcher:checked + .theme-switcher-box .label-theme-switcher .label-theme-switcher-icon-dark {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+main {
+    padding-top: 100px;
+
+    height: 100vh;
+    width: 100%;
+}
+
+.swiper {
+    max-height: 500px;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.swiper-slide {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.slide {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+.slide-content {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    opacity: 0;
+
+    padding: 0 10% 25px 10%;
+
+    height: auto;
+    width: 100%;
+}
+
+.slide:hover .slide-content {
+    opacity: 1;
+}
+
+.slide-title {
+    color: #f3e7d1;
+
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.slide-about {
+    color: #f3e7d1;
+
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+#slide-1 {
+    background-image: url(assets/linux-customization-screenshot.png);
+}
+
+#slide-2 {
+    background-image: url(assets/personal-website-screenshot.png);
+}
+
+#slide-3 {
+    background-image: url(assets/linux-customization-screenshot.png);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--surface) !important;
+    text-shadow: var(--shadow-text);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: var(--hover) !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--surface) !important;
+    box-shadow: var(--shadow);
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: var(--hover) !important;
+}
+
+@media (max-width: 775px) {
+    .navbar-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    .label-navbar-toggle {
+        display: flex;
+    }
+
+    nav {
+        align-items: center;
+        justify-content: center;
+
+        transform: translateY(-100vh);
+
+        height: 100vh;
+    }
+
+    #navbar-toggle:checked ~ nav {
+        transform: translateY(0);
+    }
+
+    .navbar-logo-box {
+        display: none;
+    }
+
+    .navbar-buttons-box {
+        flex-direction: column;
+
+        height: auto;
+        width: auto;
+    }
+
+    .navbar-button {
+        height: 50px;
+        width: 250px;
+    }
+    
+    .theme-switcher-box {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        height: auto;
+        width: auto;
+    }
+
+    .label-theme-switcher {
+        height: 50px;
+        width: 50px;
+    }
+}
