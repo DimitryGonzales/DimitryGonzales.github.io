@@ -33,17 +33,17 @@
         </div>
 
         <div class="navbar-buttons-box">
-            <a class="navbar-button" href="../semana-de-arte/">
+            <a class="navbar-button" href="../../">
                 <i class="fa-solid fa-house"></i>
                 <span>Início</span>
             </a>
 
-            <a class="navbar-button" href="pages/galeria/">
+            <a class="navbar-button" href="../galeria/">
                 <i class="fa-solid fa-images"></i>
                 <span>Galeria</span>
             </a>
 
-            <a class="navbar-button" href="pages/inscrição/">
+            <a class="navbar-button" href="../inscrição/">
                 <i class="fa-solid fa-pen-to-square"></i>
                 <span>Inscrição</span>
             </a>
@@ -59,47 +59,36 @@
     </nav>
 
     <main class="main">
-        <div class="slider">
-            <a href="">
-                <img src="assets/linux-customization-screenshot.png" alt="">
-            </a>
-
-            <a href="">
-                <img src="assets/personal-website-screenshot.png" alt="">
-            </a>
-
-            <a href="">
-                <img src="assets/linux-customization-screenshot.png" alt="">
-            </a>
-
-            <a href="">
-                <img src="assets/personal-website-screenshot.png" alt="">
-            </a>
-
-            <a href="">
-                <img src="assets/linux-customization-screenshot.png" alt="">
-            </a>
-        </div>
-
-        <script src="scripts/scroll-slider.js"></script>
-
         <section class="section">
-            <h1 class="section-title">
-                Semana de Arte
-            </h1>
-
-            <p class="section-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse magnam debitis possimus beatae minus, fugit non qui alias rerum modi nihil placeat accusantium quaerat illum natus reprehenderit deserunt nulla tempora.
-            </p>
-
             <div class="section-content">
-                <a class="register-button" href="pages/inscrição/">
-                    Preencher Inscrição
-                </a>
+                <form action="https://formspree.io/f/xrbkvzwo" method="POST">
+                    <div class="form-section">
+                        <label>
+                            Nome:
+                            <input type="text" name="firstName">
+                        </label>
+
+                        <label>
+                            Sobrenome:
+                            <input type="text" name="lastName">
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Email:
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+                    
+                    <div class="form-section">
+                        <button class="submit-button" type="submit">Enviar Inscrição</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
     
-    <script src="scripts/theme-toggle.js"></script>
+    <script src="../../scripts/theme-toggle.js"></script>
 </body>
 </html>

@@ -269,53 +269,14 @@ body {
 
 .main {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 100px;
     
     padding-top: 70px;
 
-    height: 100%;
+    height: 100vh;
     width: 100%;
-}
-
-.slider {
-    display: flex;
-    align-items: center;
-
-    background-color: var(--surface);
-
-    color: var(--text);
-
-    cursor: grab;
-    user-select: none;
-
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: auto;
-    
-    height: 300px;
-    width: 100%;
-}
-
-.slider a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    height: 100%;
-    aspect-ratio: 16/9;
-}
-
-.slider a img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-
-    max-height: 100%;
-    max-width: 100%;
 }
 
 .section {
@@ -334,6 +295,9 @@ body {
 
     font-size: 2rem;
     font-weight: bold;
+
+    height: auto;
+    width: 100%;
 }
 
 .section-text {
@@ -341,6 +305,9 @@ body {
     hyphens: auto;
     font-size: 1.25rem;
     font-weight: normal;
+
+    height: auto;
+    width: 100%;
 }
 
 .section-content {
@@ -352,32 +319,85 @@ body {
     width: 100%;
 }
 
-.register-button {
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    height: auto;
+    width: auto;
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section input {
+    background-color: var(--surface);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    font-size: 1rem;
+    text-align: center;
+
+    height: 50px;
+    width: 100%;
+}
+
+.form-section input:focus {
+    background-color: var(--hover);
+    outline: none;
+}
+
+.submit-button {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(135deg, var(--surface), var(--hover));
+    background-color: var(--surface);
+    border: none;
     border-radius: 25px;
     box-shadow: var(--shadow);
+
+    cursor: pointer;
 
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
 
     height: 100px;
-    width: 300px;
+    width: 100%;
 }
 
-.register-button:hover {
-    box-shadow: none;
-
-    transform: scale(1.15);
+.submit-button:hover {
+   background-color: var(--hover);
 }
 
 @media (max-width: 775px) {
     .navbar-logo {
         display: none;
+    }
+
+    .section {
+        padding: 0 10%;
     }
 }
 
@@ -430,16 +450,19 @@ body {
     }
 
     .main {
-        padding-top: 100px;
-    }
-
-    .slider {
-        height: auto;
-        width: 100%;
-        aspect-ratio: 16/9;
+        padding-top: 75px;
     }
 
     .section {
         padding: 0 10%;
+    }
+
+    form {
+        gap: 25px;
+    }
+
+    .form-section {
+        flex-direction: column;
+        gap: 25px;
     }
 }
