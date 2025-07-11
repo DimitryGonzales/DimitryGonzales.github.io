@@ -415,7 +415,7 @@ form {
     outline: none;
 }
 
-#members-container {
+#authors-container {
     display: flex;
     flex-direction: column;
     gap: 25px;

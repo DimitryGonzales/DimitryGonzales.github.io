@@ -7,7 +7,7 @@ function addMember(name = "") {
     const input = document.createElement("input");
     input.type = "text";
     input.name = "Integrantes";
-    input.placeholder = "ex: Murilo, João, ...";
+    input.placeholder = "ex: Maria Clara, João Eduardo, ...";
     input.value = name;
     input.classList.add("member-input");
 

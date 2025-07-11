@@ -421,6 +421,12 @@ form {
     gap: 25px;
 }
 
+#resources-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .remove-button {
     background-color: var(--surface);
     border: none;
