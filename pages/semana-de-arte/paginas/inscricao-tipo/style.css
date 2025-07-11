@@ -271,7 +271,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
     
     padding-top: 70px;
 
@@ -312,83 +311,33 @@ body {
 
 .section-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    height: auto;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-
-    height: auto;
-    width: 100%;
-}
-
-.form-section {
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-
-    height: auto;
-    width: auto;
-}
-
-.form-section label {
-    display: flex;
-    flex-direction: column;
-
-    font-size: 1.25rem;
-    font-weight: bold;
+    gap: 25px;
 
     height: auto;
     width: 100%;
 }
 
-.form-section input {
-    background-color: var(--surface);
-    border: none;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-
-    font-size: 1rem;
-    text-align: center;
-
-    height: 50px;
-    width: 100%;
-}
-
-.form-section input:focus {
-    background-color: var(--hover);
-    outline: none;
-}
-
-.submit-button {
+.register-button {
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-color: var(--surface);
-    border: none;
     border-radius: 25px;
     box-shadow: var(--shadow);
-
-    cursor: pointer;
 
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
 
     height: 100px;
-    width: 100%;
+    width: 300px;
 }
 
-.submit-button:hover {
-   background-color: var(--hover);
+.register-button:hover {
+    background-color: var(--hover);
 }
 
 @media (max-width: 775px) {
@@ -455,14 +404,5 @@ form {
 
     .section {
         padding: 0 10%;
-    }
-
-    form {
-        gap: 25px;
-    }
-
-    .form-section {
-        flex-direction: column;
-        gap: 25px;
     }
 }

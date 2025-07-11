@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Expositiva</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Nunito Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!--Swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+
+<body>
+    <input id="navbar-toggle" type="checkbox">
+    <label class="label-navbar-toggle" for="navbar-toggle">
+        <i class="fa-solid fa-bars label-navbar-toggle-icon-closed"></i>
+        <i class="fa-solid fa-xmark label-navbar-toggle-icon-open"></i>
+    </label>
+
+    <nav class="navbar">
+        <div class="navbar-logo-box">
+            <span class="navbar-logo">Formulário Expositiva</span>
+        </div>
+
+        <div class="navbar-buttons-box">
+            <a class="navbar-button" href="../../../">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a class="navbar-button" href="../galeria/">
+                <i class="fa-solid fa-images"></i>
+                <span>Galeria</span>
+            </a>
+
+            <a class="navbar-button" href="../../inscricao-tipo/">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>Inscrição</span>
+            </a>
+        </div>
+
+        <input id="theme-switcher" type="checkbox">
+        <div class="theme-switcher-box">
+            <label class="label-theme-switcher" for="theme-switcher">
+                <i class="fa-solid fa-moon label-theme-switcher-icon-bright"></i>
+                <i class="fa-solid fa-sun label-theme-switcher-icon-dark"></i>
+            </label>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section class="section">
+            <h1 class="section-title">
+                Performática
+            </h1>
+
+            <div class="section-content">
+                <form action="https://formspree.io/f/xrbkvzwo" method="POST">
+                    <div class="form-section">
+                        <label>
+                            Título:
+                            <input type="text" name="Título" placeholder="Título"></input>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Duração (ex: 2h30min):
+                            <input type="text" name="Duração" placeholder="Duração"></input>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Tipo:
+                            <select name="Tipo">
+                                <option value="" disabled selected>
+                                    Selecione um tipo
+                                </option>
+
+                                <option value="Dança">
+                                    Dança
+                                </option>
+
+                                <option value="Música">
+                                    Música
+                                </option>
+
+                                <option value="Teatro">
+                                    Teatro
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Dia:
+                            <select name="Dia">
+                                <option value="" disabled selected>
+                                    Selecione um dia
+                                </option>
+
+                                <option value="Segunda-Feira">
+                                    Segunda-Feira
+                                </option>
+
+                                <option value="Terça-Feira">
+                                    Terça-Feira
+                                </option>
+
+                                <option value="Quarta-Feira">
+                                    Quarta-Feira
+                                </option>
+
+                                <option value="Quinta-Feira">
+                                    Quinta-Feira
+                                </option>
+
+                                <option value="Sexta-Feira">
+                                    Sexta-Feira
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Integrantes:
+                            <div id="members-container">
+                                
+                            </div>
+
+                            <button class="add-button" type="button" onclick="addMember()">
+                                Adicionar Integrante
+                            </button>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Recursos necessários:
+                            <div id="resources-container">
+
+                            </div>
+                        </label>
+
+                        <button class="add-button" type="button" onclick="addResource()">
+                            Adicionar Recurso
+                        </button>
+                    </div>
+                    
+                    <div class="form-section">
+                        <button class="submit-button" type="submit">Enviar Inscrição</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/dynamic-input.js"></script>
+    <script src="../../../scripts/theme-toggle.js"></script>
+</body>
+</html>

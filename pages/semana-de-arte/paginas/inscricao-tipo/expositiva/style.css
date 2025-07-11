@@ -272,49 +272,14 @@ body {
     flex-direction: column;
     gap: 100px;
     
-    padding: 70px 0;
+    padding: 100px 0;
 
     height: 100%;
     width: 100%;
 }
 
-.slider {
-    display: flex;
-    align-items: center;
-
-    background-color: var(--surface);
-
-    color: var(--text);
-
-    cursor: grab;
-    user-select: none;
-
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-behavior: auto;
-    
-    height: 300px;
-    width: 100%;
-}
-
-.slider a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    height: 100%;
-    aspect-ratio: 16/9;
-}
-
-.slider a img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-
-    max-height: 100%;
-    max-width: 100%;
+.section-division {
+    border: none;
 }
 
 .section {
@@ -333,6 +298,9 @@ body {
 
     font-size: 2rem;
     font-weight: bold;
+
+    height: auto;
+    width: 100%;
 }
 
 .section-text {
@@ -340,40 +308,181 @@ body {
     hyphens: auto;
     font-size: 1.25rem;
     font-weight: normal;
-}
-
-.section-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
 
     height: auto;
     width: 100%;
 }
 
-.register-button {
+.section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: auto;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    height: auto;
+    width: auto;
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section input {
+    background-color: var(--surface);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    outline: none;
+
+    font-size: 1rem;
+    text-align: center;
+
+    height: 50px;
+    width: 100%;
+}
+
+.form-section input:focus {
+    background-color: var(--hover);
+    outline: none;
+}
+
+.form-section select {
+    background-color: var(--surface);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    outline: none;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+    text-align: center;
+
+    height: 50px;
+    width: 100%;
+}
+
+.form-section select:focus {
+    background-color: var(--hover);
+    outline: none;
+}
+
+.form-section textarea {
+    background-color: var(--surface);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    outline: none;
+
+    cursor: pointer;
+    resize: none;
+
+    font-size: 1rem;
+
+    padding: 25px;
+
+    height: 150px;
+    width: 100%;
+}
+
+.form-section textarea:focus {
+    background-color: var(--hover);
+    outline: none;
+}
+
+#members-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.remove-button {
+    background-color: var(--surface);
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+
+    cursor: pointer;
+
+    height: 25px;
+    width: 25px;
+}
+
+.remove-button:hover {
+    background-color: var(--hover);
+}
+
+.add-button {
+    background-color: var(--surface);
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin: 0 auto;
+
+    height: 50px;
+    width: 100px;
+}
+
+.add-button:hover {
+    background-color: var(--hover);
+}
+
+.submit-button {
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-color: var(--surface);
+    border: none;
     border-radius: 25px;
     box-shadow: var(--shadow);
+
+    cursor: pointer;
 
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
 
     height: 100px;
-    width: 300px;
+    width: 100%;
 }
 
-.register-button:hover {
-    background-color: var(--hover);
+.submit-button:hover {
+   background-color: var(--hover);
 }
 
-@media (max-width: 775px) {
+@media (max-width: 860px) {
     .navbar-logo {
         display: none;
     }
@@ -435,13 +544,16 @@ body {
         padding-top: 100px;
     }
 
-    .slider {
-        height: auto;
-        width: 100%;
-        aspect-ratio: 16/9;
-    }
-
     .section {
         padding: 0 10%;
+    }
+
+    form {
+        gap: 25px;
+    }
+
+    .form-section {
+        flex-direction: column;
+        gap: 25px;
     }
 }
