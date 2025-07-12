@@ -305,7 +305,6 @@ body {
 
 .section-text {
     text-align: justify;
-    hyphens: auto;
     font-size: 1.25rem;
     font-weight: normal;
 
@@ -482,6 +481,89 @@ form {
    background-color: var(--hover);
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+
+    padding: 0 10%;
+
+    height: 300px;
+    width: 100%;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: auto;
+    width: 250px;
+}
+
+.footer-section-title {
+    border-bottom: 3px solid var(--hover);
+
+    font-size: 1.25rem;
+    font-weight: bold;
+
+    height: auto;
+    width: 100%;
+}
+
+.footer-member {
+    display: flex;
+    gap: 12.5px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    height: 50px;
+    width: 100%;
+}
+
+.footer-member:hover {
+    background-color: var(--hover);
+}
+
+.footer-member img {
+    border: none;
+    border-radius: 100%;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.footer-member-about {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-member-name {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    height: 50%;
+    width: fit-content;
+}
+
+.footer-member-role {
+    display: flex;
+    align-items: center;
+
+    font-size: 1rem;
+    font-weight: normal;
+
+    height: 50%;
+    width: fit-content;
+}
+
 @media (max-width: 860px) {
     .navbar-logo {
         display: none;
@@ -541,7 +623,7 @@ form {
     }
 
     .main {
-        padding-top: 100px;
+        padding: 100px 0;
     }
 
     .section {

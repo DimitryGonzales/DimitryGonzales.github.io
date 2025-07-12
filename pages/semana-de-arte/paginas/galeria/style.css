@@ -278,10 +278,6 @@ body {
     width: 100%;
 }
 
-.section-division {
-    border: none;
-}
-
 .section {
     display: flex;
     flex-direction: column;
@@ -298,193 +294,47 @@ body {
 
     font-size: 2rem;
     font-weight: bold;
-
-    height: auto;
-    width: 100%;
 }
 
 .section-text {
     text-align: justify;
     font-size: 1.25rem;
     font-weight: normal;
-
-    height: auto;
-    width: 100%;
 }
 
 .section-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    height: auto;
-    width: 100%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-
-    height: auto;
-    width: 100%;
-}
-
-.form-section {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-
-    height: auto;
-    width: auto;
-}
-
-.form-section label {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 
-    font-size: 1.25rem;
-    font-weight: bold;
-
     height: auto;
     width: 100%;
 }
 
-.form-section input {
-    background-color: var(--surface);
-    border: none;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    outline: none;
-
-    font-size: 1rem;
-    text-align: center;
-
-    height: 50px;
-    width: 100%;
-}
-
-.form-section input:focus {
-    background-color: var(--hover);
-    outline: none;
-}
-
-.form-section select {
-    background-color: var(--surface);
-    border: none;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    outline: none;
-
-    cursor: pointer;
-
-    font-size: 1rem;
-    text-align: center;
-
-    height: 50px;
-    width: 100%;
-}
-
-.form-section select:focus {
-    background-color: var(--hover);
-    outline: none;
-}
-
-.form-section textarea {
-    background-color: var(--surface);
-    border: none;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    outline: none;
-
-    cursor: pointer;
-    resize: none;
-
-    font-size: 1rem;
-
-    padding: 25px;
-
-    height: 150px;
-    width: 100%;
-}
-
-.form-section textarea:focus {
-    background-color: var(--hover);
-    outline: none;
-}
-
-#members-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-#resources-container {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.remove-button {
-    background-color: var(--surface);
-    border: none;
-    border-radius: 5px;
-    box-shadow: var(--shadow);
-
-    cursor: pointer;
-
-    height: 25px;
-    width: 25px;
-}
-
-.remove-button:hover {
-    background-color: var(--hover);
-}
-
-.add-button {
-    background-color: var(--surface);
-    border: none;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-
-    font-size: 0.9rem;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    margin: 0 auto;
-
-    height: 50px;
-    width: 100px;
-}
-
-.add-button:hover {
-    background-color: var(--hover);
-}
-
-.submit-button {
+.gallery-item {
     display: flex;
     align-items: center;
     justify-content: center;
 
     background-color: var(--surface);
-    border: none;
-    border-radius: 25px;
+    border-radius: 10px;
     box-shadow: var(--shadow);
 
-    cursor: pointer;
+    overflow: hidden;
 
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-
-    height: 100px;
-    width: 100%;
+    height: 150px;
+    aspect-ratio: 16/9;
 }
 
-.submit-button:hover {
-   background-color: var(--hover);
+.gallery-item:hover {
+    transform: scale(1.1);
+    filter: brightness(110%);
+}
+
+.gallery-item img {
+    height: 100%;
+    width: 100%;
 }
 
 footer {
@@ -570,13 +420,17 @@ footer {
     width: fit-content;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 775px) {
     .navbar-logo {
         display: none;
     }
 
     .section {
         padding: 0 10%;
+    }
+
+    .gallery-item {
+        height: 125px;
     }
 }
 
@@ -636,12 +490,8 @@ footer {
         padding: 0 10%;
     }
 
-    form {
-        gap: 25px;
-    }
-
-    .form-section {
-        flex-direction: column;
-        gap: 25px;
+    .gallery-item {
+        height: auto;
+        width: 100%;
     }
 }
