@@ -358,6 +358,8 @@ form {
     box-shadow: var(--shadow);
     outline: none;
 
+    cursor: text;
+
     font-size: 1rem;
     text-align: center;
 
@@ -398,12 +400,12 @@ form {
     box-shadow: var(--shadow);
     outline: none;
 
-    cursor: pointer;
-    resize: none;
+    cursor: text;
 
     font-size: 1rem;
 
     padding: 25px;
+    resize: none;
 
     height: 150px;
     width: 100%;
@@ -523,7 +525,7 @@ footer {
     display: flex;
     gap: 12.5px;
 
-    border-radius: 10px;
+    border-radius: 25px 10px 10px 25px;
 
     text-decoration: none;
 

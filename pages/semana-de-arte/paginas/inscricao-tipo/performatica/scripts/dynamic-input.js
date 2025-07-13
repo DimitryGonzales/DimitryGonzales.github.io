@@ -31,7 +31,7 @@ function addResource(value = "") {
     const input = document.createElement("input");
     input.type = "text";
     input.name = "Recursos";
-    input.placeholder = "ex: Microfone, Mesa, ...";
+    input.placeholder = "ex: Microfone, Caixa de Som, Baterista, ...";
     input.value = value;
     input.classList.add("resource-input");
 

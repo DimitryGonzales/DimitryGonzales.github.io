@@ -411,7 +411,7 @@ footer {
     display: flex;
     gap: 12.5px;
 
-    border-radius: 10px;
+    border-radius: 25px 10px 10px 25px;
 
     text-decoration: none;
 
@@ -458,7 +458,7 @@ footer {
     width: fit-content;
 }
 
-@media (max-width: 775px) {
+@media (max-width: 900px) {
     .navbar-logo {
         display: none;
     }
