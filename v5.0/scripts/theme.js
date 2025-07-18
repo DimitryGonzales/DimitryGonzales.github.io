@@ -1,45 +1,36 @@
-const brightnessToggle = document.getElementById('brightness-toggle');
-const paletteSelect = document.getElementById('palette-select');
-const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    const brightnessToggle = document.getElementById("brightness-toggle");
+    const paletteSelector = document.getElementById("palette-selector");
 
-let isDark = false;
-let currentPalette = '';
+    // Load saved settings
+    const savedPalette = localStorage.getItem("palette") || "default";
+    const savedBrightness = localStorage.getItem("brightness") || "light";
 
-window.addEventListener('DOMContentLoaded', () => {
-    const storedMode = localStorage.getItem('theme-mode');
-    const storedPalette = localStorage.getItem('theme-palette');
+    paletteSelector.value = savedPalette;
+    brightnessToggle.checked = savedBrightness === "dark";
 
-    if (storedMode === null) {
-        isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        localStorage.setItem('theme-mode', isDark ? 'dark' : 'light');
-    } else {
-        isDark = storedMode === 'dark';
+    // Apply theme
+    function applyTheme() {
+        const palette = paletteSelector.value;
+        const brightness = brightnessToggle.checked ? "dark" : "light";
+
+        // Remove all existing theme classes
+        body.className = "";
+
+        // Build and apply the new class structure: .palette.brightness
+        const className = palette === "default" ? brightness : `${palette}.${brightness}`;
+        body.classList.add(...className.split("."));
+
+        // Save to localStorage
+        localStorage.setItem("palette", palette);
+        localStorage.setItem("brightness", brightness);
     }
 
-    currentPalette = storedPalette ?? '';
-    paletteSelect.value = currentPalette;
-    brightnessToggle.checked = isDark;
+    // Apply theme on load
+    applyTheme();
 
-    updateTheme();
+    // Event listeners
+    brightnessToggle.addEventListener("change", applyTheme);
+    paletteSelector.addEventListener("change", applyTheme);
 });
-
-brightnessToggle.addEventListener('change', () => {
-    isDark = brightnessToggle.checked;
-    localStorage.setItem('theme-mode', isDark ? 'dark' : 'light');
-    updateTheme();
-});
-
-paletteSelect.addEventListener('change', (e) => {
-    currentPalette = e.target.value;
-    localStorage.setItem('theme-palette', currentPalette);
-    updateTheme();
-});
-
-function updateTheme() {
-    body.className = '';
-
-    if (currentPalette) body.classList.add(currentPalette);
-    if (isDark) body.classList.add('dark');
-
-    brightnessToggle.checked = isDark;
-}
