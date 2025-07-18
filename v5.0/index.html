@@ -27,50 +27,74 @@
     </label>
 
     <nav class="menu">
-        <div class="shortcuts-box">
-            <h1 class="box-title">Sections</h1>
+        <div class="menu-content">
+            <div class="menu-box">
+                <h1 class="box-title">Shortcuts</h1>
 
-            <div class="shortcuts">
-                <a class="shortcut" href="">
-                    <div class="shortcut-icon">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
+                <div id="shortcuts" class="menu-box-content">
+                    <a class="shortcut" href="">
+                        <div class="shortcut-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
 
-                    <h2>Me</h2>
-                </a>
+                        <h2>Me</h2>
+                    </a>
 
-                <a class="shortcut" href="">
-                    <div class="shortcut-icon">
-                        <i class="fa-solid fa-book"></i>
-                    </div>
+                    <a class="shortcut" href="">
+                        <div class="shortcut-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
 
-                    <h2>Skills</h2>
-                </a>
+                        <h2>Skills</h2>
+                    </a>
 
-                <a class="shortcut" href="">
-                    <div class="shortcut-icon">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                    </div>
+                    <a class="shortcut" href="">
+                        <div class="shortcut-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
 
-                    <h2>Projects</h2>
-                </a>
+                        <h2>Projects</h2>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <div class="theme-selector-box">
-            <h1 class="box-title">Theme Selector</h1>
+            <div class="menu-box">
+                <h1 class="box-title">Theme Selector</h1>
 
-            <div class="theme-selector">
-                <input id="brightness-toggle" type="checkbox">
-                <label class="label-brightness-toggle" for="brightness-toggle">
-                    <i class="fa-solid fa-sun brightness-bright-icon"></i>
-                    <i class="fa-solid fa-moon brightness-dark-icon"></i>
-                </label>
+                <div id="theme-selector" class="menu-box-content">
+                    <input id="brightness-toggle" type="checkbox">
+                    <label class="label-brightness-toggle" for="brightness-toggle">
+                        <i class="fa-solid fa-sun brightness-bright-icon"></i>
+                        <i class="fa-solid fa-moon brightness-dark-icon"></i>
+                    </label>
 
-                <select id="palette-selector">
-                    <option value="default">Default</option>
-                    <option value="catppuccin-mocha">Catppuccin Mocha</option>
-                </select>
+                    <select id="palette-selector">
+                        <option value="default">Default</option>
+                        <option value="catppuccin-mocha">Catppuccin Mocha</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="menu-box">
+                <h1 class="box-title">Socials</h1>
+
+                <div id="socials" class="menu-box-content">
+                    <a id="social-email" class="social" href="mailto:dimitrygonzales@gmail.com">
+                        <div class="social-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <h2>Email</h2>
+                    </a>
+
+                    <a id="social-github" class="social" href="https://github.com/DimitryGonzales">
+                        <div class="social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+
+                        <h2>Github</h2>
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
