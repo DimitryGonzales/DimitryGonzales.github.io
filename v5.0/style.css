@@ -1,49 +1,137 @@
 :root {
+    --blue: #0088ff;
+    --brown: #ac7f5e;
+    --cyan: #00c0e8;
+    --green: #34c759;
+    --indigo: #6155f5;
+    --mint: #00c8b3;
+    --orange: #ff8d28;
+    --pink: #ff2d55;
+    --purple: #cb30e0;
+    --red: #ff383c;
+    --teal: #00c3d0;
+    --yellow: #ffcc00;
+
     --background: #ffffff;
 
     --surface: #eeeeee;
-    --surface-translucent: rgba(221, 221, 221, 0.5);
-
     --surface2: #dddddd;
-    --surface2-translucent: rgba(187, 187, 187, 0.5);
-
     --surface3: #cccccc;
-    --surface3-translucent: rgba(187, 187, 187, 0.5);
 
     --highlight: #bbbbbb;
 
     --hover: #aaaaaa;
 
-    --accent: #3584e4;
+    --accent: var(--blue);
 
     --shadow-color: rgba(0, 0, 0, 0.5);
     --shadow: 0 4px 4px -2px var(--shadow-color);
 
     --text: #000000;
+    --subtext: #555555;
 }
 
 .dark {
+    --blue: #0091ff;
+    --brown: #b78a66;
+    --cyan: #3cd3fe;
+    --green: #30d158;
+    --indigo: #6b5dff;
+    --mint: #00dac3;
+    --orange: #ff9230;
+    --pink: #ff375f;
+    --purple: #db34f2;
+    --red: #ff4245;
+    --teal: #00d2e0;
+    --yellow: #ffd600;
+
     --background: #000000;
 
     --surface: #111111;
-    --surface-translucent: rgba(221, 221, 221, 0.5);
-
     --surface2: #222222;
-    --surface2-translucent: rgba(187, 187, 187, 0.5);
-
     --surface3: #333333;
-    --surface3-translucent: rgba(187, 187, 187, 0.5);
 
     --highlight: #444444;
 
     --hover: #555555;
 
-    --accent: #3584e4;
+    --accent: var(--blue);
 
     --shadow-color: rgba(0, 0, 0, 0.5);
     --shadow: 0 4px 4px -2px var(--shadow-color);
 
     --text: #ffffff;
+    --subtext: #aaaaaa;
+}
+
+.catppuccin {
+    /* Catppuccin Latte */
+
+    --blue: #1e66f5;   /* Blue */
+    --brown: #dc8a78;  /* Rosewater */
+    --cyan: #04a5e5;   /* Sky */
+    --green: #40a02b;  /* Green */
+    --indigo: #7287fd; /* Lavender */
+    --mint: #209fb5;   /* Sapphire */
+    --orange: #fe640b; /* Peach */
+    --pink: #ea76cb;   /* Pink */
+    --purple: #8839ef; /* Mauve */
+    --red: #d20f39;    /* Red */
+    --teal: #179299;   /* Teal */
+    --yellow: #df8e1d; /* Yellow */
+
+    --background: #dce0e8; /* Crust */
+
+    --surface: #e6e9ef;  /* Mantle */
+    --surface2: #eff1f5; /* Base */
+    --surface3: #ccd0da; /* Surface 0 */
+
+    --highlight: #bcc0cc; /* Surface 1 */
+
+    --hover: #acb0be; /* Surface 2 */
+
+    --accent: var(--blue);
+
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow: 0 4px 4px -2px var(--shadow-color);
+
+    --text: #4c4f69;    /* Text */
+    --subtext: #6c6f85; /* Subtext 0 */
+}
+
+.catppuccin.dark {
+    /* Catppuccin Mocha */
+
+    --blue: #89b4fa;   /* Blue */
+    --brown: #f5e0dc;  /* Rosewater */
+    --cyan: #89dceb;   /* Sky */
+    --green: #a6e3a1;  /* Green */
+    --indigo: #b4befe; /* Lavender */
+    --mint: #74c7ec;   /* Sapphire */
+    --orange: #fab387; /* Peach */
+    --pink: #f5c2e7;   /* Pink */
+    --purple: #cba6f7; /* Mauve */
+    --red: #f38ba8;    /* Red */
+    --teal: #94e2d5;   /* Teal */
+    --yellow: #f9e2af; /* Yellow */
+
+    --background: #11111b; /* Crust */
+
+    --surface: #181825;  /* Mantle */
+    --surface2: #1e1e2e; /* Base */
+    --surface3: #313244; /* Surface 0 */
+
+    --highlight: #45475a; /* Surface 1 */
+
+    --hover: #585b70; /* Surface 2 */
+
+    --accent: var(--blue);
+
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow: 0 4px 4px -2px var(--shadow-color);
+
+    --text: #cdd6f4;    /* Text */
+    --subtext: #a6adc8; /* Subtext 0 */
 }
 
 * {
@@ -55,6 +143,11 @@
     padding: 0;
 
     transition: all 300ms ease;
+
+    scroll-behavior: smooth;
+
+    scrollbar-color: var(--text) transparent;
+    scrollbar-width: auto;
 }
 
 html {
@@ -357,8 +450,191 @@ body {
     font-weight: normal;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    padding: 90px 20px;
+
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: var(--highlight);
+
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+}
+
+.section-title h1 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.section-status {
+    display: flex;
+    gap: 5px;
+
+    background-color: var(--surface);
+    border-radius: 17px;
+
+    padding: 5px;
+
+    height: 34px;
+    width: auto;
+}
+
+.section-status.wip::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface2);
+    border-radius: 100%;
+
+    color: var(--yellow);
+    content: "!";
+    font-size: 1rem;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.section-status.wip::after {
+    display: flex;
+    align-items: center;
+
+    color: var(--yellow);
+    content: "Work In Progress";
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    height: 100%;
+    width: fit-content;
+}
+
+.section-status.finished::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface2);
+    border-radius: 100%;
+
+    color: var(--green);
+    content: "✔";
+    font-size: 1rem;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.section-status.finished::after {
+    display: flex;
+    align-items: center;
+
+    color: var(--green);
+    content: "Finished";
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    height: 100%;
+    width: fit-content;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background-color: var(--surface);
+
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+}
+
+.section-text {
+    background-color: var(--surface2);
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-weight: normal;
+
+    padding: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.section-items {
+    display: flex;
+    gap: 10px;
+
+    background-color: var(--surface2);
+    border-radius: 10px;
+
+    padding: 10px;
+
+    overflow: auto;
+
+    height: auto;
+    width: 100%;
+}
+
+.skill {
+    background-color: var(--surface3);
+    border-radius: 10px;
+
+    height: 300px;
+    min-width: 225px;
+}
+
+#projects-box {
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+.project {
+    background-color: var(--surface3);
+    border-radius: 10px;
+
+    width: calc((100% / 2) - (10px / 2));
+    aspect-ratio: 16/9;
+}
+
 @media (max-width: 450px) {
     .menu {
+        width: 100%;
+    }
+
+    #projects-box {
+        max-height: 320px;
+        overflow: auto;
+    }
+
+    .project {
         width: 100%;
     }
 }
