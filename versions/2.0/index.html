@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitry's Website</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Quicksand Font Link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!--Font Awesome Library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>  
+    <button class="default-box" id="navbartoggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="navbar">
+        <a class="navbar-button default-box" href="/index.html">Home</a>
+
+        <a class="navbar-button default-box" href="/pages/skills/index.html">Skills</a>
+
+        <a class="navbar-button default-box" href="/pages/projects/index.html">Projects</a>
+    </nav>
+
+    <script src="navbar.js"></script>
+
+    <div class="main">
+        <div class="presentation">
+            <div class="identification">
+                <div class="photo-box">
+                    <div class="default-box" id="photo-frame">
+                        <img src="https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg" alt="profile-photo">
+                    </div>
+                </div>
+
+                <div class="me-box">
+                    <div class="default-box" id="name">
+                        <span>Dimitry</span>
+                    </div>
+
+                    <div class="default-box" id="about-me">
+                        <p>Hi, I’m Dimitry, a beginner programmer aspiring to be a software engineer. I'm currently exploring different programming languages, starting with web development (HTML, CSS, and JavaScript) and expanding into C and Python.</p>
+                    </div>
+
+                    <div class="default-box" id="social">
+                        <a class="social-button" href="https://discord.com/users/1071590581765161052">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+
+                        <a class="social-button" href="https://github.com/DimitryGonzales">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-website">
+                <div class="default-box" id="website-info">
+                    <p>Personal Website | Portfolio <br><br> This website is where I showcase my skills, share the projects I’ve worked on, and track my growth as a programmer. As I learn and improve, I’ll keep updating it with new and refined projects.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="theme-indicator">↓ Theme Selector ↓</p>
+    </div>
+
+    <footer>
+        <form class="colorpicker">
+            <fieldset class="default-box">
+                <div class="theme-box">
+                    <label for="catppuccin-mocha">Catppuccin Mocha</label>
+                    <input type="radio" name="theme" id="catppuccin-mocha" checked>
+                </div>
+    
+                <div class="theme-box">
+                    <label for="wine">Wine</label>
+                    <input type="radio" name="theme" id="wine">
+                </div>
+            </fieldset>
+        </form>  
+    </footer>
+</body>
+</html>
