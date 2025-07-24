@@ -159,11 +159,11 @@
 }
 
 html {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
@@ -470,7 +470,7 @@ main {
 
     padding: 90px 20px;
 
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
@@ -875,6 +875,7 @@ section {
     font-weight: normal;
 
     overflow-y: auto;
+    overflow-wrap: break-word; /* Without this, the text gets out of the box limits in chromium based browsers */
 
     padding: 10px;
 

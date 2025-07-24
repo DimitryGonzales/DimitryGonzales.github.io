@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const body = document.body;
+    const root = document.documentElement;
     const brightnessToggle = document.getElementById("brightness-toggle");
     const paletteSelector = document.getElementById("palette-selector");
 
@@ -21,12 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const palette = paletteSelector.value;
         const brightness = brightnessToggle.checked ? "dark" : "light";
 
-        // Clear current classes
-        body.className = "";
-
-        // Build and apply new class structure
+        // Build new class list
         const className = palette === "default" ? brightness : `${palette}.${brightness}`;
-        body.classList.add(...className.split("."));
+        const classList = className.split(".");
+
+        // Clear existing theme classes
+        root.className = "";
+
+        // Apply new theme classes to <html>
+        root.classList.add(...classList);
 
         // Save settings
         localStorage.setItem("palette", palette);
