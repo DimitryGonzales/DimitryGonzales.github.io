@@ -608,6 +608,8 @@ section {
 
 .skill-progress-bar {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     background-color: var(--highlight);
     border-radius: 5px;
@@ -624,6 +626,41 @@ section {
     height: 100%;
 }
 
+.skill-stats.not-started .skill-progress-bar {
+    background: linear-gradient(to right, var(--highlight) 100%)
+}
+
+.skill-stats.not-started .skill-progress-bar::before {
+    content: "Not Started";
+}
+
+.skill-stats.in-progress .skill-progress-bar {
+    background: linear-gradient(to right, var(--yellow) 50%, var(--highlight) 50%)
+}
+
+.skill-stats.in-progress .skill-progress-bar::before {
+    content: "In Progress";
+}
+
+.skill-stats.completed .skill-progress-bar {
+    background: linear-gradient(to right, var(--green) 100%)
+}
+
+.skill-stats.completed .skill-progress-bar::before {
+    content: "Completed";
+}
+
+.skill-progress-bar::before {
+    font-size: 1rem;
+    font-weight: bold;
+
+    opacity: 0;
+}
+
+.skill:hover .skill-progress-bar::before {
+    opacity: 1;
+}
+
 .skill-progress-icon {
     display: flex;
     align-items: center;
@@ -631,16 +668,6 @@ section {
 
     height: 100%;
     aspect-ratio: 1/1;
-}
-
-.skill-stats.not-started .skill-progress-bar::before {
-    background-color: var(--red);
-    border-radius: 5px;
-
-    content: "";
-
-    height: 100%;
-    width: 0%;
 }
 
 .skill-stats.not-started .skill-progress-icon::before {
@@ -659,16 +686,6 @@ section {
     width: 100%;
 }
 
-.skill-stats.in-progress .skill-progress-bar::before {
-    background-color: var(--yellow);
-    border-radius: 5px;
-
-    content: "";
-
-    height: 100%;
-    width: 50%;
-}
-
 .skill-stats.in-progress .skill-progress-icon::before {
     display: flex;
     align-items: center;
@@ -680,16 +697,6 @@ section {
     content: "🗘";
     font-size: 1rem;
     font-weight: bold;
-
-    height: 100%;
-    width: 100%;
-}
-
-.skill-stats.completed .skill-progress-bar::before {
-    background-color: var(--green);
-    border-radius: 5px;
-
-    content: "";
 
     height: 100%;
     width: 100%;
