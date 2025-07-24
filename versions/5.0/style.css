@@ -159,7 +159,7 @@
 }
 
 html {
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", "Font Awesome 6 Free", sans-serif;
     font-optical-sizing: auto;
     font-size: 16px;
     font-weight: normal;
@@ -700,56 +700,39 @@ section {
     align-items: center;
     justify-content: center;
 
+    border-radius: 10px;
+
     height: 100%;
     aspect-ratio: 1/1;
 }
 
-.skill-stats.not-started .skill-progress-icon::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.skill-stats.not-started .skill-progress-icon {
     background-color: var(--red);
-    border-radius: 10px;
+}
 
-    content: "X";
-    font-size: 1rem;
-    font-weight: bold;
+.skill-stats.not-started .skill-progress-icon::before {
+    content: "\f00d";
+}
 
-    height: 100%;
-    width: 100%;
+.skill-stats.in-progress .skill-progress-icon {
+    background-color: var(--yellow);
 }
 
 .skill-stats.in-progress .skill-progress-icon::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    content: "\f110";
+}
 
-    background-color: var(--yellow);
-    border-radius: 10px;
-
-    content: "🗘";
-    font-size: 1rem;
-    font-weight: bold;
-
-    height: 100%;
-    width: 100%;
+.skill-stats.completed .skill-progress-icon {
+    background-color: var(--green);
 }
 
 .skill-stats.completed .skill-progress-icon::before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    content: "\f00c";
+}
 
-    background-color: var(--green);
-    border-radius: 10px;
-
-    content: "✓";
+.skill-progress-icon::before {
     font-size: 1rem;
     font-weight: bold;
-
-    height: 100%;
-    width: 100%;
 }
 
 .skill-link {
