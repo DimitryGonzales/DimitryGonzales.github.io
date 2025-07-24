@@ -170,24 +170,15 @@ body {
     background-color: var(--background);
 }
 
+a {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: none;
+}
+
 ::selection {
     background-color: var(--text);
     color: var(--background);
-}
-
-.box-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--highlight);
-
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-
-    height: 25px;
-    width: 100%;
 }
 
 #menu-toggle {
@@ -285,6 +276,20 @@ body {
     overflow: hidden;
 
     height: auto;
+    width: 100%;
+}
+
+.menu-box-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--highlight);
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    height: 25px;
     width: 100%;
 }
 
@@ -480,14 +485,17 @@ section {
 }
 
 .section-title {
+    display: flex;
+    align-items: center;
+
     background-color: var(--highlight);
 
     font-size: 1.75rem;
     font-weight: bold;
 
-    padding: 20px;
+    padding: 0 20px;
 
-    height: auto;
+    height: 75px;
     width: 100%;
 }
 
@@ -533,7 +541,7 @@ section {
 
 #skills-box {
     flex-wrap: nowrap;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 .skill {
@@ -565,7 +573,7 @@ section {
     font-weight: bold;
     text-align: center;
 
-    height: 50px;
+    height: 40px;
     width: 100%;
 }
 
@@ -580,15 +588,39 @@ section {
     width: 100%;
 }
 
-.skill-text {
+.skill-content-box-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--highlight);
+    
+    font-size: 1rem;
+    font-weight: bold;
+
+    height: 20px;
+    width: 100%;
+}
+
+.skill-course-box {
     background-color: var(--surface4);
     border-radius: 10px;
 
-    padding: 10px;
+    overflow: hidden;
 
+    height: auto;
+    width: 100%;
+}
+
+.skill-course {
+    font-size: 1rem;
+    font-weight: normal;
+
+    padding: 10px;
+    
     overflow-y: auto;
 
-    height: 200px;
+    height: 100px;
     width: 100%;
 }
 
@@ -653,6 +685,8 @@ section {
 .skill-progress-bar::before {
     font-size: 1rem;
     font-weight: bold;
+
+    transition: opacity 300ms ease;
 
     opacity: 0;
 }
@@ -772,6 +806,7 @@ section {
 
 .project-content {
     display: flex;
+    gap: 5px;
 
     border-radius: 10px;
 
@@ -859,9 +894,7 @@ section {
 
 @media (max-width: 700px) {
     .section-title {
-        font-size: 1.5rem;
-
-        padding: 10px;
+        padding: 0 10px;
     }
 
     .section-content {
@@ -871,7 +904,7 @@ section {
 
     #projects-box {
         max-height: 450px;
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .project {
@@ -889,11 +922,11 @@ section {
         height: 100%;
     }
 
-    .project-content {
-        gap: 5px;
-        
-        padding: 5px;
+    .skill-progress-bar::before {
+        opacity: 1;
+    }
 
+    .project-content {
         transform: scale(1);
     }
 
