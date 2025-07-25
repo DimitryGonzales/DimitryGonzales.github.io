@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found</title>
+
+    <!--Page Icon-->
+    <link rel="icon" href="versions/5.0/assets/404/page-icon.png" type="image/png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="404.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <input id="menu-toggle" type="checkbox">
+    <label class="label-menu-toggle" for="menu-toggle">
+        <i class="fa-solid fa-bars menu-closed-icon"></i>
+        <i class="fa-solid fa-arrow-left menu-opened-icon"></i>
+    </label>
+
+    <nav class="menu">
+        <div class="menu-content">
+            <div class="menu-box">
+                <h1 class="menu-box-title">
+                    Theme Selector
+                </h1>
+
+                <div id="theme-selector" class="menu-box-content">
+                    <input id="brightness-toggle" type="checkbox">
+                    <label class="label-brightness-toggle" for="brightness-toggle">
+                        <i class="fa-solid fa-sun brightness-bright-icon"></i>
+                        <i class="fa-solid fa-moon brightness-dark-icon"></i>
+                    </label>
+
+                    <select id="palette-selector">
+                        <option value="default">Default</option>
+                        <option value="catppuccin">Catppuccin</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="menu-box">
+                <h1 class="menu-box-title">
+                    Socials
+                </h1>
+
+                <div id="socials" class="menu-box-content">
+                    <a id="social-email" class="social" href="mailto:dimitrygonzales@gmail.com">
+                        <div class="social-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+
+                        <h2>Email</h2>
+                    </a>
+
+                    <a id="social-github" class="social" href="https://github.com/DimitryGonzales">
+                        <div class="social-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+
+                        <h2>Github</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h1 class="error-title">
+                404
+            </h1>
+
+            <div class="error-image-box">
+                <img class="error-image" src="versions/5.0/assets/404/error-image.png" alt="">
+            </div>
+
+            <p class="error-message">
+                Uhh... Looks like this page doesn't exists. Check if the link is correct!
+            </p>
+
+            <a class="error-button" href="versions/5.0/">
+                Go to main page
+            </a>
+            
+        </section>
+    </main>
+
+    <script src="versions/5.0/scripts/theme.js"></script>
+</body>
+</html>
