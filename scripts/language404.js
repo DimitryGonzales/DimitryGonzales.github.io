@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const select = document.getElementById("language-selector");
     const elements = document.querySelectorAll("[data-i18n]");
 
-    const supportedLanguages = ["en", "pt-BR", "jp"];
+    const supportedLanguages = ["en", "pt", "ja"];
 
     // Cache original English texts keyed by data-i18n value
     const originalTexts = {};
