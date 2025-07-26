@@ -430,6 +430,7 @@ a {
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 3;
 
     overflow: hidden;
 
@@ -580,5 +581,17 @@ section {
 @media (max-width: 450px) {
     .menu {
         width: 100%;
+    }
+
+    #menu-toggle:checked ~ .language-selector-box #language-selector {
+        background-color: var(--surface2);
+    }
+
+    #menu-toggle:checked ~ .language-selector-box #language-selector:hover {
+        background-color: var(--hover);
+    }
+
+    .error-image-box {
+        padding: 10%;
     }
 }
