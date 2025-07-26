@@ -474,6 +474,7 @@ a {
     position: fixed;
     top: 20px;
     right: 20px;
+    z-index: 3;
 
     overflow: hidden;
 
@@ -962,8 +963,20 @@ section {
 }
 
 @media (max-width: 450px) {
+    #menu-toggle:checked ~ .language-selector-box #language-selector {
+        background-color: var(--surface2);
+    }
+
+    #menu-toggle:checked ~ .language-selector-box #language-selector:hover {
+        background-color: var(--hover);
+    }
+
     .menu {
         width: 100%;
+    }
+
+    .skill:hover {
+        transform: translateY(0);
     }
 
     .skill-progress-bar {
@@ -973,6 +986,10 @@ section {
 
     .skill-progress-bar::before {
         opacity: 1;
+    }
+
+    .project:hover {
+        transform: translateY(0);
     }
 
     .project-content {
@@ -989,7 +1006,10 @@ section {
 
     .project-name,
     .project-tools,
-    .project-about {
+    .project-about,
+    .project:hover .project-name,
+    .project:hover .project-tools,
+    .project:hover .project-about {
         opacity: 0.75;
     }
 }
