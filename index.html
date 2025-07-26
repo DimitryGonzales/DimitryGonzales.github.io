@@ -1,418 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My personal website where I showcase my skills, share the projects I’ve worked on, and track my growth as a programmer. As I learn and improve, I update it with new and refined projects.">
     <title>Dimitry's Website</title>
-    
+
+    <!--Page Icon-->
+    <link rel="icon" href="assets/favicon/rose.png" type="image/png">
+
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
 
-    <!--AOS-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!--Font-->
+    <!--Inter Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <!--Icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!--Noto Sans Japanese Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <input type="checkbox" id="theme-toggle" aria-label="Toggle theme">
-    <label for="theme-toggle" id="label-theme-toggle">
-        <i class="fa-solid fa-sun light-theme-icon"></i>
-        <i class="fa-solid fa-moon dark-theme-icon"></i>
+    <input id="menu-toggle" type="checkbox">
+    <label class="label-menu-toggle" for="menu-toggle">
+        <i class="fa-solid fa-bars menu-closed-icon"></i>
+        <i class="fa-solid fa-arrow-left menu-opened-icon"></i>
     </label>
 
-    <script src="scripts/theme-toggle.js"></script>
+    <nav class="menu">
+        <div class="menu-content">
+            <div class="menu-box">
+                <h1 class="menu-box-title" data-i18n="menu-box-title-shortcuts">
+                    Shortcuts
+                </h1>
 
-    <input type="checkbox" id="navbar-toggle" aria-label="Toggle navigation bar">
-    <label for="navbar-toggle" id="label-navbar-toggle">
-        <i class="fa-solid fa-bars closed-navbar-icon"></i>
-        <i class="fa-solid fa-xmark opened-navbar-icon"></i>
-    </label>
+                <div id="shortcuts" class="menu-box-content">
+                    <a class="shortcut" href="#">
+                        <div class="shortcut-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
 
-    <nav id="navbar">
-        <a class="navbar-button" href="#">
-            Me
-        </a>
-        
-        <a class="navbar-button" href="#skills">
-            Skills
-        </a>
+                        <h2 data-i18n="shortcut-me">Me</h2>
+                    </a>
 
-        <a class="navbar-button" href="#projects">
-            Projects
-        </a>
+                    <a class="shortcut" href="#skills">
+                        <div class="shortcut-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
 
-        <a class="navbar-button" href="#contacts">
-            Contacts
-        </a>
-    </nav>
+                        <h2 data-i18n="shortcut-skills">Skills</h2>
+                    </a>
 
-    <script src="scripts/uncheck-when-clicked.js"></script>
+                    <a class="shortcut" href="#projects">
+                        <div class="shortcut-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
 
-    <input type="checkbox" id="social-toggle">
-    <label for="social-toggle" id="label-social-toggle" aria-label="Toggle social links">
-        <i class="fa-solid fa-share-nodes closed-social-icon"></i>
-        <i class="fa-solid fa-xmark opened-social-icon"></i>
-    </label>
-
-    <a class="social-button" id="email" href="mailto:dimitrygonzales@gmail.com" aria-label="Send email to dimitrygonzales@gmail.com">
-        <i class="fa-solid fa-envelope"></i>
-        <span class="tooltip-social-button">Email</span>
-    </a>
-
-    <a class="social-button" id="github" href="https://github.com/DimitryGonzales" aria-label="Open the github page of Dimitry">
-        <i class="fa-brands fa-github"></i>
-        <span class="tooltip-social-button">GitHub</span>
-    </a>
-
-    <script src="scripts/check-scroll.js"></script>
-
-    <div class="main">
-        <div class="me" data-aos="fade-up">
-            <div class="me-box">
-                <div class="me-image-box">
-                    <img src="assets/user.png" alt="Dimitry's Photo">
+                        <h2 data-i18n="shortcut-projects">Projects</h2>
+                    </a>
                 </div>
+            </div>
 
-                <div class="me-info">
-                    <div class="me-info-data-box">
-                        <div class="me-info-data">
-                            <i class="fa-solid fa-signature"></i>
+            <div class="menu-box">
+                <h1 class="menu-box-title" data-i18n="menu-box-title-theme">
+                    Theme
+                </h1>
 
-                            <span class="me-info-data-content">Dimitry</span>
+                <div id="theme-selector" class="menu-box-content">
+                    <input id="brightness-toggle" type="checkbox">
+                    <label class="label-brightness-toggle" for="brightness-toggle">
+                        <i class="fa-solid fa-sun brightness-bright-icon"></i>
+                        <i class="fa-solid fa-moon brightness-dark-icon"></i>
+                    </label>
+
+                    <select id="palette-selector">
+                        <option value="default" data-i18n="pallete-default">Default</option>
+                        <option value="catppuccin">Catppuccin</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="menu-box">
+                <h1 class="menu-box-title" data-i18n="menu-box-title-socials">
+                    Socials
+                </h1>
+
+                <div id="socials" class="menu-box-content">
+                    <a id="social-email" class="social" href="mailto:dimitrygonzales@gmail.com">
+                        <div class="social-icon">
+                            <i class="fa-solid fa-envelope"></i>
                         </div>
 
-                        <div class="me-info-data">
-                            <i class="fa-solid fa-calendar-days"></i>
+                        <h2 data-i18n="social-email">Email</h2>
+                    </a>
 
-                            <span class="me-info-data-content">xx</span>
+                    <a id="social-github" class="social" href="https://github.com/DimitryGonzales">
+                        <div class="social-icon">
+                            <i class="fa-brands fa-github"></i>
                         </div>
 
-                        <div class="me-info-data">
-                            <i class="fa-solid fa-location-dot"></i>
-
-                            <span class="me-info-data-content">America</span>
-                        </div>
-
-                        <div class="me-info-data">
-                            <i class="fa-solid fa-briefcase"></i>
-
-                            <span class="me-info-data-content">Student</span>
-                        </div>
-                    </div>
-
-                    <p class="me-info-about">
-                        Hi, I’m a beginner programmer aspiring to be a software engineer. I'm currently exploring web development (HTML, CSS, and JavaScript) and expanding into some programming languages (C and Python).
-                    </p>
+                        <h2 data-i18n="social-github">Github</h2>
+                    </a>
                 </div>
             </div>
         </div>
+    </nav>
 
-        <hr class="section-division" id="skills">
+    <div class="language-selector-box">
+        <div class="language-selector-icon">
+            <i class="fa-solid fa-language"></i>
+        </div>
 
-        <section class="skills">
-            <h1 class="section-title" data-aos="fade-up">Skills</h1>
-
-            <div class="skills-box">
-                <div class="skills-column" id="skills-column-1" data-aos="fade-right">
-                    <input type="checkbox" id="skill-toggle-html">
-                    <div class="skill">
-                        <div class="skill-titlebar">
-                            <label class="label-skill-toggle">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </label>
-                            
-                            <img src="assets/html.svg" alt="html-icon" class="skill-icon">
-
-                            <h2 class="skill-name">HTML</h2>
-                        </div>
-
-                        <div class="skill-content">
-                            <div class="skill-visual">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=TX338cGkbnXJTPC1&amp;list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="skill-info">
-                                <div class="skill-about">
-                                    Learning with <strong>Otavio Miranda</strong>'s course in Youtube.
-                                </div>
-
-                                <a class="skill-button" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa" aria-label="Open Otavio Miranda's course in Youtube">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input type="checkbox" id="skill-toggle-css">
-                    <div class="skill">
-                        <div class="skill-titlebar">
-                            <label class="label-skill-toggle">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </label>
-                            
-                            <img src="assets/css.svg" alt="css-icon" class="skill-icon">
-
-                            <h2 class="skill-name">CSS</h2>
-                        </div>
-
-                        <div class="skill-content">
-                            <div class="skill-visual">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=TX338cGkbnXJTPC1&amp;list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-
-                            <div class="skill-info">
-                                <div class="skill-about">
-                                    Learning with <strong>Otavio Miranda</strong>'s course in Youtube.
-                                </div>
-
-                                <a class="skill-button" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa" aria-label="Open Otavio Miranda's course in Youtube">
-                                    <i class="fa-brands fa-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input type="checkbox" id="skill-toggle-javascript">
-                    <div class="skill">
-                        <div class="skill-titlebar">
-                            <label class="label-skill-toggle">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </label>
-                            
-                            <img src="assets/javascript.svg" alt="javascript-icon" class="skill-icon">
-
-                            <h2 class="skill-name">JavaScript</h2>
-                        </div>
-
-                        <div class="skill-content">
-                            <div class="skill-visual">
-                                <img src="https://img-c.udemycdn.com/course/240x135/2575266_c184_4.jpg" alt="Otavio Miranda's Udemy Course Thumbnail">
-                            </div>
-
-                            <div class="skill-info">
-                                <div class="skill-about">
-                                    Learning with <strong>Otavio Miranda</strong>'s course in Udemy.
-                                </div>
-
-                                <a class="skill-button" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB" aria-label="Open Otavio Miranda's course in Udemy">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-column" id="skills-column-2" data-aos="fade-left">
-                    <input type="checkbox" id="skill-toggle-typescript">
-                    <div class="skill">
-                        <div class="skill-titlebar">
-                            <label class="label-skill-toggle">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </label>
-                            
-                            <img src="assets/typescript.svg" alt="typescript-icon" class="skill-icon">
-
-                            <h2 class="skill-name">TypeScript</h2>
-                        </div>
-
-                        <div class="skill-content">
-                            <div class="skill-visual">
-                                <img src="https://img-c.udemycdn.com/course/240x135/2575266_c184_4.jpg" alt="Otavio Miranda's Udemy Course Thumbnail">
-                            </div>
-
-                            <div class="skill-info">
-                                <div class="skill-about">
-                                    Learning with <strong>Otavio Miranda</strong>'s course in Udemy.
-                                </div>
-
-                                <a class="skill-button" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB" aria-label="Open Otavio Miranda's course in Udemy">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input type="checkbox" id="skill-toggle-c">
-                    <div class="skill">
-                        <div class="skill-titlebar">
-                            <label class="label-skill-toggle">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </label>
-                            
-                            <img src="assets/c.svg" alt="c-icon" class="skill-icon">
-
-                            <h2 class="skill-name">C</h2>
-                        </div>
-
-                        <div class="skill-content">
-                            <div class="skill-visual">
-                                <img src="https://www.archanaacademy.com/wp-content/uploads/2024/07/c-programming-language.png" alt="C Programming">
-                            </div>
-
-                            <div class="skill-info">
-                                <div class="skill-about">
-                                    Learning by researching it myself.
-                                </div>
-
-                                <a class="skill-button" href="https://en.wikipedia.org/wiki/C_(programming_language)" aria-label="Open the wikipedia page of C programming language">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input type="checkbox" id="skill-toggle-python">
-                    <div class="skill">
-                        <div class="skill-titlebar">
-                            <label class="label-skill-toggle">
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </label>
-                            
-                            <img src="assets/python.svg" alt="python-icon" class="skill-icon">
-
-                            <h2 class="skill-name">Python</h2>
-                        </div>
-
-                        <div class="skill-content">
-                            <div class="skill-visual">
-                                <img src="https://webandcrafts.com/_next/image?url=https%3A%2F%2Fadmin.wac.co%2Fuploads%2FFeatures_Of_Python_1_f4ccd6d9f7.jpg&w=4500&q=90" alt="Python">
-                            </div>
-
-                            <div class="skill-info">
-                                <div class="skill-about">
-                                    Learning by researching it myself.
-                                </div>
-
-                                <a class="skill-button" href="https://www.python.org/" aria-label="Open the website of Python">
-                                    <i class="fa-solid fa-globe"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <script src="scripts/check-and-uncheck-skill.js"></script>
-        </section>
-
-        <hr class="section-division" id="projects">
-
-        <section class="projects">
-            <h1 class="section-title" data-aos="fade-up">Projects</h1>
-
-            <div class="projects-box" data-aos="fade-up">
-                <div class="project">
-                    <img class="project-image" src="assets/projects-images/personal-website-screenshot.png" alt="Screenshot of Personal Website">
-
-                    <div class="project-info">
-                        <h2 class="project-name">Personal Website</h2>
-
-                        <div class="project-icons">
-                            <i class="fa-brands fa-html5"></i>
-                            <i class="fa-brands fa-css"></i>
-                            <i class="fa-brands fa-js"></i>
-                        </div>
-                    </div>
-
-                    <div class="project-about">
-                        <p>A website where I showcase my skills, share the projects I’ve worked on, and track my growth as a programmer. As I learn and improve, I update it with new and refined projects.</p>
-                    </div>
-
-                    <div class="project-button-box">
-                        <a class="project-button" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" aria-label="Open the github page of personal website">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-
-                        <a class="project-button" href="https://dimitrygonzales.github.io/" aria-label="Open the personal website">
-                            <i class="fa-solid fa-globe"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <img class="project-image" src="assets/projects-images/linux-customization-screenshot.png" alt="Screenshot of Linux Customization">
-
-                    <div class="project-info">
-                        <h2 class="project-name">Dotfiles</h2>
-
-                        <div class="project-icons">
-                            <i class="fa-brands fa-linux"></i>
-                        </div>
-                    </div>
-
-                    <div class="project-about">
-                        <p>My personal Linux configuration/customization.</p>
-                    </div>
-
-                    <div class="project-button-box">
-                        <a class="project-button" href="https://github.com/DimitryGonzales/dotfiles" aria-label="Open the github page of dotfiles ">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <script src="scripts/scroll-projects.js"></script>
-
-        <hr class="section-division" id="contacts">
-
-        <section class="contacts">
-            <h1 class="section-title" data-aos="fade-up">Contacts</h1>
-
-            <div class="contacts-box" data-aos="fade-up">
-                <a class="contact" href="mailto:dimitrygonzales@gmail.com" aria-label="Send email to dimitrygonzales@gmail.com">
-                    <i class="fa-solid fa-envelope"></i>
-
-                    <div class="contact-info">
-                        <h2 class="contact-info-name">
-                            Email
-                        </h2>
-
-                        <h3 class="contact-info-content">
-                            dimitrygonzales@gmail.com
-                        </h3>
-                    </div>
-                </a>
-
-                <a class="contact" href="https://github.com/DimitryGonzales" aria-label="Open the github page of Dimitry">
-                    <i class="fa-brands fa-github"></i>
-
-                    <div class="contact-info">
-                        <h2 class="contact-info-name">
-                            Github
-                        </h2>
-
-                        <h3 class="contact-info-content">
-                            DimitryGonzales
-                        </h3>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <hr class="section-division">
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt-BR">Português</option>
+            <option value="jp">日本語</option>
+        </select>
     </div>
 
-    <footer>
-        <span>Made by <a href="https://github.com/DimitryGonzales">Dimitry</a></span>
-    </footer>
+    <main>
+        <section id="skills">
+            <h1 class="section-title" data-i18n="section-title-skills">
+                Skills
+            </h1>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        AOS.init();
-    </script>
+            <div class="section-content">
+                <p class="section-text" data-i18n="section-text-skills">
+                    My programming skills, highlighting both my current areas of study and my established proficiencies.
+                </p>
 
-    <script src="scripts/change-aos.js"></script>
+                <div id="skills-box" class="section-items hide-scroll scroll-by-grab scroll-horizontally">
+                    <div class="skill">
+                        <h2 class="skill-title">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML</span>
+                        </h2>
+
+                        <div class="skill-content">
+                            <div class="skill-course-box">
+                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+
+                                <p class="skill-course" data-i18n="skill-HTML-course" data-i18n-html>
+                                    <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s HTML and CSS course in Youtube.
+                                </p>
+                            </div>
+                            
+                            <div class="skill-stats in-progress">
+                                <div class="skill-progress-bar">
+
+                                </div>
+
+                                <div class="skill-progress-icon">
+                                    
+                                </div>
+                            </div>
+
+                            <a class="skill-link" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h2 class="skill-title">
+                            <i class="fa-brands fa-css"></i>
+                            <span>CSS</span>
+                        </h2>
+
+                        <div class="skill-content">
+                            <div class="skill-course-box">
+                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+
+                                <p class="skill-course" data-i18n="skill-CSS-course" data-i18n-html>
+                                    <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s HTML and CSS course in Youtube.
+                                </p>
+                            </div>
+
+                            <div class="skill-stats in-progress">
+                                <div class="skill-progress-bar">
+
+                                </div>
+
+                                <div class="skill-progress-icon">
+                                    
+                                </div>
+                            </div>
+
+                            <a class="skill-link" href="https://youtube.com/playlist?list=PLbIBj8vQhvm00J3f3rD33tRuNLem8EgEA&si=UVnAXtDX75odEcKa" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h2 class="skill-title">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </h2>
+
+                        <div class="skill-content">
+                            <div class="skill-course-box">
+                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+
+                                <p class="skill-course" data-i18n="skill-JavaScript-course" data-i18n-html>
+                                    <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s JavaScript and TypeScript course in Udemy.
+                                </p>
+                            </div>
+
+                            <div class="skill-stats in-progress">
+                                <div class="skill-progress-bar">
+
+                                </div>
+
+                                <div class="skill-progress-icon">
+                                    
+                                </div>
+                            </div>
+
+                            <a class="skill-link" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB" target="_blank">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h2 class="skill-title">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>TypeScript</span>
+                        </h2>
+
+                        <div class="skill-content">
+                            <div class="skill-course-box">
+                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+
+                                <p class="skill-course" data-i18n="skill-TypeScript-course" data-i18n-html>
+                                    <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s JavaScript and TypeScript course in Udemy.
+                                </p>
+                            </div>
+
+                            <div class="skill-stats not-started">
+                                <div class="skill-progress-bar">
+
+                                </div>
+
+                                <div class="skill-progress-icon">
+                                    
+                                </div>
+                            </div>
+
+                            <a class="skill-link" href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/?couponCode=CP130525BRGB" target="_blank">
+                                <i class="fa-solid fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <h2 class="skill-title">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>Git</span>
+                        </h2>
+
+                        <div class="skill-content">
+                            <div class="skill-course-box">
+                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+
+                                <p class="skill-course" data-i18n="skill-Git-course" data-i18n-html>
+                                    Learning by using it to version control my projects.
+                                </p>
+                            </div>
+
+                            <div class="skill-stats completed">
+                                <div class="skill-progress-bar">
+
+                                </div>
+
+                                <div class="skill-progress-icon">
+                                    
+                                </div>
+                            </div>
+
+                            <a class="skill-link" href="https://git-scm.com/" target="_blank">
+                                <i class="fa-brands fa-git-alt"></i>
+                                <i class="fa-brands fa-git"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1 class="section-title" data-i18n="section-title-projects">
+                Projects
+            </h1>
+
+            <div class="section-content">
+                <p class="section-text" data-i18n="section-text-projects">
+                    Projects I have developed, reflecting my experience with diverse tools, frameworks, and problem-solving approaches.
+                </p>
+
+                <div id="projects-box" class="section-items">
+                    <a id="project-dotfiles" class="project" href="https://github.com/DimitryGonzales/dotfiles" target="_blank">
+                        <div class="project-content">
+                            <div class="project-left">
+                                <h2 class="project-name" data-i18n="project-name-dotfiles">
+                                Dotfiles
+                                </h2>
+
+                                <div class="project-tools">
+                                    <i class="fa-brands fa-linux"></i>
+                                </div>
+                            </div>
+
+                            <div class="project-right">
+                                <p class="project-about" data-i18n="project-about-dotfiles" data-i18n-html>
+                                    My personal Linux configuration/customization.
+
+                                    <br>
+                                    <br>
+
+                                    Features the following themes: Catppuccin Mocha Lavender, Gruvbox Dark & Minimalist.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a id="project-personal-website" class="project" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank">
+                        <div class="project-content">
+                            <div class="project-left">
+                                <h2 class="project-name" data-i18n="project-name-personal-website">
+                                Personal Website
+                                </h2>
+
+                                <div class="project-tools">
+                                    <i class="fa-brands fa-html5"></i>
+                                    <i class="fa-brands fa-css"></i>
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                            </div>
+
+                            <div class="project-right">
+                                <p class="project-about" data-i18n="project-about-personal-website" data-i18n-html>
+                                    A website where I showcase my skills, share the projects I’ve worked on, and track my growth as a programmer. As I learn and improve, I update it with new and refined projects.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/language.js"></script>
+
+    <script src="scripts/theme.js"></script>
+
+    <script src="scripts/scrollByGrab.js"></script>
+
+    <script src="scripts/scrollHorizontally.js"></script>
 </body>
 </html>

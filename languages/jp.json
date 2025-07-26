@@ -1,0 +1,32 @@
+{
+  "error-message": "うーん... このページは存在しないようです。リンクが正しいか確認してください！",
+  "error-button": "ホームページへ戻る",
+
+  "menu-box-title-shortcuts": "ショートカット",
+  "shortcut-me": "私について",
+  "shortcut-skills": "スキル",
+  "shortcut-projects": "プロジェクト",
+
+  "menu-box-title-theme": "テーマ",
+  "pallete-default": "デフォルト",
+
+  "menu-box-title-socials": "ソーシャル",
+  "social-email": "メール",
+  "social-github": "GitHub",
+
+  "section-title-skills": "スキル",
+  "section-text-skills": "現在学習中の分野と、すでに確立されたプログラミングスキルを紹介します。",
+  "skill-content-box-title-course": "コース",
+  "skill-HTML-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるYouTubeのHTMLとCSSコース。",
+  "skill-CSS-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるYouTubeのHTMLとCSSコース。",
+  "skill-JavaScript-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるUdemyのJavaScriptとTypeScriptコース。",
+  "skill-TypeScript-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるUdemyのJavaScriptとTypeScriptコース。",
+  "skill-Git-course": "プロジェクトのバージョン管理のために使用しながら学習中です。",
+
+  "section-title-projects": "プロジェクト",
+  "section-text-projects": "さまざまなツール、フレームワーク、問題解決アプローチを活用した、これまでに開発したプロジェクトを紹介します。",
+  "project-name-dotfiles": "Dotfiles",
+  "project-about-dotfiles": "私の個人的なLinux設定とカスタマイズ。<br><br>以下のテーマを使用しています：Catppuccin Mocha Lavender、Gruvbox Dark、Minimalist。",
+  "project-name-personal-website": "ポートフォリオサイト",
+  "project-about-personal-website": "自分のスキルやプロジェクトを紹介し、プログラマーとしての成長を記録するウェブサイトです。学びと成長に応じて、新しいプロジェクトや改善点を随時追加しています。"
+}
