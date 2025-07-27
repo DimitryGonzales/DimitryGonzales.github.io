@@ -539,19 +539,27 @@ section {
     max-width: 800px;
 }
 
-.section-title {
+.section-title-box {
     display: flex;
     align-items: center;
+    gap: 5px;
 
     background-color: var(--highlight);
-
-    font-size: 1.75rem;
-    font-weight: bold;
 
     padding: 0 20px;
 
     height: 75px;
     width: 100%;
+}
+
+.section-title-box i {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    font-weight: bold;
 }
 
 .section-content {
@@ -728,24 +736,48 @@ section {
     background: linear-gradient(to right, var(--highlight) 100%)
 }
 
-.skill-stats.not-started .skill-progress-bar::before {
+html[lang="en"] .skill-stats.not-started .skill-progress-bar::before {
     content: "Not Started";
+}
+
+html[lang="pt"] .skill-stats.not-started .skill-progress-bar::before {
+    content: "Não Iniciado";
+}
+
+html[lang="ja"] .skill-stats.not-started .skill-progress-bar::before {
+    content: "未開始";
 }
 
 .skill-stats.in-progress .skill-progress-bar {
     background: linear-gradient(to right, var(--yellow) 50%, var(--highlight) 50%)
 }
 
-.skill-stats.in-progress .skill-progress-bar::before {
+html[lang="en"] .skill-stats.in-progress .skill-progress-bar::before {
     content: "In Progress";
+}
+
+html[lang="pt"] .skill-stats.in-progress .skill-progress-bar::before {
+    content: "Em progresso";
+}
+
+html[lang="ja"] .skill-stats.in-progress .skill-progress-bar::before {
+    content: "進行中";
 }
 
 .skill-stats.completed .skill-progress-bar {
     background: linear-gradient(to right, var(--green) 100%)
 }
 
-.skill-stats.completed .skill-progress-bar::before {
+html[lang="en"] .skill-stats.completed .skill-progress-bar::before {
     content: "Completed";
+}
+
+html[lang="pt"] .skill-stats.completed .skill-progress-bar::before {
+    content: "Completado";
+}
+
+html[lang="ja"] .skill-stats.completed .skill-progress-bar::before {
+    content: "完了";
 }
 
 .skill-progress-bar::before {
@@ -943,7 +975,7 @@ section {
 }
 
 @media (max-width: 700px) {
-    .section-title {
+    .section-title-box {
         padding: 0 10px;
     }
 

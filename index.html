@@ -83,6 +83,8 @@
                         <option value="catppuccin">Catppuccin</option>
                     </select>
                 </div>
+
+                <script src="scripts/theme.js"></script>
             </div>
 
             <div class="menu-box">
@@ -111,6 +113,8 @@
         </div>
     </nav>
 
+    <script src="scripts/closeMenu.js"></script>
+
     <div class="language-selector-box">
         <div class="language-selector-icon">
             <i class="fa-solid fa-language"></i>
@@ -123,11 +127,16 @@
         </select>
     </div>
 
+    <script src="scripts/language.js"></script>
+
     <main>
         <section id="skills">
-            <h1 class="section-title" data-i18n="section-title-skills">
-                Skills
-            </h1>
+            <div class="section-title-box">
+                <i class="fa-solid fa-book"></i>
+                <h1 class="section-title" data-i18n="section-title-skills">
+                    Skills
+                </h1>
+            </div>
 
             <div class="section-content">
                 <p class="section-text" data-i18n="section-text-skills">
@@ -295,9 +304,12 @@
         </section>
 
         <section id="projects">
-            <h1 class="section-title" data-i18n="section-title-projects">
-                Projects
-            </h1>
+            <div class="section-title-box">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h1 class="section-title" data-i18n="section-title-projects">
+                    Projects
+                </h1>
+            </div>
 
             <div class="section-content">
                 <p class="section-text" data-i18n="section-text-projects">
@@ -356,12 +368,8 @@
         </section>
     </main>
 
-    <script src="scripts/language.js"></script>
-
-    <script src="scripts/theme.js"></script>
-
     <script src="scripts/scrollByGrab.js"></script>
-
+    
     <script src="scripts/scrollHorizontally.js"></script>
 </body>
 </html>

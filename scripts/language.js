@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function loadLanguage(lang) {
+        // Update the html lang attribute
+        document.documentElement.lang = lang;
+
         // Reset to original English texts
         if (lang === "en") {
             elements.forEach(el => {
