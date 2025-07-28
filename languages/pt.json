@@ -4,32 +4,35 @@
     "error-button": "Ir para a página principal",
     
     "menu-box-title-shortcuts": "Atalhos",
-    "shortcut-me": "Eu",
+    "shortcut-me": "Sobre mim",
     "shortcut-skills": "Habilidades",
     "shortcut-projects": "Projetos",
 
     "menu-box-title-theme": "Tema",
     "pallete-default": "Padrão",
 
-    "menu-box-title-socials": "Social",
+    "menu-box-title-socials": "Redes",
     "social-email": "Email",
     "social-github": "Github",
 
+    "hero-introduction": "Olá, eu sou o Dimitry.",
+    "hero-about": "Sou um aspirante a engenheiro de software, explorando o desenvolvimento web e expandindo meu conhecimento em linguagens de programação.",
+    
     "section-title-skills": "Habilidades",
-    "section-text-skills": "Minhas habilidades de programação, destacando tanto as áreas que estou estudando quanto as já bem estabelecidas.",
+    "section-text-skills": "Minhas habilidades em programação, incluindo o que estou estudando e o que já domino bem.",
     "skill-content-box-title-course": "Curso",
-    "skill-HTML-course": "Curso de HTML e CSS do <a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a> no Youtube.",
-    "skill-CSS-course": "Curso de HTML e CSS do <a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a> no Youtube.",
-    "skill-JavaScript-course": "Curso de JavaScript e TypeScript do <a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a> na Udemy.",
-    "skill-TypeScript-course": "Curso de JavaScript e TypeScript do <a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a> na Udemy.",
-    "skill-Git-course": "Aprendendo ao usá-lo para controlar as versões dos meus projetos.",
+    "skill-HTML-course": "Curso de HTML e CSS do <a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> no YouTube.",
+    "skill-CSS-course": "Curso de HTML e CSS do <a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> no YouTube.",
+    "skill-JavaScript-course": "Curso de JavaScript e TypeScript do <a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> na Udemy.",
+    "skill-TypeScript-course": "Curso de JavaScript e TypeScript do <a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> na Udemy.",
+    "skill-Git-course": "Aprendendo ao utilizar-lo para versionar meus projetos.",
 
     "section-title-projects": "Projetos",
-    "section-text-projects": "Projetos que desenvolvi, os quais demonstram minha experiência com diversas ferramentas, estruturas e abordagens de resolução de problemas.",
+    "section-text-projects": "Projetos que desenvolvi e que refletem minha experiência com diferentes ferramentas, frameworks e técnicas de resolução de problemas.",
     "project-name-dotfiles": "Dotfiles",
-    "project-about-dotfiles": "Minha configuração/personalização pessoal do Linux.",
-    "project-name-personal-website": "Site Pessoal",
-    "project-about-personal-website": "Um site onde mostro minhas habilidades, compartilho os projetos em que trabalhei e acompanho meu crescimento como programador. À medida que eu for aprendendo e melhorando, irei atualiza-lo com projetos novos e aprimorados.",
+    "project-about-dotfiles": "Minha configuração/customização pessoal do Linux.",
+    "project-name-personal-website": "Website Pessoal",
+    "project-about-personal-website": "Um site onde mostro minhas habilidades, compartilho meus projetos e acompanho minha evolução como programador. Conforme aprendo e melhoro, atualizo com projetos novos e refinados.",
 
     "footer-box-title-fonts": "Fontes",
     "footer-box-title-libraries": "Bibliotecas"

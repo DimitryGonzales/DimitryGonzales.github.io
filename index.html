@@ -11,6 +11,9 @@
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
 
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
@@ -139,6 +142,32 @@
     <script src="scripts/language.js"></script>
 
     <main>
+        <section id="hero">
+            <div class="hero-text">
+                <h1 data-i18n="hero-introduction">
+                    Hi, I'm Dimitry.
+                </h1>
+
+                <p data-i18n="hero-about">
+                    I'm an aspiring software engineer exploring web development and expanding my knowledge of programming languages. 
+                </p>
+
+                <div class="hero-links">
+                    <a href="mailto:dimitrygonzales@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                    <a href="https://github.com/DimitryGonzales">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="">
+            </div>
+        </section>
+
         <section id="skills">
             <div class="section-title">
                 <i class="fa-solid fa-book"></i>
@@ -149,7 +178,7 @@
 
             <div class="section-content">
                 <p class="section-text" data-i18n="section-text-skills">
-                    My programming skills, highlighting both my current areas of study and my established proficiencies.
+                    A showcase of my programming skills, both what I’m currently studying and what I already know well.
                 </p>
 
                 <div id="skills-box" class="section-items hide-scroll scroll-by-grab scroll-horizontally">
@@ -332,7 +361,7 @@
 
             <div class="section-content">
                 <p class="section-text" data-i18n="section-text-projects">
-                    Projects I have developed, reflecting my experience with diverse tools, frameworks, and problem-solving approaches.
+                    Projects I've built that reflect my experience with different tools, frameworks, and problem-solving techniques.
                 </p>
 
                 <div id="projects-box" class="section-items">
@@ -433,6 +462,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <script src="scripts/scrollByGrab.js"></script>
     

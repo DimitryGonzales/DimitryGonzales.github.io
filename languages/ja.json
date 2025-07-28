@@ -13,24 +13,27 @@
 
   "menu-box-title-socials": "ソーシャル",
   "social-email": "メール",
-  "social-github": "GitHub",
+  "social-github": "Github",
+
+  "hero-introduction": "こんにちは、Dimitry です。",
+  "hero-about": "私はソフトウェアエンジニアを目指しており、ウェブ開発を探求しながらプログラミング言語の知識を広げています。",
 
   "section-title-skills": "スキル",
-  "section-text-skills": "現在学習中の分野と、すでに確立されたプログラミングスキルを紹介します。",
+  "section-text-skills": "現在学んでいる内容と既に習得しているスキルを紹介するセクションです。",
   "skill-content-box-title-course": "コース",
-  "skill-HTML-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるYouTubeのHTMLとCSSコース。",
-  "skill-CSS-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるYouTubeのHTMLとCSSコース。",
-  "skill-JavaScript-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるUdemyのJavaScriptとTypeScriptコース。",
-  "skill-TypeScript-course": "<a href='https://www.otaviomiranda.com.br/'>Otavio Miranda</a>によるUdemyのJavaScriptとTypeScriptコース。",
-  "skill-Git-course": "プロジェクトのバージョン管理のために使用しながら学習中です。",
+  "skill-HTML-course": "<a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> 氏による YouTube の HTML と CSS コース。",
+  "skill-CSS-course": "<a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> 氏による YouTube の HTML と CSS コース。",
+  "skill-JavaScript-course": "<a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> 氏による Udemy の JavaScript と TypeScript コース。",
+  "skill-TypeScript-course": "<a href='https://www.otaviomiranda.com.br'>Otavio Miranda</a> 氏による Udemy の JavaScript と TypeScript コース。",
+  "skill-Git-course": "自分のプロジェクトのバージョン管理を通じて Git を実践的に学んでいます。",
 
   "section-title-projects": "プロジェクト",
-  "section-text-projects": "さまざまなツール、フレームワーク、問題解決アプローチを活用した、これまでに開発したプロジェクトを紹介します。",
+  "section-text-projects": "さまざまなツールやフレームワーク、問題解決スキルを反映したプロジェクトの一覧です。",
   "project-name-dotfiles": "Dotfiles",
-  "project-about-dotfiles": "私の個人的なLinux設定とカスタマイズ。",
+  "project-about-dotfiles": "私の個人的な Linux 設定・カスタマイズ。",
   "project-name-personal-website": "ポートフォリオサイト",
-  "project-about-personal-website": "自分のスキルやプロジェクトを紹介し、プログラマーとしての成長を記録するウェブサイトです。学びと成長に応じて、新しいプロジェクトや改善点を随時追加しています。",
-
+  "project-about-personal-website": "私のスキルを紹介し、作成したプロジェクトやプログラマーとしての成長を記録するサイト。学習と共に更新しています。",
+  
   "footer-box-title-fonts": "フォント",
   "footer-box-title-libraries": "ライブラリ"
 }
