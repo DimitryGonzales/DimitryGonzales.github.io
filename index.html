@@ -35,9 +35,12 @@
     <nav class="menu">
         <div class="menu-content">
             <div class="menu-box">
-                <h1 class="menu-box-title" data-i18n="menu-box-title-shortcuts">
-                    Shortcuts
-                </h1>
+                <div class="menu-box-title">
+                    <i class="fa-solid fa-window-restore"></i>
+                    <h1 data-i18n="menu-box-title-shortcuts">
+                        Shortcuts
+                    </h1>
+                </div>
 
                 <div id="shortcuts" class="menu-box-content">
                     <a class="shortcut" href="#">
@@ -45,7 +48,7 @@
                             <i class="fa-solid fa-user"></i>
                         </div>
 
-                        <h2 data-i18n="shortcut-me">Me</h2>
+                        <span data-i18n="shortcut-me">Me</span>
                     </a>
 
                     <a class="shortcut" href="#skills">
@@ -53,7 +56,7 @@
                             <i class="fa-solid fa-book"></i>
                         </div>
 
-                        <h2 data-i18n="shortcut-skills">Skills</h2>
+                        <span data-i18n="shortcut-skills">Skills</span>
                     </a>
 
                     <a class="shortcut" href="#projects">
@@ -61,15 +64,18 @@
                             <i class="fa-solid fa-screwdriver-wrench"></i>
                         </div>
 
-                        <h2 data-i18n="shortcut-projects">Projects</h2>
+                        <span data-i18n="shortcut-projects">Projects</span>
                     </a>
                 </div>
             </div>
 
             <div class="menu-box">
-                <h1 class="menu-box-title" data-i18n="menu-box-title-theme">
-                    Theme
-                </h1>
+                <div class="menu-box-title">
+                    <i class="fa-solid fa-palette"></i>
+                    <h1 data-i18n="menu-box-title-theme">
+                        Theme
+                    </h1>
+                </div>
 
                 <div id="theme-selector" class="menu-box-content">
                     <input id="brightness-toggle" type="checkbox">
@@ -88,9 +94,12 @@
             </div>
 
             <div class="menu-box">
-                <h1 class="menu-box-title" data-i18n="menu-box-title-socials">
-                    Socials
-                </h1>
+                <div class="menu-box-title">
+                    <i class="fa-solid fa-hashtag"></i>
+                    <h1 data-i18n="menu-box-title-socials">
+                        Socials
+                    </h1>
+                </div>
 
                 <div id="socials" class="menu-box-content">
                     <a id="social-email" class="social" href="mailto:dimitrygonzales@gmail.com">
@@ -98,7 +107,7 @@
                             <i class="fa-solid fa-envelope"></i>
                         </div>
 
-                        <h2 data-i18n="social-email">Email</h2>
+                        <span data-i18n="social-email">Email</span>
                     </a>
 
                     <a id="social-github" class="social" href="https://github.com/DimitryGonzales">
@@ -106,7 +115,7 @@
                             <i class="fa-brands fa-github"></i>
                         </div>
 
-                        <h2 data-i18n="social-github">Github</h2>
+                        <span data-i18n="social-github">Github</span>
                     </a>
                 </div>
             </div>
@@ -131,9 +140,9 @@
 
     <main>
         <section id="skills">
-            <div class="section-title-box">
+            <div class="section-title">
                 <i class="fa-solid fa-book"></i>
-                <h1 class="section-title" data-i18n="section-title-skills">
+                <h1 data-i18n="section-title-skills">
                     Skills
                 </h1>
             </div>
@@ -145,14 +154,16 @@
 
                 <div id="skills-box" class="section-items hide-scroll scroll-by-grab scroll-horizontally">
                     <div class="skill">
-                        <h2 class="skill-title">
+                        <div class="skill-title">
                             <i class="fa-brands fa-html5"></i>
-                            <span>HTML</span>
-                        </h2>
+                            <h2>HTML</h2>
+                        </div>
 
                         <div class="skill-content">
                             <div class="skill-course-box">
-                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+                                <div class="skill-content-box-title">
+                                    <h3 data-i18n="skill-content-box-title-course">Course</h3>
+                                </div>
 
                                 <p class="skill-course" data-i18n="skill-HTML-course" data-i18n-html>
                                     <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s HTML and CSS course in Youtube.
@@ -176,14 +187,16 @@
                     </div>
 
                     <div class="skill">
-                        <h2 class="skill-title">
+                        <div class="skill-title">
                             <i class="fa-brands fa-css"></i>
-                            <span>CSS</span>
-                        </h2>
+                            <h2>CSS</h2>
+                        </div>
 
                         <div class="skill-content">
                             <div class="skill-course-box">
-                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+                                <div class="skill-content-box-title">
+                                    <h3 data-i18n="skill-content-box-title-course">Course</h3>
+                                </div>
 
                                 <p class="skill-course" data-i18n="skill-CSS-course" data-i18n-html>
                                     <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s HTML and CSS course in Youtube.
@@ -207,14 +220,16 @@
                     </div>
 
                     <div class="skill">
-                        <h2 class="skill-title">
+                        <div class="skill-title">
                             <i class="fa-brands fa-js"></i>
-                            <span>JavaScript</span>
-                        </h2>
+                            <h2>JavaScript</h2>
+                        </div>
 
                         <div class="skill-content">
                             <div class="skill-course-box">
-                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+                                <div class="skill-content-box-title">
+                                    <h3 data-i18n="skill-content-box-title-course">Course</h3>
+                                </div>
 
                                 <p class="skill-course" data-i18n="skill-JavaScript-course" data-i18n-html>
                                     <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s JavaScript and TypeScript course in Udemy.
@@ -238,14 +253,16 @@
                     </div>
 
                     <div class="skill">
-                        <h2 class="skill-title">
-                            <i class="fa-brands fa-html5"></i>
-                            <span>TypeScript</span>
-                        </h2>
+                        <div class="skill-title">
+                            <i class="fa-brands fa-square-js"></i>
+                            <h2>TypeScript</h2>
+                        </div>
 
                         <div class="skill-content">
                             <div class="skill-course-box">
-                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+                                <div class="skill-content-box-title">
+                                    <h3 data-i18n="skill-content-box-title-course">Course</h3>
+                                </div>
 
                                 <p class="skill-course" data-i18n="skill-TypeScript-course" data-i18n-html>
                                     <a href="https://www.otaviomiranda.com.br/">Otavio Miranda</a>'s JavaScript and TypeScript course in Udemy.
@@ -269,14 +286,16 @@
                     </div>
 
                     <div class="skill">
-                        <h2 class="skill-title">
+                        <div class="skill-title">
                             <i class="fa-brands fa-git-alt"></i>
-                            <span>Git</span>
-                        </h2>
+                            <h2>Git</h2>
+                        </div>
 
                         <div class="skill-content">
                             <div class="skill-course-box">
-                                <span class="skill-content-box-title" data-i18n="skill-content-box-title-course">Course</span>
+                                <div class="skill-content-box-title">
+                                    <h3 data-i18n="skill-content-box-title-course">Course</h3>
+                                </div>
 
                                 <p class="skill-course" data-i18n="skill-Git-course" data-i18n-html>
                                     Learning by using it to version control my projects.
@@ -304,9 +323,9 @@
         </section>
 
         <section id="projects">
-            <div class="section-title-box">
+            <div class="section-title">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
-                <h1 class="section-title" data-i18n="section-title-projects">
+                <h1 data-i18n="section-title-projects">
                     Projects
                 </h1>
             </div>
@@ -320,9 +339,9 @@
                     <a id="project-dotfiles" class="project" href="https://github.com/DimitryGonzales/dotfiles" target="_blank">
                         <div class="project-content">
                             <div class="project-left">
-                                <h2 class="project-name" data-i18n="project-name-dotfiles">
-                                Dotfiles
-                                </h2>
+                                <div class="project-name">
+                                    <h2 data-i18n="project-name-dotfiles">Dotfiles</h2>
+                                </div>
 
                                 <div class="project-tools">
                                     <i class="fa-brands fa-linux"></i>
@@ -332,11 +351,6 @@
                             <div class="project-right">
                                 <p class="project-about" data-i18n="project-about-dotfiles" data-i18n-html>
                                     My personal Linux configuration/customization.
-
-                                    <br>
-                                    <br>
-
-                                    Features the following themes: Catppuccin Mocha Lavender, Gruvbox Dark & Minimalist.
                                 </p>
                             </div>
                         </div>
@@ -345,9 +359,9 @@
                     <a id="project-personal-website" class="project" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank">
                         <div class="project-content">
                             <div class="project-left">
-                                <h2 class="project-name" data-i18n="project-name-personal-website">
-                                Personal Website
-                                </h2>
+                                <div class="project-name">
+                                    <h2 data-i18n="project-name-personal-website">Personal Website</h2>
+                                </div>
 
                                 <div class="project-tools">
                                     <i class="fa-brands fa-html5"></i>
@@ -367,6 +381,58 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-box-title">
+                <i class="fa-solid fa-font"></i>
+                <h1 data-i18n="footer-box-title-fonts">Fonts</h1>
+            </div>
+
+            <div id="fonts" class="footer-box-content">
+                <a id="inter" class="font" href="https://fonts.google.com/specimen/Inter?preview.layout=grid&query=inter" target="_blank">
+                    <div class="font-icon">
+                        <span>Aa</span>
+                    </div>
+
+                    <span>Inter</span>
+                </a>
+
+                <a id="noto-sans-jp" class="font" href="https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.layout=grid&query=noto+sans+jp" target="_blank">
+                    <div class="font-icon">
+                        <span>あ</span>
+                    </div>
+
+                    <span>Noto Sans Japanese</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="footer-box-title">
+                <i class="fa-solid fa-briefcase"></i>
+                <h1 data-i18n="footer-box-title-libraries">Libraries</h1>
+            </div>
+
+            <div id="libraries" class="footer-box-content">
+                <a class="library" href="https://michalsnik.github.io/aos/" target="_blank">
+                    <div class="library-icon">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+
+                    <span>AOS</span>
+                </a>
+
+                <a class="library" href="https://fontawesome.com/" target="_blank">
+                    <div class="library-icon">
+                        <i class="fa-brands fa-font-awesome"></i>
+                    </div>
+
+                    <span>Font Awesome</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="scripts/scrollByGrab.js"></script>
     

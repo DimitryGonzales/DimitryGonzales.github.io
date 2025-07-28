@@ -27,7 +27,10 @@
     "section-title-projects": "Projetos",
     "section-text-projects": "Projetos que desenvolvi, os quais demonstram minha experiência com diversas ferramentas, estruturas e abordagens de resolução de problemas.",
     "project-name-dotfiles": "Dotfiles",
-    "project-about-dotfiles": "Minha configuração/personalização pessoal do Linux. <br> <br> Apresenta os seguintes temas: Catppuccin Mocha Lavender, Gruvbox Dark e Minimalist.",
+    "project-about-dotfiles": "Minha configuração/personalização pessoal do Linux.",
     "project-name-personal-website": "Site Pessoal",
-    "project-about-personal-website": "Um site onde mostro minhas habilidades, compartilho os projetos em que trabalhei e acompanho meu crescimento como programador. À medida que aprendo e melhoro, atualizo-o com projetos novos e aprimorados."
+    "project-about-personal-website": "Um site onde mostro minhas habilidades, compartilho os projetos em que trabalhei e acompanho meu crescimento como programador. À medida que eu for aprendendo e melhorando, irei atualiza-lo com projetos novos e aprimorados.",
+
+    "footer-box-title-fonts": "Fontes",
+    "footer-box-title-libraries": "Bibliotecas"
 }

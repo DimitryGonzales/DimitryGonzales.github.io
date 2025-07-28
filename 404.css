@@ -287,14 +287,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 
     background-color: var(--highlight);
 
-    font-size: 1rem;
-    font-weight: bold;
-
-    height: 25px;
+    height: 35px;
     width: 100%;
+}
+
+.menu-box-title i,
+.menu-box-title h1 {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .menu-box-content {
@@ -417,7 +421,7 @@ a {
     font-size: 1rem;
 }
 
-.social h2 {
+.social span {
     font-size: 1rem;
     font-weight: normal;
 }

@@ -27,7 +27,10 @@
   "section-title-projects": "プロジェクト",
   "section-text-projects": "さまざまなツール、フレームワーク、問題解決アプローチを活用した、これまでに開発したプロジェクトを紹介します。",
   "project-name-dotfiles": "Dotfiles",
-  "project-about-dotfiles": "私の個人的なLinux設定とカスタマイズ。<br><br>以下のテーマを使用しています：Catppuccin Mocha Lavender、Gruvbox Dark、Minimalist。",
+  "project-about-dotfiles": "私の個人的なLinux設定とカスタマイズ。",
   "project-name-personal-website": "ポートフォリオサイト",
-  "project-about-personal-website": "自分のスキルやプロジェクトを紹介し、プログラマーとしての成長を記録するウェブサイトです。学びと成長に応じて、新しいプロジェクトや改善点を随時追加しています。"
+  "project-about-personal-website": "自分のスキルやプロジェクトを紹介し、プログラマーとしての成長を記録するウェブサイトです。学びと成長に応じて、新しいプロジェクトや改善点を随時追加しています。",
+
+  "footer-box-title-fonts": "フォント",
+  "footer-box-title-libraries": "ライブラリ"
 }

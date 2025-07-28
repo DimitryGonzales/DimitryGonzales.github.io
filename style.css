@@ -287,14 +287,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
 
     background-color: var(--highlight);
 
-    font-size: 1rem;
-    font-weight: bold;
-
-    height: 25px;
+    height: 35px;
     width: 100%;
+}
+
+.menu-box-title i,
+.menu-box-title h1 {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .menu-box-content {
@@ -347,7 +351,7 @@ a {
     font-size: 1rem;
 }
 
-.shortcut h2 {
+.shortcut span {
     font-size: 1rem;
     font-weight: normal;
 }
@@ -461,7 +465,7 @@ a {
     font-size: 1rem;
 }
 
-.social h2 {
+.social span {
     font-size: 1rem;
     font-weight: normal;
 }
@@ -539,7 +543,7 @@ section {
     max-width: 800px;
 }
 
-.section-title-box {
+.section-title {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -552,12 +556,12 @@ section {
     width: 100%;
 }
 
-.section-title-box i {
+.section-title i {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.section-title {
+.section-title h1 {
     font-size: 1.75rem;
     font-weight: bold;
 }
@@ -643,12 +647,14 @@ section {
 
     background-color: var(--highlight);
 
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;
-
     height: 40px;
     width: 100%;
+}
+
+.skill-title i,
+.skill-title h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .skill-content {
@@ -668,12 +674,14 @@ section {
     justify-content: center;
 
     background-color: var(--highlight);
-    
+
+    height: 30px;
+    width: 100%;
+}
+
+.skill-content-box-title h3 {
     font-size: 1rem;
     font-weight: bold;
-
-    height: 20px;
-    width: 100%;
 }
 
 .skill-course-box {
@@ -916,13 +924,15 @@ html[lang="ja"] .skill-stats.completed .skill-progress-bar::before {
     background-color: var(--surface);
     border-radius: 10px;
 
-    font-size: 1.1rem;
-    font-weight: bold;
-
     padding: 10px;
 
     height: auto;
     width: fit-content;
+}
+
+.project-name h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .project-tools {
@@ -974,8 +984,157 @@ html[lang="ja"] .skill-stats.completed .skill-progress-bar::before {
     opacity: 1;
 }
 
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    background-color: var(--surface);
+
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+}
+
+.footer-box {
+    background-color: var(--surface2);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    height: auto;
+    width: 250px;
+}
+
+.footer-box-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    background-color: var(--highlight);
+
+    height: 35px;
+    width: 100%;
+}
+
+.footer-box-title i,
+.footer-box-title h1 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer-box-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: var(--surface2);
+
+    padding: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.font {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--surface3);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    height: 50px;
+    width: 100%;
+}
+
+.font:hover {
+    background-color: var(--hover);
+}
+
+.font-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--highlight);
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.font:hover .font-icon {
+    background-color: var(--hover);
+}
+
+.font-icon span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#inter .font-icon span {
+    font-family: "Inter", sans-serif;
+}
+
+#noto-sans-jp .font-icon span {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.font span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.library {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--surface3);
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    height: 50px;
+    width: 100%;
+}
+
+.library:hover {
+    background-color: var(--hover);
+}
+
+.library-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--highlight);
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.library:hover .library-icon {
+    background-color: var(--hover);
+}
+
+.library-icon i {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.library span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
 @media (max-width: 700px) {
-    .section-title-box {
+    .section-title {
         padding: 0 10px;
     }
 
@@ -1043,5 +1202,9 @@ html[lang="ja"] .skill-stats.completed .skill-progress-bar::before {
     .project:hover .project-tools,
     .project:hover .project-about {
         opacity: 0.75;
+    }
+
+    .footer-box {
+        width: 100%;
     }
 }
