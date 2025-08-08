@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="navbar-toggle">
+    <label for="navbar-toggle">
+        <i class="fa-solid fa-bars navbar-toggle-closed-icon"></i>
+        <i class="fa-solid fa-arrow-left navbar-toggle-open-icon"></i>
+    </label>
+
+    <nav class="navbar">
+        <span class="navbar-title">
+            Menu
+        </span>
+
+        <div class="navbar-content">
+            <section class="navbar-section">
+                <span class="navbar-section-title">
+                    Shortcuts
+                </span>
+
+                <a class="navbar-section-button shortcut" href="#">
+                    <span>Home</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a class="navbar-section-button shortcut" href="#">
+                    <span>Experience</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a class="navbar-section-button shortcut" href="#">
+                    <span>Projects</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </section>
+
+            <section class="navbar-section">
+                <span class="navbar-section-title">
+                    Social
+                </span>
+
+                <a class="navbar-section-button" href="mailto:dimitrygonzales@gmail.com" target="_blank">
+                    <span>Email</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="navbar-section-button" href="https://github.com/DimitryGonzales" target="_blank">
+                    <span>Github</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </section>
+        </div>
+
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">
+            <i class="fa-solid fa-sun bright-icon"></i>
+            <i class="fa-solid fa-moon dark-icon"></i>
+        </label>
+
+        <script src="scripts/theme.js"></script>
+    </nav>
+
+    <script src="scripts/closeMenu.js"></script>
+
+    <div class="main">
+
+    </div>
+
+
+</body>
+</html>
