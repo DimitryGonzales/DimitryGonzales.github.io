@@ -47,6 +47,11 @@
 
     margin: 0;
     padding: 0;
+
+    scroll-behavior: smooth;
+    
+    scrollbar-color: var(--title) transparent;
+    scrollbar-width: auto;
 }
 
 
@@ -89,8 +94,6 @@ label[for="navbar-toggle"] {
     z-index: 2;
 
     overflow: hidden;
-
-    transition: background 100ms ease;
 
     height: 40px;
     aspect-ratio: 1/1;
@@ -262,8 +265,6 @@ label[for="navbar-toggle"] i {
 
     padding: 0 10px;
 
-    transition: background 100ms ease;
-
     height: 40px;
     width: 100%;
 }
@@ -271,17 +272,6 @@ label[for="navbar-toggle"] i {
 .navbar-section-button:hover {
     background-color: var(--surface_container);
     color: var(--surface_container_text);
-}
-
-.navbar-section-button i {
-    color: var(--surface_container_text);
-    opacity: 0;
-
-    transition: opacity 100ms ease;
-}
-
-.navbar-section-button:hover i {
-    opacity: 1;
 }
 
 #theme-toggle {
@@ -302,8 +292,6 @@ label[for="theme-toggle"] {
     bottom: 25px;
     left: 25px;
     z-index: 2;
-
-    transition: background 100ms ease;
 
     height: 40px;
     aspect-ratio: 1/1;
@@ -497,8 +485,6 @@ label[for="theme-toggle"] i {
     text-decoration: none;
 
     padding: 0 10px;
-
-    transition: background 100ms ease;
 
     height: 40px;
     width: fit-content;
