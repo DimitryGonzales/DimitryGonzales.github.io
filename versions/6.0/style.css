@@ -486,3 +486,17 @@ label[for="theme-toggle"] i {
         font-size: 1.25rem;
     }
 }
+
+@media (max-width: 350px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-paragraph {
+        font-size: 1rem;
+    }
+}
