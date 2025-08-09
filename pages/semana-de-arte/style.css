@@ -305,7 +305,7 @@ body {
     text-decoration: none;
 
     height: 100%;
-    aspect-ratio: 16/9;
+    min-width: fit-content;
 }
 
 .slider a img {

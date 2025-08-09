@@ -323,13 +323,12 @@ body {
 
     overflow: hidden;
 
-    height: 150px;
-    aspect-ratio: 16/9;
+    height: 200px;
+    width: auto;
 }
 
 .gallery-item:hover {
     transform: scale(1.1);
-    filter: brightness(110%);
 }
 
 .gallery-item img {
@@ -427,10 +426,6 @@ footer {
 
     .section {
         padding: 0 10%;
-    }
-
-    .gallery-item {
-        height: 125px;
     }
 }
 
