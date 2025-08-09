@@ -297,7 +297,11 @@ body {
     width: 100%;
 }
 
-.slider a {
+.slider:active {
+    cursor: grabbing;
+}
+
+.slider-image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -308,7 +312,7 @@ body {
     min-width: fit-content;
 }
 
-.slider a img {
+.slider-image img {
     pointer-events: none;
     user-select: none;
     -webkit-user-drag: none;
