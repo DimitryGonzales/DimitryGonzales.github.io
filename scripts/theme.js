@@ -1,45 +1,44 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("theme-toggle");
     const root = document.documentElement;
-    const brightnessToggle = document.getElementById("brightness-toggle");
-    const paletteSelector = document.getElementById("palette-selector");
 
-    // Detect device theme preference
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    // Load saved settings or use system preference
-    const savedPalette = localStorage.getItem("palette") || "default";
-    const savedBrightness = localStorage.getItem("brightness");
-
-    // Determine brightness: use saved or fallback to system preference
-    const brightness = savedBrightness || (systemPrefersDark ? "dark" : "light");
-
-    paletteSelector.value = savedPalette;
-    brightnessToggle.checked = brightness === "dark";
-
-    // Apply theme
-    function applyTheme() {
-        const palette = paletteSelector.value;
-        const brightness = brightnessToggle.checked ? "dark" : "light";
-
-        // Build new class list
-        const className = palette === "default" ? brightness : `${palette}.${brightness}`;
-        const classList = className.split(".");
-
-        // Clear existing theme classes
-        root.className = "";
-
-        // Apply new theme classes to <html>
-        root.classList.add(...classList);
-
-        // Save settings
-        localStorage.setItem("palette", palette);
-        localStorage.setItem("brightness", brightness);
+    // Apply dark or light theme
+    function applyTheme(isDark) {
+        if (isDark) {
+            root.classList.add("dark");
+        } else {
+            root.classList.remove("dark");
+        }
+        checkbox.checked = isDark;
     }
 
-    // Apply theme on load
-    applyTheme();
+    // Check localStorage or system preference
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem("theme");
 
-    // Event listeners
-    brightnessToggle.addEventListener("change", applyTheme);
-    paletteSelector.addEventListener("change", applyTheme);
+        if (savedTheme === "dark") {
+            applyTheme(true);
+        } else if (savedTheme === "light") {
+            applyTheme(false);
+        } else {
+            const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            applyTheme(systemPrefersDark);
+        }
+    }
+
+    // Save and apply on toggle
+    checkbox.addEventListener("change", function () {
+        const isDark = checkbox.checked;
+        applyTheme(isDark);
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    // Live update from system preference
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+        if (!localStorage.getItem("theme")) {
+            applyTheme(e.matches);
+        }
+    });
+
+    initializeTheme();
 });

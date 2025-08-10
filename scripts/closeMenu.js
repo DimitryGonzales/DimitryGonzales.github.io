@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const shortcuts = document.querySelectorAll(".shortcut");
-    const menuToggle = document.getElementById("menu-toggle");
+    const navbarToggle = document.getElementById("navbar-toggle");
 
     shortcuts.forEach(shortcut => {
         shortcut.addEventListener("click", () => {
-            menuToggle.checked = false;
+            navbarToggle.checked = false;
         });
     });
 });
