@@ -417,7 +417,7 @@ label[for="theme-toggle"] i {
 
     padding: calc(25px + 40px + 25px) 25px;
 
-    overflow-x: hidden;
+    overflow: hidden;
 
     height: 100%;
     width: 100%;
