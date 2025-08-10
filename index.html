@@ -15,6 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--ScrollReveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <input type="checkbox" id="navbar-toggle">
@@ -35,23 +38,13 @@
                 </span>
 
                 <div class="navbar-section-button-container">
-                    <a class="navbar-section-button shortcut" href="#">
-                        <span>About Me</span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-
-                    <a class="navbar-section-button shortcut" href="#">
-                        <span>Experience</span>
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </a>
-
                     <a class="navbar-section-button shortcut" href="#projects">
                         <span>Projects</span>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
 
-                    <a class="navbar-section-button shortcut" href="#">
-                        <span>Social</span>
+                    <a class="navbar-section-button shortcut" href="#skills">
+                        <span>Skills</span>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
                 </div>
@@ -81,11 +74,23 @@
             <i class="fa-solid fa-sun bright-icon"></i>
             <i class="fa-solid fa-moon dark-icon"></i>
         </label>
-
-        <script src="scripts/theme.js"></script>
     </nav>
 
-    <script src="scripts/closeMenu.js"></script>
+    <div class="language-selector-container">
+        <div class="language-selector-icon">
+            <i class="fa-solid fa-language"></i>
+        </div>
+
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+
+    <a class="return-to-top" href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
     <div class="main">
         <section class="main-section" id="hero">
@@ -99,7 +104,7 @@
                         Dimitry Gonzales
                     </h1>
 
-                    <h2 class="hero-subtitle">
+                    <h2 class="hero-subtitle" data-i18n="hero-subtitle">
                         Beginner programmer aspiring to become a software engineer.
                     </h2>
 
@@ -113,49 +118,11 @@
 
             <div class="hero-bottom">
                 <div class="hero-shortcut">
-                    <span class="hero-shortcut-title">
-                        About Me
-                    </span>
-
-                    <p class="hero-shortcut-paragraph">
-                        An overview of who I am, my background, and interests.
-                    </p>
-
-                    <div class="hero-shortcut-button-container">
-                        <a class="hero-shortcut-button" href="#">
-                            <span>
-                                About Me
-                            </span>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-shortcut">
-                    <span class="hero-shortcut-title">
-                        Experience
-                    </span>
-
-                    <p class="hero-shortcut-paragraph">
-                        Highlights of my professional journey and key projects.
-                    </p>
-
-                    <div class="hero-shortcut-button-container">
-                        <a class="hero-shortcut-button" href="#">
-                            <span>
-                                Experience
-                            </span>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="hero-shortcut">
-                    <span class="hero-shortcut-title">
+                    <h2 class="hero-shortcut-title">
                         Projects
-                    </span>
+                    </h2>
 
-                    <p class="hero-shortcut-paragraph">
+                    <p class="hero-shortcut-about">
                         A showcase of personal and collaborative works I've worked on.
                     </p>
 
@@ -170,18 +137,18 @@
                 </div>
 
                 <div class="hero-shortcut">
-                    <span class="hero-shortcut-title">
-                        Social
-                    </span>
+                    <h2 class="hero-shortcut-title">
+                        Skills
+                    </h2>
 
-                    <p class="hero-shortcut-paragraph">
-                        Links to my online presence and ways to connect with me.
+                    <p class="hero-shortcut-about">
+                        A showcase of my key skills and technologies I use to bring projects to life and solve problems efficiently.
                     </p>
 
                     <div class="hero-shortcut-button-container">
-                        <a class="hero-shortcut-button" href="#">
+                        <a class="hero-shortcut-button" href="#skills">
                             <span>
-                                Social
+                                Skills
                             </span>
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
@@ -195,7 +162,7 @@
                 Projects
             </h1>
 
-            <div class="project">
+            <div class="project" data-aos="fade-right">
                 <div class="project-info">
                     <h2 class="project-title">
                         Dotfiles
@@ -241,7 +208,7 @@
                 <img class="project-image" src="assets/projects/dotfiles.png" alt="">
             </div>
 
-            <div class="project">
+            <div class="project" data-aos="fade-left">
                 <div class="project-info">
                     <h2 class="project-title">
                         Website
@@ -291,6 +258,157 @@
                 <img class="project-image" src="assets/projects/website.png" alt="">
             </div>
         </section>
+
+        <section class="main-section" id="skills">
+            <h1 class="main-section-title">
+                Skills
+            </h1> 
+
+            <div class="skill-container">
+                <a class="skill" href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" data-aos="fade-up" data-aos-duration="250">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/html5.svg" alt="html5-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            HTML
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            Markup language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" data-aos="fade-up" data-aos-duration="500">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/css3.svg" alt="css3-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            CSS
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            Style sheet language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" data-aos="fade-up" data-aos-duration="750">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/javascript.svg" alt="javascript-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            JavaScript
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            Programming language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://wikipedia.org/wiki/C_(programming_language)" target="_blank" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/c.svg" alt="c-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            C
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            General-purpose programming language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://www.python.org/" target="_blank" data-aos="fade-up" data-aos-duration="1250">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/python.svg" alt="python-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Python
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            High-level programming language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://git-scm.com/" target="_blank" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/git.svg" alt="git-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Git
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            Version control system
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://wikipedia.org/wiki/Linux" target="_blank" data-aos="fade-up" data-aos-duration="1750">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/linux.svg" alt="tux-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Linux
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            Open-source operating system
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://www.gnu.org/software/bash/" target="_blank" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/bash.svg" alt="bash-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Bash
+                        </h2>
+
+                        <span class="skill-subtitle">
+                            Command-line shell
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <i class="fa-solid fa-wrench"></i>
+        <span>
+            Work In Progress
+        </span>
+    </footer>
+
+    <script src="scripts/scrollreveal.js"></script>
+
+    <script src="scripts/language.js"></script>
+
+    <script src="scripts/theme.js"></script>
+
+    <script src="scripts/closeMenu.js"></script>
 </body>
 </html>

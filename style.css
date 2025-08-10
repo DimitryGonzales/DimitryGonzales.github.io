@@ -1,5 +1,5 @@
 :root {
-    --background: linear-gradient(135deg, #aaaaaa 0%, #ffffff 100%);
+    --background: linear-gradient(to bottom, #eeeeee 0%, #777777 100%);
 
     --title: #111111;
     --text: #222222;
@@ -21,7 +21,7 @@
 }
 
 .dark {
-    --background: linear-gradient(135deg, #555555 0%, #111111 100%);
+    --background: linear-gradient(to bottom, #111111 0%, #777777 100%);
     
     --title: #ffffff;
     --text: #eeeeee;
@@ -63,6 +63,8 @@ html {
     font-style: normal;
 
     cursor: default;
+
+    overflow-x: hidden;
 }
 
 body {
@@ -83,7 +85,7 @@ label[for="navbar-toggle"] {
     align-items: center;
     justify-content: center;
     
-    background-color: transparent;
+    background-color: var(--surface);
     border-radius: 10px;
 
     cursor: pointer;
@@ -91,7 +93,7 @@ label[for="navbar-toggle"] {
     position: fixed;
     top: 25px;
     left: 25px;
-    z-index: 2;
+    z-index: 3;
 
     overflow: hidden;
 
@@ -100,7 +102,7 @@ label[for="navbar-toggle"] {
 }
 
 label[for="navbar-toggle"]:hover {
-    background-color: var(--surface);
+    background-color: var(--surface_hover);
 }
 
 #navbar-toggle:checked + label[for="navbar-toggle"] {
@@ -156,6 +158,7 @@ label[for="navbar-toggle"] i {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
 
     padding: 25px;
 
@@ -332,6 +335,78 @@ label[for="theme-toggle"] i {
     transform: rotate(0deg);
 }
 
+.language-selector-container {
+    display: flex;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1;
+
+    overflow: hidden;
+
+    height: 40px;
+    width: auto;
+}
+
+.language-selector-container:hover {
+    background-color: var(--surface_hover);
+}
+
+.language-selector-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: var(--surface_title);
+    font-size: 1rem;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+#language-selector {
+    background-color: transparent;
+    border: none;
+
+    color: var(--surface_text);
+    font-size: 1rem;
+    font-weight: normal;
+
+    cursor: pointer;
+
+    height: 100%;
+    width: auto;
+}
+
+.return-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+    
+    color: var(--surface_container_title);
+    font-size: 1rem;
+    text-decoration: none;
+
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1;
+
+    height: 50px;
+    aspect-ratio: 1/1;
+}
+
+.return-to-top:hover {
+    background-color: var(--surface_hover);
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -342,11 +417,17 @@ label[for="theme-toggle"] i {
 
     padding: calc(25px + 40px + 25px) 25px;
 
+    overflow-x: hidden;
+
     height: 100%;
     width: 100%;
 }
 
 .main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
     height: auto;
     width: 100%;
     max-width: 1000px;
@@ -361,12 +442,6 @@ label[for="theme-toggle"] i {
 
     height: 50px;
     width: 100%;
-}
-
-#hero {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
 }
 
 .hero-top {
@@ -397,8 +472,7 @@ label[for="theme-toggle"] i {
 }
 
 .hero-text {
-    height: 100%;
-    width: 100%;
+    flex: 1;
 }
 
 .hero-title {
@@ -462,14 +536,14 @@ label[for="theme-toggle"] i {
     border-bottom: 2px solid var(--outline);
 
     color: var(--surface_title);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: bold;;
 
     height: 40px;
     width: 100%;
 }
 
-.hero-shortcut-paragraph {
+.hero-shortcut-about {
     color: var(--surface_text);
     font-size: 1rem;
     font-weight: normal;
@@ -507,12 +581,6 @@ label[for="theme-toggle"] i {
 
 .hero-shortcut-button:hover {
     background-color: var(--surface_container_hover);
-}
-
-#projects {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
 }
 
 .project {
@@ -645,6 +713,116 @@ label[for="theme-toggle"] i {
     flex: 1;
 }
 
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    height: auto;
+    width: 100%;
+}
+
+.skill {
+    display: flex;
+
+    background-color: var(--surface);
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    height: 75px;
+    width: calc((100% - (15px * (3 - 1))) / 3);
+}
+
+.skill:hover {
+    background-color: var(--surface_hover);
+}
+
+.skill-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.skill-image-container img {
+    height: 65%;
+    aspect-ratio: 1/1;
+}
+
+.skill-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex: 1;
+}
+
+.skill-title {
+    color: var(--surface_title);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.skill-subtitle {
+    color: var(--surface_subtext);
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    background: var(--surface);
+
+    color: var(--surface_title);
+    font-size: 2rem;
+    font-weight: bold;
+
+    padding: 25px;
+
+    height: 300px;
+    width: 100%;
+}
+
+@media (max-width: 1050px) {
+    label[for="navbar-toggle"],
+    .language-selector-container,
+    .return-to-top {
+        border: 1px solid var(--outline);
+    }
+
+    #navbar-toggle:checked + label[for="navbar-toggle"] {
+        border: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .skill {
+        width: calc((100% - (15px * (2 - 1))) / 2);
+    }
+}
+
+@media (max-width: 700px) {
+    .project {
+        flex-direction: column-reverse;
+    }
+
+    .project-info {
+        width: 100%;
+    }
+
+    .project-image {
+        height: 100%;
+        width: 100%;
+    }
+}
+
 @media (max-width: 600px) {
     .hero-top {
         height: 200px;
@@ -662,16 +840,7 @@ label[for="theme-toggle"] i {
         font-size: 1rem;
     }
 
-    .project {
-        flex-direction: column-reverse;
-    }
-
-    .project-info {
-        width: 100%;
-    }
-
-    .project-image {
-        height: 100%;
+    .skill {
         width: 100%;
     }
 }
@@ -696,6 +865,11 @@ label[for="theme-toggle"] i {
 
     .navbar-section-button i {
         opacity: 1;
+    }
+
+    .return-to-top {
+        right: 10px;
+        bottom: 150px;
     }
 
     .hero-top {
