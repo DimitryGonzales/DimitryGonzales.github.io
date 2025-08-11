@@ -16,6 +16,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <!--Noto Sans Japanese Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
     <!--ScrollReveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
@@ -27,42 +32,42 @@
     </label>
 
     <nav class="navbar">
-        <span class="navbar-title">
+        <span class="navbar-title" data-i18n="navbar-title">
             Menu
         </span>
 
         <div class="navbar-content">
             <section class="navbar-section">
-                <span class="navbar-section-title">
+                <span class="navbar-section-title" data-i18n="navbar-section-title-shortcuts">
                     Shortcuts
                 </span>
 
                 <div class="navbar-section-button-container">
                     <a class="navbar-section-button shortcut" href="#projects">
-                        <span>Projects</span>
+                        <span data-i18n="shortcut-projects">Projects</span>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
 
                     <a class="navbar-section-button shortcut" href="#skills">
-                        <span>Skills</span>
+                        <span data-i18n="shortcut-skills">Skills</span>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
                 </div>
             </section>
 
             <section class="navbar-section">
-                <span class="navbar-section-title">
+                <span class="navbar-section-title" data-i18n="navbar-section-title-social">
                     Social
                 </span>
 
                 <div class="navbar-section-button-container">
                     <a class="navbar-section-button" href="mailto:dimitrygonzales@gmail.com" target="_blank">
-                        <span>Email</span>
+                        <span data-i18n="social-email">Email</span>
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
                     <a class="navbar-section-button" href="https://github.com/DimitryGonzales" target="_blank">
-                        <span>Github</span>
+                        <span data-i18n="social-github">Github</span>
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
@@ -95,9 +100,9 @@
     <div class="main">
         <section class="main-section" id="hero">
             <div class="hero-top">
-                <div class="hero-image-container">
+                <a class="hero-image-container" href="https://github.com/DimitryGonzales" target="_blank">
                     <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="prlw's avatar">
-                </div>
+                </a>
 
                 <div class="hero-text">
                     <h1 class="hero-title">
@@ -108,7 +113,7 @@
                         Beginner programmer aspiring to become a software engineer.
                     </h2>
 
-                    <p class="hero-paragraph">
+                    <p class="hero-about" data-i18n="hero-about">
                         Hi, I'm Dimitry Gonzales,  an aspiring software engineer exploring web development and expanding my knowledge of programming languages.
                     </p>
                 </div>
@@ -118,17 +123,17 @@
 
             <div class="hero-bottom">
                 <div class="hero-shortcut">
-                    <h2 class="hero-shortcut-title">
+                    <h2 class="hero-shortcut-title" data-i18n="hero-shortcut-title-projects">
                         Projects
                     </h2>
 
-                    <p class="hero-shortcut-about">
+                    <p class="hero-shortcut-about" data-i18n="hero-shortcut-about-projects">
                         A showcase of personal and collaborative works I've worked on.
                     </p>
 
                     <div class="hero-shortcut-button-container">
                         <a class="hero-shortcut-button" href="#projects">
-                            <span>
+                            <span data-i18n="hero-shortcut-button-projects">
                                 Projects
                             </span>
                             <i class="fa-solid fa-chevron-right"></i>
@@ -137,17 +142,17 @@
                 </div>
 
                 <div class="hero-shortcut">
-                    <h2 class="hero-shortcut-title">
+                    <h2 class="hero-shortcut-title" data-i18n="hero-shortcut-title-skills">
                         Skills
                     </h2>
 
-                    <p class="hero-shortcut-about">
+                    <p class="hero-shortcut-about" data-i18n="hero-shortcut-about-skills">
                         A showcase of my key skills and technologies I use to bring projects to life and solve problems efficiently.
                     </p>
 
                     <div class="hero-shortcut-button-container">
                         <a class="hero-shortcut-button" href="#skills">
-                            <span>
+                            <span data-i18n="hero-shortcut-button-skills">
                                 Skills
                             </span>
                             <i class="fa-solid fa-chevron-right"></i>
@@ -158,13 +163,13 @@
         </section>
 
         <section class="main-section" id="projects">
-            <h1 class="main-section-title">
+            <h1 class="main-section-title" data-i18n="main-section-title-projects">
                 Projects
             </h1>
 
             <div class="project" data-aos="fade-right">
                 <div class="project-info">
-                    <h2 class="project-title">
+                    <h2 class="project-title" data-i18n="project-title-dotfiles">
                         Dotfiles
                     </h2>
 
@@ -194,7 +199,7 @@
                         </div>
                     </div>
 
-                    <p class="project-about">
+                    <p class="project-about" data-i18n="project-about-dotfiles">
                         Dotfiles built for an Arch Linux setup running Hyprland, with a focus on a cohesive and adaptive look. System applications are color-coordinated through Matugen, which dynamically generates Material You–based palettes for a unified and personalized theme. Alongside custom configurations and automation scripts, these dotfiles make it easy to recreate my exact workflow and visual style on any machine.
                     </p>
 
@@ -205,12 +210,12 @@
                     </div>
                 </div>
 
-                <img class="project-image" src="assets/projects/dotfiles.png" alt="">
+                <img class="project-image" src="assets/projects/dotfiles.png" alt="dotfiles-image">
             </div>
 
             <div class="project" data-aos="fade-left">
                 <div class="project-info">
-                    <h2 class="project-title">
+                    <h2 class="project-title" data-i18n="project-title-website">
                         Website
                     </h2>
 
@@ -240,8 +245,8 @@
                         </div>
                     </div>
 
-                    <p class="project-about">
-                        This website serves as a dynamic showcase of who I am as a programmer and creator. It highlights my experiences, ongoing projects, and social connections, all in one place. Regularly updated to reflect my growth and new accomplishments, it offers a clear view of my evolving skills and passions in software development. Whether you want to explore my work or connect with me, this site is designed to keep you informed about my journey and progress.
+                    <p class="project-about" data-i18n="project-about-website">
+                        This website serves as a dynamic showcase of who I am as a programmer and creator. It highlights my experiences, ongoing projects, and social connections, all in one place. Regularly updated to reflect my growth and new accomplishments, it offers a clear view of my evolving skills and passions in software development.
                     </p>
 
                     <div class="project-link-container">
@@ -255,12 +260,12 @@
                     </div>
                 </div>
 
-                <img class="project-image" src="assets/projects/website.png" alt="">
+                <img class="project-image" src="assets/projects/website.png" alt="website-image">
             </div>
         </section>
 
         <section class="main-section" id="skills">
-            <h1 class="main-section-title">
+            <h1 class="main-section-title" data-i18n="main-section-title-skills">
                 Skills
             </h1> 
 
@@ -275,7 +280,7 @@
                             HTML
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-html">
                             Markup language
                         </span>
                     </div>
@@ -291,7 +296,7 @@
                             CSS
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-css">
                             Style sheet language
                         </span>
                     </div>
@@ -307,7 +312,7 @@
                             JavaScript
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-javascript">
                             Programming language
                         </span>
                     </div>
@@ -323,7 +328,7 @@
                             C
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-c">
                             General-purpose programming language
                         </span>
                     </div>
@@ -339,7 +344,7 @@
                             Python
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-python">
                             High-level programming language
                         </span>
                     </div>
@@ -355,7 +360,7 @@
                             Git
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-git">
                             Version control system
                         </span>
                     </div>
@@ -371,7 +376,7 @@
                             Linux
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-linux">
                             Open-source operating system
                         </span>
                     </div>
@@ -387,7 +392,7 @@
                             Bash
                         </h2>
 
-                        <span class="skill-subtitle">
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-bash">
                             Command-line shell
                         </span>
                     </div>
@@ -397,15 +402,70 @@
     </div>
 
     <footer>
-        <i class="fa-solid fa-wrench"></i>
-        <span>
-            Work In Progress
-        </span>
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-contributors">
+                Contributors
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" id="contributor" href="https://github.com/DimitryGonzales" target="_blank">
+                    <div class="contributor-image-container">
+                        <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="prlw's avatar">
+                    </div>
+
+                    <div class="contributor-info">
+                        <h2 class="contributor-title">
+                            Dimitry
+                        </h2>
+
+                        <span class="contributor-role" data-i18n="contributor-role-dimitry">
+                            Developer
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-fonts">
+                Fonts
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" href="https://fonts.google.com/specimen/Inter" target="_blank">
+                    <span>Inter</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="footer-section-button" href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank">
+                    <span>Noto Sans Japanese</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-libraries">
+                Libraries
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" href="https://fontawesome.com/" target="_blank">
+                    <span>Font Awesome</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="footer-section-button" href="https://scrollrevealjs.org/" target="_blank">
+                    <span>ScrollReveal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
     </footer>
 
-    <script src="scripts/scrollreveal.js"></script>
-
     <script src="scripts/language.js"></script>
+
+    <script src="scripts/scrollreveal.js"></script>
 
     <script src="scripts/theme.js"></script>
 
