@@ -470,35 +470,14 @@ label[for="theme-toggle"] i {
     font-weight: normal;
     text-decoration: none;
 
-    padding: 0 25px;
+    padding: 15px;
 
-    height: 60px;
+    height: auto;
     width: auto;
 }
 
 .error-button:hover {
     background-color: var(--surface_hover);
-}
-
-.main-section {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-
-    height: auto;
-    width: 100%;
-    max-width: 1000px;
-}
-
-.main-section-title {
-    border-bottom: 2px solid var(--outline);
-
-    color: var(--title);
-    font-size: 2rem;
-    font-weight: bold;
-
-    height: 50px;
-    width: 100%;
 }
 
 footer {
@@ -705,5 +684,21 @@ footer {
     .return-to-top {
         right: 10px;
         bottom: 150px;
+    }
+
+    .main::before {
+        font-size: 10rem;
+    }
+
+    .error-title {
+        font-size: 3rem;
+    }
+
+    .error-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .error-button {
+        font-size: 1rem;
     }
 }
