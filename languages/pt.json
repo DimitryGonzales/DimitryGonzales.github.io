@@ -1,4 +1,7 @@
 {
+    "error-title": "Página não encontrada",
+    "error-subtitle": "A página solicitada não pôde ser encontrada.",
+    "error-button": "Voltar para a página inicial",
     "navbar-title": "Menu",
     "navbar-section-title-shortcuts": "Atalhos",
     "shortcut-projects": "Projetos",

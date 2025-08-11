@@ -1,4 +1,7 @@
 {
+    "error-title": "ページが見つかりません",
+    "error-subtitle": "リクエストされたページは見つかりませんでした。",
+    "error-button": "ホームページに戻る",
     "navbar-title": "メニュー",
     "navbar-section-title-shortcuts": "ショートカット",
     "shortcut-projects": "プロジェクト",

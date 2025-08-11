@@ -19,7 +19,7 @@ ScrollReveal().reveal('.language-selector-container, .return-to-top', {
 });
 
 // Bottom
-ScrollReveal().reveal('#hero, .hero-image-container, .hero-text, .hero-shortcut, #projects, .project, #skills, .skill', {
+ScrollReveal().reveal('.error-title, .error-message, .error-button, #hero, .hero-image-container, .hero-text, .hero-shortcut, #projects, .project, #skills, .skill', {
     duration: 500,
     distance: '50px',
     easing: 'ease',

@@ -3,10 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page not found</title>
-
-    <!--Page Icon-->
-    <link rel="icon" href="/assets/404/page-icon.png" type="image/png">
+    <title>Dimitry's Website</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="/404.css">
@@ -23,71 +20,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-</head>
 
+    <!--ScrollReveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
 <body>
-    <input id="menu-toggle" type="checkbox">
-    <label class="label-menu-toggle" for="menu-toggle">
-        <i class="fa-solid fa-bars menu-closed-icon"></i>
-        <i class="fa-solid fa-arrow-left menu-opened-icon"></i>
+    <input type="checkbox" id="navbar-toggle">
+    <label for="navbar-toggle">
+        <i class="fa-solid fa-bars navbar-toggle-closed-icon"></i>
+        <i class="fa-solid fa-arrow-left navbar-toggle-open-icon"></i>
     </label>
 
-    <nav class="menu">
-        <div class="menu-content">
-            <div class="menu-box">
-                <div class="menu-box-title">
-                    <i class="fa-solid fa-palette"></i>
-                    <h1 data-i18n="menu-box-title-theme">
-                        Theme
-                    </h1>
-                </div>
+    <nav class="navbar">
+        <span class="navbar-title" data-i18n="navbar-title">
+            Menu
+        </span>
+            <section class="navbar-section">
+                <span class="navbar-section-title" data-i18n="navbar-section-title-social">
+                    Social
+                </span>
 
-                <div id="theme-selector" class="menu-box-content">
-                    <input id="brightness-toggle" type="checkbox">
-                    <label class="label-brightness-toggle" for="brightness-toggle">
-                        <i class="fa-solid fa-sun brightness-bright-icon"></i>
-                        <i class="fa-solid fa-moon brightness-dark-icon"></i>
-                    </label>
-
-                    <select id="palette-selector">
-                        <option value="default" data-i18n="pallete-default">Default</option>
-                        <option value="catppuccin">Catppuccin</option>
-                    </select>
-                </div>
-
-                <script src="/scripts/theme.js"></script>
-            </div>
-
-            <div class="menu-box">
-                <div class="menu-box-title">
-                    <i class="fa-solid fa-hashtag"></i>
-                    <h1 data-i18n="menu-box-title-socials">
-                        Socials
-                    </h1>
-                </div>
-
-                <div id="socials" class="menu-box-content">
-                    <a id="social-email" class="social" href="mailto:dimitrygonzales@gmail.com">
-                        <div class="social-icon">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-
+                <div class="navbar-section-button-container">
+                    <a class="navbar-section-button" href="mailto:dimitrygonzales@gmail.com" target="_blank">
                         <span data-i18n="social-email">Email</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
-                    <a id="social-github" class="social" href="https://github.com/DimitryGonzales">
-                        <div class="social-icon">
-                            <i class="fa-brands fa-github"></i>
-                        </div>
-
+                    <a class="navbar-section-button" href="https://github.com/DimitryGonzales" target="_blank">
                         <span data-i18n="social-github">Github</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
-            </div>
+            </section>
         </div>
+
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">
+            <i class="fa-solid fa-sun bright-icon"></i>
+            <i class="fa-solid fa-moon dark-icon"></i>
+        </label>
     </nav>
 
-    <div class="language-selector-box">
+    <div class="language-selector-container">
         <div class="language-selector-icon">
             <i class="fa-solid fa-language"></i>
         </div>
@@ -99,27 +73,92 @@
         </select>
     </div>
 
-    <script src="/scripts/language.js"></script>
+    <a class="return-to-top" href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
-    <main>
-        <section>
-            <h1 class="error-title" data-i18n="error">
-                404 Not Found
+    <div class="main">
+        <h1 class="error-title" data-i18n="error-title">
+            Page Not Found
+        </h1>
+
+        <p class="error-subtitle" data-i18n="error-subtitle">
+            The requested page could not be found.
+        </p>
+
+        <a class="error-button" href="/">
+            <span data-i18n="error-button">Return to homepage</span>
+        </a>
+    </div>
+
+    <footer>
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-contributors">
+                Contributors
             </h1>
 
-            <div class="error-image-box">
-                <img class="error-image" src="/assets/404/error-image.png" alt="">
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" id="contributor" href="https://github.com/DimitryGonzales" target="_blank">
+                    <div class="contributor-image-container">
+                        <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="prlw's avatar">
+                    </div>
+
+                    <div class="contributor-info">
+                        <h2 class="contributor-title">
+                            Dimitry
+                        </h2>
+
+                        <span class="contributor-role" data-i18n="contributor-role-dimitry">
+                            Developer
+                        </span>
+                    </div>
+                </a>
             </div>
-
-            <p class="error-message" data-i18n="error-message">
-                Uhh... Looks like this page doesn't exists. Check if the link is correct!
-            </p>
-
-            <a class="error-button" href="/" data-i18n="error-button">
-                Go to main page
-            </a>
-            
         </section>
-    </main>
+
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-fonts">
+                Fonts
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" href="https://fonts.google.com/specimen/Inter" target="_blank">
+                    <span>Inter</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="footer-section-button" href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank">
+                    <span>Noto Sans Japanese</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-libraries">
+                Libraries
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" href="https://fontawesome.com/" target="_blank">
+                    <span>Font Awesome</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="footer-section-button" href="https://scrollrevealjs.org/" target="_blank">
+                    <span>ScrollReveal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="scripts/language.js"></script>
+
+    <script src="scripts/scrollreveal.js"></script>
+
+    <script src="scripts/theme.js"></script>
+
+    <script src="scripts/closeMenu.js"></script>
 </body>
 </html>
