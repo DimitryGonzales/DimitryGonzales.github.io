@@ -46,6 +46,11 @@
 
     margin: 0;
     padding: 0;
+
+    scroll-behavior: smooth;
+
+    scrollbar-color: var(--title) transparent;
+    scrollbar-width: auto;
 }
 
 html {
@@ -54,6 +59,117 @@ html {
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+label[for="menu-toggle"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface);
+    backdrop-filter: blur(1px);
+    border: 1px solid var(--outline);
+    border-radius: 100%;
+    
+    cursor: pointer;
+
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 4;
+
+    user-select: none;
+
+    height: 50px;
+    aspect-ratio: 1/1;
+
+    transition: 
+        border-radius 200ms ease,
+        box-shadow 200ms ease;
+}
+
+#menu-toggle:checked + label[for="menu-toggle"] {
+    background-color: transparent;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 25px 0 0px 0;
+}
+
+label[for="menu-toggle"]:hover {
+    box-shadow: 0 0 4px 4px var(--outline) inset;
+}
+
+#menu-toggle:checked + label[for="menu-toggle"]:hover {
+    box-shadow: none;
+}
+
+label[for="menu-toggle"] span {
+    color: var(--title);
+    font-size: 1.25rem;
+
+    position: absolute;
+
+    transition: 
+        opacity 200ms ease,
+        transform 200ms ease;
+}
+
+.closed-menu-icon {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+.open-menu-icon {
+    opacity: 0;
+
+    transform: scale(0);
+}
+
+#menu-toggle:checked + label[for="menu-toggle"] .closed-menu-icon {
+    opacity: 0;
+
+    transform: scale(0);
+}
+
+#menu-toggle:checked + label[for="menu-toggle"] .open-menu-icon {
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+.menu {
+    border-radius: 25px;
+
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+
+    height: 50px;
+    width: 50px;
+
+    transition:
+        background 200ms ease,
+        backdrop-filter 200ms ease,
+        border 200ms ease,
+        box-shadow 200ms ease,
+        height 200ms ease,
+        width 200ms ease;
+}
+
+#menu-toggle:checked ~ .menu {
+    background-color: var(--surface);
+    backdrop-filter: blur(1px);
+    border: 1px solid var(--outline);
+    box-shadow: 0 0 4px 4px var(--outline) inset;
+
+    height: 500px;
+    width: 250px;
 }
 
 #theme-toggle {
@@ -96,8 +212,8 @@ label[for="theme-toggle"] span {
     position: absolute;
 
     transition: 
-        opacity 300ms ease,
-        transform 300ms ease;
+        opacity 200ms ease,
+        transform 200ms ease;
 }
 
 .bright-icon {
@@ -214,8 +330,6 @@ html.dark .hero:hover::after {
     flex-direction: column;
 
     z-index: 2;
-
-    transition: filter 500ms ease;;
 }
 
 .hero-image-container {
@@ -242,8 +356,8 @@ html.dark .hero:hover::after {
     color: var(--title);
     font-size: 2.5rem;
     font-weight: bold;
-
     text-align: center;
+    white-space: nowrap;
 }
 
 .hero-title-name {
@@ -269,7 +383,7 @@ html.dark .hero:hover::after {
     height: 1px;
     width: 0%;
 
-    transition: width 300ms ease;
+    transition: width 200ms ease;
 }
 
 .hero-title-name:hover::before {
@@ -313,7 +427,7 @@ html.dark .hero:hover::after {
     height: 1px;
     width: 0%;
 
-    transition: width 300ms ease;
+    transition: width 200ms ease;
 }
 
 .hero-link:hover::before {
@@ -326,7 +440,7 @@ html.dark .hero:hover::after {
     font-weight: normal;
     text-decoration: none;
 
-    transition: color 300ms ease;
+    transition: color 200ms ease;
 }
 
 .hero-link:hover i {
@@ -365,9 +479,7 @@ html.dark .hero:hover::after {
     aspect-ratio: 1/1;
 
     animation: bounce 1s infinite ease;
-    transition: 
-        box-shadow 200ms ease,
-        filter 500ms ease;
+    transition: box-shadow 200ms ease;
 }
 
 .hero-scroll-down:hover {
@@ -415,6 +527,8 @@ html.dark .hero:hover::after {
 html.dark #hero-content,
 html.dark .hero-scroll-down {
     filter: brightness(0.25);
+
+    transition: filter 500ms ease;
 }
 
 html.dark .hero:hover #hero-content,
@@ -443,20 +557,41 @@ html.dark .main-content {
         linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
 }
 
-@media (max-width:750px) {
+@media (max-width:750px), (max-height: 650px) {
     .hero::after {
         box-shadow: 0 0 256px 96px var(--background) inset;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
     html.dark .hero::before,
     html.dark .hero::after {
         opacity: 1;
     }
 
+    .hero-title {
+        font-size: 2rem;
+        
+    }
+
     html.dark #hero-content,
     html.dark .hero-scroll-down {
         filter: brightness(1);
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 }
