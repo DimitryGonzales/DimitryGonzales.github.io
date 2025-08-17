@@ -21,31 +21,42 @@
 </head>
 
 <body>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle">
-        <span class="material-symbols-rounded closed-menu-icon">
-            menu
-        </span>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-shortcut-container">
+                <a class="navbar-shortcut" href="">
+                    <span>Home</span>
+                </a>
 
-        <span class="material-symbols-rounded open-menu-icon">
-            close
-        </span>
-    </label>
+                <a class="navbar-shortcut" href="">
+                    <span>About Me</span>
+                </a>
 
-    <nav class="menu">
-        
+                <a class="navbar-shortcut" href="">
+                    <span>Projects</span>
+                </a>
+
+                <a class="navbar-shortcut" href="">
+                    <span>Skills</span>
+                </a>
+            </div>
+
+            <div class="navbar-tool-container">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle">
+                    <div class="theme-slide">
+                        <span class="material-symbols-rounded bright-icon">
+                            sunny
+                        </span>
+
+                        <span class="material-symbols-rounded dark-icon">
+                            moon_stars
+                        </span>
+                    </div>
+                </label>
+            </div>
+        </div>
     </nav>
-
-    <input type="checkbox" id="theme-toggle">
-    <label for="theme-toggle">
-        <span class="material-symbols-rounded bright-icon">
-            moon_stars
-        </span>
-
-        <span class="material-symbols-rounded dark-icon">
-            sunny
-        </span>
-    </label>
 
     <main>
         <div class="hero">
