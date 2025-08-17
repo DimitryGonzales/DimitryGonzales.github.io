@@ -96,6 +96,7 @@ html.dark .navbar {
 
 .navbar-shortcut-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
@@ -535,7 +536,7 @@ html.dark .main-content {
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
     .navbar-shortcut-container {
         gap: 15px;
     }
@@ -557,12 +558,32 @@ html.dark .main-content {
 }
 
 @media (max-width: 400px) {
+    .navbar-shortcut-container {
+        gap: 10px;
+    }
+
+    .navbar-shortcut {
+        font-size: 1rem;
+    }
+
+    label[for="theme-toggle"] {
+        width: 50px;
+    }
+
+    #theme-toggle:checked + label[for="theme-toggle"] .theme-slide {
+        transform: translateX(calc(100% - 10px));
+    }
+
     .hero-title {
         font-size: 1.75rem;
     }
 }
 
 @media (max-width: 350px) {
+    .navbar-shortcut {
+        font-size: 0.9rem;
+    }
+
     .hero-title {
         font-size: 1.5rem;
     }
