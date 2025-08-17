@@ -537,6 +537,10 @@ html.dark .main-content {
 }
 
 @media (max-width: 500px) {
+    .navbar {
+        padding: 0 15px;
+    }
+
     .navbar-shortcut-container {
         gap: 15px;
     }
@@ -558,6 +562,10 @@ html.dark .main-content {
 }
 
 @media (max-width: 400px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
     .navbar-shortcut-container {
         gap: 10px;
     }
