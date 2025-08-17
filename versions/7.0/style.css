@@ -303,6 +303,8 @@ html.dark .hero:hover::after {
     flex-direction: column;
 
     z-index: 2;
+
+    transition: filter 500ms ease;
 }
 
 .hero-image-container {
@@ -435,7 +437,6 @@ html.dark .hero:hover::after {
 
     background-color: var(--surface);
     backdrop-filter: blur(1px);
-    border: 1px solid var(--surface_outline);
     border-radius: 100%;
 
     text-decoration: none;
@@ -450,7 +451,9 @@ html.dark .hero:hover::after {
     aspect-ratio: 1/1;
 
     animation: bounce 1s infinite ease;
-    transition: box-shadow 200ms ease;
+    transition: 
+        box-shadow 200ms ease,
+        filter 500ms ease;
 }
 
 .hero-scroll-down:hover {
@@ -498,8 +501,6 @@ html.dark .hero:hover::after {
 html.dark #hero-content,
 html.dark .hero-scroll-down {
     filter: brightness(0.25);
-
-    transition: filter 500ms ease;
 }
 
 html.dark .hero:hover #hero-content,
