@@ -264,6 +264,7 @@ html.dark .hero:hover::after {
 
     position: absolute;
     bottom: 0;
+    left: 0;
 
     height: 1px;
     width: 0%;
@@ -281,6 +282,55 @@ html.dark .hero:hover::after {
     font-weight: normal;
 
     text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.hero-link-container {
+    display: flex;
+    gap: 10px;
+
+    height: auto;
+    width: auto;
+}
+
+.hero-link {
+    position: relative;
+
+    height: auto;
+    width: auto;
+}
+
+.hero-link::before {
+    content: "";
+
+    background-color: var(--accent);
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    height: 1px;
+    width: 0%;
+
+    transition: width 300ms ease;
+}
+
+.hero-link:hover::before {
+    width: 100%;;
+}
+
+.hero-link i {
+    color: var(--title);
+    font-size: 1.75rem;
+    font-weight: normal;
+    text-decoration: none;
+
+    transition: color 300ms ease;
+}
+
+.hero-link:hover i {
+    color: var(--accent);
 }
 
 @keyframes bounce {
@@ -397,13 +447,16 @@ html.dark .main-content {
     .hero::after {
         box-shadow: 0 0 256px 96px var(--background) inset;
     }
+}
 
-    .hero::before,
-    .hero::after {
+@media (max-width: 450px) {
+    html.dark .hero::before,
+    html.dark .hero::after {
         opacity: 1;
     }
 
-    #hero-content {
+    html.dark #hero-content,
+    html.dark .hero-scroll-down {
         filter: brightness(1);
     }
 }
