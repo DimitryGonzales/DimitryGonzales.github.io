@@ -11,7 +11,7 @@
     --surface: rgba(175, 175, 175, 0.2);
     --surface_hover: rgba(100, 100, 100, 0.2);
     --surface_blur: blur(4px);
-    --surface_shadow: 0 0 4px 4px var(--surface_outline) inset;
+    --surface_shadow: 0 0 4px 2px var(--surface_outline) inset;
     --surface_title: #222222;
     --surface_text: #333333;
     --surface_subtext: #555555;
@@ -20,7 +20,7 @@
     --surface_container: rgba(125, 125, 125, 0.2);
     --surface_container_hover: rgba(50, 50, 50, 0.2);
     --surface_container_blur: blur(2px);
-    --surface_container_shadow: 0 0 4px 2px var(--surface_container_outline) inset;
+    --surface_container_shadow: 0 0 4px 0px var(--surface_container_outline) inset;
     --surface_container_title: #333333;
     --surface_container_text: #444444;
     --surface_container_subtext: #666666;
