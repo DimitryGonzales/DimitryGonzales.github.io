@@ -1,5 +1,5 @@
-// Top
-ScrollReveal().reveal('.footer-section', {
+// From Top
+ScrollReveal().reveal('.from-top', {
     duration: 500,
     distance: '50px',
     easing: 'ease',
@@ -8,8 +8,8 @@ ScrollReveal().reveal('.footer-section', {
     reset: false
 });
 
-// Right
-ScrollReveal().reveal('.language-selector-container, .return-to-top', {
+// From Right
+ScrollReveal().reveal('.from-right', {
     duration: 500,
     distance: '50px',
     easing: 'ease',
@@ -18,8 +18,8 @@ ScrollReveal().reveal('.language-selector-container, .return-to-top', {
     reset: false
 });
 
-// Bottom
-ScrollReveal().reveal('.error-title, .error-subtitle, .error-button, #hero, .hero-image-container, .hero-text, .hero-shortcut, #projects, .project, #skills, .skill', {
+// From Bottom
+ScrollReveal().reveal('.from-bottom', {
     duration: 500,
     distance: '50px',
     easing: 'ease',
@@ -28,8 +28,8 @@ ScrollReveal().reveal('.error-title, .error-subtitle, .error-button, #hero, .her
     reset: false
 });
 
-// Left
-ScrollReveal().reveal('label[for="navbar-toggle"]', {
+// From Left
+ScrollReveal().reveal('.from-left', {
     duration: 500,
     distance: '50px',
     easing: 'ease',

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitry's Website</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--Noto Sans Japanese Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <!--ScrollReveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <input type="checkbox" id="navbar-toggle">
+    <label for="navbar-toggle">
+        <i class="fa-solid fa-bars navbar-toggle-closed-icon"></i>
+        <i class="fa-solid fa-arrow-left navbar-toggle-open-icon"></i>
+    </label>
+
+    <nav class="navbar">
+        <span class="navbar-title" data-i18n="navbar-title">
+            Menu
+        </span>
+
+        <div class="navbar-content">
+            <section class="navbar-section">
+                <span class="navbar-section-title" data-i18n="navbar-section-title-shortcuts">
+                    Shortcuts
+                </span>
+
+                <div class="navbar-section-button-container">
+                    <a class="navbar-section-button shortcut" href="#projects">
+                        <span data-i18n="shortcut-projects">Projects</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+
+                    <a class="navbar-section-button shortcut" href="#skills">
+                        <span data-i18n="shortcut-skills">Skills</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="navbar-section">
+                <span class="navbar-section-title" data-i18n="navbar-section-title-social">
+                    Social
+                </span>
+
+                <div class="navbar-section-button-container">
+                    <a class="navbar-section-button" href="mailto:dimitrygonzales@gmail.com" target="_blank">
+                        <span data-i18n="social-email">Email</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a class="navbar-section-button" href="https://github.com/DimitryGonzales" target="_blank">
+                        <span data-i18n="social-github">Github</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">
+            <i class="fa-solid fa-sun bright-icon"></i>
+            <i class="fa-solid fa-moon dark-icon"></i>
+        </label>
+    </nav>
+
+    <div class="language-selector-container">
+        <div class="language-selector-icon">
+            <i class="fa-solid fa-language"></i>
+        </div>
+
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+
+    <a class="return-to-top" href="#">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <div class="main">
+        <section class="main-section" id="hero">
+            <div class="hero-top">
+                <a class="hero-image-container" href="https://github.com/DimitryGonzales" target="_blank">
+                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="prlw's avatar">
+                </a>
+
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Dimitry Gonzales
+                    </h1>
+
+                    <h2 class="hero-subtitle" data-i18n="hero-subtitle">
+                        Beginner programmer aspiring to become a software engineer.
+                    </h2>
+
+                    <p class="hero-about" data-i18n="hero-about">
+                        Hi, I'm Dimitry Gonzales,  an aspiring software engineer exploring web development and expanding my knowledge of programming languages.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hero-separator"></div>
+
+            <div class="hero-bottom">
+                <div class="hero-shortcut">
+                    <h2 class="hero-shortcut-title" data-i18n="hero-shortcut-title-projects">
+                        Projects
+                    </h2>
+
+                    <p class="hero-shortcut-about" data-i18n="hero-shortcut-about-projects">
+                        A showcase of personal and collaborative works I've worked on.
+                    </p>
+
+                    <div class="hero-shortcut-button-container">
+                        <a class="hero-shortcut-button" href="#projects">
+                            <span data-i18n="hero-shortcut-button-projects">
+                                Projects
+                            </span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-shortcut">
+                    <h2 class="hero-shortcut-title" data-i18n="hero-shortcut-title-skills">
+                        Skills
+                    </h2>
+
+                    <p class="hero-shortcut-about" data-i18n="hero-shortcut-about-skills">
+                        A showcase of my key skills and technologies I use to bring projects to life and solve problems efficiently.
+                    </p>
+
+                    <div class="hero-shortcut-button-container">
+                        <a class="hero-shortcut-button" href="#skills">
+                            <span data-i18n="hero-shortcut-button-skills">
+                                Skills
+                            </span>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-section" id="projects">
+            <h1 class="main-section-title" data-i18n="main-section-title-projects">
+                Projects
+            </h1>
+
+            <div class="project" data-aos="fade-right">
+                <div class="project-info">
+                    <h2 class="project-title" data-i18n="project-title-dotfiles">
+                        Dotfiles
+                    </h2>
+
+                    <div class="project-tool-container">
+                        <div class="project-tool">
+                            <img src="assets/svg/linux.svg" alt="">
+
+                            <span class="project-tool-tooltip">
+                                Linux
+                            </span>
+                        </div>
+
+                        <div class="project-tool">
+                            <img src="assets/svg/css3.svg" alt="">
+
+                            <span class="project-tool-tooltip">
+                                CSS 
+                            </span>
+                        </div>
+
+                        <div class="project-tool">
+                            <img src="assets/svg/bash.svg" alt="">
+
+                            <span class="project-tool-tooltip">
+                                Bash
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="project-about" data-i18n="project-about-dotfiles">
+                        Dotfiles built for an Arch Linux setup running Hyprland, with a focus on a cohesive and adaptive look. System applications are color-coordinated through Matugen, which dynamically generates Material You–based palettes for a unified and personalized theme. Alongside custom configurations and automation scripts, these dotfiles make it easy to recreate my exact workflow and visual style on any machine.
+                    </p>
+
+                    <div class="project-link-container">
+                        <a class="project-link" href="https://github.com/DimitryGonzales/dotfiles" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <img class="project-image" src="assets/projects/dotfiles.png" alt="dotfiles-image">
+            </div>
+
+            <div class="project" data-aos="fade-left">
+                <div class="project-info">
+                    <h2 class="project-title" data-i18n="project-title-website">
+                        Website
+                    </h2>
+
+                    <div class="project-tool-container">
+                        <div class="project-tool">
+                            <img src="assets/svg/html5.svg" alt="">
+
+                            <span class="project-tool-tooltip">
+                                HTML
+                            </span>
+                        </div>
+
+                        <div class="project-tool">
+                            <img src="assets/svg/css3.svg" alt="">
+
+                            <span class="project-tool-tooltip">
+                                CSS 
+                            </span>
+                        </div>
+
+                        <div class="project-tool">
+                            <img src="assets/svg/javascript.svg" alt="">
+
+                            <span class="project-tool-tooltip">
+                                JavaScript
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="project-about" data-i18n="project-about-website">
+                        This website serves as a dynamic showcase of who I am as a programmer and developer. It highlights my experiences, ongoing projects, and social connections, all in one place. Regularly updated to reflect my growth and new accomplishments, it offers a clear view of my evolving skills and passions in software development.
+                    </p>
+
+                    <div class="project-link-container">
+                        <a class="project-link" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a class="project-link" href="https://dimitrygonzales.github.io" target="_blank">
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <img class="project-image" src="assets/projects/website.png" alt="website-image">
+            </div>
+        </section>
+
+        <section class="main-section" id="skills">
+            <h1 class="main-section-title" data-i18n="main-section-title-skills">
+                Skills
+            </h1> 
+
+            <div class="skill-container">
+                <a class="skill" href="https://developer.mozilla.org/docs/Web/HTML" target="_blank" data-aos="fade-up" data-aos-duration="250">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/html5.svg" alt="html5-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            HTML
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-html">
+                            Markup language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://developer.mozilla.org/docs/Web/CSS" target="_blank" data-aos="fade-up" data-aos-duration="500">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/css3.svg" alt="css3-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            CSS
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-css">
+                            Style sheet language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank" data-aos="fade-up" data-aos-duration="750">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/javascript.svg" alt="javascript-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            JavaScript
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-javascript">
+                            Programming language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://wikipedia.org/wiki/C_(programming_language)" target="_blank" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/c.svg" alt="c-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            C
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-c">
+                            General-purpose programming language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://www.python.org/" target="_blank" data-aos="fade-up" data-aos-duration="1250">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/python.svg" alt="python-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Python
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-python">
+                            High-level programming language
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://git-scm.com/" target="_blank" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/git.svg" alt="git-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Git
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-git">
+                            Version control system
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://wikipedia.org/wiki/Linux" target="_blank" data-aos="fade-up" data-aos-duration="1750">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/linux.svg" alt="tux-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Linux
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-linux">
+                            Open-source operating system
+                        </span>
+                    </div>
+                </a>
+
+                <a class="skill" href="https://www.gnu.org/software/bash/" target="_blank" data-aos="fade-up" data-aos-duration="2000">
+                    <div class="skill-image-container">
+                        <img src="assets/svg/bash.svg" alt="bash-icon">
+                    </div>
+
+                    <div class="skill-about">
+                        <h2 class="skill-title">
+                            Bash
+                        </h2>
+
+                        <span class="skill-subtitle" data-i18n="skill-subtitle-bash">
+                            Command-line shell
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-contributors">
+                Contributors
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" id="contributor" href="https://github.com/DimitryGonzales" target="_blank">
+                    <div class="contributor-image-container">
+                        <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="prlw's avatar">
+                    </div>
+
+                    <div class="contributor-info">
+                        <h2 class="contributor-title">
+                            Dimitry
+                        </h2>
+
+                        <span class="contributor-role" data-i18n="contributor-role-dimitry">
+                            Developer
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-fonts">
+                Fonts
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" href="https://fonts.google.com/specimen/Inter" target="_blank">
+                    <span>Inter</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="footer-section-button" href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank">
+                    <span>Noto Sans Japanese</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="footer-section">
+            <h1 class="footer-section-title" data-i18n="footer-section-title-libraries">
+                Libraries
+            </h1>
+
+            <div class="footer-section-button-container">
+                <a class="footer-section-button" href="https://fontawesome.com/" target="_blank">
+                    <span>Font Awesome</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a class="footer-section-button" href="https://scrollrevealjs.org/" target="_blank">
+                    <span>ScrollReveal</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="scripts/language.js"></script>
+
+    <script src="scripts/scrollreveal.js"></script>
+
+    <script src="scripts/theme.js"></script>
+
+    <script src="scripts/closeMenu.js"></script>
+</body>
+</html>
