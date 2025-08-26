@@ -1,6 +1,6 @@
 # Dimitry's Website
 
-This website serves as a dynamic showcase of who I am as a programmer and developer. It highlights my experiences, ongoing projects, and social connections, all in one place. Regularly updated to reflect my growth and new accomplishments, it offers a clear view of my evolving skills and passions in software development.
+This website serves as a dynamic showcase of who I am as a programmer and developer. It highlights my experiences and ongoing projects, all in one place. Regularly updated to reflect my growth and new accomplishments, it offers a clear view of my evolving skills and passions in software development.
 
 <br>
 
