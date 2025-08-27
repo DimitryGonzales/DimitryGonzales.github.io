@@ -23,4 +23,4 @@ git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git
 
 ## 🖼️ Showcase
 
-<img width="1920" height="2315" alt="website-full" src="https://github.com/user-attachments/assets/253592f7-aaf9-4eb1-86a3-1e3ccd548aef" />
+<img width="1920" height="4270" alt="Screenshot 2025-08-27 at 00-53-36 Dimitry's Website" src="https://github.com/user-attachments/assets/00a0f25d-e526-48a2-bec6-b94237742e60" />
