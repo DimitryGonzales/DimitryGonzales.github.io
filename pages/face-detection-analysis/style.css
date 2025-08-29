@@ -224,8 +224,6 @@ label[for="theme-toggle"] span {
     display: block;
     border-radius: 25px;
 
-    transform: scaleX(-1);
-
     height: auto;
     width: auto;
     max-width: 100%;
@@ -239,8 +237,6 @@ label[for="theme-toggle"] span {
     left: 0;
 
     pointer-events: none;
-
-    transform: scaleX(-1);
 
     height: 100%;
     width: 100%;
