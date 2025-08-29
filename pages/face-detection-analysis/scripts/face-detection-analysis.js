@@ -6,12 +6,14 @@ const infoContainer = document.getElementById('face-info-container');
 // GitHub raw URL for models
 const MODEL_URL = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights';
 
+let analysisResults = [];
+
 async function loadModels() {
     await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
     await faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL);
     await faceapi.nets.ageGenderNet.loadFromUri(MODEL_URL);
     await faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL);
-    console.log("Models loaded");
+    console.log("Models loaded ✅");
 }
 
 async function startVideo() {
@@ -23,40 +25,58 @@ async function startVideo() {
     }
 }
 
+// Keep canvas in sync with video size
+function resizeCanvas() {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+}
+
 video.addEventListener('play', () => {
-    function resizeCanvas() {
-        // Match canvas resolution to video resolution
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-    }
-
     resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
+    // Run analysis every 750 ms
     setInterval(async () => {
         const displaySize = { width: video.videoWidth, height: video.videoHeight };
-        faceapi.matchDimensions(canvas, displaySize);
-
         const detections = await faceapi
             .detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
             .withFaceLandmarks()
             .withAgeAndGender()
             .withFaceExpressions();
 
-        const resized = faceapi.resizeResults(detections, displaySize);
+        analysisResults = faceapi.resizeResults(detections, displaySize);
+    }, 750);
 
+    // Draw loop every frame
+    const drawLoop = () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
         infoContainer.innerHTML = "";
 
-        resized.forEach((det, i) => {
-            // Draw face box
+        analysisResults.forEach((det, i) => {
             const box = det.detection.box;
-            new faceapi.draw.DrawBox(box, { label: `Face ${i + 1}` }).draw(canvas);
 
-            // Extract attributes
+            // Draw box
+            context.strokeStyle = "lime";
+            context.lineWidth = 2;
+            context.strokeRect(box.x, box.y, box.width, box.height);
+
+            // Draw label above the box
+            const label = `Face ${i + 1}`;
+            context.fillStyle = "lime";
+            context.font = "16px Arial";
+            const textWidth = context.measureText(label).width;
+            const textHeight = 16;
+            const padding = 4;
+            context.fillRect(box.x, box.y - textHeight - padding * 2, textWidth + padding * 2, textHeight + padding * 2);
+            context.fillStyle = "black";
+            context.fillText(label, box.x + padding, box.y - padding);
+
+            // Process attributes
             const { age, gender, expressions } = det;
-            const topExpression = Object.entries(expressions).sort((a, b) => b[1] - a[1])[0][0];
+            const sorted = Object.entries(expressions).sort((a, b) => b[1] - a[1]);
+            const topExpression = sorted[0][0];
 
-            // Create card
+            // Create info card
             const card = document.createElement('div');
             card.className = "face-about";
             card.innerHTML = `
@@ -70,10 +90,12 @@ video.addEventListener('play', () => {
                         <h2>Age</h2>
                         <span>${age.toFixed(0)}</span>
                     </div>
+
                     <div class="face-about-info">
                         <h2>Gender</h2>
                         <span>${gender}</span>
                     </div>
+
                     <div class="face-about-info">
                         <h2>Expression</h2>
                         <span>${topExpression}</span>
@@ -82,7 +104,11 @@ video.addEventListener('play', () => {
             `;
             infoContainer.appendChild(card);
         });
-    }, 500);
+
+        requestAnimationFrame(drawLoop);
+    };
+
+    drawLoop();
 });
 
 // Load models and start video
