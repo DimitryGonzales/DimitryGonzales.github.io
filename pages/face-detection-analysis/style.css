@@ -327,6 +327,7 @@ main {
     padding: 200px 25px;
 
     height: auto;
+    min-height: 100dvh;
     width: 100%;
 }
 
@@ -343,27 +344,32 @@ html.dark .main-content {
     
     position: relative;
 
-    height: auto;
-    width: 100%;
-}
-
-video {
-    background-color: var(--surface);
-    border-radius: 25px;
-
-    overflow: hidden;
-
     width: 100%;
     aspect-ratio: 16/9;
 }
 
-canvas {
+#video {
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    height: auto;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+#overlay {
+    display: flex;
+
     position: absolute;
     top: 0;
     left: 0;
 
-    height: 100%;
+    height: auto;
+    max-height: 100%;
     width: auto;
+    max-width: 100%;
 }
 
 .face-info-container {
