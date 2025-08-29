@@ -218,7 +218,7 @@ label[for="theme-toggle"] span {
 
     height: auto;
     width: auto;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 #overlay {
@@ -314,10 +314,6 @@ label[for="theme-toggle"] span {
 }
 
 @media (max-width: 950px) {
-    #video {
-        max-width: 100%;
-    }
-
     .face-about {
         width: calc((100% - (15px * (2 - 1))) / 2);
     }
