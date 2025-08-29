@@ -1,0 +1,442 @@
+:root {
+    --background: #ffffff;
+
+    --accent: #006896;
+    --accent-gradient: linear-gradient(to right, #006896, #00b3ff);
+
+    --title: #111111;
+    --text: #222222;
+    --subtext: #444444;
+
+    --surface: rgba(175, 175, 175, 0.2);
+    --surface_hover: rgba(100, 100, 100, 0.2);
+    --surface_blur: blur(4px);
+    --surface_shadow: 0 0 4px 2px var(--surface_outline) inset;
+    --surface_title: #222222;
+    --surface_text: #333333;
+    --surface_subtext: #555555;
+    --surface_outline: #bbbbbb;
+
+    --surface_container: rgba(125, 125, 125, 0.2);
+    --surface_container_hover: rgba(50, 50, 50, 0.2);
+    --surface_container_blur: blur(2px);
+    --surface_container_shadow: 0 0 4px 0px var(--surface_container_outline) inset;
+    --surface_container_title: #333333;
+    --surface_container_text: #444444;
+    --surface_container_subtext: #666666;
+    --surface_container_outline: #888888;
+}
+
+.dark {
+    --background: #000000;
+
+    --title: #ffffff;
+    --text: #eeeeee;
+    --subtext: #bbbbbb;
+
+    --surface: rgba(100, 100, 100, 0.2);
+    --surface_hover: rgba(175, 175, 175, 0.2);
+    --surface_title: #eeeeee;
+    --surface_text: #cccccc;
+    --surface_subtext: #aaaaaa;
+    --surface_outline: #333333;
+
+    --surface_container: rgba(150, 150, 150, 0.2);
+    --surface_container_hover: rgba(225, 225, 225, 0.2);
+    --surface_container_title: #cccccc;
+    --surface_container_text: #bbbbbb;
+    --surface_container_subtext: #999999;
+    --surface_container_outline: #666666;
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+    scrollbar-color: var(--title) transparent;
+    scrollbar-width: auto;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+::selection {
+    background-color: var(--accent);
+    color: var(--title);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    padding: 0 25px;
+
+    height: 100px;
+    width: 100%
+}
+
+html.dark .navbar {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+}
+
+.navbar-shortcut-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.navbar-shortcut {
+    text-decoration: none;
+
+    position: relative;
+}
+
+.navbar-shortcut span {
+    color: var(--title);
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.navbar-shortcut:hover span {
+    color: var(--accent);
+}
+
+.navbar-shortcut::before {
+    content: "";
+
+    background-color: var(--accent);
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    height: 1px;
+    width: 0%;
+
+    transition: width 200ms ease;
+}
+
+.navbar-shortcut:hover::before {
+    width: 100%;
+}
+
+.navbar-tool-container {
+    display: flex;
+    gap: 25px;
+}
+
+#theme-toggle {
+    display: none;
+}
+
+label[for="theme-toggle"] {
+    background-color: var(--surface);
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    user-select: none;
+    
+    height: 30px;
+    width: 60px;
+
+    transition: background 200ms ease;
+}
+
+label[for="theme-toggle"]:hover {
+    background-color: var(--surface_hover);
+}
+
+.theme-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface_container);
+    border-radius: 100%;
+
+    position: relative;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transition: transform 200ms ease;
+}
+
+#theme-toggle:checked + label[for="theme-toggle"] .theme-slide {
+    transform: translateX(100%);
+}
+
+.theme-slide span {
+    position: absolute;
+
+    color: var(--surface_container_title);
+    font-size: 1rem;
+    font-weight: normal;
+
+    transition: 
+        opacity 200ms ease,
+        transform 200ms ease;
+}
+
+.bright-icon {
+    opacity: 1;
+
+    transform: rotate(0);
+}
+
+.dark-icon {
+    opacity: 0;
+
+    transform: rotate(-90deg);
+}
+
+#theme-toggle:checked + label[for="theme-toggle"] .bright-icon {
+    opacity: 0;
+
+    transform: rotate(90deg);
+}
+
+#theme-toggle:checked + label[for="theme-toggle"] .dark-icon {
+    opacity: 1;
+
+    transform: rotate(0deg);
+}
+
+main {
+    height: auto;
+    width: 100%;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    height: auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.main-section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: auto;
+    width: 100%;
+}
+
+.main-section-title h1 {
+    color: var(--title);
+    font-size: 1.75rem;
+    font-weight: bold;
+
+    cursor: default;
+}
+
+.main-section-title-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    position: relative;
+}
+
+.main-section-title-link::before {
+    content: "";
+
+    background-color: var(--accent);
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    height: 1px;
+    width: 0%;
+
+    transition: width 200ms ease;
+}
+
+.main-section-title-link:hover::before {
+    width: 100%;
+}
+
+.main-section-title-link span,
+.main-section-title-link i {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: transform 200ms ease;
+}
+
+.main-section-title-link:hover span,
+.main-section-title-link:hover i {
+    color: var(--accent);
+}
+
+.main-section-title-link:hover i {
+    transform: translateX(5px);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+    
+    background-color: var(--background);
+    background-image: 
+        linear-gradient(0deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+    box-shadow: 
+        0 150px 256px -20px var(--background) inset,
+        0 -150px 256px -20px var(--background) inset;
+
+    padding: 200px 25px;
+
+    height: auto;
+    width: 100%;
+}
+
+html.dark .main-content {
+    background-image: 
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+}
+
+.face-detection-analysis-container {
+    position: relative;
+
+    height: auto;
+    width: 100%;
+}
+
+video {
+    background-color: var(--surface);
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.face-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.face-box {
+    background: var(--surface);
+    backdrop-filter: var(--surface_blur);
+    border-radius: 25px;
+
+    padding: 25px;
+
+    height: auto;
+    width: calc((100% - (15px * (2 - 1))) / 2);
+}
+
+.face-box h2 {
+    color: var(--surface_title);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.face-box span {
+    color: var(--surface_text);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+@media (max-width:850px) {
+    .face-box {
+        width: 100%;
+    }
+}
+
+@media (max-width:750px), (max-height: 650px) {
+    
+}
+
+@media (max-width: 500px) {
+    
+}
+
+@media (max-width: 450px) {
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .navbar-shortcut-container {
+        gap: 15px;
+    }
+
+    .navbar-shortcut span {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .navbar-shortcut-container {
+        gap: 10px;
+    }
+
+    .navbar-shortcut span {
+        font-size: 0.9rem;
+    }
+
+    label[for="theme-toggle"] {
+        width: 50px;
+    }
+
+    #theme-toggle:checked + label[for="theme-toggle"] .theme-slide {
+        transform: translateX(calc(100% - 10px));
+    }
+}

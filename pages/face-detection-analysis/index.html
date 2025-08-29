@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitry's Website</title>
+
+    <!--Page Icon-->
+    <link rel="icon" href="/assets/rose.png" type="image/png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="navbar-shortcut-container">
+                <a class="navbar-shortcut" href="#">
+                    <span>
+                        Home
+                    </span>
+                </a>
+
+                <a class="navbar-shortcut" href="#about-me">
+                    <span>
+                        About Me
+                    </span>
+                </a>
+
+                <a class="navbar-shortcut" href="#projects">
+                    <span>
+                        Projects
+                    </span>
+                </a>
+
+                <a class="navbar-shortcut" href="#skills">
+                    <span>
+                        Skills
+                    </span>
+                </a>
+            </div>
+
+            <div class="navbar-tool-container">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle">
+                    <div class="theme-slide">
+                        <span class="material-symbols-rounded bright-icon">
+                            sunny
+                        </span>
+
+                        <span class="material-symbols-rounded dark-icon">
+                            moon_stars
+                        </span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="main-content">
+            <section class="main-section">
+                <div class="main-section-title">
+                    <h1>
+                        Face Detection & Analysis
+                    </h1>
+                </div>
+
+                <div class="face-detection-analysis-container">
+                    <video id="video" autoplay muted></video>
+                    <canvas id="overlay"></canvas>
+                </div>
+
+                <div id="face-info-container" class="face-info-container"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/scripts/theme.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="scripts/face-detection-analysis.js"></script>
+</body>
+</html>
