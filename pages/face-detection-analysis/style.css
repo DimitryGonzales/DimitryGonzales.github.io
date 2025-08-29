@@ -73,11 +73,6 @@ html {
     color: var(--title);
 }
 
-body {
-    height: 100dvh;
-    width: 100%;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -95,6 +90,7 @@ main {
     padding: 25px;
 
     height: 100%;
+    min-height: 100dvh;
     width: 100%;
 }
 
@@ -207,23 +203,13 @@ label[for="theme-toggle"] span {
     transform: rotate(0deg);
 }
 
-.face-detection-analysis {
-    display: flex;
-    gap: 25px;
-
-    background-color: red;
-
-    flex: 1;
-}
-
 .face-detection-container {
     display: inline-block;
 
-    background-color: blue;
-
     position: relative;
 
-    flex: 1;
+    height: fit-content;
+    width: fit-content;
 }
 
 #video {
@@ -231,11 +217,12 @@ label[for="theme-toggle"] span {
     border-radius: 25px;
 
     height: auto;
-    max-width: 100%;
+    width: auto;
+    max-width: 50%;
 }
 
 #overlay {
-    border-radius: 25px; /* match video corners */
+    border-radius: 25px;
 
     position: absolute;
     top: 0;
@@ -252,9 +239,8 @@ label[for="theme-toggle"] span {
     flex-wrap: wrap;
     gap: 15px;
 
-    background-color: pink;
-
-    flex: 1;
+    height: auto;
+    width: auto;
 }
 
 .face-about {
@@ -269,7 +255,7 @@ label[for="theme-toggle"] span {
     padding: 25px;
 
     height: auto;
-    width: calc((100% - (15px * (2 - 1))) / 2);
+    width: calc((100% - (15px * (4 - 1))) / 4);
 }
 
 .face-about-title {
@@ -319,4 +305,26 @@ label[for="theme-toggle"] span {
     color: var(--surface_text);
     font-size: 1rem;
     font-weight: normal;
+}
+
+@media (max-width: 1250px) {
+    .face-about {
+        width: calc((100% - (15px * (3 - 1))) / 3);
+    }
+}
+
+@media (max-width: 950px) {
+    #video {
+        max-width: 100%;
+    }
+
+    .face-about {
+        width: calc((100% - (15px * (2 - 1))) / 2);
+    }
+}
+
+@media (max-width: 650px) {
+    .face-about {
+        width: 100%;
+    }
 }
