@@ -24,69 +24,39 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="navbar-shortcut-container">
-                <a class="navbar-shortcut" href="#">
-                    <span>
-                        Home
-                    </span>
-                </a>
-
-                <a class="navbar-shortcut" href="#about-me">
-                    <span>
-                        About Me
-                    </span>
-                </a>
-
-                <a class="navbar-shortcut" href="#projects">
-                    <span>
-                        Projects
-                    </span>
-                </a>
-
-                <a class="navbar-shortcut" href="#skills">
-                    <span>
-                        Skills
-                    </span>
-                </a>
-            </div>
-
-            <div class="navbar-tool-container">
-                <input type="checkbox" id="theme-toggle">
-                <label for="theme-toggle">
-                    <div class="theme-slide">
-                        <span class="material-symbols-rounded bright-icon">
-                            sunny
-                        </span>
-
-                        <span class="material-symbols-rounded dark-icon">
-                            moon_stars
-                        </span>
-                    </div>
-                </label>
-            </div>
-        </div>
-    </nav>
-
     <main>
-        <div class="main-content">
-            <section class="main-section">
-                <div class="main-section-title">
-                    <h1>
-                        Face Detection & Analysis
-                    </h1>
-                </div>
+        <div class="tool-container">
+            <a class="tool-go-home" href="/">
+                <i class="fa-solid fa-house"></i>
 
-                <div class="face-detection-analysis-container">
-                    <video id="video" autoplay muted></video>
-                    <canvas id="overlay"></canvas>
-                </div>
+                <span>Home</span>
+            </a>
 
-                <div id="face-info-container" class="face-info-container">
-                    
-                </div>
-            </section>
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">
+                <span class="material-symbols-rounded bright-icon">
+                    sunny
+                </span>
+
+                <span class="material-symbols-rounded dark-icon">
+                    moon_stars
+                </span>
+            </label>
+        </div>
+
+        <h1 class="main-title">
+            Face Detection & Analysis
+        </h1>
+
+        <div class="face-detection-analysis">
+            <div class="face-detection-container">
+                <video id="video" autoplay muted></video>
+                <canvas id="overlay"></canvas>
+            </div>
+
+            <div id="face-info-container" class="face-info-container">
+               
+            </div>
         </div>
     </main>
 

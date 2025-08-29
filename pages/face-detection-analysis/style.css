@@ -73,83 +73,76 @@ html {
     color: var(--title);
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 3;
-
-    padding: 0 25px;
-
-    height: 100px;
-    width: 100%
+body {
+    height: 100dvh;
+    width: 100%;
 }
 
-html.dark .navbar {
-    background-color: rgba(0, 0, 0, 0.25);
-}
-
-.navbar-content {
+main {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 25px;
+
+    background-color: var(--background);
+    background-image: 
+        linear-gradient(0deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+    background-size: 50px 50px;
+    box-shadow: 
+        0 150px 256px -20px var(--background) inset,
+        0 -150px 256px -20px var(--background) inset;
+
+    padding: 25px;
 
     height: 100%;
     width: 100%;
-    max-width: 800px;
 }
 
-.navbar-shortcut-container {
+html.dark main {
+    background-image: 
+        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+}
+
+.main-title {
+    color: var(--title);
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.tool-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
+    align-items: center;
+    gap: 15px;
+
+    height: 50px;
+    width: auto;
 }
 
-.navbar-shortcut {
+.tool-go-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--surface);
+    backdrop-filter: var(--surface_blur);
+    border-radius: 25px;
+    box-shadow: var(--surface_shadow);
+
+    color: var(--surface_title);
+    font-size: 1rem;
+    font-weight: bold;
     text-decoration: none;
 
-    position: relative;
+    padding: 0 15px;
+
+    height: 100%;
+    width: fit-content;
 }
 
-.navbar-shortcut span {
-    color: var(--title);
-    font-size: 1.1rem;
-    font-weight: normal;
-}
-
-.navbar-shortcut:hover span {
-    color: var(--accent);
-}
-
-.navbar-shortcut::before {
-    content: "";
-
-    background-color: var(--accent);
-
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-
-    height: 1px;
-    width: 0%;
-
-    transition: width 200ms ease;
-}
-
-.navbar-shortcut:hover::before {
-    width: 100%;
-}
-
-.navbar-tool-container {
-    display: flex;
-    gap: 25px;
+.tool-go-home:hover {
+    background-color: var(--surface_hover);
 }
 
 #theme-toggle {
@@ -157,48 +150,32 @@ html.dark .navbar {
 }
 
 label[for="theme-toggle"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background-color: var(--surface);
-    border-radius: 15px;
+    backdrop-filter: var(--surface_blur);
+    border-radius: 100%;
+    box-shadow: var(--surface_shadow);
 
     cursor: pointer;
 
     user-select: none;
     
-    height: 30px;
-    width: 60px;
-
-    transition: background 200ms ease;
+    height: 100%;
+    aspect-ratio: 1/1;
 }
 
 label[for="theme-toggle"]:hover {
     background-color: var(--surface_hover);
 }
 
-.theme-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: var(--surface_container);
-    border-radius: 100%;
-
-    position: relative;
-
-    height: 100%;
-    aspect-ratio: 1/1;
-
-    transition: transform 200ms ease;
-}
-
-#theme-toggle:checked + label[for="theme-toggle"] .theme-slide {
-    transform: translateX(100%);
-}
-
-.theme-slide span {
+label[for="theme-toggle"] span {
     position: absolute;
 
-    color: var(--surface_container_title);
-    font-size: 1rem;
+    color: var(--surface_title);
+    font-size: 1.25rem;
     font-weight: normal;
 
     transition: 
@@ -215,13 +192,13 @@ label[for="theme-toggle"]:hover {
 .dark-icon {
     opacity: 0;
 
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 }
 
 #theme-toggle:checked + label[for="theme-toggle"] .bright-icon {
     opacity: 0;
 
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 #theme-toggle:checked + label[for="theme-toggle"] .dark-icon {
@@ -230,152 +207,54 @@ label[for="theme-toggle"]:hover {
     transform: rotate(0deg);
 }
 
-main {
-    height: auto;
-    width: 100%;
-}
-
-.main-section {
+.face-detection-analysis {
     display: flex;
-    flex-direction: column;
     gap: 25px;
 
-    height: auto;
-    width: 100%;
-    max-width: 800px;
+    background-color: red;
+
+    flex: 1;
 }
 
-.main-section-title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.face-detection-container {
+    display: inline-block;
 
-    height: auto;
-    width: 100%;
-}
-
-.main-section-title h1 {
-    color: var(--title);
-    font-size: 1.75rem;
-    font-weight: bold;
-
-    cursor: default;
-}
-
-.main-section-title-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    text-decoration: none;
+    background-color: blue;
 
     position: relative;
-}
 
-.main-section-title-link::before {
-    content: "";
-
-    background-color: var(--accent);
-
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-
-    height: 1px;
-    width: 0%;
-
-    transition: width 200ms ease;
-}
-
-.main-section-title-link:hover::before {
-    width: 100%;
-}
-
-.main-section-title-link span,
-.main-section-title-link i {
-    color: var(--text);
-    font-size: 1rem;
-    font-weight: bold;
-
-    transition: transform 200ms ease;
-}
-
-.main-section-title-link:hover span,
-.main-section-title-link:hover i {
-    color: var(--accent);
-}
-
-.main-section-title-link:hover i {
-    transform: translateX(5px);
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
-    
-    background-color: var(--background);
-    background-image: 
-        linear-gradient(0deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
-    background-size: 50px 50px;
-    box-shadow: 
-        0 150px 256px -20px var(--background) inset,
-        0 -150px 256px -20px var(--background) inset;
-
-    padding: 200px 25px;
-
-    height: auto;
-    min-height: 100dvh;
-    width: 100%;
-}
-
-html.dark .main-content {
-    background-image: 
-        linear-gradient(0deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-}
-
-.face-detection-analysis-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    position: relative;
-
-    width: 100%;
-    aspect-ratio: 16/9;
+    flex: 1;
 }
 
 #video {
+    display: block;
     border-radius: 25px;
 
-    overflow: hidden;
-
     height: auto;
-    max-height: 100%;
-    width: auto;
     max-width: 100%;
 }
 
 #overlay {
-    display: flex;
+    border-radius: 25px; /* match video corners */
 
     position: absolute;
     top: 0;
     left: 0;
 
-    height: auto;
-    max-height: 100%;
-    width: auto;
-    max-width: 100%;
+    pointer-events: none;
+
+    height: 100%;
+    width: 100%;
 }
 
 .face-info-container {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+
+    background-color: pink;
+
+    flex: 1;
 }
 
 .face-about {
@@ -430,7 +309,7 @@ html.dark .main-content {
     width: 100%;
 }
 
-.face-about-info h3 {
+.face-about-info h2 {
     color: var(--surface_title);
     font-size: 1.1rem;
     font-weight: bold;
@@ -440,46 +319,4 @@ html.dark .main-content {
     color: var(--surface_text);
     font-size: 1rem;
     font-weight: normal;
-}
-
-@media (max-width:850px) {
-    .face-about {
-        width: 100%;
-    }
-}
-
-@media (max-width: 450px) {
-    .navbar {
-        padding: 0 15px;
-    }
-
-    .navbar-shortcut-container {
-        gap: 15px;
-    }
-
-    .navbar-shortcut span {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 350px) {
-    .navbar {
-        padding: 0 10px;
-    }
-
-    .navbar-shortcut-container {
-        gap: 10px;
-    }
-
-    .navbar-shortcut span {
-        font-size: 0.9rem;
-    }
-
-    label[for="theme-toggle"] {
-        width: 50px;
-    }
-
-    #theme-toggle:checked + label[for="theme-toggle"] .theme-slide {
-        transform: translateX(calc(100% - 10px));
-    }
 }
