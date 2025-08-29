@@ -248,7 +248,7 @@ label[for="theme-toggle"] span {
     gap: 15px;
 
     height: auto;
-    width: auto;
+    width: 100%;
 }
 
 .face-about {
@@ -313,4 +313,10 @@ label[for="theme-toggle"] span {
     color: var(--surface_text);
     font-size: 1rem;
     font-weight: normal;
+}
+
+@media (max-width: 700px) {
+    .face-detection-analysis {
+        flex-direction: column;
+    }
 }
