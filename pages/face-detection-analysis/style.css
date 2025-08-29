@@ -337,6 +337,10 @@ html.dark .main-content {
 }
 
 .face-detection-analysis-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     position: relative;
 
     height: auto;
@@ -357,9 +361,6 @@ canvas {
     position: absolute;
     top: 0;
     left: 0;
-
-    width: 100%;
-    aspect-ratio: 16/9;
 }
 
 .face-info-container {
@@ -368,7 +369,11 @@ canvas {
     gap: 15px;
 }
 
-.face-box {
+.face-about {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
     background: var(--surface);
     backdrop-filter: var(--surface_blur);
     border-radius: 25px;
@@ -379,30 +384,59 @@ canvas {
     width: calc((100% - (15px * (2 - 1))) / 2);
 }
 
-.face-box h2 {
+.face-about-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.face-about-title i {
+    color: var(--accent);
+    font-size: 1.25rem;
+}
+
+.face-about-title h2 {
+    color: var(--surface_title);
+    font-size: 1.25rem;
+}
+
+.face-about-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.face-about-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: auto;
+    width: 100%;
+}
+
+.face-about-info h3 {
     color: var(--surface_title);
     font-size: 1.1rem;
     font-weight: bold;
 }
 
-.face-box span {
+.face-about-info span {
     color: var(--surface_text);
     font-size: 1rem;
     font-weight: normal;
 }
 
 @media (max-width:850px) {
-    .face-box {
+    .face-about {
         width: 100%;
     }
-}
-
-@media (max-width:750px), (max-height: 650px) {
-    
-}
-
-@media (max-width: 500px) {
-    
 }
 
 @media (max-width: 450px) {
