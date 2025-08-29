@@ -247,8 +247,7 @@ label[for="theme-toggle"] span {
     flex-wrap: wrap;
     gap: 15px;
 
-    height: auto;
-    width: 100%;
+    flex: 1;
 }
 
 .face-about {
@@ -262,7 +261,7 @@ label[for="theme-toggle"] span {
 
     padding: 25px;
 
-    height: auto;
+    height: fit-content;
     width: 100%;
 }
 
