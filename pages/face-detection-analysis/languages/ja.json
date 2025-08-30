@@ -1,0 +1,8 @@
+{
+    "tool-go-home": "ホーム",
+    "main-title": "顔検出と解析",
+
+    "face-about-info-age": "年齢",
+    "face-about-info-gender": "性別",
+    "face-about-info-expression": "表情"
+}

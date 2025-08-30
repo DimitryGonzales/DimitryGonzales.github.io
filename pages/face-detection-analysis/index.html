@@ -29,8 +29,20 @@
             <a class="tool-go-home" href="/">
                 <i class="fa-solid fa-house"></i>
 
-                <span>Home</span>
+                <span data-i18n="tool-go-home">Home</span>
             </a>
+
+            <div class="language-selector-container">
+                <div class="language-selector-icon">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
 
             <input type="checkbox" id="theme-toggle">
             <label for="theme-toggle">
@@ -44,9 +56,10 @@
             </label>
         </div>
 
-        <h1 class="main-title">
+        <h1 class="main-title" data-i18n="main-title">
             Face Detection & Analysis
         </h1>
+
         <div class="face-detection-analysis">
             <div class="face-detection-container">
                 <video id="video" autoplay muted></video>
@@ -58,6 +71,8 @@
             </div>
         </div>
     </main>
+
+    <script src="/scripts/language.js"></script>
 
     <script src="/scripts/theme.js"></script>
 

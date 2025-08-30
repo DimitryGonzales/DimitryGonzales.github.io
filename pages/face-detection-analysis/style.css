@@ -134,11 +134,59 @@ html.dark main {
     padding: 0 15px;
 
     height: 100%;
-    width: fit-content;
+    width: auto;
 }
 
 .tool-go-home:hover {
     background-color: var(--surface_hover);
+}
+
+.language-selector-container {
+    display: flex;
+
+    background-color: var(--surface);
+    backdrop-filter: var(--surface_blur);
+    border-radius: 25px;
+    box-shadow: var(--surface_shadow);
+
+    overflow: hidden;
+
+    height: 100%;
+    width: auto;
+}
+
+.language-selector-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--surface_title);
+    font-size: 1rem;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+#language-selector {
+    background-color: var(--surface_container);
+    border: none;
+
+    color: var(--surface_container_title);
+    font-size: 1rem;
+    font-weight: normal;
+
+    cursor: pointer;
+
+    padding: 0 10px;
+
+    height: 100%;
+    width: 125px;
+
+    transition: background 200ms ease;
+}
+
+#language-selector:hover {
+    background-color: var(--surface_container_hover);
 }
 
 #theme-toggle {

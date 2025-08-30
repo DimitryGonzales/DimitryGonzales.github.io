@@ -1,0 +1,43 @@
+{
+    "navbar-shortcut-home": "Início",
+    "navbar-shortcut-about-me": "Sobre mim",
+    "navbar-shortcut-projects": "Projetos",
+    "navbar-shortcut-skills": "Habilidades",
+
+    "hero-title": "Olá, eu sou <a class=\"hero-title-name\" href=\"https://github.com/DimitryGonzales\" target=\"_blank\">Dimitry Gonzales</a>",
+    "hero-subtitle": "Programador iniciante com o sonho de me tornar engenheiro de software.",
+    "hero-scroll-down-tooltip": "Sobre mim",
+
+    "main-section-title-about-me": "Sobre mim",
+    "about-me-data-title-age": "Idade",
+    "about-me-data-title-company": "Empresa",
+    "about-me-data-value-company": "Nenhuma",
+    "about-me-data-title-occupation": "Ocupação",
+    "about-me-data-value-occupation": "Estudante",
+    "about-me-info": "Sou Dimitry Gonzales, um aspirante a engenheiro de software explorando desenvolvimento web e expandindo meu conhecimento em linguagens de programação.",
+    "about-me-tree-toggle-1": "Educação",
+    "about-me-tree-toggle-2": "Trabalho",
+    "about-me-tree-1": "Em desenvolvimento<br>Árvore de Educação",
+    "about-me-tree-2": "Em desenvolvimento<br>Árvore de Trabalho",
+
+    "main-section-title-projects": "Projetos",
+    "main-section-title-link": "Ver mais",
+    "project-title-dotfiles": "Dotfiles",
+    "project-about-dotfiles": "Dotfiles para <b>Hyprland</b> com personalização dinâmica inspirada no <b>Material You</b>, usando <b>Matugen</b>. Projetado para se adaptar automaticamente ao seu papel de parede.",
+    "project-link-redirect": "Projeto",
+    "project-title-face-detection-analysis": "Detecção e Análise Facial",
+    "project-about-face-detection-analysis": "Uma ferramenta de detecção e análise facial em tempo real construída com face-api.js. Usando sua câmera, ela estima idade, gênero e expressões faciais instantaneamente, demonstrando o poder do aprendizado de máquina no navegador.",
+    "project-title-website": "Website",
+    "project-about-website": "Um site que funciona como um portfólio dinâmico de quem eu sou como programador e desenvolvedor. Ele destaca minhas experiências e projetos em andamento.",
+
+    "main-section-title-skills": "Habilidades",
+    "skill-about-css": "Estilos e layouts que trazem design, cores e responsividade para sites.",
+    "skill-about-git": "Um sistema de controle de versão que rastreia alterações no código e permite colaboração em projetos.",
+    "skill-about-html": "A base das páginas web, usada para estruturar conteúdo e elementos na internet.",
+    "skill-about-linux": "Um sistema operacional de código aberto conhecido por estabilidade, personalização e ferramentas para desenvolvedores.",
+    "skill-about-bash": "Um shell de linha de comando e linguagem de script usada para automatizar tarefas em sistemas Unix-like.",
+    "skill-about-c": "Uma linguagem poderosa de baixo nível, muito usada em programação de sistemas e aplicações de alto desempenho.",
+    "skill-about-javascript": "Uma linguagem versátil que adiciona interatividade e comportamento dinâmico a aplicações web.",
+    "skill-about-python": "Uma linguagem de alto nível, amigável para iniciantes, popular em automação, ciência de dados e desenvolvimento web.",
+    "skill-link": "Ver projetos"
+}
