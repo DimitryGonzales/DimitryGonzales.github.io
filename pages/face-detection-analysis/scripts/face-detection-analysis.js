@@ -17,7 +17,7 @@ const translations = {
         genders: { "male": "Male", "female": "Female" },
         expressions: { angry: "Angry", disgusted: "Disgusted", fearful: "Fearful", happy: "Happy", neutral: "Neutral", sad: "Sad", surprised: "Surprised" }
     },
-    "pt-BR": {
+    "pt": {
         age: "Idade",
         gender: "Gênero",
         expression: "Expressão",
