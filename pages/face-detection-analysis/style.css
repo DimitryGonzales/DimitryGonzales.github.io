@@ -292,7 +292,7 @@ label[for="theme-toggle"] span {
 
 .face-info-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 15px;
 
     flex: 1;
@@ -306,6 +306,7 @@ label[for="theme-toggle"] span {
     background: var(--surface);
     backdrop-filter: var(--surface_blur);
     border-radius: 25px;
+    box-shadow: var(--surface_shadow);
 
     padding: 25px;
 
