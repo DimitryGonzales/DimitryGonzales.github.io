@@ -6,70 +6,39 @@ const infoContainer = document.getElementById('face-info-container');
 // GitHub raw URL for models
 const MODEL_URL = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights';
 
-// Translation dictionary
+let analysisResults = [];
+
+// Translation dictionaries
 const translations = {
     "en": {
         age: "Age",
         gender: "Gender",
-        face: "Face",
         expression: "Expression",
-        genders: { male: "Male", female: "Female" },
-        expressions: {
-            neutral: "Neutral",
-            happy: "Happy",
-            sad: "Sad",
-            angry: "Angry",
-            fearful: "Fearful",
-            disgusted: "Disgusted",
-            surprised: "Surprised"
-        }
+        genders: { "male": "Male", "female": "Female" },
+        expressions: { angry: "Angry", disgusted: "Disgusted", fearful: "Fearful", happy: "Happy", neutral: "Neutral", sad: "Sad", surprised: "Surprised" }
     },
-    "pt": {
+    "pt-BR": {
         age: "Idade",
         gender: "Gênero",
-        face: "Rosto",
         expression: "Expressão",
-        genders: { male: "Masculino", female: "Feminino" },
-        expressions: {
-            neutral: "Neutro",
-            happy: "Feliz",
-            sad: "Triste",
-            angry: "Bravo",
-            fearful: "Medo",
-            disgusted: "Nojo",
-            surprised: "Surpreso"
-        }
+        genders: { "male": "Masculino", "female": "Feminino" },
+        expressions: { angry: "Bravo", disgusted: "Nojo", fearful: "Medo", happy: "Feliz", neutral: "Neutro", sad: "Triste", surprised: "Surpreso" }
     },
     "ja": {
         age: "年齢",
         gender: "性別",
-        face: "顔",
         expression: "表情",
-        genders: { male: "男性", female: "女性" },
-        expressions: {
-            neutral: "ニュートラル",
-            happy: "嬉しい",
-            sad: "悲しい",
-            angry: "怒っている",
-            fearful: "恐怖",
-            disgusted: "嫌悪",
-            surprised: "驚き"
-        }
+        genders: { "male": "男性", "female": "女性" },
+        expressions: { angry: "怒り", disgusted: "嫌悪", fearful: "恐れ", happy: "幸せ", neutral: "普通", sad: "悲しい", surprised: "驚き" }
     }
 };
-
-// Detect document language (default English if not found)
-const userLang = document.documentElement.lang || "en";
-const i18n = translations[userLang] || translations["en"];
-
-let analysisResults = [];
 
 async function loadModels() {
     await faceapi.nets.tinyFaceDetector.loadFromUri(MODEL_URL);
     await faceapi.nets.faceLandmark68Net.loadFromUri(MODEL_URL);
     await faceapi.nets.ageGenderNet.loadFromUri(MODEL_URL);
     await faceapi.nets.faceExpressionNet.loadFromUri(MODEL_URL);
-    console.log("Models loaded");
+    console.log("Models loaded ✅");
 }
 
 async function startVideo() {
@@ -89,9 +58,10 @@ function resizeCanvas() {
 
 video.addEventListener('play', () => {
     resizeCanvas();
+    applyMirror();
     window.addEventListener("resize", resizeCanvas);
 
-    // Run analysis every 1000 ms
+    // Run face analysis every 1000 ms
     setInterval(async () => {
         const displaySize = { width: video.videoWidth, height: video.videoHeight };
         const detections = await faceapi
@@ -108,15 +78,19 @@ video.addEventListener('play', () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
         infoContainer.innerHTML = "";
 
+        // Get current language dynamically
+        const currentLang = document.documentElement.lang || "en";
+        const i18n = translations[currentLang] || translations["en"];
+
         analysisResults.forEach((det, i) => {
             const box = det.detection.box;
 
-            // Draw box
+            // Draw face box
             context.strokeStyle = "lime";
             context.lineWidth = 2;
             context.strokeRect(box.x, box.y, box.width, box.height);
 
-            // Draw label above the box
+            // Draw label above box
             const label = `${i + 1}`;
             context.fillStyle = "lime";
             context.font = "16px Arial";
@@ -140,7 +114,7 @@ video.addEventListener('play', () => {
             card.innerHTML = `
                 <div class="face-about-title">
                     <i class="fa-solid fa-user"></i>
-                    <h2>${i18n.face} ${i + 1}</h2>
+                    <h2>${i + 1}</h2>
                 </div>
 
                 <div class="face-about-info-container">
@@ -169,5 +143,5 @@ video.addEventListener('play', () => {
     drawLoop();
 });
 
-// Load models and start video
+// Load models and start webcam
 loadModels().then(startVideo);
