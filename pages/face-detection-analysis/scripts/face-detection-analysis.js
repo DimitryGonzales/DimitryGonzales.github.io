@@ -7,6 +7,7 @@ const infoContainer = document.getElementById('face-info-container');
 const MODEL_URL = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights';
 
 let analysisResults = [];
+let displayedResults = []; // For smooth interpolation
 
 // Translation dictionaries
 const translations = {
@@ -60,7 +61,11 @@ video.addEventListener('play', () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Run face analysis every 1000 ms
+    // Get current language dynamically
+    const currentLang = document.documentElement.lang || "en";
+    const i18n = translations[currentLang] || translations["en"];
+
+    // Run face analysis every 1000 ms (1 second)
     setInterval(async () => {
         const displaySize = { width: video.videoWidth, height: video.videoHeight };
         const detections = await faceapi
@@ -69,64 +74,74 @@ video.addEventListener('play', () => {
             .withAgeAndGender()
             .withFaceExpressions();
 
-        analysisResults = faceapi.resizeResults(detections, displaySize);
+        if (detections.length > 0) {
+            analysisResults = faceapi.resizeResults(detections, displaySize);
+            // Initialize displayedResults if empty
+            if (displayedResults.length === 0) {
+                displayedResults = analysisResults.map(det => ({ ...det, box: { ...det.detection.box } }));
+            }
+        }
     }, 1000);
+
+    // Smooth interpolation function
+    const lerp = (start, end, t) => start + (end - start) * t;
+    const interpBox = (prevBox, newBox, t) => ({
+        x: lerp(prevBox.x, newBox.x, t),
+        y: lerp(prevBox.y, newBox.y, t),
+        width: lerp(prevBox.width, newBox.width, t),
+        height: lerp(prevBox.height, newBox.height, t)
+    });
 
     // Draw loop every frame
     const drawLoop = () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
         infoContainer.innerHTML = "";
 
-        // Get current language dynamically
-        const currentLang = document.documentElement.lang || "en";
-        const i18n = translations[currentLang] || translations["en"];
+        displayedResults.forEach((det, i) => {
+            const targetBox = analysisResults[i]?.detection.box || det.box;
+            // Smoothly interpolate box position
+            det.box = interpBox(det.box, targetBox, 0.2);
 
-        analysisResults.forEach((det, i) => {
-            const box = det.detection.box;
+            const box = det.box;
 
-            // Draw face box
+            // Draw box
             context.strokeStyle = "lime";
             context.lineWidth = 2;
             context.strokeRect(box.x, box.y, box.width, box.height);
 
-            // Draw label above box
+            // Draw number label
             const label = `${i + 1}`;
             context.fillStyle = "lime";
             context.font = "16px Arial";
+            const padding = 4;
             const textWidth = context.measureText(label).width;
             const textHeight = 16;
-            const padding = 4;
             context.fillRect(box.x, box.y - textHeight - padding * 2, textWidth + padding * 2, textHeight + padding * 2);
             context.fillStyle = "black";
             context.fillText(label, box.x + padding, box.y - padding);
 
-            // Process attributes
+            // Info cards
             const { age, gender, expressions } = det;
             const sorted = Object.entries(expressions).sort((a, b) => b[1] - a[1]);
             const topExpressionKey = sorted[0][0];
             const topExpressionTranslated = i18n.expressions[topExpressionKey] || topExpressionKey;
             const genderTranslated = i18n.genders[gender] || gender;
 
-            // Create info card
             const card = document.createElement('div');
             card.className = "face-about";
             card.innerHTML = `
                 <div class="face-about-title">
-                    <i class="fa-solid fa-user"></i>
                     <h2>${i + 1}</h2>
                 </div>
-
                 <div class="face-about-info-container">
                     <div class="face-about-info">
                         <h2>${i18n.age}</h2>
                         <span>${age.toFixed(0)}</span>
                     </div>
-
                     <div class="face-about-info">
                         <h2>${i18n.gender}</h2>
                         <span>${genderTranslated}</span>
                     </div>
-
                     <div class="face-about-info">
                         <h2>${i18n.expression}</h2>
                         <span>${topExpressionTranslated}</span>
