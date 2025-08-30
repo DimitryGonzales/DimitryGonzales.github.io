@@ -58,7 +58,6 @@ function resizeCanvas() {
 
 video.addEventListener('play', () => {
     resizeCanvas();
-    applyMirror();
     window.addEventListener("resize", resizeCanvas);
 
     // Run face analysis every 1000 ms
