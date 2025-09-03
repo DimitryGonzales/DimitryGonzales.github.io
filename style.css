@@ -820,7 +820,6 @@ html.dark .main-content {
     transition: 
         background 200ms ease,
         backdrop-filter 200ms ease,
-        box-shadow 200ms ease,
         color 200ms ease;
 }
 
