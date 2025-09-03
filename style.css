@@ -1242,8 +1242,10 @@ html.dark .main-content {
 
 @media (max-width: calc(900px + (10px * 2))) {
     .navbar {
+        top: 10px;
         left: 10px;
         right: 10px;
+
         width: auto;
     }
 }
@@ -1273,9 +1275,25 @@ html.dark .main-content {
     .navbar {
         align-items: center;
         justify-content: center;
+
+        padding: 10px;
+
+        height: 65px;
+    }
+
+    .navbar-shortcut-container {
+        gap: 5px;
+        
+        width: 100%;
+    }
+
+    .navbar-shortcut {
+        width: 100%;
     }
 
     .navbar-tool-container {
+        gap: 5px;
+        
         background-color: var(--surface);
         backdrop-filter: var(--surface_blur);
         border: var(--surface_border);
