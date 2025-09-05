@@ -360,8 +360,6 @@ main {
 
     height: 100dvh;
     width: 100%;
-
-    transition: filter 500ms ease;
 }
 
 .hero::before {
@@ -1164,6 +1162,14 @@ html.dark .main-content {
     font-weight: normal;
 }
 
+html[lang="pt"] .skill-level.starter::before {
+    content: "Iniciante";
+}
+
+html[lang="ja"] .skill-level.starter::before {
+    content: "初心者";
+}
+
 .skill-level.intermediate {
     background-color: rgba(59, 130, 246, 0.2);
 }
@@ -1176,6 +1182,14 @@ html.dark .main-content {
     font-weight: normal;
 }
 
+html[lang="pt"] .skill-level.intermediate::before {
+    content: "Intermediário";
+}
+
+html[lang="ja"] .skill-level.intermediate::before {
+    content: "中級";
+}
+
 .skill-level.advanced {
     background-color: rgba(139, 92, 246, 0.2);
 }
@@ -1186,6 +1200,14 @@ html.dark .main-content {
     color: rgba(139, 92, 246, 1);
     font-size: 1rem;
     font-weight: normal;
+}
+
+html[lang="pt"] .skill-level.advanced::before {
+    content: "Avançado";
+}
+
+html[lang="ja"] .skill-level.advanced::before {
+    content: "上級";
 }
 
 .skill-about {
