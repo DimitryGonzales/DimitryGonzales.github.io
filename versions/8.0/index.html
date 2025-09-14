@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Website</title>
+
+    <!--Page Icon-->
+    <link rel="icon" href="assets/rose.png" type="image/png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--Noto Sans Japanese Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="label-menu-toggle">
+        <i class="fa-solid fa-chevron-down"></i>
+    </label>
+
+    <input type="checkbox" id="toggle-palette-selector">
+
+    <div class="menu">
+        <div class="menu-button-container">
+            <label for="toggle-palette-selector" class="menu-button">
+                <i class="fa-solid fa-palette"></i>
+                <span>Palette Selector</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="language-selector-container">
+        <div class="language-selector-icon">
+            <i class="fa-solid fa-language"></i>
+        </div>
+
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+    
+    <div class="palette-selector">
+        <label for="toggle-palette-selector" class="label-inner-toggle-palette-selector">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Close</span>
+        </label>
+
+        <div class="palette-type-container">
+            <input type="radio" name="palette-type" class="palette-type-radio" id="palette-type-light">
+
+            <label for="palette-type-light" class="palette-type" id="label-palette-type-light">
+                <i class="fa-solid fa-sun"></i>
+                <span>Light</span>
+            </label>
+
+            <input type="radio" name="palette-type" class="palette-type-radio" id="palette-type-dark">
+
+            <label for="palette-type-dark" class="palette-type" id="label-palette-type-dark">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark</span>
+            </label>
+        </div>
+
+        <div class="palette-container">
+            <input type="radio" name="palette" class="palette-radio" id="palette-color-blue" checked>
+
+            <label for="palette-color-blue" class="palette" id="label-palette-color-blue">
+                <h1>Blue</h1>
+
+                <div class="palette-shade-container palette-color-blue">
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #8ecff2
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #196585
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #003548
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #0f1417
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #1b2023
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <input type="radio" name="palette" class="palette-radio" id="palette-color-purple">
+
+            <label for="palette-color-purple" class="palette" id="label-palette-color-purple">
+                <h1>Purple</h1>
+
+                <div class="palette-shade-container palette-color-purple">
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #c4c0ff
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #5b5891
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #2d2960
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #131318
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #201f25
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <input type="radio" name="palette" class="palette-radio" id="palette-color-red">
+
+            <label for="palette-color-red" class="palette" id="label-palette-color-red">
+                <h1>Red</h1>
+
+                <div class="palette-shade-container palette-color-red">
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #ffb1c6
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #8c4a5e
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #551d30
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #191113
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #261d1f
+                        </span>
+                    </div>
+                </div>
+            </label>
+        </div>
+    </div>
+
+    <script src="scripts/paletteType.js"></script>
+    <script src="scripts/palette.js"></script>
+</body>
+</html>
