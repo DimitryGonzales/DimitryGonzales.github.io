@@ -241,6 +241,7 @@ body {
 
 #navbar {
     display: flex;
+    gap: 25px;
 
     background-color: var(--surface_container);
 
@@ -282,6 +283,44 @@ body {
     color: var(--on_primary);
 }
 
+.navbar-shortcut-container {
+    display: flex;
+    gap: 10px;
+
+    height: 100%;
+    width: auto;
+}
+
+.navbar-shortcut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--surface_container_high);
+    border-radius: 10px;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    
+    padding: 0 15px;
+
+    height: 100%;
+    width: auto;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.navbar-shortcut:hover {
+    background-color: var(--primary);
+
+    color: var(--on_primary);
+}
+
 #toggle-palette-selector {
     display: none;
 }
@@ -297,13 +336,14 @@ body {
     overflow: hidden;
 
     height: 0px;
+    max-height: calc(100% - (100px + 15px) - 25px);
     width: calc(50px + 15px + (50px + 125px));
 
     transition: height 200ms ease;
 }
 
 #menu-toggle:checked ~ .menu {
-    height: calc((10px * 2) + (25px * (2 - 1)) + ((5px * (3 - 1)) + (40px * 3)) + 50px);
+    height: calc((15px * 2) + (25px * (3 - 1)) + ((5px * (1 - 1)) + (40px * 1)) + ((5px * (2 - 1)) + (40px * 2)) + 50px);
 }
 
 .menu-content {
@@ -311,14 +351,14 @@ body {
     flex-direction: column;
     gap: 25px;
 
-    padding: 10px;
+    padding: 15px;
 
     height: auto;
     width: 100%;
 }
 
-.menu-button-container {
-    display: flex;
+.menu-shortcut-container {
+    display: none;
     flex-direction: column;
     gap: 5px;
 
@@ -326,7 +366,7 @@ body {
     width: 100%;
 }
 
-.menu-button {
+.menu-shortcut {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -341,7 +381,53 @@ body {
 
     cursor: pointer;
 
-    padding: 0 10px;
+    padding: 0 15px;
+
+    height: 40px;
+    width: 100%;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.menu-shortcut:hover {
+    background-color: var(--primary);
+
+    color: var(--on_primary);
+}
+
+.menu-shortcut-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    height: auto;
+    width: 100%;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--surface_container_high);
+    border-radius: 10px;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    padding: 0 15px;
 
     height: 40px;
     width: 100%;
@@ -357,10 +443,50 @@ body {
     color: var(--on_primary);
 }
 
-.menu-button-title {
+.menu-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    height: auto;
+    width: 100%;
+}
+
+.menu-link {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+
+    background-color: var(--surface_container_high);
+    border-radius: 10px;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    padding: 0 15px;
+
+    height: 40px;
+    width: 100%;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.menu-link:hover {
+    background-color: var(--primary);
+
+    color: var(--on_primary);
+}
+
+.menu-link-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .language-selector-container {
@@ -398,7 +524,7 @@ body {
 
     cursor: pointer;
     
-    padding: 0 10px;
+    padding: 0 15px;
 
     height: 100%;
     width: 100%;
@@ -426,7 +552,7 @@ html.palette-type-light #language-selector:hover {
     top: calc(100px + 15px);
     left: 25px;
 
-    padding: 25px 25px 0 25px;
+    padding: 15px 15px 0 15px;
 
     height: auto;
     max-height: calc(100% - (100px + 15px) - 25px);
@@ -445,7 +571,7 @@ html.palette-type-light #language-selector:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 
     background-color: var(--surface_container_high);
     border-radius: 10px;
@@ -493,7 +619,7 @@ html.palette-type-light #language-selector:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
 
     background-color: var(--surface_container_highest);
     border-radius: 10px;
@@ -531,12 +657,12 @@ html.palette-type-light .palette-type:hover {
 .palette-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
     overflow-x: hidden;
     overflow-y: scroll;
 
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 
     height: auto;
     width: 100%;    
@@ -649,7 +775,7 @@ html.palette-type-light .palette:hover {
     position: absolute;
     bottom: calc(100% + 5px);
 
-    padding: 0 10px;
+    padding: 0 15px;
 
     height: 30px;
     width: fit-content;
@@ -728,7 +854,7 @@ main section{
 .project-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 
     height: auto;
     width: 100%;
@@ -892,6 +1018,18 @@ main section{
 }
 
 @media (max-width: 550px) {
+    #menu-toggle:checked ~ .menu {
+        height: calc((15px * 2) + (25px * (4 - 1)) + ((5px * (3 - 1)) + (40px * 3)) + ((5px * (1 - 1)) + (40px * 1)) + ((5px * (2 - 1)) + (40px * 2)) + 50px);
+    }
+
+    .menu-shortcut-container {
+        display: flex;
+    }
+
+    .navbar-shortcut-container {
+        display: none;
+    }
+
     .palette-selector {
         top: 25px;
         right: 25px;

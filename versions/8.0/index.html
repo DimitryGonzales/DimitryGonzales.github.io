@@ -30,22 +30,68 @@
         <label for="menu-toggle" class="label-menu-toggle">
             <i class="fa-solid fa-bars"></i>
         </label>
+
+        <div class="navbar-shortcut-container">
+            <a href="#me" class="navbar-shortcut">
+                <i class="fa-solid fa-user"></i>
+                <span>Me</span>
+            </a>
+
+            <a href="#projects" class="navbar-shortcut">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Projects</span>
+            </a>
+
+            <a href="#skills" class="navbar-shortcut">
+                <i class="fa-solid fa-book"></i>
+                <span>Skills</span>
+            </a>
+        </div>
     </nav>
 
     <input type="checkbox" id="toggle-palette-selector">
 
     <div class="menu">
         <div class="menu-content">
+            <div class="menu-shortcut-container">
+                <a href="#me" class="menu-shortcut">
+                    <div class="menu-shortcut-title">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Me</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#projects" class="menu-shortcut">
+                    <div class="menu-shortcut-title">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Projects</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#skills" class="menu-shortcut">
+                    <div class="menu-shortcut-title">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Skills</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+
             <div class="menu-button-container">
                 <label for="toggle-palette-selector" class="menu-button">
-                    <div class="menu-button-title">
-                        <i class="fa-solid fa-palette"></i>
-                        <span>Palette Selector</span>
-                    </div>
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Palette Selector</span>
                 </label>
+            </div>
 
-                <a href="https://github.com/DimitryGonzales" target="_blank" class="menu-button">
-                    <div class="menu-button-title">
+            <div class="menu-link-container">
+                <a href="https://github.com/DimitryGonzales" target="_blank" class="menu-link">
+                    <div class="menu-link-title">
                         <i class="fa-brands fa-github"></i>
                         <span>My Github</span>
                     </div>
@@ -53,8 +99,8 @@
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
 
-                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="menu-button">
-                    <div class="menu-button-title">
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="menu-link">
+                    <div class="menu-link-title">
                         <i class="fa-brands fa-github"></i>
                         <span>Website Source</span>
                     </div>
@@ -242,7 +288,7 @@
     </div>
 
     <main>
-        <section>
+        <section id="projects">
             <div class="main-section-title-bar">
                 <h1 class="main-section-title">
                     Projects
