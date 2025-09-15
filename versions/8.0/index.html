@@ -26,31 +26,55 @@
 </head>
 <body>
     <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="label-menu-toggle">
-        <i class="fa-solid fa-chevron-down"></i>
-    </label>
+    <nav id="navbar">
+        <label for="menu-toggle" class="label-menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </nav>
 
     <input type="checkbox" id="toggle-palette-selector">
 
     <div class="menu">
-        <div class="menu-button-container">
-            <label for="toggle-palette-selector" class="menu-button">
-                <i class="fa-solid fa-palette"></i>
-                <span>Palette Selector</span>
-            </label>
-        </div>
-    </div>
+        <div class="menu-content">
+            <div class="menu-button-container">
+                <label for="toggle-palette-selector" class="menu-button">
+                    <div class="menu-button-title">
+                        <i class="fa-solid fa-palette"></i>
+                        <span>Palette Selector</span>
+                    </div>
+                </label>
 
-    <div class="language-selector-container">
-        <div class="language-selector-icon">
-            <i class="fa-solid fa-language"></i>
-        </div>
+                <a href="https://github.com/DimitryGonzales" target="_blank" class="menu-button">
+                    <div class="menu-button-title">
+                        <i class="fa-brands fa-github"></i>
+                        <span>My Github</span>
+                    </div>
 
-        <select id="language-selector">
-            <option value="en">English</option>
-            <option value="pt">Português</option>
-            <option value="ja">日本語</option>
-        </select>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="menu-button">
+                    <div class="menu-button-title">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Website Source</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="language-selector-container">
+                <div class="language-selector-icon">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
     </div>
     
     <div class="palette-selector">
@@ -105,6 +129,40 @@
                     <div class="palette-shade">
                         <span class="palette-shade-tooltip">
                             #1b2023
+                        </span>
+                    </div>
+                </div>
+            </label>
+
+            <input type="radio" name="palette" class="palette-radio" id="palette-color-pink">
+
+            <label for="palette-color-pink" class="palette" id="label-palette-color-pink">
+                <h1>Pink</h1>
+
+                <div class="palette-shade-container palette-color-pink">
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #dfb8f7
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #725188
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #412356
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #161217
+                        </span>
+                    </div>
+                    <div class="palette-shade">
+                        <span class="palette-shade-tooltip">
+                            #221e24
                         </span>
                     </div>
                 </div>
@@ -203,6 +261,8 @@
                                 Linux dotfiles
                             </p>
                         </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
                     <div class="project-bottom">
@@ -218,13 +278,15 @@
                     <a href="#" class="project-top">
                         <div class="project-top-info">
                             <h2 class="project-title">
-                                Face Detection & Analysis
+                                Face Detection
                             </h2>
 
                             <p class="project-description">
-                                Real-time face detection and analysis tool
+                                Face detection and analysis tool
                             </p>
                         </div>
+                        
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
                     <div class="project-bottom">
@@ -251,6 +313,8 @@
                                 Personal website
                             </p>
                         </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
 
                     <div class="project-bottom">

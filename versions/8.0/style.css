@@ -48,6 +48,56 @@
     --outline_variant: #c0c7cd;
 }
 
+.palette-color-pink {
+    --primary: #dfb8f7;
+    --primary_container: #593a6f;
+    --inverse_primary: #725188;
+    --on_primary: #412356;
+    --on_primary_container: #f3daff;
+
+    --surface: #161217;
+    --surface_bright: #3c383e;
+    --surface_dim: #161217;
+    --surface_container: #221e24;
+    --surface_container_high: #2d292e;
+    --surface_container_highest: #383339;
+    --on_surface: #e9e0e8;
+    --on_surface_variant: #cdc3ce;
+
+    --error: #ffb4ab;
+    --error_container: #93000a;
+    --on_error: #690005;
+    --on_error_container: #ffdad6;
+
+    --outline: #968e98;
+    --outline_variant: #4b454d;
+}
+
+.palette-color-pink.palette-type-light {
+    --primary: #725188;
+    --primary_container: #f3daff;
+    --inverse_primary: #dfb8f7;
+    --on_primary: #ffffff;
+    --on_primary_container: #2a0c40;
+
+    --surface: #fff7fd;
+    --surface_bright: #fff7fd;
+    --surface_dim: #e0d7df;
+    --surface_container: #f4ebf3;
+    --surface_container_high: #eee6ed;
+    --surface_container_highest: #e9e0e8;
+    --on_surface: #1e1a20;
+    --on_surface_variant: #4b454d;
+
+    --error: #ba1a1a;
+    --error_container: #ffdad6;
+    --on_error: #ffffff;
+    --on_error_container: #410002;
+    
+    --outline: #7c757e;
+    --outline_variant: #cdc3ce;
+}
+
 .palette-color-purple {
     --primary: #c4c0ff;
     --primary_container: #434078;
@@ -153,6 +203,10 @@
 
     margin: 0;
     padding: 0;
+
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary) transparent;
+    scrollbar-width: auto;
 }
 
 html {
@@ -173,6 +227,7 @@ body {
     background-color: var(--surface)
 }
 
+#navbar,
 .label-menu-toggle,
 .menu,
 .language-selector-container,
@@ -184,24 +239,35 @@ body {
     display: none;
 }
 
+#navbar {
+    display: flex;
+
+    background-color: var(--surface_container);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 25px;
+
+    height: 100px;
+    width: 100%;
+}
+
 .label-menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: var(--surface_container);
+    background-color: var(--surface_container_high);
     border-radius: 15px;
 
     color: var(--on_surface);
     font-size: 1rem;
 
     cursor: pointer;
-
-    position: fixed;
-    top: 25px;
-    left: 25px;
     
-    height: 50px;
+    height: 100%;
     aspect-ratio: 1/1;
 
     transition: 
@@ -210,22 +276,10 @@ body {
 }
 
 .label-menu-toggle:hover,
-#menu-toggle:checked + .label-menu-toggle {
+#menu-toggle:checked + #navbar .label-menu-toggle {
     background-color: var(--primary);
 
     color: var(--on_primary);
-}
-
-.label-menu-toggle i {
-    position: absolute;
-
-    transition: 
-        opacity 200ms ease,
-        transform 200ms ease;
-}
-
-#menu-toggle:checked + .label-menu-toggle i {
-    transform: rotate(180deg);
 }
 
 #toggle-palette-selector {
@@ -237,7 +291,7 @@ body {
     border-radius: 15px;
 
     position: fixed;
-    top: calc((25px + 50px) + 10px);
+    top: calc(100px + 15px);
     left: 25px;
 
     overflow: hidden;
@@ -249,15 +303,24 @@ body {
 }
 
 #menu-toggle:checked ~ .menu {
-    height: calc((10px * 2) + (40px * 1) + (5px * (1 - 1)));
+    height: calc((10px * 2) + (25px * (2 - 1)) + ((5px * (3 - 1)) + (40px * 3)) + 50px);
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    padding: 10px;
+
+    height: auto;
+    width: 100%;
 }
 
 .menu-button-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
-
-    padding: 10px;
 
     height: auto;
     width: 100%;
@@ -266,7 +329,7 @@ body {
 .menu-button {
     display: flex;
     align-items: center;
-    gap: 5px;
+    justify-content: space-between;
 
     background-color: var(--surface_container_high);
     border-radius: 10px;
@@ -274,6 +337,7 @@ body {
     color: var(--on_surface);
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: none;
 
     cursor: pointer;
 
@@ -293,19 +357,21 @@ body {
     color: var(--on_primary);
 }
 
+.menu-button-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .language-selector-container {
     display: flex;
 
-    border-radius: 15px;
-
-    position: fixed;
-    top: 25px;
-    left: calc((25px + 50px) + 15px);
+    border-radius: 10px;
 
     overflow: hidden;
     
     height: 50px;
-    width: auto;
+    width: 100%;
 }
 
 .language-selector-icon {
@@ -323,7 +389,7 @@ body {
 }
 
 #language-selector {
-    background-color: var(--surface_container);
+    background-color: var(--surface_container_high);
     border: none;
 
     color: var(--on_surface);
@@ -335,7 +401,7 @@ body {
     padding: 0 10px;
 
     height: 100%;
-    width: 125px;
+    width: 100%;
 
     transition: background 200ms ease;
 }
@@ -357,13 +423,13 @@ html.palette-type-light #language-selector:hover {
     border-radius: 15px;
 
     position: fixed;
-    top: 25px;
+    top: calc(100px + 15px);
     left: 25px;
 
     padding: 25px 25px 0 25px;
 
     height: auto;
-    max-height: calc(100% - (25px * 2));
+    max-height: calc(100% - (100px + 15px) - 25px);
     width: 350px;
 
     transform: translateX(calc(-100% - 25px));
@@ -403,14 +469,6 @@ html.palette-type-light #language-selector:hover {
     background-color: var(--primary);
 
     color: var(--on_primary);
-}
-
-.label-inner-toggle-palette-selector i {
-    transition: transform 200ms ease;
-}
-
-.label-inner-toggle-palette-selector:hover i {
-    transform: translateX(-5px);
 }
 
 .palette-type-container {
@@ -507,6 +565,7 @@ html.palette-type-light .palette-type:hover {
 }
 
 #palette-color-blue:checked ~ #label-palette-color-blue,
+#palette-color-pink:checked ~ #label-palette-color-pink,
 #palette-color-purple:checked ~ #label-palette-color-purple,
 #palette-color-red:checked ~ #label-palette-color-red {
     background-color: var(--primary_container);
@@ -528,6 +587,7 @@ html.palette-type-light .palette:hover {
 }
 
 #palette-color-blue:checked ~ #label-palette-color-blue h1,
+#palette-color-pink:checked ~ #label-palette-color-pink h1,
 #palette-color-purple:checked ~ #label-palette-color-purple h1,
 #palette-color-red:checked ~ #label-palette-color-red h1 {
     color: var(--on_primary_container);
@@ -636,7 +696,7 @@ main {
     flex-direction: column;
     align-items: center;
 
-    padding: calc(25px + 50px + 25px) 25px 25px 25px;
+    padding: calc(100px + 50px) 25px 50px 25px;
 
     height: auto;
     width: 100%;
@@ -693,6 +753,7 @@ main section{
 
 .project-top {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     background-position: center;
@@ -727,7 +788,8 @@ main section{
 .project-top::before {
     content: "";
 
-    background: linear-gradient(to right, var(--surface_container) 25%, transparent);
+    background-color: var(--primary);
+    opacity: 0;
 
     position: absolute;
     top: 0;
@@ -735,6 +797,12 @@ main section{
     bottom: 0;
     left: 0;
     z-index: -1;
+
+    transition: opacity 200ms ease;
+}
+
+.project-top:hover::before {
+    opacity: 1;
 }
 
 .project-top-info {
@@ -747,15 +815,39 @@ main section{
 }
 
 .project-title {
-    color: var(--on_surface);
-    font-size: 1.5rem;
+    color: #eeeeee;
+    font-size: 1.25rem;
     font-weight: bold;
+
+    transition: color 200ms ease;
+}
+
+.project-top:hover .project-title {
+    color: var(--on_primary);
 }
 
 .project-description {
-    color: var(--on_surface_variant);
+    color: #bbbbbb;
     font-size: 1rem;
     font-weight: normal;
+
+    transition: color 200ms ease;
+}
+
+.project-top:hover .project-description {
+    color: var(--inverse_primary);
+}
+
+.project-top i {
+    color: #eeeeee;
+    font-size: 1.25rem;
+
+    transition: 
+        color 200ms ease;
+}
+
+.project-top:hover i {
+    color: var(--on_primary);
 }
 
 .project-bottom {
@@ -801,9 +893,12 @@ main section{
 
 @media (max-width: 550px) {
     .palette-selector {
+        top: 25px;
         right: 25px;
         bottom: 25px;
+        left: 25px;
 
+        max-height: none;
         width: auto;
     }
 

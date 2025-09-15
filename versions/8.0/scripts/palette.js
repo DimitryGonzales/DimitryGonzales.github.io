@@ -4,17 +4,17 @@ function applyPalette() {
 
     const color = checked.id.replace("palette-color-", "");
 
-    // remove any existing palette-color-* classes
+    // Remove any existing palette-color-* classes
     document.documentElement.classList.forEach(cls => {
         if (cls.startsWith("palette-color-")) {
             document.documentElement.classList.remove(cls);
         }
     });
 
-    // add new class
+    // Add new class
     document.documentElement.classList.add(`palette-color-${color}`);
 
-    // save selection in localStorage
+    // Save selection in localStorage
     localStorage.setItem("selectedPaletteColor", color);
 }
 
@@ -27,17 +27,17 @@ function restorePalette() {
             applyPalette();
         }
     } else {
-        // if nothing saved, just apply the currently checked one
+        // If nothing saved, just apply the currently checked one
         applyPalette();
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // attach listeners
+    // Attach listeners
     document.querySelectorAll('input[id^="palette-color-"]').forEach(radio => {
         radio.addEventListener("change", applyPalette);
     });
 
-    // run at startup
+    // Run at startup
     restorePalette();
 });

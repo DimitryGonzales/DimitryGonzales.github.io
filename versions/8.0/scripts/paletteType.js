@@ -4,40 +4,49 @@ function applyPaletteType() {
 
     const type = checked.id.replace("palette-type-", "");
 
-    // remove any existing palette-type-* classes
+    // Remove any existing palette-type-* classes
     document.documentElement.classList.forEach(cls => {
         if (cls.startsWith("palette-type-")) {
             document.documentElement.classList.remove(cls);
         }
     });
 
-    // add the new class
+    // Add the new class
     document.documentElement.classList.add(`palette-type-${type}`);
 
-    // save selection
+    // Save selection
     localStorage.setItem("selectedPaletteType", type);
 }
 
 function restorePaletteType() {
     const saved = localStorage.getItem("selectedPaletteType");
+
     if (saved) {
+        // Restore saved theme
         const radio = document.getElementById(`palette-type-${saved}`);
         if (radio) {
             radio.checked = true;
             applyPaletteType();
         }
     } else {
-        // if nothing saved, just apply the currently checked one
-        applyPaletteType();
+        // Detect system preference the first time
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const systemType = prefersDark ? "dark" : "light";
+
+        const radio = document.getElementById(`palette-type-${systemType}`);
+        if (radio) {
+            radio.checked = true;
+            applyPaletteType();
+        }
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    // attach listeners
+    // Attach listeners
     document.querySelectorAll('input[id^="palette-type-"]').forEach(radio => {
         radio.addEventListener("change", applyPaletteType);
     });
 
-    // run at startup
+    // Run at startup
     restorePaletteType();
 });
