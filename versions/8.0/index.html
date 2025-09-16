@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
 
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!--Inter Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <a href="#" class="go-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
     <input type="checkbox" id="menu-toggle">
     <nav id="navbar">
         <label for="menu-toggle" class="label-menu-toggle">
@@ -564,5 +569,76 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-top">
+            <section class="footer-section">
+                <h1 class="footer-section-title">
+                   Libraries 
+                </h1>
+
+                <div class="footer-button-container">
+                    <a href="https://fontawesome.com/" target="_blank" class="footer-button">
+                        <div class="footer-button-title">
+                            <span>Font Awesome</span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="footer-section">
+                <h1 class="footer-section-title">
+                   Fonts 
+                </h1>
+
+                <div class="footer-button-container">
+                    <a href="https://fonts.google.com/specimen/Inter" target="_blank" class="footer-button">
+                        <div class="footer-button-title">
+                            <span>Inter</span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                    <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank" class="footer-button">
+                        <div class="footer-button-title">
+                            <span>Noto Sans Japanese</span>
+                        </div>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+            <div class="footer-link-container">
+                <a href="https://github.com/DimitryGonzales" target="_blank" class="footer-link">
+                    <div class="footer-link-title">
+                        <i class="fa-brands fa-github"></i>
+                        <span>My Github</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="footer-link">
+                    <div class="footer-link-title">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Website source</span>
+                    </div>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/closeOutside.js"></script>
+    <script src="scripts/scrollingDirection.js"></script>
 </body>
 </html>
