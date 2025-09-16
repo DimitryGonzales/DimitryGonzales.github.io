@@ -1243,7 +1243,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
 
     background-color: var(--surface_container_high);
     border-radius: 10px;
@@ -1301,7 +1301,7 @@ footer hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
 
     background-color: var(--surface_container_high);
     border-radius: 10px;
