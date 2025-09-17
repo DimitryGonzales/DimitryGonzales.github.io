@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitry's Website</title>
+
+    <!--Page Icon-->
+    <link rel="icon" href="assets/rose.png" type="image/png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Google Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--Noto Sans Japanese Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-shortcut-container">
+            <a class="navbar-shortcut" href="#">
+                <span data-i18n="navbar-shortcut-home">
+                    Home
+                </span>
+            </a>
+
+            <a class="navbar-shortcut" href="#about-me">
+                <span data-i18n="navbar-shortcut-about-me">
+                    About Me
+                </span>
+            </a>
+
+            <a class="navbar-shortcut" href="#projects">
+                <span data-i18n="navbar-shortcut-projects">
+                    Projects
+                </span>
+            </a>
+
+            <a class="navbar-shortcut" href="#skills">
+                <span data-i18n="navbar-shortcut-skills">
+                    Skills
+                </span>
+            </a>
+        </div>
+
+        <div class="navbar-tool-container">
+            <div class="language-selector-container">
+                <div class="language-selector-icon">
+                    <i class="fa-solid fa-language"></i>
+                </div>
+
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle">
+                <span class="material-symbols-rounded bright-icon">
+                    moon_stars
+                </span>
+
+                <span class="material-symbols-rounded dark-icon">
+                    sunny
+                </span>
+            </label>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <section class="main-section" id="hero-content">
+                <div class="hero-image-container">
+                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="Dimitry's Image">
+                </div>
+
+                <h1 class="hero-title" data-i18n="hero-title" data-i18n-html>
+                    Hi, I'm <a class="hero-title-name" href="https://github.com/DimitryGonzales" target="_blank">Dimitry Gonzales</a>
+                </h1>
+
+                <h2 class="hero-subtitle" data-i18n="hero-subtitle">
+                    Beginner programmer aspiring to become a software engineer.
+                </h2>
+
+                <div class="hero-link-container">
+                    <a class="hero-link" href="https://discord.com/users/1071590581765161052" target="_blank">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a class="hero-link" href="mailto:dimitrygonzales@gmail.com" target="_blank">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+
+                    <a class="hero-link" href="https://github.com/DimitryGonzales" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </section>
+
+            <a class="hero-scroll-down" href="#mc">
+                <span class="material-symbols-rounded">
+                    arrow_downward
+                </span>
+
+                <div class="hero-scroll-down-tooltip">
+                    <span data-i18n="hero-scroll-down-tooltip">
+                        About Me
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div class="main-content" id="mc">
+            <div class="main-section" id="about-me">
+                <div class="main-section-title">
+                    <h1 data-i18n="main-section-title-about-me">
+                        About Me
+                    </h1>
+                </div>
+
+                <div class="about-me-container">
+                    <div class="about-me-data-container">
+                        <div class="about-me-data">
+                            <div class="about-me-data-title">
+                                <i class="fa-solid fa-calendar"></i>
+
+                                <span data-i18n="about-me-data-title-age">Age</span>
+                            </div>
+
+                            <span class="about-me-data-value">
+                                18
+                            </span>
+                        </div>
+
+                        <div class="about-me-data">
+                            <div class="about-me-data-title">
+                                <i class="fa-solid fa-building"></i>
+
+                                <span data-i18n="about-me-data-title-company">Company</span>
+                            </div>
+
+                            <span class="about-me-data-value" data-i18n="about-me-data-value-company">
+                                None
+                            </span>
+                        </div>
+
+                        <div class="about-me-data">
+                            <div class="about-me-data-title">
+                                <i class="fa-solid fa-briefcase"></i>
+
+                                <span data-i18n="about-me-data-title-occupation">Occupation</span>
+                            </div>
+
+                            <span class="about-me-data-value" data-i18n="about-me-data-value-occupation">
+                                Student
+                            </span>
+                        </div>
+                    </div>
+
+                    <p class="about-me-info" data-i18n="about-me-info">
+                        I'm Dimitry Gonzales, an aspiring software engineer exploring web development and expanding my knowledge of programming languages.
+                    </p>
+
+                    <div class="about-me-tree-container">
+                        <input type="radio" id="about-me-tree-toggle-1" name="toggle" checked>
+                        <input type="radio" id="about-me-tree-toggle-2" name="toggle">
+
+                        <div class="about-me-tree-selector">
+                            <label for="about-me-tree-toggle-1" data-i18n="about-me-tree-toggle-1">
+                                Education
+                            </label>
+
+                            <label for="about-me-tree-toggle-2" data-i18n="about-me-tree-toggle-2">
+                                Work
+                            </label>
+                        </div>
+
+                        <div class="about-me-tree-viewer">
+                            <div class="about-me-tree-1" data-i18n="about-me-tree-1" data-i18n-html>
+                                Work In Progress
+
+                                <br>
+
+                                Education Tree
+                            </div>
+
+                            <div class="about-me-tree-2" data-i18n="about-me-tree-2" data-i18n-html>
+                                Work In Progress
+
+                                <br>
+
+                                Work Tree
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section" id="projects">
+                <div class="main-section-title">
+                    <h1 data-i18n="main-section-title-projects">
+                        Projects
+                    </h1>
+
+                    <a class="main-section-title-link" href="#">
+                        <span data-i18n="main-section-title-link">
+                            View more
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="project-container">
+                    <div class="project">
+                        <img class="project-image" src="assets/projects/dotfiles.png" alt="dotfiles-image">
+
+                        <div class="project-info">
+                            <h2 class="project-title" data-i18n="project-title-dotfiles">
+                                Dotfiles
+                            </h2>
+
+                            <div class="project-tool-container">
+                                <div class="project-tool">
+                                    <img src="assets/svg/css3.svg" alt="css3-icon">
+
+                                    <span>
+                                        CSS3
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>CSS3</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-tool">
+                                    <img src="assets/svg/linux.svg" alt="linux-icon">
+
+                                    <span>
+                                        Linux
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>Linux</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="project-about" data-i18n="project-about-dotfiles" data-i18n-html>
+                                Dotfiles for <b>Hyprland</b> with <b>Material You</b>-inspired dynamic theming using <b>Matugen</b>. Designed to adapt to your wallpaper automatically. 
+                            </p>
+
+                            <div class="project-link-container">
+                                <a class="project-link" href="https://github.com/DimitryGonzales/dotfiles" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a class="project-link project-link-redirect" href="#">
+                                    <span data-i18n="project-link-redirect">
+                                        Project
+                                    </span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img class="project-image" src="assets/projects/face-detection-analysis.png" alt="dotfiles-image">
+
+                        <div class="project-info">
+                            <h2 class="project-title" data-i18n="project-title-face-detection-analysis">
+                                Face Detection & Analysis
+                            </h2>
+
+                            <div class="project-tool-container">
+                                <div class="project-tool">
+                                    <img src="assets/svg/html5.svg" alt="css3-icon">
+
+                                    <span>
+                                        HTML5
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>HTML5</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-tool">
+                                    <img src="assets/svg/css3.svg" alt="css3-icon">
+
+                                    <span>
+                                        CSS3
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>CSS3</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-tool">
+                                    <img src="assets/svg/javascript.svg" alt="javascript-icon">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="project-about" data-i18n="project-about-face-detection-analysis">
+                                A real-time face detection and analysis tool built with face-api.js. Using your camera, it estimates age, gender, and facial expressions instantly, showcasing the power of browser-based machine learning.
+                            </p>
+
+                            <div class="project-link-container">
+                                <a class="project-link" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io/tree/main/pages/face-detection-analysis" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a class="project-link" href="https://dimitrygonzales.github.io/pages/face-detection-analysis" target="_blank">
+                                    <i class="fa-solid fa-globe"></i>
+                                </a>
+
+                                <a class="project-link project-link-redirect" href="#">
+                                    <span data-i18n="project-link-redirect">
+                                        Project
+                                    </span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <img class="project-image" src="assets/projects/website.png" alt="dotfiles-image">
+
+                        <div class="project-info">
+                            <h2 class="project-title" data-i18n="project-title-website">
+                                Website
+                            </h2>
+
+                            <div class="project-tool-container">
+                                <div class="project-tool">
+                                    <img src="assets/svg/html5.svg" alt="css3-icon">
+
+                                    <span>
+                                        HTML5
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>HTML5</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-tool">
+                                    <img src="assets/svg/css3.svg" alt="css3-icon">
+
+                                    <span>
+                                        CSS3
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>CSS3</span>
+                                    </div>
+                                </div>
+
+                                <div class="project-tool">
+                                    <img src="assets/svg/javascript.svg" alt="javascript-icon">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                    <div class="project-tool-tooltip">
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="project-about" data-i18n="project-about-website">
+                                A website that serves as a dynamic showcase of who I am as a programmer and developer. It highlights my experiences and ongoing projects.
+                            </p>
+
+                            <div class="project-link-container">
+                                <a class="project-link" href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+
+                                <a class="project-link" href="https://dimitrygonzales.github.io" target="_blank">
+                                    <i class="fa-solid fa-globe"></i>
+                                </a>
+
+                                <a class="project-link project-link-redirect" href="#">
+                                    <span data-i18n="project-link-redirect">
+                                        Project
+                                    </span>
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section" id="skills">
+                <div class="main-section-title">
+                    <h1 data-i18n="main-section-title-skills">
+                        Skills
+                    </h1>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/css3.svg" alt="css3-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">CSS</h2>
+
+                                <span class="skill-level intermediate"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-css">
+                            Styles and layouts that bring design, colors, and responsiveness to websites.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/git.svg" alt="git-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">Git</h2>
+
+                                <span class="skill-level intermediate"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-git">
+                            A version control system that tracks code changes and enables collaboration across projects.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/html5.svg" alt="html5-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">HTML</h2>
+
+                                <span class="skill-level intermediate"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-html">
+                            The foundation of web pages, used to structure content and elements on the internet.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/linux.svg" alt="linux-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">Linux</h2>
+
+                                <span class="skill-level intermediate"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-linux">
+                            An open-source operating system known for stability, customization, and developer-friendly tools.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/bash.svg" alt="bash-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">Bash</h2>
+
+                                <span class="skill-level starter"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-bash">
+                            A command-line shell and scripting language used to automate tasks in Unix-like systems.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/c.svg" alt="c-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">C</h2>
+
+                                <span class="skill-level starter"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-c">
+                            A powerful low-level language often used for systems programming and performance-critical applications.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/javascript.svg" alt="javascript-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">JavaScript</h2>
+
+                                <span class="skill-level starter"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-javascript">
+                            A versatile language that adds interactivity and dynamic behavior to web applications.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <img class="skill-image" src="assets/svg/python.svg" alt="python-icon">
+
+                            <div class="skill-info">
+                                <h2 class="skill-title">Python</h2>
+
+                                <span class="skill-level starter"></span>
+                            </div>
+                        </div>
+
+                        <p class="skill-about" data-i18n="skill-about-python">
+                            A high-level, beginner-friendly language popular for automation, data science, and web development.
+                        </p>
+
+                        <div class="skill-link-container">
+                            <a class="skill-link" href="#">
+                                <span data-i18n="skill-link">
+                                    View projects
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/language.js"></script>
+
+    <script src="scripts/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+    "navbar-shortcut-home": "ホーム",
+    "navbar-shortcut-about-me": "自己紹介",
+    "navbar-shortcut-projects": "プロジェクト",
+    "navbar-shortcut-skills": "スキル",
+
+    "hero-title": "こんにちは、<a class=\"hero-title-name\" href=\"https://github.com/DimitryGonzales\" target=\"_blank\">Dimitry Gonzales</a> です",
+    "hero-subtitle": "ソフトウェアエンジニアを目指す初心者プログラマーです。",
+    "hero-scroll-down-tooltip": "自己紹介",
+
+    "main-section-title-about-me": "自己紹介",
+    "about-me-data-title-age": "年齢",
+    "about-me-data-title-company": "会社",
+    "about-me-data-value-company": "なし",
+    "about-me-data-title-occupation": "職業",
+    "about-me-data-value-occupation": "学生",
+    "about-me-info": "私は Dimitry Gonzales です。ソフトウェアエンジニアを目指し、Web開発を学びながらプログラミング言語の知識を広げています。",
+
+    "about-me-tree-toggle-1": "学歴",
+    "about-me-tree-toggle-2": "職歴",
+    "about-me-tree-1": "作成中<br>学歴ツリー",
+    "about-me-tree-2": "作成中<br>職歴ツリー",
+
+    "main-section-title-projects": "プロジェクト",
+    "main-section-title-link": "もっと見る",
+    "project-title-dotfiles": "Dotfiles",
+    "project-about-dotfiles": "<b>Hyprland</b> 用の dotfiles で、<b>Material You</b> 風の動的テーマを <b>Matugen</b> で実装しました。壁紙に自動で適応します。",
+    "project-link-redirect": "プロジェクト",
+    "project-title-face-detection-analysis": "顔検出と解析",
+    "project-about-face-detection-analysis": "face-api.js を使って構築されたリアルタイムの顔検出・解析ツールです。カメラを利用して年齢・性別・表情を即座に推定し、ブラウザ上での機械学習の可能性を示します。",
+    "project-title-website": "ウェブサイト",
+    "project-about-website": "自分をプログラマー・開発者として紹介するダイナミックなポートフォリオサイト。経験や進行中のプロジェクトを紹介します。",
+
+    "main-section-title-skills": "スキル",
+    "skill-about-css": "デザイン、色、レスポンシブ性をウェブサイトに与えるスタイルとレイアウト。",
+    "skill-about-git": "コードの変更を記録し、複数人での共同開発を可能にするバージョン管理システム。",
+    "skill-about-html": "ウェブページの基盤であり、コンテンツや要素を構造化するために使われます。",
+    "skill-about-linux": "安定性、カスタマイズ性、開発者向けの豊富なツールで知られるオープンソースのOS。",
+    "skill-about-bash": "Unix系システムでタスク自動化に使われるコマンドラインシェルとスクリプト言語。",
+    "skill-about-c": "システムプログラミングや高性能アプリケーションに広く使われる強力な低水準言語。",
+    "skill-about-javascript": "ウェブアプリにインタラクティブ性や動的な動きを加える多用途の言語。",
+    "skill-about-python": "初心者に優しく、オートメーション・データサイエンス・Web開発で人気の高水準言語。",
+    "skill-link": "プロジェクトを見る"
+}
