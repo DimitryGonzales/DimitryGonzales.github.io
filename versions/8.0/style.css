@@ -1209,7 +1209,7 @@ footer {
 .footer-top {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 25px;
 
     height: auto;
     width: 100%;
