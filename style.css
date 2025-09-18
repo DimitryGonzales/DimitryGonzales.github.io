@@ -1301,7 +1301,7 @@ html.palette-type-light #project3 .project-top {
 }
 
 .project-top:hover .project-top-info {
-    background-color: var(--primary_container);
+    background-color: var(--primary);
 }
 
 .project-title {
@@ -1313,7 +1313,7 @@ html.palette-type-light #project3 .project-top {
 }
 
 .project-top:hover .project-title {
-    color: var(--on_primary_container);
+    color: var(--on_primary);
 }
 
 .project-description {
@@ -1325,7 +1325,7 @@ html.palette-type-light #project3 .project-top {
 }
 
 .project-top:hover .project-description {
-    color: var(--primary);
+    color: var(--inverse_primary);
 }
 
 .project-top-icon {
@@ -1349,9 +1349,9 @@ html.palette-type-light #project3 .project-top {
 }
 
 .project-top:hover .project-top-icon {
-    background-color: var(--primary_container);
+    background-color: var(--primary);
 
-    color: var(--on_primary_container);
+    color: var(--on_primary);
 }
 
 .project-bottom {
