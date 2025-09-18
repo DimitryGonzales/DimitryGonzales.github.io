@@ -1225,6 +1225,7 @@ html[lang="ja"] #tree-work::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 25px;
 
     background-position: center;
     background-size: cover;
@@ -1237,7 +1238,7 @@ html[lang="ja"] #tree-work::after {
 
     overflow: hidden;
 
-    padding: 25px;
+    padding: 15px;
 
     height: 100px;
     width: 100%;
@@ -1248,11 +1249,19 @@ html[lang="ja"] #tree-work::after {
 }
 
 #project2 .project-top {
-    background-image: url(assets/projects/face-detection-analysis.png);
+    background-image: url(assets/projects/face-detection-analysis-light.png);
+}
+
+html.palette-type-light #project2 .project-top {
+    background-image: url(assets/projects/face-detection-analysis-dark.png);
 }
 
 #project3 .project-top {
-    background-image: url(assets/projects/website.png);
+    background-image: url(assets/projects/website-light.png);
+}
+
+html.palette-type-light #project3 .project-top {
+    background-image: url(assets/projects/website-dark.png);
 }
 
 .project-top::before {
@@ -1280,12 +1289,23 @@ html[lang="ja"] #tree-work::after {
     flex-direction: column;
     justify-content: center;
 
+    background-color: var(--surface_container);
+    border-radius: 10px;
+
+    padding: 0 15px;
+
     height: 100%;
     width: fit-content;
+    
+    transition: background 200ms ease;
+}
+
+.project-top:hover .project-top-info {
+    background-color: var(--primary_container);
 }
 
 .project-title {
-    color: #eeeeee;
+    color: var(--on_surface);
     font-size: 1.25rem;
     font-weight: bold;
 
@@ -1293,11 +1313,11 @@ html[lang="ja"] #tree-work::after {
 }
 
 .project-top:hover .project-title {
-    color: var(--on_primary);
+    color: var(--on_primary_container);
 }
 
 .project-description {
-    color: #bbbbbb;
+    color: var(--on_surface_variant);
     font-size: 1rem;
     font-weight: normal;
 
@@ -1305,19 +1325,33 @@ html[lang="ja"] #tree-work::after {
 }
 
 .project-top:hover .project-description {
-    color: var(--inverse_primary);
+    color: var(--primary);
 }
 
-.project-top i {
-    color: #eeeeee;
-    font-size: 1.25rem;
+.project-top-icon {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+
+    background-color: var(--surface_container);
+    border-radius: 10px;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+
+    padding: 0 10px;
+
+    aspect-ratio: 1/1;
 
     transition: 
+        background 200ms ease,
         color 200ms ease;
 }
 
-.project-top:hover i {
-    color: var(--on_primary);
+.project-top:hover .project-top-icon {
+    background-color: var(--primary_container);
+
+    color: var(--on_primary_container);
 }
 
 .project-bottom {
@@ -1413,6 +1447,7 @@ html.palette-type-light .skill:hover {
 .skill-content {
     display: flex;
     justify-content: space-between;
+    gap: 25px;
 
     height: 100%;
     width: 100%;
