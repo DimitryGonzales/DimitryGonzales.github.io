@@ -1306,7 +1306,7 @@ html.palette-type-light #project3 .project-top {
 
 .project-title {
     color: var(--on_surface);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: bold;
 
     transition: color 200ms ease;
