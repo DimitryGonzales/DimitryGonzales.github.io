@@ -20,7 +20,11 @@ git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git
 
 2. Open the `index.html` file in your browser.
 
+<br>
+
 ---
+
+<br>
 
 # 🌐 Dimitry's Website (🇧🇷 Português - Brasil)
 
@@ -44,7 +48,11 @@ git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git
 
 2. Abra o arquivo `index.html` no seu navegador.
 
+<br>
+
 ---
+
+<br>
 
 # 🌐 Dimitry's Website (🇯🇵 日本語)
 
@@ -68,6 +76,10 @@ git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git
 
 2. ブラウザで `index.html` ファイルを開きます。
 
+<br>
+
 ---
+
+<br>
 
 <img width="1920" height="2099" alt="website-full" src="https://github.com/user-attachments/assets/cafd4b4c-5923-4bdc-bc40-6d6517f0890d" />
