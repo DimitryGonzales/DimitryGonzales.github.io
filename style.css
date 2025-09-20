@@ -1804,6 +1804,10 @@ html.palette-type-light .footer-link:hover {
         width: auto;
     }
 
+    #navbar.scrolling-down ~ .palette-selector {
+        top: 10px;
+    }
+
     .project-top {
         gap: 20px;
 
