@@ -267,9 +267,12 @@ body {
     transform: scale(1);
 }
 
-.go-to-top:hover {
-    background-color: var(--primary);
-    color: var(--on_primary);
+html.palette-type-dark .go-to-top:hover {
+    background-color: var(--surface_bright);
+}
+
+html.palette-type-light .go-to-top:hover {
+    background-color: var(--surface_dim);
 }
 
 #menu-toggle {
