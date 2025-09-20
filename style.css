@@ -281,7 +281,7 @@ html.palette-type-light .go-to-top:hover {
 
 #navbar {
     display: flex;
-    gap: 25px;
+    gap: 10px;
 
     background-color: var(--surface_container);
 
@@ -308,6 +308,7 @@ html.palette-type-light .go-to-top:hover {
 
     border-radius: 100%;
 
+    background-color: var(--surface_container_high);
     color: var(--on_surface);
     font-size: 1rem;
 
@@ -324,6 +325,7 @@ html.palette-type-light .go-to-top:hover {
 
 html.palette-type-dark .label-menu-toggle:hover {
     background-color: var(--surface_bright);
+    border-radius: 20px;
 }
 
 html.palette-type-light .label-menu-toggle:hover {
@@ -335,6 +337,156 @@ html.palette-type-light .label-menu-toggle:hover {
     border-radius: 10px;
 
     color: var(--on_primary);
+}
+
+.navbar-searchbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--surface_container_high);
+    border-radius: 25px;
+
+    position: relative;
+
+    padding: 0 10px;
+    
+    height: 100%;
+    width: 275px;
+
+    transition: 
+        background 200ms ease,
+        border-radius 200ms ease;
+}
+
+.navbar-searchbox:hover {
+    border-radius: 20px;
+}
+
+.navbar-searchbox:focus-within {
+    border-radius: 10px 10px 0 0;
+}
+
+html.palette-type-dark .navbar-searchbox:hover,
+html.palette-type-dark .navbar-searchbox:focus-within {
+    background-color: var(--surface_bright);
+}
+
+html.palette-type-light .navbar-searchbox:hover,
+html.palette-type-light .navbar-searchbox:focus-within {
+    background-color: var(--surface_dim);
+}
+
+.navbar-searchbox-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    border-radius: 100%;
+
+    color: var(--on_primary);
+    font-size: 1rem;
+
+    padding: 5px;
+
+    height: auto;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+
+#search {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: normal;
+
+    height: 100%;
+    width: 100%;
+}
+
+#search::placeholder {
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.search-result-container {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: var(--surface_container);
+    border-radius: 0 0 10px 10px;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    padding: 10px;
+
+    height: auto;
+    width: auto;
+}
+
+.navbar-searchbox:focus-within .search-result-container {
+    display: flex;
+}
+#navbar.scrolling-down .search-result-container {
+    display: none;
+}
+
+.search-result {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color: var(--surface_container_high);
+    border-radius: 5px;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    text-decoration: none;
+
+    padding: 0 10px;
+
+    height: 50px;
+    width: 100%;
+
+    transition: background 200ms ease;
+}
+
+html.palette-type-dark .search-result:hover {
+    background-color: var(--surface_bright);
+}
+
+html.palette-type-light .search-result:hover {
+    background-color: var(--surface_dim);
+}
+
+.search-result-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 100%;
+    width: fit-content;
+}
+
+.search-result-title {
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.search-result-description {
+    color: var(--on_surface_variant);
+    font-size: 0.9rem;
+    font-weight: normal;
 }
 
 #toggle-palette-selector {
@@ -354,7 +506,7 @@ html.palette-type-light .label-menu-toggle:hover {
 
     height: 0px;
     max-height: calc(100% - (70px + 10px) - 10px);
-    width: auto;
+    width: 250px;
 
     transition: 
         height 200ms ease,
@@ -464,7 +616,7 @@ html.palette-type-light .language-selector-container:hover {
     justify-content: center;
 
     background-color: var(--primary);
-    border-radius: 5px;
+    border-radius: 100%;
 
     color: var(--on_primary);
     font-size: 1rem;
@@ -612,7 +764,7 @@ html.palette-type-light .palette-type:hover {
     gap: 5px;
 
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     padding-bottom: 10px;
 
@@ -1634,8 +1786,16 @@ html.palette-type-light .footer-link:hover {
         bottom: 150px;
     }
 
+    .navbar-searchbox {
+        width: 100%;
+    }
+
+    .menu {
+        width: calc(100% - (10px * 2));
+    }
+
     .palette-selector {
-        top: 10px;
+        top: calc(70px + 10px);
         right: 10px;
         bottom: 10px;
         left: 10px;
