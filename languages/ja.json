@@ -1,13 +1,10 @@
 {
-    "navbar-shortcut-me": "私",
-    "navbar-shortcut-projects": "プロジェクト",
-    "navbar-shortcut-skills": "スキル",
-
-    "menu-shortcut-projects": "プロジェクト",
-    "menu-shortcut-skills": "スキル",
+    "menu-button-me": "私",
+    "menu-button-projects": "プロジェクト",
+    "menu-button-skills": "スキル",
     "menu-button-palette-selector": "パレットセレクター",
-    "menu-link-my-github": "私のGitHub",
-    "menu-link-website-source": "サイトのコード",
+    "menu-button-my-github": "私のGitHub",
+    "menu-button-website-source": "サイトのコード",
 
     "label-inner-toggle-palette-selector": "閉じる",
     "label-palette-type-light": "ライト",

@@ -1,13 +1,10 @@
 {
-    "navbar-shortcut-me": "Eu",
-    "navbar-shortcut-projects": "Projetos",
-    "navbar-shortcut-skills": "Habilidades",
-
-    "menu-shortcut-projects": "Projetos",
-    "menu-shortcut-skills": "Habilidades",
+    "menu-button-me": "Eu",
+    "menu-button-projects": "Projetos",
+    "menu-button-skills": "Habilidades",
     "menu-button-palette-selector": "Seletor de Paleta",
-    "menu-link-my-github": "Meu Github",
-    "menu-link-website-source": "Código do Site",
+    "menu-button-my-github": "Meu Github",
+    "menu-button-website-source": "Código do Site",
 
     "label-inner-toggle-palette-selector": "Fechar",
     "label-palette-type-light": "Claro",
