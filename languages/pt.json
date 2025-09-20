@@ -1,4 +1,12 @@
 {
+    "search-placeholder": "Pesquisar",
+    "search-result-title-me": "Eu",
+    "search-result-description-me": "Seção",
+    "search-result-title-projects": "Projetos",
+    "search-result-description-projects": "Seção",
+    "search-result-title-skills": "Habilidades",
+    "search-result-description-skills": "Seção",
+
     "menu-button-me": "Eu",
     "menu-button-projects": "Projetos",
     "menu-button-skills": "Habilidades",

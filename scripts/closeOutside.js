@@ -7,18 +7,15 @@ function uncheckOnOutsideClick(checkboxId, containerClass) {
 
     if (!checkbox || !container) return;
 
-    // Avoid adding multiple listeners for the same checkbox
     if (outsideClickHandlers.has(checkbox)) return;
 
     const handler = function(event) {
-        // Defer execution so checkbox toggles first
         setTimeout(() => {
             if (!checkbox.checked) return;
 
             const clickedInsideContainer = container.contains(event.target);
             const clickedOnCheckboxOrLabel = checkbox.contains(event.target) || (label && label.contains(event.target));
 
-            // Only uncheck if click is completely outside container and outside label/checkbox
             if (!clickedInsideContainer && !clickedOnCheckboxOrLabel) {
                 checkbox.checked = false;
             }

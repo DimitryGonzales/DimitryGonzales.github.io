@@ -1,4 +1,12 @@
 {
+    "search-placeholder": "検索",
+    "search-result-title-me": "私",
+    "search-result-description-me": "セクション",
+    "search-result-title-projects": "プロジェクト",
+    "search-result-description-projects": "セクション",
+    "search-result-title-skills": "スキル",
+    "search-result-description-skills": "セクション",
+
     "menu-button-me": "私",
     "menu-button-projects": "プロジェクト",
     "menu-button-skills": "スキル",
