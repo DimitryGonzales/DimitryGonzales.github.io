@@ -1,6 +1,6 @@
 # 🌐 Dimitry's Website
 
-A **Material You–inspired** personal website designed to be dynamic, adaptive, and visually consistent.
+A **Material inspired** personal website designed to be dynamic, adaptive, and visually consistent.
 
 It serves as a showcase of who I am as a programmer and developer, bringing together my experiences, projects, and growth, all in one place.
 
