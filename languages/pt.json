@@ -35,6 +35,8 @@
     "label-tree-selector-work": "Trabalho",
 
     "main-section-title-projects": "Projetos",
+    "project-button-repository": "Repositório",
+    "project-button-website": "Site",
     "project-title-dotfiles": "Dotfiles",
     "project-description-dotfiles": "Arquivos de configuração do Linux",
     "project-title-face-detection": "Detecção Facial",

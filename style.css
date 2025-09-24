@@ -229,9 +229,7 @@ body {
 
 .go-to-top,
 #navbar,
-.label-menu-toggle,
 .menu,
-.language-selector-container,
 .palette-selector {
     z-index: 1000;
 }

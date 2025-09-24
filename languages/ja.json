@@ -35,6 +35,8 @@
     "label-tree-selector-work": "仕事",
 
     "main-section-title-projects": "プロジェクト",
+    "project-button-repository": "リポジトリ",
+    "project-button-website": "ウェブサイト",
     "project-title-dotfiles": "Dotfiles",
     "project-description-dotfiles": "Linuxの設定ファイル",
     "project-title-face-detection": "顔検出",
