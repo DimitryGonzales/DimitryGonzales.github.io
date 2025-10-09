@@ -1087,7 +1087,7 @@ html.palette-type-light .me-card:hover {
 }
 
 .me-tree-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 10px;
 
@@ -1476,6 +1476,10 @@ html.palette-type-dark .project-button:hover {
 
 html.palette-type-light .project-button:hover {
     background-color: var(--surface_dim);
+}
+
+#skills {
+    display: none;
 }
 
 .skill-container {
