@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Arch Setup</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--JetBrains Mono Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <!--Material Symbols Sharp-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar-content">
+            <h1 class="page-title">
+                My Arch Setup
+            </h1>
+
+            <div class="navbar-tool-container">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search">
+
+                    <div class="search-result-container">
+                        <a href="#fstrim" class="search-result">
+                            <span class="search-result-title">
+                                fstrim
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#pacman" class="search-result">
+                            <span class="search-result-title">
+                                Pacman
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#amdgpu" class="search-result">
+                            <span class="search-result-title">
+                                AMDGPU
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#paru" class="search-result">
+                            <span class="search-result-title">
+                                Paru
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#pipewire" class="search-result">
+                            <span class="search-result-title">
+                                Pipewire
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#fonts" class="search-result">
+                            <span class="search-result-title">
+                                Fonts
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#hyprland" class="search-result">
+                            <span class="search-result-title">
+                                Hyprland
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#gtk" class="search-result">
+                            <span class="search-result-title">
+                                GTK
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#qt" class="search-result">
+                            <span class="search-result-title">
+                                QT
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#matugen" class="search-result">
+                            <span class="search-result-title">
+                                Matugen
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#rofi" class="search-result">
+                            <span class="search-result-title">
+                                Rofi
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#waybar" class="search-result">
+                            <span class="search-result-title">
+                                Waybar
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#dotfiles" class="search-result">
+                            <span class="search-result-title">
+                                Dotfiles
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#showcase" class="search-result">
+                            <span class="search-result-title">
+                                Showcase
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="#" class="go-to-top tooltip-parent">
+        <i class="fa-solid fa-chevron-up"></i>
+
+        <div class="tooltip tooltip-left">
+            <span>Go to top</span>
+        </div>
+    </a>
+    
+    <main>
+        <section>
+            <div class="message-container">
+                <div class="message-title">
+                    About This Guide
+                </div>
+
+                <div class="message">
+                    This guide is based on <b>Arch Linux</b>, using its structure, tools and conventions as reference. While many steps may apply to other distributions, some commands or configurations are specific to Arch and its derivatives.
+                </div>
+            </div>
+        </section>
+        
+        <section id="fstrim">
+            <div class="section-header">
+                <h2 class="section-title">
+                    fstrim
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Solid_state_drive#Periodic_TRIM" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    fstrim is used on a mounted filesystem to discard (or "trim") blocks which are not in use by the filesystem. This is useful for solid-state drives (SSDs) and thinly-provisioned storage.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Actions:
+                </h3>
+
+                <ol>
+                    <li><b>If the system is on an SSD</b>:
+
+                        <ol>
+                            <li>Enable <b>fstrim.timer</b> service</li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="pacman">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Pacman
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Pacman" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    The pacman package manager is one of the major distinguishing features of Arch Linux. It combines a simple binary package format with an easy-to-use Arch build system. The goal of pacman is to make it possible to easily manage packages, whether they are from the official repositories or the user's own builds. 
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=pacman-contrib" target="_blank" class="package">
+                        <span>pacman-contrib</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed pacman-contrib
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Actions:
+                </h3>
+
+                <ol>
+                    <li>Edit /etc/pacman.conf
+                        
+                        <ol>
+                            <li>In <b>Misc options</b>:
+
+                                <ol>
+                                    <li>Uncheck <b>Color</b></li>
+                                    <li>Uncheck <b>VerbosePkgLists</b></li>
+                                    <li>Change <b>ParallelDownloads</b> to 10</li>
+                                </ol>
+                            </li>
+
+                            <li>In <b>Repositories</b>:
+
+                                <ol>
+                                    <li>Uncheck <b>[multilib]</b></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+
+                    <li>Enable and Start <b>paccache.timer</b> service</li>
+                </ol>
+
+                <code>
+                    systemctl enable --now paccache.timer
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="amdgpu">
+            <div class="section-header">
+                <h2 class="section-title">
+                    AMDGPU
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/AMDGPU" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    AMDGPU is the open source graphics driver for AMD Radeon graphics cards since the Graphics Core Next family. 
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=mesa" target="_blank" class="package">
+                        <span>mesa</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=lib32-mesa" target="_blank" class="package">
+                        <span>lib32-mesa</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=xf86-video-amdgpu" target="_blank" class="package">
+                        <span>xf86-video-amdgpu</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=vulkan-radeon" target="_blank" class="package">
+                        <span>vulkan-radeon</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=lib32-vulkan-radeon" target="_blank" class="package">
+                        <span>lib32-vulkan-radeon</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="paru">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Paru
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Paru is your standard pacman wrapping AUR helper with lots of features and minimal interaction.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=base-devel" target="_blank" class="package">
+                        <span>base-devel</span>
+                    </a>
+                </div>
+
+                <code>
+                    cd ~ && sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd .. && rm -rf paru
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="pipewire">
+            <div class="section-header">
+                <h2 class="section-title">
+                    PipeWire
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/PipeWire" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    PipeWire is a project that aims to greatly improve handling of audio and video under Linux. It provides a low-latency, graph-based processing engine on top of audio and video devices that can be used to support the use cases currently handled by both PulseAudio and JACK.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=pipewire" target="_blank" class="package">
+                        <span>pipewire</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=lib32-pipewire" target="_blank" class="package">
+                        <span>lib32-pipewire</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=wireplumber" target="_blank" class="package">
+                        <span>wireplumber</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=helvum" target="_blank" class="package">
+                        <span>helvum</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=pavucontrol" target="_blank" class="package">
+                        <span>pavucontrol</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=pipewire-audio" target="_blank" class="package">
+                        <span>pipewire-audio</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=pipewire-alsa" target="_blank" class="package">
+                        <span>pipewire-alsa</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=pipewire-pulse" target="_blank" class="package">
+                        <span>pipewire-pulse</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=pipewire-jack" target="_blank" class="package">
+                        <span>pipewire-jack</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=lib32-pipewire-jack" target="_blank" class="package">
+                        <span>lib32-pipewire-jack</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed pipewire lib32-pipewire wireplumber helvum pavucontrol pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack lib32-pipewire-jack
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="fonts">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Fonts
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Fonts used in the system.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=noto-fonts" target="_blank" class="package">
+                        <span>noto-fonts</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=noto-fonts-cjk" target="_blank" class="package">
+                        <span>noto-fonts-cjk</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=noto-fonts-emoji" target="_blank" class="package">
+                        <span>noto-fonts-emoji</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=noto-fonts-extra" target="_blank" class="package">
+                        <span>noto-fonts-extra</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=ttf-jetbrains-mono" target="_blank" class="package">
+                        <span>ttf-jetbrains-mono</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=ttf-jetbrains-mono-nerd" target="_blank" class="package">
+                        <span>ttf-jetbrains-mono-nerd</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=inter-font" target="_blank" class="package">
+                        <span>inter-font</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=otf-font-awesome" target="_blank" class="package">
+                        <span>otf-font-awesome</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-jetbrains-mono ttf-jetbrains-mono-nerd inter-font otf-font-awesome
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="hyprland">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Hyprland
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Hyprland" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Hyprland is an independent tiling Wayland compositor written in C++. Noteworthy features of Hyprland include dynamic tiling, tabbed windows, a clean and readable C++ code-base, and a custom renderer that provides window animations, rounded corners, and Dual-Kawase Blur on transparent windows.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=hyprland" target="_blank" class="package">
+                        <span>hyprland</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=hyprpolkitagent" target="_blank" class="package">
+                        <span>hyprpolkitagent</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=hyprlock" target="_blank" class="package">
+                        <span>hyprlock</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=hyprshot" target="_blank" class="package">
+                        <span>hyprshot</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=hyprpicker" target="_blank" class="package">
+                        <span>hyprpicker</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=xdg-desktop-portal" target="_blank" class="package">
+                        <span>xdg-desktop-portal</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=xdg-desktop-portal-gtk" target="_blank" class="package">
+                        <span>xdg-desktop-portal-gtk</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=xdg-desktop-portal-hyprland" target="_blank" class="package">
+                        <span>xdg-desktop-portal-hyprland</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed hyprland hyprpolkitagent hyprlock hyprshot hyprpicker xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-hyprland
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="gtk">
+            <div class="section-header">
+                <h2 class="section-title">
+                    GTK
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/GTK" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    GTK, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK is suitable for projects ranging from small one-off tools to complete application suites.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=gtk2" target="_blank" class="package">
+                        <span>gtk2</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=gtk3" target="_blank" class="package">
+                        <span>gtk3</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=gtk4" target="_blank" class="package">
+                        <span>gtk4</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=adw-gtk-theme" target="_blank" class="package">
+                        <span>adw-gtk-theme</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed gtk2 gtk3 gtk4 adw-gtk-theme
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="qt">
+            <div class="section-header">
+                <h2 class="section-title">
+                    QT
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Qt" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Qt is a cross-platform application and widget toolkit that uses standard C++ but makes extensive use of a special code generator (called the Meta Object Compiler, or moc) together with several macros to enrich the language.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=qt5-base" target="_blank" class="package">
+                        <span>qt5-base</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=qt6-base" target="_blank" class="package">
+                        <span>qt6-base</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=qt5-wayland" target="_blank" class="package">
+                        <span>qt5-wayland</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=qt6-wayland" target="_blank" class="package">
+                        <span>qt6-wayland</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed qt5-base qt6-base qt5-wayland qt6-wayland
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="matugen">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Matugen
+                </h2>
+
+                <a href="https://github.com/InioX/matugen/wiki" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Matugen is a material you color generation tool that generates palettes either from an image or a color.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://aur.archlinux.org/packages/matugen-bin" target="_blank" class="package">
+                        <span>[AUR] matugen-bin</span>
+                    </a>
+
+                    <a href="https://aur.archlinux.org/packages/waypaper-git" target="_blank" class="package">
+                        <span>[AUR] waypaper-git</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=swww" target="_blank" class="package">
+                        <span>swww</span>
+                    </a>
+                </div>
+
+                <code>
+                    paru -S --needed matugen-bin waypaper-git swww
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="rofi">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Rofi
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Rofi" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Rofi is a window switcher, run dialog, ssh-launcher and dmenu replacement that started as a clone of simpleswitcher, written by Sean Pringle and later expanded by Dave Davenport.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=rofi" target="_blank" class="package">
+                        <span>rofi</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=rofi-emoji" target="_blank" class="package">
+                        <span>rofi-emoji</span>
+                    </a>
+
+                    <a href="https://aur.archlinux.org/packages/rofi-power-menu" target="_blank" class="package">
+                        <span>[AUR] rofi-power-menu</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=wl-clipboard" target="_blank" class="package">
+                        <span>wl-clipboard</span>
+                    </a>
+                </div>
+
+                <code>
+                    paru -S --needed rofi rofi-emoji rofi-power-menu wl-clipboard
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="waybar">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Waybar
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Waybar" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Waybar is a highly customizable Wayland bar for Sway and Wlroots based compositors. Its configuration is done in JSONC with styling in CSS. 
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=waybar" target="_blank" class="package">
+                        <span>waybar</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed waybar
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="dotfiles">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Dotfiles
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about">
+                    Personal dotfiles with Material Design-inspired dynamic theming using Matugen. It includes configurations to the desktop environment, GTK/Qt apps, Rofi, Waybar, and more, all designed to adapt to your wallpaper automatically.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=yadm" target="_blank" class="package">
+                        <span>yadm</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed yadm && cd ~ && yadm clone "https://github.com/DimitryGonzales/dotfiles.git" && yadm checkout --force
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="showcase">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Showcase
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    TUI theme:
+                </h3>
+
+                <div class="video-container">
+                    <div class="video-header">
+                        <span class="video-title">
+                            tui-theme-desktop.mp4
+                        </span>
+                    </div>
+
+                    <video src="assets/videos/tui-theme-desktop.mp4" controls></video>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-header">
+                        <span class="video-title">
+                            tui-theme-apps.mp4
+                        </span>
+                    </div>
+
+                    <video src="assets/videos/tui-theme-apps.mp4" controls></video>
+                </div>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title">
+                    Rounded theme:
+                </h3>
+
+                <div class="video-container">
+                    <div class="video-header">
+                        <span class="video-title">
+                            rounded-theme-desktop.mp4
+                        </span>
+                    </div>
+
+                    <video src="assets/videos/rounded-theme-desktop.mp4" controls></video>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-header">
+                        <span class="video-title">
+                            rounded-theme-apps.mp4
+                        </span>
+                    </div>
+
+                    <video src="assets/videos/rounded-theme-apps.mp4" controls></video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts/scrollingDirection.js"></script>
+    <script src="scripts/search.js"></script>
+    <script src="scripts/copyContent.js"></script>
+</body>
+</html>
