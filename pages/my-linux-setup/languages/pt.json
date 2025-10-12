@@ -1,0 +1,50 @@
+{
+    "page-title": "Minha Configuração do Linux",
+
+    "search-placeholder": "Pesquisar",
+
+    "go-to-top-tooltip": "Ir para o topo",
+
+    "about-this-guide-message-title": "Sobre este guia",
+    "about-this-guide-message": "Este guia é baseado no <b>Arch Linux</b>, usando sua estrutura, ferramentas e convenções como referência. Embora muitos passos possam se aplicar a outras distribuições, alguns comandos ou configurações são específicos do Arch e seus derivados.",
+
+    "about-section-container-title": "Sobre:",
+    "packages-section-container-title": "Pacotes:",
+    "actions-section-container-title": "Ações:",
+
+    "fstrim-section-about": "O fstrim é usado em um sistema de arquivos montado para descartar (ou \"trim\") blocos que não estão em uso pelo sistema de arquivos. Isso é útil para unidades de estado sólido (SSDs) e para armazenamento com provisionamento fino.",
+    "fstrim-actions-1": "<b>Se o sistema estiver em um SSD</b>:<ol><li>Habilitar o serviço <b>fstrim.timer</b></li></ol>",
+
+    "pacman-section-about": "O gerenciador de pacotes pacman é uma das principais características distintivas do Arch Linux. Combina um formato simples de pacote binário com um sistema de compilação fácil de usar. O objetivo do pacman é tornar possível gerenciar pacotes facilmente, sejam eles dos repositórios oficiais ou das próprias compilações do usuário.",
+    "pacman-actions-1": "Editar <b>/etc/pacman.conf</b>:<ol><li>Em <b>Misc options</b>:<ol><li>Desmarcar <b>Color</b></li><li>Desmarcar <b>VerbosePkgLists</b></li><li>Alterar <b>ParallelDownloads</b> para 10</li></ol></li><li>Em <b>Repositories</b>:<ol><li>Desmarcar <b>[multilib]</b></li></ol></li></ol>",
+    "pacman-actions-2": "Habilitar e iniciar o serviço <b>paccache.timer</b>",
+
+    "amdgpu-section-about": "AMDGPU é o driver de código aberto para placas gráficas AMD Radeon desde a família Graphics Core Next.",
+
+    "paru-section-about": "Paru é um auxiliar AUR que envolve o pacman, com muitos recursos e interação mínima.",
+
+    "pipewire-section-about": "PipeWire é um projeto que visa melhorar consideravelmente o manuseio de áudio e vídeo no Linux. Ele fornece um motor de processamento baseado em grafo de baixa latência sobre dispositivos de áudio e vídeo que pode ser usado para suportar os casos de uso atualmente tratados tanto pelo PulseAudio quanto pelo JACK.",
+
+    "fonts-section-title": "Fontes",
+    "fonts-section-about": "Fontes usadas no sistema.",
+
+    "hyprland-section-about": "Hyprland é um compositor tiling independente para Wayland escrito em C++. Recursos notáveis do Hyprland incluem tiling dinâmico, janelas em abas, uma base de código C++ limpa e legível, e um renderizador personalizado que fornece animações de janela, cantos arredondados e Dual-Kawase Blur em janelas transparentes.",
+
+    "greetd-section-about": "Greetd é um gerenciador de login (daemon) minimalista, agnóstico e flexível que não assume o que o usuário deseja iniciar, seja via console ou gráfico. Qualquer script ou programa que possa ser iniciado pelo console pode ser executado pelo greetd, o que o torna particularmente adequado para compositores Wayland. Também pode iniciar um greeter para iniciar sessões de usuário, como qualquer outro display manager.",
+    "greetd-actions-1": "Editar <b>/etc/greetd/config.toml</b>:",
+    "greetd-actions-1-a": "Alterar <b>command</b> para <b>tuigreet --cmd Hyprland</b>",
+
+    "gtk-section-about": "GTK, ou GIMP Toolkit, é um conjunto de ferramentas multiplataforma para criar interfaces gráficas. Oferecendo um conjunto completo de widgets, o GTK é adequado para projetos que vão desde pequenas ferramentas pontuais até suítes de aplicativos completas.",
+
+    "qt-section-about": "Qt é um toolkit multiplataforma para aplicações e widgets que usa C++ padrão, mas faz uso extensivo de um gerador de código especial (o Meta Object Compiler, ou moc) juntamente com várias macros para enriquecer a linguagem.",
+
+    "matugen-section-about": "Matugen é uma ferramenta de geração de paletas no estilo Material You que gera paletas a partir de uma imagem ou de uma cor.",
+
+    "rofi-section-about": "Rofi é um alternador de janelas, caixa de execução, lançador SSH e substituto do dmenu que começou como um clone do simpleswitcher, escrito por Sean Pringle e posteriormente expandido por Dave Davenport.",
+
+    "waybar-section-about": "Waybar é uma barra Wayland altamente personalizável para compositores baseados em Sway e Wlroots. Sua configuração é feita em JSONC com estilização em CSS.",
+
+    "dotfiles-section-about": "Dotfiles pessoais com tema dinâmico inspirado no Material Design usando Matugen. Inclui configurações para o ambiente de trabalho, apps GTK/Qt, Rofi, Waybar e mais — tudo projetado para se adaptar automaticamente ao seu papel de parede.",
+
+    "showcase-section-title": "Apresentação"
+}

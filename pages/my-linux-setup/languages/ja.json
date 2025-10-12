@@ -1,0 +1,50 @@
+{
+    "page-title": "私のLinuxセットアップ",
+
+    "search-placeholder": "検索",
+
+    "go-to-top-tooltip": "ページの先頭へ",
+
+    "about-this-guide-message-title": "このガイドについて",
+    "about-this-guide-message": "このガイドは<b>Arch Linux</b>をベースにしており、その構成、ツール、慣例を参照として使用しています。多くの手順は他のディストリビューションにも適用される場合がありますが、いくつかのコマンドや設定は Arch とその派生版に特有です。",
+
+    "about-section-container-title": "概要：",
+    "actions-section-container-title": "アクション：",
+    "packages-section-container-title": "パッケージ：",
+
+    "fstrim-section-about": "fstrim は、マウントされたファイルシステム上でファイルシステムによって使用されていないブロックを破棄（または「trim」）するために使用されます。これはソリッドステートドライブ（SSD）や薄くプロビジョニングされたストレージで有用です。",
+    "fstrim-actions-1": "<b>システムがSSD上にある場合</b>：<ol><li><b>fstrim.timer</b> サービスを有効化</li></ol>",
+
+    "pacman-section-about": "pacman パッケージマネージャは Arch Linux を特徴付ける主要な要素の一つです。シンプルなバイナリパッケージ形式と使いやすいビルドシステムを組み合わせています。pacman の目的は、公式リポジトリからでもユーザー自身のビルドからでも、パッケージを簡単に管理できるようにすることです。",
+    "pacman-actions-1": "<b>/etc/pacman.conf</b> を編集:<ol><li><b>Misc options</b> セクションで:<ol><li><b>Color</b> のチェックを外す</li><li><b>VerbosePkgLists</b> のチェックを外す</li><li><b>ParallelDownloads</b> を 10 に変更</li></ol></li><li><b>Repositories</b> セクションで:<ol><li><b>[multilib]</b> のチェックを外す</li></ol></li></ol>",
+    "pacman-actions-2": "<b>paccache.timer</b> サービスを有効化して起動する",
+
+    "amdgpu-section-about": "AMDGPU は Graphics Core Next ファミリー以降の AMD Radeon グラフィックスカード向けのオープンソースのグラフィックスドライバです。",
+
+    "paru-section-about": "Paru は、多機能で対話を最小限にした pacman ラッパーとしての AUR ヘルパーです。",
+
+    "pipewire-section-about": "PipeWire は Linux 上でのオーディオとビデオの取り扱いを大幅に改善することを目的としたプロジェクトです。低レイテンシーのグラフベース処理エンジンをオーディオおよびビデオデバイス上に提供し、現在 PulseAudio と JACK が扱っているユースケースをサポートできます。",
+
+    "fonts-section-title": "フォント",
+    "fonts-section-about": "システムで使用されるフォントです。",
+
+    "hyprland-section-about": "Hyprland は C++ で書かれた独立したタイル型 Wayland コンポジタです。主な特徴には動的タイル、タブ化ウィンドウ、読みやすい C++ コードベース、およびウィンドウアニメーション、角丸、透明ウィンドウでの Dual-Kawase ブラーを提供するカスタムレンダラーが含まれます。",
+
+    "greetd-section-about": "greetd は、コンソールかグラフィカルかを問わずユーザーが起動したいものを仮定しない、最小限で中立的かつ柔軟なログインマネージャデーモンです。コンソールから起動可能な任意のスクリプトやプログラムを greetd が起動できるため、Wayland コンポジタに特に適しています。通常のディスプレイマネージャと同様に、ユーザーセッションを開始するための greeter を起動することもできます。",
+    "greetd-actions-1": " <b>/etc/greetd/config.toml</b> を編集：",
+    "greetd-actions-1-a": "<b>command</b> を <b>tuigreet --cmd Hyprland</b> に変更",
+
+    "gtk-section-about": "GTK（GIMP Toolkit）は、グラフィカルユーザーインターフェースを作成するためのマルチプラットフォームのツールキットです。ウィジェットの完全なセットを提供し、小さなユーティリティから完全なアプリケーションスイートまで適しています。",
+
+    "qt-section-about": "Qt はクロスプラットフォームのアプリケーションおよびウィジェットツールキットで、標準の C++ を使用しますが、Meta Object Compiler（moc）などの特殊なコード生成器と複数のマクロを広く使用して言語を拡張します。",
+
+    "matugen-section-about": "Matugen は、画像や色からパレットを生成する Material You スタイルのカラーパレット生成ツールです。",
+
+    "rofi-section-about": "Rofi はウィンドウスイッチャー、実行ダイアログ、SSH ランチャー、dmenu の代替で、Sean Pringle により simpleswitcher のクローンとして開発され、その後 Dave Davenport により拡張されました。",
+
+    "waybar-section-about": "Waybar は Sway や wlroots ベースのコンポジタ向けの高度にカスタマイズ可能な Wayland バーです。設定は JSONC、スタイルは CSS で行います。",
+
+    "dotfiles-section-about": "Matugen を使った Material Design に触発された動的テーマを備えた個人用 dotfiles。デスクトップ環境、GTK/Qt アプリ、Rofi、Waybar などの設定を含み、壁紙に自動的に適応するよう設計されています。",
+
+    "showcase-section-title": "ショーケース"
+}

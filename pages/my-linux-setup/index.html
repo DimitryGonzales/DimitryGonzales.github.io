@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Arch Setup</title>
+    <title>My Linux Setup</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
@@ -18,17 +18,22 @@
 
     <!--Material Symbols Sharp-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu">
+
+    <!--Noto Sans Japanese-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav id="navbar">
         <div class="navbar-content">
-            <h1 class="page-title">
-                My Arch Setup
+            <h1 class="page-title" data-i18n="page-title">
+                My Linux Setup
             </h1>
 
             <div class="navbar-tool-container">
                 <div class="search-container">
-                    <input type="text" id="search" placeholder="Search">
+                    <input type="text" id="search" placeholder="Search" data-i18n-placeholder="search-placeholder">
 
                     <div class="search-result-container">
                         <a href="#fstrim" class="search-result">
@@ -72,7 +77,7 @@
                         </a>
 
                         <a href="#fonts" class="search-result">
-                            <span class="search-result-title">
+                            <span class="search-result-title" data-i18n="fonts-section-title">
                                 Fonts
                             </span>
 
@@ -82,6 +87,14 @@
                         <a href="#hyprland" class="search-result">
                             <span class="search-result-title">
                                 Hyprland
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#greetd" class="search-result">
+                            <span class="search-result-title">
+                                Greetd
                             </span>
 
                             <i class="fa-solid fa-chevron-right"></i>
@@ -136,13 +149,21 @@
                         </a>
 
                         <a href="#showcase" class="search-result">
-                            <span class="search-result-title">
+                            <span class="search-result-title" data-i18n="showcase-section-title">
                                 Showcase
                             </span>
 
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>
+                </div>
+
+                <div class="language-selector-container">
+                    <select id="language-selector">
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                        <option value="ja">日本語</option>
+                    </select>
                 </div>
             </div>
         </div>
@@ -152,18 +173,18 @@
         <i class="fa-solid fa-chevron-up"></i>
 
         <div class="tooltip tooltip-left">
-            <span>Go to top</span>
+            <span data-i18n="go-to-top-tooltip">Go to top</span>
         </div>
     </a>
     
     <main>
         <section>
             <div class="message-container">
-                <div class="message-title">
+                <div class="message-title" data-i18n="about-this-guide-message-title">
                     About This Guide
                 </div>
 
-                <div class="message">
+                <div class="message" data-i18n="about-this-guide-message">
                     This guide is based on <b>Arch Linux</b>, using its structure, tools and conventions as reference. While many steps may apply to other distributions, some commands or configurations are specific to Arch and its derivatives.
                 </div>
             </div>
@@ -183,22 +204,22 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="fstrim-section-about">
                     fstrim is used on a mounted filesystem to discard (or "trim") blocks which are not in use by the filesystem. This is useful for solid-state drives (SSDs) and thinly-provisioned storage.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="actions-section-container-title">
                     Actions:
                 </h3>
 
                 <ol>
-                    <li><b>If the system is on an SSD</b>:
+                    <li data-i18n="fstrim-actions-1" data-i18n-html><b>If the system is on a SSD</b>:
 
                         <ol>
                             <li>Enable <b>fstrim.timer</b> service</li>
@@ -222,17 +243,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="pacman-section-about">
                     The pacman package manager is one of the major distinguishing features of Arch Linux. It combines a simple binary package format with an easy-to-use Arch build system. The goal of pacman is to make it possible to easily manage packages, whether they are from the official repositories or the user's own builds. 
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -256,12 +277,12 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="actions-section-container-title">
                     Actions:
                 </h3>
 
                 <ol>
-                    <li>Edit /etc/pacman.conf
+                    <li data-i18n="pacman-actions-1" data-i18n-html>Edit <b>/etc/pacman.conf</b>
                         
                         <ol>
                             <li>In <b>Misc options</b>:
@@ -282,7 +303,7 @@
                         </ol>
                     </li>
 
-                    <li>Enable and Start <b>paccache.timer</b> service</li>
+                    <li data-i18n="pacman-actions-2" data-i18n-html>Enable and Start <b>paccache.timer</b> service</li>
                 </ol>
 
                 <code>
@@ -313,17 +334,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="amdgpu-section-about">
                     AMDGPU is the open source graphics driver for AMD Radeon graphics cards since the Graphics Core Next family. 
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -371,17 +392,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="paru-section-about">
                     Paru is your standard pacman wrapping AUR helper with lots of features and minimal interaction.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -419,17 +440,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="pipewire-section-about">
                     PipeWire is a project that aims to greatly improve handling of audio and video under Linux. It provides a low-latency, graph-based processing engine on top of audio and video devices that can be used to support the use cases currently handled by both PulseAudio and JACK.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -491,23 +512,23 @@
 
         <section id="fonts">
             <div class="section-header">
-                <h2 class="section-title">
+                <h2 class="section-title" data-i18n="fonts-section-title">
                     Fonts
                 </h2>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="fonts-section-about">
                     Fonts used in the system.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -573,17 +594,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="hyprland-section-about">
                     Hyprland is an independent tiling Wayland compositor written in C++. Noteworthy features of Hyprland include dynamic tiling, tabbed windows, a clean and readable C++ code-base, and a custom renderer that provides window animations, rounded corners, and Dual-Kawase Blur on transparent windows.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -635,6 +656,73 @@
             </div>
         </section>
 
+        <section id="greetd">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Greetd
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Greetd" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="greetd-section-about">
+                    Greetd is a minimal, agnostic and flexible login manager daemon which does not make assumptions about what the user wants to launch, should it be console-based or graphical. Any script or program which can be started from the console may be launched by greetd, which makes it particularly suitable for Wayland compositors. It can also launch a greeter to start user sessions, like any other display manager.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=greetd" target="_blank" class="package">
+                        <span>greetd</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=greetd-tuigreet" target="_blank" class="package">
+                        <span>greetd-tuigreet</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed greetd greetd-tuigreet
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span>Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="actions-section-container-title">
+                    Actions:
+                </h3>
+
+                <ol>
+                    <li data-i18n="greetd-actions-1" data-i18n-html>Edit <b>/etc/greetd/config.toml</b>:
+
+                        <ol>
+                            <li data-i18n="greetd-actions-1-a" data-i18n-html>Change <b>command</b> to <b>tuigreet --cmd Hyprland</b></li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
         <section id="gtk">
             <div class="section-header">
                 <h2 class="section-title">
@@ -649,17 +737,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="gtk-section-about">
                     GTK, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK is suitable for projects ranging from small one-off tools to complete application suites.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -679,10 +767,14 @@
                     <a href="https://archlinux.org/packages/?name=adw-gtk-theme" target="_blank" class="package">
                         <span>adw-gtk-theme</span>
                     </a>
+
+                    <a href="https://aur.archlinux.org/packages/bibata-cursor-theme" target="_blank" class="package">
+                        <span>[AUR] bibata-cursor-theme</span>
+                    </a>
                 </div>
 
                 <code>
-                    sudo pacman -S --needed gtk2 gtk3 gtk4 adw-gtk-theme
+                    sudo pacman -S --needed gtk2 gtk3 gtk4 adw-gtk-theme && paru -S --needed bibata-cursor-theme
 
                     <button class="code-copy-button tooltip-parent">
                         <i class="fa-solid fa-copy"></i>
@@ -709,17 +801,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="qt-section-about">
                     Qt is a cross-platform application and widget toolkit that uses standard C++ but makes extensive use of a special code generator (called the Meta Object Compiler, or moc) together with several macros to enrich the language.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -769,21 +861,25 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="matugen-section-about">
                     Matugen is a material you color generation tool that generates palettes either from an image or a color.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
                 <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=swww" target="_blank" class="package">
+                        <span>swww</span>
+                    </a>
+
                     <a href="https://aur.archlinux.org/packages/matugen-bin" target="_blank" class="package">
                         <span>[AUR] matugen-bin</span>
                     </a>
@@ -791,14 +887,10 @@
                     <a href="https://aur.archlinux.org/packages/waypaper-git" target="_blank" class="package">
                         <span>[AUR] waypaper-git</span>
                     </a>
-
-                    <a href="https://archlinux.org/packages/?name=swww" target="_blank" class="package">
-                        <span>swww</span>
-                    </a>
                 </div>
 
                 <code>
-                    paru -S --needed matugen-bin waypaper-git swww
+                    sudo pacman -S --needed swww && paru -S --needed matugen-bin waypaper-git
 
                     <button class="code-copy-button tooltip-parent">
                         <i class="fa-solid fa-copy"></i>
@@ -825,17 +917,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="rofi-section-about">
                     Rofi is a window switcher, run dialog, ssh-launcher and dmenu replacement that started as a clone of simpleswitcher, written by Sean Pringle and later expanded by Dave Davenport.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -848,17 +940,17 @@
                         <span>rofi-emoji</span>
                     </a>
 
-                    <a href="https://aur.archlinux.org/packages/rofi-power-menu" target="_blank" class="package">
-                        <span>[AUR] rofi-power-menu</span>
+                    <a href="https://archlinux.org/packages/?name=cliphist" target="_blank" class="package">
+                        <span>cliphist</span>
                     </a>
 
-                    <a href="https://archlinux.org/packages/?name=wl-clipboard" target="_blank" class="package">
-                        <span>wl-clipboard</span>
+                    <a href="https://aur.archlinux.org/packages/rofi-power-menu" target="_blank" class="package">
+                        <span>[AUR] rofi-power-menu</span>
                     </a>
                 </div>
 
                 <code>
-                    paru -S --needed rofi rofi-emoji rofi-power-menu wl-clipboard
+                    sudo pacman -S --needed rofi rofi-emoji cliphist && paru -S --needed rofi-power-menu
 
                     <button class="code-copy-button tooltip-parent">
                         <i class="fa-solid fa-copy"></i>
@@ -885,17 +977,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="waybar-section-about">
                     Waybar is a highly customizable Wayland bar for Sway and Wlroots based compositors. Its configuration is done in JSONC with styling in CSS. 
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -927,17 +1019,17 @@
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
                     About:
                 </h3>
 
-                <p class="section-about">
+                <p class="section-about" data-i18n="dotfiles-section-about">
                     Personal dotfiles with Material Design-inspired dynamic theming using Matugen. It includes configurations to the desktop environment, GTK/Qt apps, Rofi, Waybar, and more, all designed to adapt to your wallpaper automatically.
                 </p>
             </div>
 
             <div class="section-container">
-                <h3 class="section-container-title">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
                     Packages:
                 </h3>
 
@@ -963,7 +1055,7 @@
 
         <section id="showcase">
             <div class="section-header">
-                <h2 class="section-title">
+                <h2 class="section-title" data-i18n="showcase-section-title">
                     Showcase
                 </h2>
             </div>
@@ -1022,8 +1114,9 @@
         </section>
     </main>
 
-    <script src="scripts/scrollingDirection.js"></script>
-    <script src="scripts/search.js"></script>
-    <script src="scripts/copyContent.js"></script>
+    <script src="/scripts/language.js"></script>
+    <script src="/scripts/scrollingDirection.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script src="/scripts/copyContent.js"></script>
 </body>
 </html>

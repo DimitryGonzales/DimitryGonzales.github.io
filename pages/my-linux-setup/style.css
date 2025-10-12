@@ -217,7 +217,7 @@
 }
 
 html {
-    font-family: "JetBrains Mono", "Font Awesome 7 Free", sans-serif;
+    font-family: "JetBrains Mono", "Noto Sans JP", "Font Awesome 7 Free", sans-serif;
     font-optical-sizing: auto;
     font-size: 16px;
     font-weight: normal;
@@ -311,6 +311,7 @@ code {
     background-color: var(--surface_container);
 
     color: var(--on_surface);
+    font-family: "JetBrains Mono";
     font-size: 1rem;
     font-weight: normal;
 
@@ -437,7 +438,6 @@ ol b {
     color: var(--on_surface);
     font-size: 1.5rem;
     font-weight: bold;
-    white-space: nowrap;
 }
 
 .navbar-tool-container {
@@ -491,7 +491,7 @@ ol b {
     background-color: var(--surface_container_high);
 
     position: absolute;
-    top: 100%;
+    top: calc(100% + 5px);
 
     overflow-y: auto;
 
@@ -533,6 +533,34 @@ ol b {
 }
 
 .search-result:hover {
+    background-color: var(--surface_bright);
+}
+
+.language-selector-container {
+    height: 100%;
+    width: auto;
+}
+
+#language-selector {
+    background-color: var(--surface_container_high);
+    border: none;
+    outline: none;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 0 10px;
+
+    height: 100%;
+    width: auto;
+
+    transition: background 200ms ease;
+}
+
+#language-selector:hover {
     background-color: var(--surface_bright);
 }
 
@@ -748,7 +776,16 @@ video {
     width: 100%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+    #navbar {
+        top: auto;
+        bottom: 0;
+    }
+
+    #navbar.scrolling-down {
+        transform: translateY(100%);
+    }
+
     .page-title {
         display: none;
     }
@@ -765,7 +802,16 @@ video {
         width: 100%;
     }
 
+    .search-result-container {
+        top: auto;
+        bottom: calc(100% + 5px);
+    }
+
     .go-to-top {
         bottom: 200px;
+    }
+
+    main {
+        padding: 50px 10px 50px 10px;
     }
 }
