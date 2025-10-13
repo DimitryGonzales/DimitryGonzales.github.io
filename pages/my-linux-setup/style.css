@@ -364,6 +364,14 @@ code {
     content: "Copied";
 }
 
+html[lang="pt"] .code-copy-button.copied::after {
+    content: "Copiado";
+}
+
+html[lang="ja"] .code-copy-button.copied::after {
+    content: "コピーしました";
+}
+
 .code-copy-button.copied .tooltip-bottom {
     transform: scale(0);
 }
