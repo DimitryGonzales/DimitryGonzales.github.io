@@ -785,15 +785,6 @@ video {
 }
 
 @media (max-width: 600px) {
-    #navbar {
-        top: auto;
-        bottom: 0;
-    }
-
-    #navbar.scrolling-down {
-        transform: translateY(100%);
-    }
-
     .page-title {
         display: none;
     }
@@ -810,16 +801,7 @@ video {
         width: 100%;
     }
 
-    .search-result-container {
-        top: auto;
-        bottom: calc(100% + 5px);
-    }
-
     .go-to-top {
         bottom: 200px;
-    }
-
-    main {
-        padding: 50px 10px 50px 10px;
     }
 }

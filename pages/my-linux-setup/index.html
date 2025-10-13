@@ -52,17 +52,17 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
 
-                        <a href="#amdgpu" class="search-result">
+                        <a href="#paru" class="search-result">
                             <span class="search-result-title">
-                                AMDGPU
+                                Paru
                             </span>
 
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
 
-                        <a href="#paru" class="search-result">
+                        <a href="#amdgpu" class="search-result">
                             <span class="search-result-title">
-                                Paru
+                                AMDGPU
                             </span>
 
                             <i class="fa-solid fa-chevron-right"></i>
@@ -84,22 +84,6 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
 
-                        <a href="#hyprland" class="search-result">
-                            <span class="search-result-title">
-                                Hyprland
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-
-                        <a href="#greetd" class="search-result">
-                            <span class="search-result-title">
-                                Greetd
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-
                         <a href="#gtk" class="search-result">
                             <span class="search-result-title">
                                 GTK
@@ -116,14 +100,6 @@
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
 
-                        <a href="#matugen" class="search-result">
-                            <span class="search-result-title">
-                                Matugen
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-
                         <a href="#rofi" class="search-result">
                             <span class="search-result-title">
                                 Rofi
@@ -135,6 +111,30 @@
                         <a href="#waybar" class="search-result">
                             <span class="search-result-title">
                                 Waybar
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#matugen" class="search-result">
+                            <span class="search-result-title">
+                                Matugen
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#hyprland" class="search-result">
+                            <span class="search-result-title">
+                                Hyprland
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#greetd" class="search-result">
+                            <span class="search-result-title">
+                                Greetd
                             </span>
 
                             <i class="fa-solid fa-chevron-right"></i>
@@ -320,6 +320,48 @@
             </div>
         </section>
 
+        <section id="paru">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Paru
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="paru-section-about">
+                    Paru is your standard pacman wrapping AUR helper with lots of features and minimal interaction.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=base-devel" target="_blank" class="package">
+                        <span>base-devel</span>
+                    </a>
+                </div>
+
+                <code>
+                    cd ~ && sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd .. && rm -rf paru
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
         <section id="amdgpu">
             <div class="section-header">
                 <h2 class="section-title">
@@ -372,48 +414,6 @@
 
                 <code>
                     sudo pacman -S --needed mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon
-
-                    <button class="code-copy-button tooltip-parent">
-                        <i class="fa-solid fa-copy"></i>
-
-                        <div class="tooltip tooltip-bottom">
-                            <span data-i18n="code-copy-button-tooltip">Copy</span>
-                        </div>
-                    </button>
-                </code>
-            </div>
-        </section>
-
-        <section id="paru">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Paru
-                </h2>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="about-section-container-title">
-                    About:
-                </h3>
-
-                <p class="section-about" data-i18n="paru-section-about">
-                    Paru is your standard pacman wrapping AUR helper with lots of features and minimal interaction.
-                </p>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="packages-section-container-title">
-                    Packages:
-                </h3>
-
-                <div class="package-container">
-                    <a href="https://archlinux.org/packages/?name=base-devel" target="_blank" class="package">
-                        <span>base-devel</span>
-                    </a>
-                </div>
-
-                <code>
-                    cd ~ && sudo pacman -S --needed base-devel && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && cd .. && rm -rf paru
 
                     <button class="code-copy-button tooltip-parent">
                         <i class="fa-solid fa-copy"></i>
@@ -580,6 +580,294 @@
             </div>
         </section>
 
+        <section id="gtk">
+            <div class="section-header">
+                <h2 class="section-title">
+                    GTK
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/GTK" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="gtk-section-about">
+                    GTK, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK is suitable for projects ranging from small one-off tools to complete application suites.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=gtk2" target="_blank" class="package">
+                        <span>gtk2</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=gtk3" target="_blank" class="package">
+                        <span>gtk3</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=gtk4" target="_blank" class="package">
+                        <span>gtk4</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=adw-gtk-theme" target="_blank" class="package">
+                        <span>adw-gtk-theme</span>
+                    </a>
+
+                    <a href="https://aur.archlinux.org/packages/bibata-cursor-theme" target="_blank" class="package">
+                        <span>[AUR] bibata-cursor-theme</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed gtk2 gtk3 gtk4 adw-gtk-theme && paru -S --needed bibata-cursor-theme
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="qt">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Qt
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Qt" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="qt-section-about">
+                    Qt is a cross-platform application and widget toolkit that uses standard C++ but makes extensive use of a special code generator (called the Meta Object Compiler, or moc) together with several macros to enrich the language.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=qt5-base" target="_blank" class="package">
+                        <span>qt5-base</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=qt6-base" target="_blank" class="package">
+                        <span>qt6-base</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=qt5-wayland" target="_blank" class="package">
+                        <span>qt5-wayland</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=qt6-wayland" target="_blank" class="package">
+                        <span>qt6-wayland</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed qt5-base qt6-base qt5-wayland qt6-wayland
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="rofi">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Rofi
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Rofi" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="rofi-section-about">
+                    Rofi is a window switcher, run dialog, ssh-launcher and dmenu replacement that started as a clone of simpleswitcher, written by Sean Pringle and later expanded by Dave Davenport.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=rofi" target="_blank" class="package">
+                        <span>rofi</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=rofi-emoji" target="_blank" class="package">
+                        <span>rofi-emoji</span>
+                    </a>
+
+                    <a href="https://archlinux.org/packages/?name=cliphist" target="_blank" class="package">
+                        <span>cliphist</span>
+                    </a>
+
+                    <a href="https://aur.archlinux.org/packages/rofi-power-menu" target="_blank" class="package">
+                        <span>[AUR] rofi-power-menu</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed rofi rofi-emoji cliphist && paru -S --needed rofi-power-menu
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+
+        <section id="waybar">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Waybar
+                </h2>
+
+                <a href="https://wiki.archlinux.org/title/Waybar" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="waybar-section-about">
+                    Waybar is a highly customizable Wayland bar for Sway and Wlroots based compositors. Its configuration is done in JSONC with styling in CSS. 
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=waybar" target="_blank" class="package">
+                        <span>waybar</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed waybar
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+        
+        <section id="matugen">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Matugen
+                </h2>
+
+                <a href="https://github.com/InioX/matugen/wiki" target="_blank" class="section-header-link">
+                    <span>Wiki</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="about-section-container-title">
+                    About:
+                </h3>
+
+                <p class="section-about" data-i18n="matugen-section-about">
+                    Matugen is a Material You color generation tool that generates palettes either from an image or a color.
+                </p>
+            </div>
+
+            <div class="section-container">
+                <h3 class="section-container-title" data-i18n="packages-section-container-title">
+                    Packages:
+                </h3>
+
+                <div class="package-container">
+                    <a href="https://archlinux.org/packages/?name=swww" target="_blank" class="package">
+                        <span>swww</span>
+                    </a>
+
+                    <a href="https://aur.archlinux.org/packages/matugen-bin" target="_blank" class="package">
+                        <span>[AUR] matugen-bin</span>
+                    </a>
+
+                    <a href="https://aur.archlinux.org/packages/waypaper-git" target="_blank" class="package">
+                        <span>[AUR] waypaper-git</span>
+                    </a>
+                </div>
+
+                <code>
+                    sudo pacman -S --needed swww && paru -S --needed matugen-bin waypaper-git
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
+            </div>
+        </section>
+        
         <section id="hyprland">
             <div class="section-header">
                 <h2 class="section-title">
@@ -720,294 +1008,6 @@
                         </ol>
                     </li>
                 </ol>
-            </div>
-        </section>
-
-        <section id="gtk">
-            <div class="section-header">
-                <h2 class="section-title">
-                    GTK
-                </h2>
-
-                <a href="https://wiki.archlinux.org/title/GTK" target="_blank" class="section-header-link">
-                    <span>Wiki</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="about-section-container-title">
-                    About:
-                </h3>
-
-                <p class="section-about" data-i18n="gtk-section-about">
-                    GTK, or the GIMP Toolkit, is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK is suitable for projects ranging from small one-off tools to complete application suites.
-                </p>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="packages-section-container-title">
-                    Packages:
-                </h3>
-
-                <div class="package-container">
-                    <a href="https://archlinux.org/packages/?name=gtk2" target="_blank" class="package">
-                        <span>gtk2</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=gtk3" target="_blank" class="package">
-                        <span>gtk3</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=gtk4" target="_blank" class="package">
-                        <span>gtk4</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=adw-gtk-theme" target="_blank" class="package">
-                        <span>adw-gtk-theme</span>
-                    </a>
-
-                    <a href="https://aur.archlinux.org/packages/bibata-cursor-theme" target="_blank" class="package">
-                        <span>[AUR] bibata-cursor-theme</span>
-                    </a>
-                </div>
-
-                <code>
-                    sudo pacman -S --needed gtk2 gtk3 gtk4 adw-gtk-theme && paru -S --needed bibata-cursor-theme
-
-                    <button class="code-copy-button tooltip-parent">
-                        <i class="fa-solid fa-copy"></i>
-
-                        <div class="tooltip tooltip-bottom">
-                            <span data-i18n="code-copy-button-tooltip">Copy</span>
-                        </div>
-                    </button>
-                </code>
-            </div>
-        </section>
-
-        <section id="qt">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Qt
-                </h2>
-
-                <a href="https://wiki.archlinux.org/title/Qt" target="_blank" class="section-header-link">
-                    <span>Wiki</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="about-section-container-title">
-                    About:
-                </h3>
-
-                <p class="section-about" data-i18n="qt-section-about">
-                    Qt is a cross-platform application and widget toolkit that uses standard C++ but makes extensive use of a special code generator (called the Meta Object Compiler, or moc) together with several macros to enrich the language.
-                </p>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="packages-section-container-title">
-                    Packages:
-                </h3>
-
-                <div class="package-container">
-                    <a href="https://archlinux.org/packages/?name=qt5-base" target="_blank" class="package">
-                        <span>qt5-base</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=qt6-base" target="_blank" class="package">
-                        <span>qt6-base</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=qt5-wayland" target="_blank" class="package">
-                        <span>qt5-wayland</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=qt6-wayland" target="_blank" class="package">
-                        <span>qt6-wayland</span>
-                    </a>
-                </div>
-
-                <code>
-                    sudo pacman -S --needed qt5-base qt6-base qt5-wayland qt6-wayland
-
-                    <button class="code-copy-button tooltip-parent">
-                        <i class="fa-solid fa-copy"></i>
-
-                        <div class="tooltip tooltip-bottom">
-                            <span data-i18n="code-copy-button-tooltip">Copy</span>
-                        </div>
-                    </button>
-                </code>
-            </div>
-        </section>
-
-        <section id="matugen">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Matugen
-                </h2>
-
-                <a href="https://github.com/InioX/matugen/wiki" target="_blank" class="section-header-link">
-                    <span>Wiki</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="about-section-container-title">
-                    About:
-                </h3>
-
-                <p class="section-about" data-i18n="matugen-section-about">
-                    Matugen is a Material You color generation tool that generates palettes either from an image or a color.
-                </p>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="packages-section-container-title">
-                    Packages:
-                </h3>
-
-                <div class="package-container">
-                    <a href="https://archlinux.org/packages/?name=swww" target="_blank" class="package">
-                        <span>swww</span>
-                    </a>
-
-                    <a href="https://aur.archlinux.org/packages/matugen-bin" target="_blank" class="package">
-                        <span>[AUR] matugen-bin</span>
-                    </a>
-
-                    <a href="https://aur.archlinux.org/packages/waypaper-git" target="_blank" class="package">
-                        <span>[AUR] waypaper-git</span>
-                    </a>
-                </div>
-
-                <code>
-                    sudo pacman -S --needed swww && paru -S --needed matugen-bin waypaper-git
-
-                    <button class="code-copy-button tooltip-parent">
-                        <i class="fa-solid fa-copy"></i>
-
-                        <div class="tooltip tooltip-bottom">
-                            <span data-i18n="code-copy-button-tooltip">Copy</span>
-                        </div>
-                    </button>
-                </code>
-            </div>
-        </section>
-
-        <section id="rofi">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Rofi
-                </h2>
-
-                <a href="https://wiki.archlinux.org/title/Rofi" target="_blank" class="section-header-link">
-                    <span>Wiki</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="about-section-container-title">
-                    About:
-                </h3>
-
-                <p class="section-about" data-i18n="rofi-section-about">
-                    Rofi is a window switcher, run dialog, ssh-launcher and dmenu replacement that started as a clone of simpleswitcher, written by Sean Pringle and later expanded by Dave Davenport.
-                </p>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="packages-section-container-title">
-                    Packages:
-                </h3>
-
-                <div class="package-container">
-                    <a href="https://archlinux.org/packages/?name=rofi" target="_blank" class="package">
-                        <span>rofi</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=rofi-emoji" target="_blank" class="package">
-                        <span>rofi-emoji</span>
-                    </a>
-
-                    <a href="https://archlinux.org/packages/?name=cliphist" target="_blank" class="package">
-                        <span>cliphist</span>
-                    </a>
-
-                    <a href="https://aur.archlinux.org/packages/rofi-power-menu" target="_blank" class="package">
-                        <span>[AUR] rofi-power-menu</span>
-                    </a>
-                </div>
-
-                <code>
-                    sudo pacman -S --needed rofi rofi-emoji cliphist && paru -S --needed rofi-power-menu
-
-                    <button class="code-copy-button tooltip-parent">
-                        <i class="fa-solid fa-copy"></i>
-
-                        <div class="tooltip tooltip-bottom">
-                            <span data-i18n="code-copy-button-tooltip">Copy</span>
-                        </div>
-                    </button>
-                </code>
-            </div>
-        </section>
-
-        <section id="waybar">
-            <div class="section-header">
-                <h2 class="section-title">
-                    Waybar
-                </h2>
-
-                <a href="https://wiki.archlinux.org/title/Waybar" target="_blank" class="section-header-link">
-                    <span>Wiki</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="about-section-container-title">
-                    About:
-                </h3>
-
-                <p class="section-about" data-i18n="waybar-section-about">
-                    Waybar is a highly customizable Wayland bar for Sway and Wlroots based compositors. Its configuration is done in JSONC with styling in CSS. 
-                </p>
-            </div>
-
-            <div class="section-container">
-                <h3 class="section-container-title" data-i18n="packages-section-container-title">
-                    Packages:
-                </h3>
-
-                <div class="package-container">
-                    <a href="https://archlinux.org/packages/?name=waybar" target="_blank" class="package">
-                        <span>waybar</span>
-                    </a>
-                </div>
-
-                <code>
-                    sudo pacman -S --needed waybar
-
-                    <button class="code-copy-button tooltip-parent">
-                        <i class="fa-solid fa-copy"></i>
-
-                        <div class="tooltip tooltip-bottom">
-                            <span data-i18n="code-copy-button-tooltip">Copy</span>
-                        </div>
-                    </button>
-                </code>
             </div>
         </section>
 

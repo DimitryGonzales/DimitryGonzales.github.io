@@ -21,29 +21,29 @@
     "pacman-actions-1": "Edite <b>/etc/pacman.conf</b>:<ol><li>Em <b>Misc options</b>:<ol><li>Desmarque <b>Color</b></li><li>Desmarque <b>VerbosePkgLists</b></li><li>Altere <b>ParallelDownloads</b> para 10</li></ol></li><li>Em <b>Repositories</b>:<ol><li>Desmarque <b>[multilib]</b></li></ol></li></ol>",
     "pacman-actions-2": "Ative e inicie o serviço <b>paccache.timer</b>",
 
-    "amdgpu-section-about": "AMDGPU é o driver gráfico de código aberto para placas AMD Radeon desde a família Graphics Core Next.",
-
     "paru-section-about": "Paru é um helper de AUR que envolve o pacman, oferecendo muitos recursos com interação mínima.",
+
+    "amdgpu-section-about": "AMDGPU é o driver gráfico de código aberto para placas AMD Radeon desde a família Graphics Core Next.",
 
     "pipewire-section-about": "PipeWire é um projeto que busca melhorar substancialmente o manuseio de áudio e vídeo no Linux. Ele fornece um motor de processamento de baixa latência para dispositivos de áudio e vídeo, capaz de cobrir casos de uso atualmente tratados pelo PulseAudio e JACK.",
 
     "fonts-section-title": "Fontes",
     "fonts-section-about": "Fontes usadas no sistema.",
-
-    "hyprland-section-about": "Hyprland é um compositor Wayland de empilhamento independente escrito em C++. Entre seus destaques estão empilhamento dinâmico, janelas em abas, uma base de código C++ limpa e legível, e um renderizador customizado que fornece animações de janelas, cantos arredondados e Dual-Kawase Blur em janelas transparentes.",
-
-    "greetd-section-about": "Greetd é um daemon gerenciador de login minimalista, agnóstico e flexível que não pressuponhe o que o usuário deseja iniciar, seja em modo console ou gráfico. Qualquer script ou programa iniciável a partir do console pode ser lançado pelo greetd, tornando-o especialmente adequado para compositores Wayland. Também pode iniciar um greeter para abrir sessões de usuário, como qualquer outro display manager.",
-    "greetd-actions-1": "Edite <b>/etc/greetd/config.toml</b>:<ol><li>Altere <b>command</b> para <b>tuigreet --cmd Hyprland</b></li></ol>",
     
     "gtk-section-about": "GTK, ou GIMP Toolkit, é um toolkit multiplataforma para criar interfaces gráficas. Oferecendo um conjunto completo de widgets, o GTK é adequado para projetos que vão desde pequenas ferramentas até suítes completas de aplicativos.",
 
     "qt-section-about": "Qt é um toolkit multiplataforma para aplicações e widgets que usa C++ padrão e faz uso extensivo de um gerador de código especial (Meta Object Compiler, moc) junto com várias macros para enriquecer a linguagem.",
 
-    "matugen-section-about": "Matugen é uma ferramenta de geração de cores Material You que cria paletas a partir de uma imagem ou de uma cor.",
-
     "rofi-section-about": "Rofi é um trocador de janelas, executor de diálogo, lançador SSH e substituto do dmenu que começou como um clone do simpleswitcher, foi escrito por Sean Pringle e posteriormente expandido por Dave Davenport.",
 
     "waybar-section-about": "Waybar é uma barra para Wayland altamente customizável para compositores baseados em Sway e Wlroots. Sua configuração é feita em JSONC com personalização em CSS.",
+
+    "matugen-section-about": "Matugen é uma ferramenta de geração de cores Material You que cria paletas a partir de uma imagem ou de uma cor.",
+
+    "hyprland-section-about": "Hyprland é um compositor Wayland de empilhamento independente escrito em C++. Entre seus destaques estão empilhamento dinâmico, janelas em abas, uma base de código C++ limpa e legível, e um renderizador customizado que fornece animações de janelas, cantos arredondados e Dual-Kawase Blur em janelas transparentes.",
+
+    "greetd-section-about": "Greetd é um daemon gerenciador de login minimalista, agnóstico e flexível que não pressuponhe o que o usuário deseja iniciar, seja em modo console ou gráfico. Qualquer script ou programa iniciável a partir do console pode ser lançado pelo greetd, tornando-o especialmente adequado para compositores Wayland. Também pode iniciar um greeter para abrir sessões de usuário, como qualquer outro display manager.",
+    "greetd-actions-1": "Edite <b>/etc/greetd/config.toml</b>:<ol><li>Altere <b>command</b> para <b>tuigreet --cmd Hyprland</b></li></ol>",
 
     "dotfiles-section-about": "Dotfiles pessoais com temas dinâmicos inspirados no Material Design usando Matugen. Inclui configurações para ambiente de desktop, apps GTK/Qt, Rofi, Waybar e mais, todas projetadas para se adaptar automaticamente ao seu papel de parede.",
     
