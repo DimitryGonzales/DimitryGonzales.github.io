@@ -208,6 +208,9 @@
 * {
     box-sizing: border-box;
 
+    overflow-wrap: break-word;
+    word-break: normal;
+
     margin: 0;
     padding: 0;
 
@@ -233,11 +236,11 @@ body {
     background-color: var(--surface);
 }
 
-.tooltip,
 #navbar {
     z-index: 9999;
 }
 
+.tooltip,
 .go-to-top {
     z-index: 9998;
 }
