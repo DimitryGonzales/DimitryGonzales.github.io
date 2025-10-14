@@ -1,6 +1,6 @@
 # 🌐 Dimitry's Website
 
-A **Material Design inspired** personal website designed to be dynamic, adaptive, and visually consistent.
+A **TUI inspired** personal website designed to be dynamic, adaptive, and visually consistent.
 
 It serves as a showcase of who I am as a programmer and developer, bringing together my experiences, projects, and growth, all in one place.
 
@@ -28,7 +28,7 @@ git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git
 
 # 🌐 Dimitry's Website (🇧🇷 Português - Brasil)
 
-Um site pessoal **inspirado no Material Design**, projetado para ser dinâmico, adaptável e visualmente consistente.
+Um site pessoal **inspirado no TUI**, projetado para ser dinâmico, adaptável e visualmente consistente.
 
 Ele funciona como uma demonstração de quem eu sou como programador e desenvolvedor, reunindo minhas experiências, projetos e evolução, tudo em um só lugar.
 
@@ -56,7 +56,7 @@ git clone https://github.com/DimitryGonzales/DimitryGonzales.github.io.git
 
 # 🌐 Dimitry's Website (🇯🇵 日本語)
 
-**Material Design** にインスパイアされたパーソナルサイトで、動的で適応的、そして視覚的一貫性を持つようにデザインされています。
+**TUI** にインスパイアされたパーソナルサイトで、動的で適応的、そして視覚的一貫性を持つようにデザインされています。
 
 プログラマー兼開発者としての私を紹介する場として、経験・進行中のプロジェクト・成長をひとつにまとめています。
 
