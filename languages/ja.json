@@ -1,4 +1,8 @@
 {
+    "404-message-1": "ページが見つかりません",
+    "404-message-2": "指定されたページは見つかりませんでした。",
+    "404-homepage-button": "ホームページに戻る",
+    
     "page-title": "ディミトリーのウェブサイト",
 
     "search-placeholder": "検索",

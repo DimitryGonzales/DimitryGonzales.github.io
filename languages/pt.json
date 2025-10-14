@@ -1,4 +1,8 @@
 {
+    "404-message-1": "Página Não Encontrada",
+    "404-message-2": "A página solicitada não pôde ser encontrada.",
+    "404-homepage-button": "Voltar para a página inicial",
+    
     "page-title": "Site do Dimitry",
 
     "search-placeholder": "Pesquisar",

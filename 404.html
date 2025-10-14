@@ -6,159 +6,105 @@
     <title>Dimitry's Website</title>
 
     <!--CSS-->
-    <link rel="stylesheet" href="/404.css">
+    <link rel="stylesheet" href="404.css">
 
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!--Inter Font-->
+    <!--JetBrains Mono Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
-    <!--Noto Sans Japanese Font-->
+    <!--Noto Sans Japanese-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-
-    <!--ScrollReveal-->
-    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
-    <input type="checkbox" id="navbar-toggle">
-    <label for="navbar-toggle">
-        <i class="fa-solid fa-bars navbar-toggle-closed-icon"></i>
-        <i class="fa-solid fa-arrow-left navbar-toggle-open-icon"></i>
-    </label>
-
-    <nav class="navbar">
-        <span class="navbar-title" data-i18n="navbar-title">
-            Menu
-        </span>
-            <section class="navbar-section">
-                <span class="navbar-section-title" data-i18n="navbar-section-title-social">
-                    Social
-                </span>
-
-                <div class="navbar-section-button-container">
-                    <a class="navbar-section-button" href="mailto:dimitrygonzales@gmail.com" target="_blank">
-                        <span data-i18n="social-email">Email</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-
-                    <a class="navbar-section-button" href="https://github.com/DimitryGonzales" target="_blank">
-                        <span data-i18n="social-github">Github</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </a>
-                </div>
-            </section>
+    <nav id="navbar">
+        <div class="navbar-content">
+            <div class="language-selector-container">
+                <select id="language-selector">
+                    <option value="en">English</option>
+                    <option value="pt">Português</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
         </div>
-
-        <input type="checkbox" id="theme-toggle">
-        <label for="theme-toggle">
-            <i class="fa-solid fa-sun bright-icon"></i>
-            <i class="fa-solid fa-moon dark-icon"></i>
-        </label>
     </nav>
+    
+    <main>
+        <div class="message-container">
+            <h1 class="message-1" data-i18n="404-message-1">
+                Page Not Found
+            </h1>
 
-    <div class="language-selector-container">
-        <div class="language-selector-icon">
-            <i class="fa-solid fa-language"></i>
+            <p class="message-2" data-i18n="404-message-2">
+                The requested page could not be found.
+            </p>
         </div>
 
-        <select id="language-selector">
-            <option value="en">English</option>
-            <option value="pt">Português</option>
-            <option value="ja">日本語</option>
-        </select>
-    </div>
-
-    <a class="return-to-top" href="#">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-
-    <div class="main">
-        <h1 class="error-title" data-i18n="error-title">
-            Page Not Found
-        </h1>
-
-        <p class="error-subtitle" data-i18n="error-subtitle">
-            The requested page could not be found.
-        </p>
-
-        <a class="error-button" href="/">
-            <span data-i18n="error-button">Return to homepage</span>
+        <a href="/" class="homepage-button">
+            <span data-i18n="404-homepage-button">Return to homepage</span>
         </a>
-    </div>
+    </main>
 
     <footer>
-        <section class="footer-section">
-            <h1 class="footer-section-title" data-i18n="footer-section-title-contributors">
-                Contributors
-            </h1>
-
-            <div class="footer-section-button-container">
-                <a class="footer-section-button" id="contributor" href="https://github.com/DimitryGonzales" target="_blank">
-                    <div class="contributor-image-container">
-                        <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="prlw's avatar">
-                    </div>
-
-                    <div class="contributor-info">
-                        <h2 class="contributor-title">
-                            Dimitry
-                        </h2>
-
-                        <span class="contributor-role" data-i18n="contributor-role-dimitry">
-                            Developer
-                        </span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section class="footer-section">
-            <h1 class="footer-section-title" data-i18n="footer-section-title-fonts">
+        <div class="footer-container">
+            <h2 class="footer-container-title" data-i18n="footer-container-title-fonts">
                 Fonts
-            </h1>
+            </h2>
 
-            <div class="footer-section-button-container">
-                <a class="footer-section-button" href="https://fonts.google.com/specimen/Inter" target="_blank">
-                    <span>Inter</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <div class="footer-data-container">
+                <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" class="footer-data">
+                    <span>JetBrains Mono</span>
+
+                    <i class="fa-brands fa-google"></i>
                 </a>
 
-                <a class="footer-section-button" href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank">
+                <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank" class="footer-data">
                     <span>Noto Sans Japanese</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    <i class="fa-brands fa-google"></i>
                 </a>
             </div>
-        </section>
+        </div>
 
-        <section class="footer-section">
-            <h1 class="footer-section-title" data-i18n="footer-section-title-libraries">
+        <div class="footer-container">
+            <h2 class="footer-container-title" data-i18n="footer-container-title-libraries">
                 Libraries
-            </h1>
+            </h2>
 
-            <div class="footer-section-button-container">
-                <a class="footer-section-button" href="https://fontawesome.com/" target="_blank">
+            <div class="footer-data-container">
+                <a href="https://fontawesome.com" target="_blank" class="footer-data">
                     <span>Font Awesome</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
 
-                <a class="footer-section-button" href="https://scrollrevealjs.org/" target="_blank">
-                    <span>ScrollReveal</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <i class="fa-brands fa-font-awesome"></i>
                 </a>
             </div>
-        </section>
+        </div>
+
+        <hr class="footer-division">
+
+        <div class="footer-link-container">
+            <a href="https://github.com/DimitryGonzales" target="_blank" class="footer-link">
+                <span data-i18n="footer-link-my-github">My Github</span>
+
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="footer-link">
+                <span data-i18n="footer-link-website-source">Website Source</span>
+
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
     </footer>
 
     <script src="/scripts/language.js"></script>
-
-    <script src="/scripts/scrollreveal.js"></script>
-
-    <script src="/scripts/theme.js"></script>
-
-    <script src="/scripts/closeMenu.js"></script>
+    <script src="/scripts/scrollingDirection.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script src="/scripts/githubData.js"></script>
 </body>
 </html>
