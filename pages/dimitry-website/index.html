@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitry's Website</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--JetBrains Mono Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+    <!--Noto Sans Japanese-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar-content">
+            <h1 class="page-title" data-i18n="page-title">
+                Dimitry's Website
+            </h1>
+
+            <div class="navbar-tool-container">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search" data-i18n-placeholder="search-placeholder">
+
+                    <div class="search-result-container">
+                        <a href="#me" class="search-result">
+                            <span class="search-result-title">
+                                Me
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#projects" class="search-result">
+                            <span class="search-result-title">
+                                Projects
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="language-selector-container">
+                    <select id="language-selector">
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <a href="#" class="go-to-top tooltip-parent">
+        <i class="fa-solid fa-chevron-up"></i>
+
+        <div class="tooltip tooltip-left">
+            <span data-i18n="go-to-top-tooltip">Go to top</span>
+        </div>
+    </a>
+    
+    <main>
+        <section id="me">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Me
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <div class="me-card">
+                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="" class="me-icon">
+
+                    <div class="me-info">
+                        <h1 class="me-name">
+                            Dimitry Gonzales
+                        </h1>
+
+                        <p class="me-about">
+                            Currently exploring web development.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Projects
+                </h2>
+            </div>
+
+            <div class="section-container">
+                <a href="https://github.com/DimitryGonzales/dotfiles" target="_blank" class="project" id="project-dotfiles">
+                    <div class="project-left">
+                        <div class="project-data-container">
+                            <div class="project-data tooltip-parent">
+                                <div class="cool-indicator"></div>
+
+                                <span id="github-lastCommit-dotfiles"></span>
+
+                                <div class="tooltip tooltip-right">
+                                    <span>Last Commit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">Dotfiles</h3>
+                    </div>
+
+                    <div class="project-right">
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-star"></i>
+
+                            <span id="github-stars-dotfiles"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span>Stars</span>
+                            </div>
+                        </div>
+
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            <span id="github-commits-dotfiles"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span>Commits</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="project" id="project-website">
+                    <div class="project-left">
+                        <div class="project-data-container">
+                            <div class="project-data tooltip-parent">
+                                <div class="cool-indicator"></div>
+
+                                <span id="github-lastCommit-dimitrygonzales.github.io"></span>
+
+                                <div class="tooltip tooltip-right">
+                                    <span>Last Commit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title">Website</h3>
+                    </div>
+
+                    <div class="project-right">
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-star"></i>
+
+                            <span id="github-stars-dimitrygonzales.github.io"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span>Stars</span>
+                            </div>
+                        </div>
+
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            <span id="github-commits-dimitrygonzales.github.io"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span>Commits</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripts/language.js"></script>
+    <script src="/scripts/scrollingDirection.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script src="/scripts/githubData.js"></script>
+</body>
+</html>

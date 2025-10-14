@@ -44,6 +44,7 @@
 
     "greetd-section-about": "Greetd は、ミニマルで柔軟なログインマネージャーデーモンです。コンソールモードでもグラフィックモードでも使用可能で、任意のスクリプトやプログラムを起動できます。Wayland コンポジターに特に適しています。また、通常のディスプレイマネージャーのようにユーザーセッションを開く greeter も起動できます。",
     "greetd-actions-1": "<b>/etc/greetd/config.toml</b> を編集:<ol><li><b>command</b> を <b>tuigreet --cmd Hyprland</b> に変更する</li></ol>",
+    "greetd-actions-2": "<b>greetd</b> サービスを有効にする",
 
     "dotfiles-section-about": "Matugen を使用した Material Design 風の動的テーマを備えた個人用 dotfiles。デスクトップ環境、GTK/Qt アプリ、Rofi、Waybar などの設定を含み、壁紙に自動適応します。",
     

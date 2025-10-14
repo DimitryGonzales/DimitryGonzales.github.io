@@ -44,6 +44,7 @@
 
     "greetd-section-about": "Greetd é um daemon gerenciador de login minimalista, agnóstico e flexível que não pressuponhe o que o usuário deseja iniciar, seja em modo console ou gráfico. Qualquer script ou programa iniciável a partir do console pode ser lançado pelo greetd, tornando-o especialmente adequado para compositores Wayland. Também pode iniciar um greeter para abrir sessões de usuário, como qualquer outro display manager.",
     "greetd-actions-1": "Edite <b>/etc/greetd/config.toml</b>:<ol><li>Altere <b>command</b> para <b>tuigreet --cmd Hyprland</b></li></ol>",
+    "greetd-actions-2": "Ative o serviço <b>greetd</b>",
 
     "dotfiles-section-about": "Dotfiles pessoais com temas dinâmicos inspirados no Material Design usando Matugen. Inclui configurações para ambiente de desktop, apps GTK/Qt, Rofi, Waybar e mais, todas projetadas para se adaptar automaticamente ao seu papel de parede.",
     

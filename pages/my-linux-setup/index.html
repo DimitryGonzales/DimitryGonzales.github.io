@@ -16,9 +16,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
-    <!--Material Symbols Sharp-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu">
-
     <!--Noto Sans Japanese-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1007,7 +1004,21 @@
                             <li>Change <b>command</b> to <b>tuigreet --cmd Hyprland</b></li>
                         </ol>
                     </li>
+
+                    <li data-i18n="greetd-actions-2" data-i18n-html>Enable <b>greetd</b> service</li>
                 </ol>
+
+                <code>
+                    systemctl enable greetd
+
+                    <button class="code-copy-button tooltip-parent">
+                        <i class="fa-solid fa-copy"></i>
+
+                        <div class="tooltip tooltip-bottom">
+                            <span data-i18n="code-copy-button-tooltip">Copy</span>
+                        </div>
+                    </button>
+                </code>
             </div>
         </section>
 
