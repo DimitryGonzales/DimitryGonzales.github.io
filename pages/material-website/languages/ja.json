@@ -1,0 +1,61 @@
+{
+    "search-placeholder": "検索",
+    "search-result-title-me": "私",
+    "search-result-description-me": "セクション",
+    "search-result-title-projects": "プロジェクト",
+    "search-result-description-projects": "セクション",
+    "search-result-title-skills": "スキル",
+    "search-result-description-skills": "セクション",
+
+    "menu-button-me": "私",
+    "menu-button-projects": "プロジェクト",
+    "menu-button-skills": "スキル",
+    "menu-button-palette-selector": "パレットセレクター",
+    "menu-button-my-github": "私のGitHub",
+    "menu-button-website-source": "サイトのコード",
+
+    "label-inner-toggle-palette-selector": "閉じる",
+    "label-palette-type-light": "ライト",
+    "label-palette-type-dark": "ダーク",
+
+    "label-palette-color-blue": "青",
+    "label-palette-color-pink": "ピンク",
+    "label-palette-color-purple": "紫",
+    "label-palette-color-red": "赤",
+
+    "me-card-description": "ソフトウェアエンジニア志望",
+    "me-detail-title-age": "年齢",
+    "me-detail-title-company": "会社",
+    "me-detail-company": "なし",
+    "me-detail-title-occupation": "職業",
+    "me-detail-occupation": "学生",
+    "me-about": "こんにちは、私はディミトリー・ゴンザレスです。ソフトウェアエンジニアを志望し、ウェブ開発を探求しながらプログラミング言語の知識を広げています。",
+
+    "label-tree-selector-education": "学歴",
+    "label-tree-selector-work": "仕事",
+
+    "main-section-title-projects": "プロジェクト",
+    "project-button-repository": "リポジトリ",
+    "project-button-website": "ウェブサイト",
+    "project-title-dotfiles": "Dotfiles",
+    "project-description-dotfiles": "Linuxの設定ファイル",
+    "project-title-face-detection": "顔検出",
+    "project-description-face-detection": "顔検出と分析ツール",
+    "project-title-website": "ウェブサイト",
+    "project-description-website": "個人サイト",
+
+    "main-section-title-skills": "スキル",
+    "skill-description-css": "ウェブのスタイル",
+    "skill-description-git": "コードのバージョン管理",
+    "skill-description-html": "ウェブの構造",
+    "skill-description-linux": "カーネル",
+    "skill-description-bash": "シェルスクリプト",
+    "skill-description-c": "低水準言語",
+    "skill-description-javascript": "ウェブスクリプト",
+    "skill-description-python": "高水準言語",
+
+    "footer-section-title-fonts": "フォント",
+    "footer-section-title-libraries": "ライブラリ",
+    "footer-link-my-github": "私のGitHub",
+    "footer-link-website-source": "サイトのコード"
+}

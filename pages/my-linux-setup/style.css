@@ -454,6 +454,7 @@ ol b {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 
     height: 100%;
     width: 100%;

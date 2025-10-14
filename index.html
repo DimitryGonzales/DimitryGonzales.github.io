@@ -5,808 +5,312 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimitry's Website</title>
 
-    <!--Page Icon-->
-    <link rel="icon" href="assets/rose.png" type="image/png">
-
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!--Inter Font-->
+    <!--JetBrains Mono Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
-    <!--Noto Sans Japanese Font-->
+    <!--Noto Sans Japanese-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <a href="#" class="go-to-top">
-        <i class="fa-solid fa-chevron-up"></i>
-    </a>
-
-    <input type="checkbox" id="menu-toggle">
     <nav id="navbar">
-        <label for="menu-toggle" class="label-menu-toggle">
-            <i class="fa-solid fa-bars"></i>
-        </label>
+        <div class="navbar-content">
+            <h1 class="page-title" data-i18n="page-title">
+                Dimitry's Website
+            </h1>
 
-        <div class="navbar-searchbox">
-            <div class="navbar-searchbox-icon">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            <div class="navbar-tool-container">
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Search" data-i18n-placeholder="search-placeholder">
 
-            <input type="text" placeholder="Search" id="search" data-i18n-placeholder="search-placeholder">
+                    <div class="search-result-container">
+                        <a href="#me" class="search-result">
+                            <span class="search-result-title" data-i18n="section-title-me"">
+                                Me
+                            </span>
 
-            <div class="search-result-container">
-                <a href="#me" class="search-result">
-                    <div class="search-result-info">
-                        <h2 class="search-result-title" data-i18n="search-result-title-me">
-                            Me
-                        </h2>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
 
-                        <p class="search-result-description" data-i18n="search-result-description-me">
-                            Section
-                        </p>
+                        <a href="#projects" class="search-result">
+                            <span class="search-result-title" data-i18n="section-title-projects">
+                                Projects
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+
+                        <a href="#pages" class="search-result">
+                            <span class="search-result-title" data-i18n="section-title-pages">
+                                Pages
+                            </span>
+
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
                     </div>
+                </div>
 
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="#projects" class="search-result">
-                    <div class="search-result-info">
-                        <h2 class="search-result-title" data-i18n="search-result-title-projects">
-                            Projects
-                        </h2>
-
-                        <p class="search-result-description" data-i18n="search-result-description-projects">
-                            Section
-                        </p>
-                    </div>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="#skills" class="search-result">
-                    <div class="search-result-info">
-                        <h2 class="search-result-title" data-i18n="search-result-title-skills">
-                            Skills
-                        </h2>
-
-                        <p class="search-result-description" data-i18n="search-result-description-skills">
-                            Section
-                        </p>
-                    </div>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
+                <div class="language-selector-container">
+                    <select id="language-selector">
+                        <option value="en">English</option>
+                        <option value="pt">Português</option>
+                        <option value="ja">日本語</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
 
-    <input type="checkbox" id="toggle-palette-selector">
+    <a href="#" class="go-to-top tooltip-parent">
+        <i class="fa-solid fa-chevron-up"></i>
 
-    <div class="menu">
-        <div class="menu-content">
-            <div class="menu-button-container" id="menu-shortcut-container">
-                <a href="#me" class="menu-button">
-                    <span data-i18n="menu-button-me">Me</span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="#projects" class="menu-button">
-                    <span data-i18n="menu-button-projects">Projects</span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="#skills" class="menu-button">
-                    <span data-i18n="menu-button-skills">Skills</span>
-
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-            </div>
-            
-            <hr>
-
-            <div class="menu-button-container">
-                <label for="toggle-palette-selector" class="menu-button">
-                    <span data-i18n="menu-button-palette-selector">Palette Selector</span>
-                    <i class="fa-solid fa-palette"></i>
-                </label>
-            </div>
-
-            <hr>
-
-            <div class="menu-button-container">
-                <a href="https://github.com/DimitryGonzales" target="_blank" class="menu-button">
-                    <span data-i18n="menu-button-my-github">My Github</span>
-
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="menu-button">
-                    <span data-i18n="menu-button-website-source">Website Source</span>
-
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-
-            <hr>
-
-            <div class="language-selector-container">
-                <div class="language-selector-icon">
-                    <i class="fa-solid fa-language"></i>
-                </div>
-
-                <select id="language-selector">
-                    <option value="en">English</option>
-                    <option value="pt">Português</option>
-                    <option value="ja">日本語</option>
-                </select>
-            </div>
+        <div class="tooltip tooltip-left">
+            <span data-i18n="go-to-top-tooltip">Go to top</span>
         </div>
-    </div>
+    </a>
     
-    <div class="palette-selector">
-        <label for="toggle-palette-selector" class="label-inner-toggle-palette-selector">
-            <i class="fa-solid fa-arrow-left"></i>
-            <span data-i18n="label-inner-toggle-palette-selector">Close</span>
-        </label>
-
-        <div class="palette-type-container">
-            <input type="radio" name="palette-type" class="palette-type-radio" id="palette-type-light">
-
-            <label for="palette-type-light" class="palette-type" id="label-palette-type-light">
-                <i class="fa-solid fa-sun"></i>
-                <span data-i18n="label-palette-type-light">Light</span>
-            </label>
-
-            <input type="radio" name="palette-type" class="palette-type-radio" id="palette-type-dark">
-
-            <label for="palette-type-dark" class="palette-type" id="label-palette-type-dark">
-                <i class="fa-solid fa-moon"></i>
-                <span data-i18n="label-palette-type-dark">Dark</span>
-            </label>
-        </div>
-
-        <div class="palette-container">
-            <input type="radio" name="palette" class="palette-radio" id="palette-color-blue" checked>
-
-            <label for="palette-color-blue" class="palette" id="label-palette-color-blue">
-                <h1 data-i18n="label-palette-color-blue">Blue</h1>
-
-                <div class="palette-shade-container palette-color-blue">
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #8ecff2
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #196585
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #003548
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #0f1417
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #1b2023
-                        </span>
-                    </div>
-                </div>
-            </label>
-
-            <input type="radio" name="palette" class="palette-radio" id="palette-color-pink">
-
-            <label for="palette-color-pink" class="palette" id="label-palette-color-pink">
-                <h1 data-i18n="label-palette-color-pink">Pink</h1>
-
-                <div class="palette-shade-container palette-color-pink">
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #dfb8f7
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #725188
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #412356
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #161217
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #221e24
-                        </span>
-                    </div>
-                </div>
-            </label>
-
-            <input type="radio" name="palette" class="palette-radio" id="palette-color-purple">
-
-            <label for="palette-color-purple" class="palette" id="label-palette-color-purple">
-                <h1 data-i18n="label-palette-color-purple">Purple</h1>
-
-                <div class="palette-shade-container palette-color-purple">
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #c4c0ff
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #5b5891
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #2d2960
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #131318
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #201f25
-                        </span>
-                    </div>
-                </div>
-            </label>
-
-            <input type="radio" name="palette" class="palette-radio" id="palette-color-red">
-
-            <label for="palette-color-red" class="palette" id="label-palette-color-red">
-                <h1 data-i18n="label-palette-color-red">Red</h1>
-
-                <div class="palette-shade-container palette-color-red">
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #ffb1c6
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #8c4a5e
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #551d30
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #191113
-                        </span>
-                    </div>
-                    <div class="palette-shade">
-                        <span class="palette-shade-tooltip">
-                            #261d1f
-                        </span>
-                    </div>
-                </div>
-            </label>
-        </div>
-    </div>
-
     <main>
         <section id="me">
-            <div class="me-info">
-                <a href="https://github.com/DimitryGonzales" target="_blank" class="me-card">
-                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="DimitryGonzales's Github Avatar" class="me-card-image">
-
-                    <div class="me-card-info">
-                        <h2 class="me-card-title">
-                            Dimitry Gonzales
-                        </h2>
-
-                        <p class="me-card-description" data-i18n="me-card-description">
-                            Aspiring software engineer
-                        </p>
-                    </div>
-                </a>
-
-                <div class="me-detail-container">
-                    <div class="me-detail">
-                        <div class="me-detail-title">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span data-i18n="me-detail-title-age">Age</span>
-                        </div>
-
-                        <span>18</span>
-                    </div>
-
-                    <div class="me-detail">
-                        <div class="me-detail-title">
-                            <i class="fa-solid fa-building"></i>
-                            <span data-i18n="me-detail-title-company">Company</span>
-                        </div>
-
-                        <span data-i18n="me-detail-company">None</span>
-                    </div>
-
-                    <div class="me-detail">
-                        <div class="me-detail-title">
-                            <i class="fa-solid fa-calendar"></i>
-                            <span data-i18n="me-detail-title-occupation">Occupation</span>
-                        </div>
-
-                        <span data-i18n="me-detail-occupation">Student</span>
-                    </div>
-                </div>
-
-                <p class="me-about" data-i18n="me-about">
-                    Hi, I'm Dimitry Gonzales, an aspiring software engineer exploring web development and expanding my knowledge of programming languages.
-                </p>
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section-title-me">
+                    Me
+                </h2>
             </div>
 
-            <div class="me-tree-container">
-                <input type="radio" name="me-tree-selector" class="me-tree-radio" id="tree-selector-education" checked>
-                <input type="radio" name="me-tree-selector" class="me-tree-radio" id="tree-selector-work">
+            <div class="section-container">
+                <div class="me-card">
+                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="" class="me-icon">
 
-                <div class="me-tree-selector-container">
-                    <label for="tree-selector-education" class="me-tree-selector" id="label-tree-selector-education">
-                        <i class="fa-solid fa-school"></i>
-                        <span data-i18n="label-tree-selector-education">Education</span>
-                    </label>
+                    <div class="me-info">
+                        <h1 class="me-name">
+                            Dimitry Gonzales
+                        </h1>
 
-                    <label for="tree-selector-work" class="me-tree-selector" id="label-tree-selector-work">
-                        <i class="fa-solid fa-briefcase"></i>
-                        <span data-i18n="label-tree-selector-work">Work</span>
-                    </label>
-                </div>
-
-                <div class="me-tree-viewer">
-                    <div class="me-tree" id="tree-education">
-
-                    </div>
-
-                    <div class="me-tree" id="tree-work">
-
+                        <p class="me-about" data-i18n="me-about">
+                            Currently exploring web development.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <div class="main-section-title-bar">
-                <h1 class="main-section-title" data-i18n="main-section-title-projects">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section-title-projects">
                     Projects
-                </h1>
+                </h2>
+
+                <a href="https://github.com/DimitryGonzales?tab=repositories" target="_blank" class="section-header-link">
+                    <span data-i18n="section-header-link-repositories">Repositories</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
 
-            <div class="project-container">
-                <div class="project" id="project1">
-                    <div class="project-top">
-                        <div class="project-image"></div>
+            <div class="section-container">
+                <a href="https://github.com/DimitryGonzales/dotfiles" target="_blank" class="project" id="project-dotfiles">
+                    <div class="project-left">
+                        <div class="project-data-container">
+                            <div class="project-data tooltip-parent">
+                                <div class="cool-indicator"></div>
 
-                        <div class="project-info">
-                            <h2 class="project-title" data-i18n="project-tile-dotfiles">
-                                Dotfiles
-                            </h2>
+                                <span id="github-lastCommit-dotfiles"></span>
 
-                            <p class="project-description" data-i18n="project-description-dotfiles">
-                                Linux Configuration files
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-tool-container">
-                            <div class="project-tool">
-                                <img src="assets/svg/linux.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    Linux
-                                </span>
-                            </div>
-
-                            <div class="project-tool">
-                                <img src="assets/svg/hyprland.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    Hyprland
-                                </span>
+                                <div class="tooltip tooltip-right">
+                                    <span data-i18n="tooltip-project-data-lastCommit">Last Commit</span>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="project-button-container">
-                            <a href="https://github.com/DimitryGonzales/Dotfiles" target="_blank" class="project-button">
-                                <i class="fa-brands fa-github"></i>
-                                <span data-i18n="project-button-repository">Repository</span>
-                            </a>
+                        <h3 class="project-title">Dotfiles</h3>
+                    </div>
+
+                    <div class="project-right">
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-star"></i>
+
+                            <span id="github-stars-dotfiles"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span data-i18n="tooltip-project-data-stars">Stars</span>
+                            </div>
+                        </div>
+
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            <span id="github-commits-dotfiles"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span data-i18n="tooltip-project-data-commits">Commits</span>
+                            </div>
                         </div>
                     </div>
+                </a>
+
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="project" id="project-website">
+                    <div class="project-left">
+                        <div class="project-data-container">
+                            <div class="project-data tooltip-parent">
+                                <div class="cool-indicator"></div>
+
+                                <span id="github-lastCommit-dimitrygonzales.github.io"></span>
+
+                                <div class="tooltip tooltip-right">
+                                    <span data-i18n="tooltip-project-data-lastCommit">Last Commit</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="project-title" data-i18n="project-title-website">Website</h3>
+                    </div>
+
+                    <div class="project-right">
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-star"></i>
+
+                            <span id="github-stars-dimitrygonzales.github.io"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span data-i18n="tooltip-project-data-stars">Stars</span>
+                            </div>
+                        </div>
+
+                        <div class="project-data tooltip-parent">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+
+                            <span id="github-commits-dimitrygonzales.github.io"></span>
+
+                            <div class="tooltip tooltip-left">
+                                <span data-i18n="tooltip-project-data-commits">Commits</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="message-container">
+                <div class="message-title">
+                    <span data-i18n="message-title-about-github-data">About Github Data</span>
                 </div>
 
-                <div class="project" id="project2">
-                    <div class="project-top">
-                        <div class="project-image"></div>
-
-                        <div class="project-info">
-                            <h2 class="project-title" data-i18n="project-title-face-detection">
-                                Face Detection
-                            </h2>
-
-                            <p class="project-description" data-i18n="project-description-face-detection">
-                                Face detection and analysis tool
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-tool-container">
-                            <div class="project-tool">
-                                <img src="assets/svg/html5.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    HTML
-                                </span>
-                            </div>
-
-                            <div class="project-tool">
-                                <img src="assets/svg/css3.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    CSS
-                                </span>
-                            </div>
-
-                            <div class="project-tool">
-                                <img src="assets/svg/javascript.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    JavaScript
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="project-button-container">
-                            <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io/tree/main/pages/face-detection-analysis" target="_blank" class="project-button">
-                                <i class="fa-brands fa-github"></i>
-                                <span data-i18n="project-button-repository">Repository</span>
-                            </a>
-
-                            <a href="https://dimitrygonzales.github.io/pages/face-detection-analysis" target="_blank" class="project-button">
-                                <i class="fa-solid fa-globe"></i>
-                                <span data-i18n="project-button-website">Website</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project" id="project3">
-                    <div class="project-top">
-                        <div class="project-image"></div>
-
-                        <div class="project-info">
-                            <h2 class="project-title" data-i18n="project-title-website">
-                                Website
-                            </h2>
-
-                            <p class="project-description" data-i18n="project-description-website">
-                                Personal website
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="project-content">
-                        <div class="project-tool-container">
-                            <div class="project-tool">
-                                <img src="assets/svg/html5.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    HTML
-                                </span>
-                            </div>
-
-                            <div class="project-tool">
-                                <img src="assets/svg/css3.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    CSS
-                                </span>
-                            </div>
-
-                            <div class="project-tool">
-                                <img src="assets/svg/javascript.svg" alt="" class="project-tool-image">
-
-                                <span class="project-tool-tooltip">
-                                    JavaScript
-                                </span>
-                            </div>
-                        </div>
-                        
-                        <div class="project-button-container">
-                            <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="project-button">
-                                <i class="fa-brands fa-github"></i>
-                                <span data-i18n="project-button-repository">Repository</span>
-                            </a>
-
-                            <a href="https://dimitrygonzales.github.io" target="_blank" class="project-button">
-                                <i class="fa-solid fa-globe"></i>
-                                <span data-i18n="project-button-website">Website</span>
-                            </a>
-                        </div>
-                    </div>
+                <div class="message">
+                    <span data-i18n="message-about-github-data">
+                        This section uses the public GitHub API to fetch project data such as last commit, stars, and commits directly from my repositories. Because it’s an unauthenticated request, the data might occasionally fail to load or update slowly due to GitHub’s rate limits(60 requests per hour per IP).
+                    </span>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <div class="main-section-title-bar">
-                <h1 class="main-section-title" data-i18n="main-section-title-skills">
-                    Skills
-                </h1>
+        <section id="pages">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section-title-pages">
+                    Pages
+                </h2>
+
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io/tree/main/pages" target="_blank" class="section-header-link">
+                    <span data-i18n="section-header-link-sources">Sources</span>
+
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
 
-            <div class="skill-container">
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/css3.svg" alt="">
+            <div class="section-container">
+                <a href="/pages/my-linux-setup/" target="_blank" class="page">
+                    <div class="page-info">
+                        <h3 class="page-name" data-i18n="page-name-my-linux-setup">
+                            My Linux Setup
+                        </h3>
+
+                        <p class="page-about" data-i18n="page-about-my-linux-setup">
+                            A detailed guide and overview of my Linux setup. Tools, configurations and themes.
+                        </p>
                     </div>
 
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                CSS
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-css">
-                                Web styling
-                            </p>
-                        </div>
-
-                        <div class="skill-level intermediate">
-
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
 
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/git.svg" alt="">
+                <a href="/pages/face-detection-analysis/" target="_blank" class="page">
+                    <div class="page-info">
+                        <h3 class="page-name" data-i18n="page-name-face-detection-and-analysis">
+                            Face Detection & Analysis
+                        </h3>
+
+                        <p class="page-about" data-i18n="page-about-face-detection-and-analysis">
+                            A web-based tool for real-time face detection and analysis using your device’s camera.
+                        </p>
                     </div>
 
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                Git
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-git">
-                                Code versioning
-                            </p>
-                        </div>
-
-                        <div class="skill-level intermediate">
-
-                        </div>
-                    </div>
-                </a>
-
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/html5.svg" alt="">
-                    </div>
-
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                HTML
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-html">
-                                Web structure
-                            </p>
-                        </div>
-
-                        <div class="skill-level intermediate">
-
-                        </div>
-                    </div>
-                </a>
-
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/linux.svg" alt="">
-                    </div>
-
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                Linux
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-linux">
-                                Kernel
-                            </p>
-                        </div>
-
-                        <div class="skill-level intermediate">
-
-                        </div>
-                    </div>
-                </a>
-
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/bash.svg" alt="">
-                    </div>
-
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                Bash
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-bash">
-                                Shell scripting
-                            </p>
-                        </div>
-
-                        <div class="skill-level beginner">
-
-                        </div>
-                    </div>
-                </a>
-
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/c.svg" alt="">
-                    </div>
-
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                C
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-c">
-                                Low-level language
-                            </p>
-                        </div>
-
-                        <div class="skill-level beginner">
-
-                        </div>
-                    </div>
-                </a>
-
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/javascript.svg" alt="">
-                    </div>
-
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                JavaScript
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-javascript">
-                                Web scripting
-                            </p>
-                        </div>
-
-                        <div class="skill-level beginner">
-
-                        </div>
-                    </div>
-                </a>
-
-                <a class="skill">
-                    <div class="skill-icon">
-                        <img src="assets/svg/python.svg" alt="">
-                    </div>
-
-                    <div class="skill-content">
-                        <div class="skill-info">
-                            <h2 class="skill-title">
-                                Python
-                            </h2>
-
-                            <p class="skill-description" data-i18n="skill-description-python">
-                                High-level language
-                            </p>
-                        </div>
-
-                        <div class="skill-level beginner">
-
-                        </div>
-                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-top">
-            <section class="footer-section">
-                <h1 class="footer-section-title" data-i18n="footer-section-title-fonts">
-                   Fonts 
-                </h1>
+        <div class="footer-container">
+            <h2 class="footer-container-title" data-i18n="footer-container-title-fonts">
+                Fonts
+            </h2>
 
-                <div class="footer-button-container">
-                    <a href="https://fonts.google.com/specimen/Inter" target="_blank" class="footer-button">
-                        <span>Inter</span>
+            <div class="footer-data-container">
+                <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" class="footer-data">
+                    <span>JetBrains Mono</span>
 
-                        <i class="fa-brands fa-google"></i>
-                    </a>
-
-                    <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank" class="footer-button">
-                        <span>Noto Sans Japanese</span>
-
-                        <i class="fa-brands fa-google"></i>
-                    </a>
-                </div>
-            </section>
-            
-            <section class="footer-section">
-                <h1 class="footer-section-title" data-i18n="footer-section-title-libraries">
-                   Libraries 
-                </h1>
-
-                <div class="footer-button-container">
-                    <a href="https://fontawesome.com/" target="_blank" class="footer-button">
-                        <span>Font Awesome</span>
-
-                        <i class="fa-brands fa-font-awesome"></i>
-                    </a>
-                </div>
-            </section>
-        </div>
-
-        <hr>
-
-        <div class="footer-bottom">
-            <div class="footer-link-container">
-                <a href="https://github.com/DimitryGonzales" target="_blank" class="footer-link">
-                    <span data-i18n="footer-link-my-github">My Github</span>
-
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-google"></i>
                 </a>
 
-                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="footer-link">
-                    <span data-i18n="footer-link-website-source">Website source</span>
+                <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank" class="footer-data">
+                    <span>Noto Sans Japanese</span>
 
-                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-google"></i>
                 </a>
             </div>
         </div>
+
+        <div class="footer-container">
+            <h2 class="footer-container-title" data-i18n="footer-container-title-libraries">
+                Libraries
+            </h2>
+
+            <div class="footer-data-container">
+                <a href="https://fontawesome.com" target="_blank" class="footer-data">
+                    <span>Font Awesome</span>
+
+                    <i class="fa-brands fa-font-awesome"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr class="footer-division">
+
+        <div class="footer-link-container">
+            <a href="https://github.com/DimitryGonzales" target="_blank" class="footer-link">
+                <span data-i18n="footer-link-my-github">My Github</span>
+
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="footer-link">
+                <span data-i18n="footer-link-website-source">Website Source</span>
+
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
     </footer>
 
-    <script src="scripts/language.js"></script>
-    <script src="scripts/paletteType.js"></script>
-    <script src="scripts/paletteColor.js"></script>
-    <script src="scripts/scrollingDirection.js"></script>
-    <script src="scripts/closeOutside.js"></script>
-    <script src="scripts/search.js"></script>
+    <script src="/scripts/language.js"></script>
+    <script src="/scripts/scrollingDirection.js"></script>
+    <script src="/scripts/search.js"></script>
+    <script src="/scripts/githubData.js"></script>
 </body>
 </html>

@@ -1,61 +1,37 @@
 {
+    "page-title": "ディミトリーのウェブサイト",
+
     "search-placeholder": "検索",
-    "search-result-title-me": "私",
-    "search-result-description-me": "セクション",
-    "search-result-title-projects": "プロジェクト",
-    "search-result-description-projects": "セクション",
-    "search-result-title-skills": "スキル",
-    "search-result-description-skills": "セクション",
 
-    "menu-button-me": "私",
-    "menu-button-projects": "プロジェクト",
-    "menu-button-skills": "スキル",
-    "menu-button-palette-selector": "パレットセレクター",
-    "menu-button-my-github": "私のGitHub",
-    "menu-button-website-source": "サイトのコード",
+    "go-to-top-tooltip": "トップへ戻る",
 
-    "label-inner-toggle-palette-selector": "閉じる",
-    "label-palette-type-light": "ライト",
-    "label-palette-type-dark": "ダーク",
+    "section-title-me": "私について",
+    "section-title-projects": "プロジェクト",
+    "section-title-pages": "ページ",
 
-    "label-palette-color-blue": "青",
-    "label-palette-color-pink": "ピンク",
-    "label-palette-color-purple": "紫",
-    "label-palette-color-red": "赤",
+    "section-header-link-repositories": "リポジトリ",
+    "section-header-link-sources": "ソース",
 
-    "me-card-description": "ソフトウェアエンジニア志望",
-    "me-detail-title-age": "年齢",
-    "me-detail-title-company": "会社",
-    "me-detail-company": "なし",
-    "me-detail-title-occupation": "職業",
-    "me-detail-occupation": "学生",
-    "me-about": "こんにちは、私はディミトリー・ゴンザレスです。ソフトウェアエンジニアを志望し、ウェブ開発を探求しながらプログラミング言語の知識を広げています。",
+    "me-about": "現在、ウェブ開発を探求しています。",
 
-    "label-tree-selector-education": "学歴",
-    "label-tree-selector-work": "仕事",
+    "tooltip-project-data-lastCommit": "最終コミット",
+    "tooltip-project-data-stars": "スター",
+    "tooltip-project-data-commits": "コミット",
 
-    "main-section-title-projects": "プロジェクト",
-    "project-button-repository": "リポジトリ",
-    "project-button-website": "ウェブサイト",
-    "project-title-dotfiles": "Dotfiles",
-    "project-description-dotfiles": "Linuxの設定ファイル",
-    "project-title-face-detection": "顔検出",
-    "project-description-face-detection": "顔検出と分析ツール",
     "project-title-website": "ウェブサイト",
-    "project-description-website": "個人サイト",
 
-    "main-section-title-skills": "スキル",
-    "skill-description-css": "ウェブのスタイル",
-    "skill-description-git": "コードのバージョン管理",
-    "skill-description-html": "ウェブの構造",
-    "skill-description-linux": "カーネル",
-    "skill-description-bash": "シェルスクリプト",
-    "skill-description-c": "低水準言語",
-    "skill-description-javascript": "ウェブスクリプト",
-    "skill-description-python": "高水準言語",
+    "message-title-about-github-data": "GitHubデータについて",
+    "message-about-github-data": "このセクションでは、GitHubの公開APIを使用して、私のリポジトリから最終コミット、スター数、コミット数などのプロジェクトデータを取得しています。認証されていないリクエストのため、GitHubのレート制限（IPごとに1時間あたり60回）により、データの読み込みが失敗したり更新が遅れる場合があります。",
 
-    "footer-section-title-fonts": "フォント",
-    "footer-section-title-libraries": "ライブラリ",
+    "page-name-my-linux-setup": "私のLinux設定",
+    "page-about-my-linux-setup": "私のLinux環境の詳細なガイドと概要。使用しているツール、設定、テーマを紹介します。",
+
+    "page-name-face-detection-and-analysis": "顔検出と分析",
+    "page-about-face-detection-and-analysis": "デバイスのカメラを使用してリアルタイムで顔を検出・分析するウェブツールです。",
+
+    "footer-container-title-fonts": "フォント",
+    "footer-container-title-libraries": "ライブラリ",
+
     "footer-link-my-github": "私のGitHub",
-    "footer-link-website-source": "サイトのコード"
+    "footer-link-website-source": "ウェブサイトのソース"
 }
