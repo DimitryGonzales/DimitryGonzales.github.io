@@ -27,7 +27,7 @@
     --surface_container_outline: #888888;
 }
 
-.dark {
+html.dark {
     --background: #000000;
 
     --title: #ffffff;
@@ -135,6 +135,8 @@ html.dark main {
 
     height: 100%;
     width: auto;
+
+    transition: background 200ms ease;
 }
 
 .tool-go-home:hover {
@@ -168,7 +170,7 @@ html.dark main {
 }
 
 #language-selector {
-    background-color: var(--surface_container);
+    background-color: transparent;
     border: none;
 
     color: var(--surface_container_title);
@@ -209,6 +211,8 @@ label[for="theme-toggle"] {
     
     height: 100%;
     aspect-ratio: 1/1;
+
+    transition: background 200ms ease;
 }
 
 label[for="theme-toggle"]:hover {

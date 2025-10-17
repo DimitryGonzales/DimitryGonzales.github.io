@@ -26,4 +26,4 @@ function uncheckOnOutsideClick(checkboxId, containerClass) {
     outsideClickHandlers.set(checkbox, handler);
 }
 
-uncheckOnOutsideClick("", "");
+uncheckOnOutsideClick("menu-toggle", "menu");

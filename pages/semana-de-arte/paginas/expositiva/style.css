@@ -580,34 +580,6 @@ main {
     width: 100%;
 }
 
-.slider {
-    display: flex;
-
-    background-color: var(--surface_container);
-    border-radius: 20px;
-
-    cursor: grab;
-
-    overflow-x: auto;
-    scroll-behavior: auto;
-    
-    height: 300px;
-    width: 100%;
-}
-
-.slider:active {
-    cursor: grabbing;
-}
-
-.slider img {
-    pointer-events: none;
-    user-select: none;
-    -webkit-user-drag: none;
-
-    height: 100%;
-    width: auto;
-}
-
 .main-section {
     display: flex;
     flex-direction: column;
@@ -673,12 +645,6 @@ main {
     width: 100%;
 }
 
-.main-section-about {
-    color: var(--on_surface);
-    font-size: 1rem;
-    font-weight: normal;
-}
-
 .main-section-button-container {
     display: flex;
     flex-wrap: wrap;
@@ -717,10 +683,222 @@ main {
 
 .main-section-button:hover {
     background-color: var(--inverse_primary);
-    
     color: var(--primary);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: var(--on_surface);
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    height: auto;
+    width: 100%;
+}
+
+.form-section input {
+    background-color: var(--surface_container_high);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+
+    padding: 0 20px;
+
+    height: 40px;
+    width: 100%;
+
+    transition: background 200ms ease;
+}
+
+.form-section input:hover,
+.form-section input:focus {
+    background-color: var(--surface_dim);
+}
+
+html.dark .form-section input:hover,
+html.dark .form-section input:focus {
+    background-color: var(--surface_bright);
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: var(--surface_container_high);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 0 20px;
+
+    height: 40px;
+    width: 100%;
+
+    transition: background 200ms ease;
+}
+
+.add-button:hover {
+    background-color: var(--surface_dim);
+}
+
+html.dark .add-button:hover {
+    background-color: var(--surface_bright);
+}
+
+#members-container,
+#resources-container,
+#authors-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface_container_high);
+    border-radius: 100%;
+    border: none;
+    outline: none;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 5px;
+
+    height: 40px;
+    aspect-ratio: 1/1;
+
+    transition: background 200ms ease;
+}
+
+.remove-button:hover {
+    background-color: var(--error);
+    color: var(--on_error);
+}
+
+.form-section select {
+    background-color: var(--surface_container_high);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: normal;
+
+    cursor: pointer;
+
+    padding: 0 20px;
+
+    height: 40px;
+    width: 100%;
+
+    transition: background 200ms ease;
+}
+
+.form-section select:hover {
+    background-color: var(--surface_dim);
+}
+
+html.dark select:hover {
+    background-color: var(--surface_bright);
+}
+
+.form-section textarea {
+    background-color: var(--surface_container_high);
+    border-radius: 20px;
+    border: none;
+    outline: none;
+
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: normal;
+    
+    padding: 20px;
+
+    height: 150px;
+    width: 100%;
+    resize: none;
+
+    transition: background 200ms ease;
+}
+
+.form-section textarea:hover,
+.form-section textarea:focus {
+    background-color: var(--surface_dim);
+}
+
+html.dark .form-section textarea:hover,
+html.dark .form-section textarea:focus {
+    background-color: var(--surface_bright);
+}
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+
+    color: var(--on_primary);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    height: 50px;
+    width: 100%;
+    
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.submit-button:hover {
+    background-color: var(--inverse_primary);
+    
+    color: var(--primary);
+}
 
 footer {
     display: flex;

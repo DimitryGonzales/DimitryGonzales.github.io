@@ -3,12 +3,10 @@ const canvas = document.getElementById('overlay');
 const context = canvas.getContext('2d');
 const infoContainer = document.getElementById('face-info-container');
 
-// GitHub raw URL for models
 const MODEL_URL = 'https://raw.githubusercontent.com/justadudewhohacks/face-api.js/master/weights';
 
 let analysisResults = [];
 
-// Translation dictionaries
 const translations = {
     "en": {
         age: "Age",
@@ -50,7 +48,6 @@ async function startVideo() {
     }
 }
 
-// Keep canvas in sync with video size
 function resizeCanvas() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
@@ -60,7 +57,6 @@ video.addEventListener('play', () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Run face analysis every 1000 ms
     setInterval(async () => {
         const displaySize = { width: video.videoWidth, height: video.videoHeight };
         const detections = await faceapi
@@ -72,24 +68,20 @@ video.addEventListener('play', () => {
         analysisResults = faceapi.resizeResults(detections, displaySize);
     }, 1000);
 
-    // Draw loop every frame
     const drawLoop = () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
         infoContainer.innerHTML = "";
 
-        // Get current language dynamically
         const currentLang = document.documentElement.lang || "en";
         const i18n = translations[currentLang] || translations["en"];
 
         analysisResults.forEach((det, i) => {
             const box = det.detection.box;
 
-            // Draw face box
             context.strokeStyle = "lime";
             context.lineWidth = 2;
             context.strokeRect(box.x, box.y, box.width, box.height);
 
-            // Draw label above box
             const label = `${i + 1}`;
             context.fillStyle = "lime";
             context.font = "16px Arial";
@@ -100,14 +92,12 @@ video.addEventListener('play', () => {
             context.fillStyle = "black";
             context.fillText(label, box.x + padding, box.y - padding);
 
-            // Process attributes
             const { age, gender, expressions } = det;
             const sorted = Object.entries(expressions).sort((a, b) => b[1] - a[1]);
             const topExpressionKey = sorted[0][0];
             const topExpressionTranslated = i18n.expressions[topExpressionKey] || topExpressionKey;
             const genderTranslated = i18n.genders[gender] || gender;
 
-            // Create info card
             const card = document.createElement('div');
             card.className = "face-about";
             card.innerHTML = `
@@ -142,5 +132,4 @@ video.addEventListener('play', () => {
     drawLoop();
 });
 
-// Load models and start webcam
 loadModels().then(startVideo);

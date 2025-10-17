@@ -1,6 +1,5 @@
 const scrollContainer = document.querySelector('.slider');
 
-// Grab Scolling
 let isDown = false;
 let startX;
 let startY;
@@ -35,13 +34,11 @@ scrollContainer.addEventListener('mousemove', (e) => {
     scrollContainer.scrollTop = scrollTop - walkY;
 });
 
-// Scroll horizontally with mouse scroll
 scrollContainer.addEventListener('wheel', (e) => {
     e.preventDefault();
     scrollContainer.scrollLeft += e.deltaY;
 }, { passive: false });
 
-// Auto scroll and loop
 document.addEventListener("DOMContentLoaded", () => {
     const slider = document.querySelector(".slider");
     if (!slider) return;
@@ -58,9 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
         requestId = requestAnimationFrame(autoScroll);
     }
 
-    autoScroll(); // Start scrolling
+    autoScroll();
 
-    // Pause on hover
     slider.addEventListener("mouseenter", () => cancelAnimationFrame(requestId));
     slider.addEventListener("mouseleave", () => autoScroll());
 });

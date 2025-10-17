@@ -21,7 +21,7 @@
 
     <nav class="navbar">
         <h1 class="page-title">
-            Semana De Arte
+            Performática
         </h1>
 
         <div class="navbar-tool-container">
@@ -95,88 +95,115 @@
     </div>
 
     <main>
-        <div class="slider">
-            <img src="assets/event-environment/1.jpg" alt="">
-            <img src="assets/event-environment/2.jpg" alt="">
-            <img src="assets/event-environment/3.jpg" alt="">
-            <img src="assets/event-environment/4.jpg" alt="">
-            <img src="assets/event-environment/5.jpg" alt="">
-            <img src="assets/event-environment/6.jpg" alt="">
-        </div>
-
-        <section class="main-section">
-            <div class="main-section-header main-section-header-centered">
-                <h2 class="main-section-title">
-                    Inscreva-se
-                </h2>
-            </div>
-
-            <div class="main-section-content">
-                <p class="main-section-about">
-                    Garanta sua vaga neste evento repleto de cultura, criatividade e expressão artística. Inscreva-se agora e venha viver experiências únicas com exposições, oficinas, apresentações e muito mais!
-
-                    <br>
-                    <br>
-
-                    <b>Selecione uma das opções de apresentação abaixo e preencha o formulário:</b> 
-                </p>
-
-                <div class="main-section-button-container">
-                    <a href="/pages/semana-de-arte/paginas/performatica/" class="main-section-button main-section-button-dividing">
-                        <span>Performática</span>
-                    </a>
-
-                    <a href="/pages/semana-de-arte/paginas/expositiva/" class="main-section-button main-section-button-dividing">
-                        <span>Expositiva</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <section class="main-section">
             <div class="main-section-header">
                 <div class="main-section-icon">
-                    <i class="fa-solid fa-info"></i>
+                    <i class="fa-solid fa-pencil"></i>
                 </div>
 
                 <h2 class="main-section-title">
-                    Sobre o evento
+                    Inscrição
                 </h2>
             </div>
 
             <div class="main-section-content">
-                <p class="main-section-about">
-                    A Semana de Arte do SESI Pedro Leopoldo – Maria José D’Almeida Mello é um evento dedicado à celebração da criatividade, da expressão e da cultura dentro e fora da escola. Durante essa semana especial, estudantes e professores se reúnem para apresentar e vivenciar diferentes formas de arte, pintura, música, teatro, dança, fotografia, literatura e muito mais.
+                <form action="https://formspree.io/f/xrbkvzwo" method="POST">
+                    <div class="form-section">
+                        <label>
+                            Título da performance:
+                            <input type="text" name="Título" placeholder="ex: The Starry Night"></input>
+                        </label>
+                    </div>
 
-                    <br>
-                    <br>
+                    <div class="form-section">
+                        <label>
+                            Tipo de performance:
+                            <input type="text" name="Tipo" placeholder="ex: Música, Dança, ...">
+                        </label>
+                    </div>
 
-                    Mais do que uma exposição de talentos, a Semana de Arte é um espaço de troca, reflexão e valorização da identidade artística de cada participante. Venha fazer parte dessa experiência única, onde a escola se transforma em um palco aberto para o pensamento crítico, a imaginação e o fazer artístico coletivo. 
-                </p>
-            </div>
-        </section>
+                    <div class="form-section">
+                        <label>
+                            Duração da performance:
+                            <input type="text" name="Duração" placeholder="ex: 30min"></input>
+                        </label>
+                    </div>
 
-        <section class="main-section" style="display: none">
-            <div class="main-section-header">
-                <div class="main-section-icon">
-                    <i class="fa-solid fa-images"></i>
-                </div>
+                    <div class="form-section">
+                        <label>
+                            Recursos para a apresentação (apenas se precisar):
+                            <div id="resources-container">
 
-                <h2 class="main-section-title">
-                    Galeria de Artes
-                </h2>
-            </div>
+                            </div>
+                        </label>
 
-            <div class="main-section-content">
-                <p class="main-section-about">
-                    Aqui você encontrará uma seleção especial de obras criadas por participantes da Semana de Arte. Este espaço celebra a criatividade, a diversidade de expressões e o talento que floresce quando a arte se torna coletiva. Inspire-se com cada traço, cor e ideia, sinta-se parte desse movimento artístico!  
-                </p>
+                        <button class="add-button" type="button" onclick="addResource()">
+                            Adicionar Recurso
+                        </button>
+                    </div>
 
-                <div class="main-section-button-container">
-                    <a href="/pages/semana-de-arte/paginas/galeria/" class="main-section-button">
-                        <span>Galeria</span>
-                    </a>
-                </div>
+                    <div class="form-section">
+                        <label>
+                            Dia de apresentação:
+                            <select name="Dia">
+                                <option value="" disabled selected>
+                                    Selecione um dia
+                                </option>
+
+                                <option value="Segunda-Feira">
+                                    Segunda-Feira
+                                </option>
+
+                                <option value="Terça-Feira">
+                                    Terça-Feira
+                                </option>
+
+                                <option value="Quarta-Feira">
+                                    Quarta-Feira
+                                </option>
+
+                                <option value="Quinta-Feira">
+                                    Quinta-Feira
+                                </option>
+
+                                <option value="Sexta-Feira">
+                                    Sexta-Feira
+                                </option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Turma do grupo:
+                            <input type="text" name="Turma" placeholder="ex: 302, 301, ...">
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Integrantes do grupo:
+                            <div id="members-container">
+                                
+                            </div>
+
+                            <button class="add-button" type="button" onclick="addMember()">
+                                Adicionar Integrante
+                            </button>
+                        </label>
+                    </div>
+
+                    <div class="form-section">
+                        <label>
+                            Contato do grupo:
+                            <input type="text" name="Contato" placeholder="ex: pedro@gmail.com, +55 31 28417-8746, ...">
+                        </label>
+                    </div>
+                    
+                    <div class="form-section">
+                        <button class="submit-button" type="submit">Enviar Formulário</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -233,8 +260,8 @@
         </div>
     </footer>
 
-    <script src="scripts/themeToggle.js"></script>
-    <script src="scripts/scroll-slider.js"></script>
-    <script src="scripts/closeOutside.js"></script>
+    <script src="../../scripts/themeToggle.js"></script>
+    <script src="scripts/dynamic-input.js"></script>
+    <script src="../../scripts/closeOutside.js"></script>
 </body>
 </html>

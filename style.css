@@ -221,8 +221,8 @@
 html {
     font-optical-sizing: auto;
     font-size: 16px;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
 }
 
 ::selection {
@@ -927,6 +927,7 @@ footer {
 
 .footer-division {
     background-color: var(--outline);
+    border: none;
 
     height: 1px;
     width: 100%;
