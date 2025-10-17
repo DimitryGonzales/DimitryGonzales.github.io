@@ -785,6 +785,10 @@ footer {
     background-color: var(--surface_dim);
 }
 
+.footer-data i {
+    color: var(--on_surface_variant);
+}
+
 html.dark .footer-data:hover {
     background-color: var(--surface_bright);
 }
@@ -831,6 +835,10 @@ html.dark .footer-data:hover {
 
 .footer-link:hover {
     background-color: var(--surface_bright);
+}
+
+.footer-link i {
+    color: var(--on_surface_variant);
 }
 
 @media (max-width: 840px) {
