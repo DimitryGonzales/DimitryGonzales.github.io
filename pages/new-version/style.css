@@ -1,0 +1,410 @@
+:root {
+    --background: #101418;
+
+    --error: #ffb4ab;
+
+    --error_container: #93000a;
+
+    --inverse_on_surface: #2d3135;
+
+    --inverse_primary: #2f628c;
+
+    --inverse_surface: #e0e2e8;
+
+    --on_background: #e0e2e8;
+
+    --on_error: #690005;
+
+    --on_error_container: #ffdad6;
+
+    --on_primary: #003353;
+
+    --on_primary_container: #cee5ff;
+
+    --on_primary_fixed: #001d33;
+
+    --on_primary_fixed_variant: #0e4a73;
+
+    --on_secondary: #233240;
+
+    --on_secondary_container: #d5e4f7;
+
+    --on_secondary_fixed: #0e1d2a;
+
+    --on_secondary_fixed_variant: #3a4857;
+
+    --on_surface: #e0e2e8;
+
+    --on_surface_variant: #c2c7cf;
+
+    --on_tertiary: #382a49;
+
+    --on_tertiary_container: #eedbff;
+
+    --on_tertiary_fixed: #231533;
+
+    --on_tertiary_fixed_variant: #504061;
+
+    --outline: #8c9198;
+
+    --outline_variant: #42474e;
+
+    --primary: #9bcbfb;
+
+    --primary_container: #0e4a73;
+
+    --primary_fixed: #cee5ff;
+
+    --primary_fixed_dim: #9bcbfb;
+
+    --scrim: #000000;
+
+    --secondary: #b9c8da;
+
+    --secondary_container: #3a4857;
+
+    --secondary_fixed: #d5e4f7;
+
+    --secondary_fixed_dim: #b9c8da;
+
+    --shadow: #000000;
+
+    --source_color: #306e9f;
+
+    --surface: #101418;
+
+    --surface_bright: #36393e;
+
+    --surface_container: #1c2024;
+
+    --surface_container_high: #272a2f;
+
+    --surface_container_highest: #323539;
+
+    --surface_container_low: #181c20;
+
+    --surface_container_lowest: #0b0f12;
+
+    --surface_dim: #101418;
+
+    --surface_tint: #9bcbfb;
+
+    --surface_variant: #42474e;
+
+    --tertiary: #d3bfe6;
+
+    --tertiary_container: #504061;
+
+    --tertiary_fixed: #eedbff;
+
+    --tertiary_fixed_dim: #d3bfe6;
+
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: "Inter", "Noto Sans JP", "Font Awesome 7 Free", sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+    scrollbar-color: var(--primary) transparent;
+    scrollbar-width: auto;
+}
+
+html {
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: var(--on_primary);
+}
+
+body {
+    background-color: var(--surface);
+}
+
+@keyframes click {
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.clicked {
+    animation: click 200ms;
+}
+
+.tooltip-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    height: auto;
+    width: auto;
+}
+
+.tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface_container_highest);
+    border-radius: 20px;
+    
+    color: var(--on_surface);
+    font-size: 1rem;
+    font-weight: normal;
+    white-space: nowrap;
+
+    position: absolute;
+
+    pointer-events: none;
+
+    padding: 0 10px;
+
+    min-height: 40px;
+    width: auto;
+
+    transform: scale(0);
+
+    transition: transform 200ms ease;
+}
+
+.tooltip-parent:hover .tooltip {
+    transform: scale(1);
+}
+
+.tooltip-top {
+    bottom: calc(100% + 10px);
+
+    transform-origin: bottom center;
+}
+
+.tooltip-right {
+    left: calc(100% + 10px);
+
+    transform-origin: left center;
+}
+
+.tooltip-bottom {
+    top: calc(100% + 10px);
+
+    transform-origin: top center;
+}
+
+.tooltip-left {
+    right: calc(100% + 10px);
+
+    transform-origin: right center;
+}
+
+.toolbox {
+    display: flex;
+    gap: 5px;
+
+    background-color: var(--surface_container);
+    border-radius: calc(50px / 2);
+
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+
+    padding: 5px;
+
+    height: 50px;
+    width: auto;
+}
+
+#theme-menu-toggle {
+    display: none;
+}
+
+.theme-menu-toggle-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border-radius: 100%;
+
+    color: var(--on_surface_variant);
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.theme-menu-toggle-label:hover {
+    background-color: var(--surface_bright);
+    
+    color: var(--on_surface);
+}
+
+.theme-menu-toggle-label i {
+    position: absolute;
+
+    transition: 
+        transform 200ms ease;
+}
+
+.theme-menu-toggle-label i:nth-of-type(1) {
+    transform: scale(1);
+}
+
+.theme-menu-toggle-label i:nth-of-type(2) {
+    transform: scale(0);
+}
+
+#theme-menu-toggle:checked + .tooltip-parent .theme-menu-toggle-label i:nth-of-type(1) {
+    transform: scale(0);
+}
+
+#theme-menu-toggle:checked + .tooltip-parent .theme-menu-toggle-label i:nth-of-type(2) {
+    transform: scale(1);
+}
+
+.section-menu {
+    display: flex;
+    gap: 5px;
+
+    background-color: var(--surface_container);
+    border-radius: calc(60px / 2);
+
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+
+    padding: 5px;
+
+    height: 60px;
+    width: auto;
+
+    transform: translateX(-50%);
+}
+
+.section-menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border-radius: 100%;
+
+    color: var(--on_surface_variant);
+    font-size: 1rem;
+    text-decoration: none;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.section-menu-button:hover {
+    background-color: var(--surface_bright);
+
+    color: var(--on_surface);
+}
+
+.section-menu-button.section-indicator-current {
+    background-color: var(--primary_container);
+
+    color: var(--on_primary_container);
+}
+
+.language-selector-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    background-color: var(--surface_container);
+    border-radius: calc(50px / 2);
+
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+
+    padding: 5px;
+
+    height: 50px;
+    width: auto;
+}
+
+.language-selector-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    border-radius: 100%;
+
+    color: var(--on_primary);
+    font-size: 1rem;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+#language-selector {
+    background-color: transparent;
+    border-radius: calc((50px - (5px * 2)) / 2);
+    border: none;
+    outline: none;
+
+    color: var(--on_surface_variant);
+    font-size: 1rem;
+    font-weight: normal;
+
+    cursor: pointer;
+
+    padding: 0 5px;
+
+    height: 100%;
+    width: fit-content;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+#language-selector:hover {
+    background-color: var(--surface_bright);
+    color: var(--on_surface);
+}
+
+section {
+    height: 100dvh;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .toolbox {
+        top: 10px;
+        bottom: auto;
+    }
+
+    .language-selector-container {
+        top: 10px;
+        bottom: auto;
+    }
+}

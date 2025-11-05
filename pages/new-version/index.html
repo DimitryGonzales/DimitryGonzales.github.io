@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!--Inter Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!--Noto Sans Japanese-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="toolbox">
+        <input type="checkbox" id="theme-menu-toggle">
+        <div class="tooltip-parent">
+            <label for="theme-menu-toggle" class="theme-menu-toggle-label will-be-clicked">
+                <i class="fa-solid fa-palette"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <div class="tooltip tooltip-right">
+                <span>Theme Menu</span>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-menu">
+        <div class="tooltip-parent">
+            <a href="#home" class="section-menu-button section-indicator-home will-be-clicked">
+                <i class="fa-solid fa-house"></i>
+            </a>
+
+            <div class="tooltip tooltip-top">
+                <span>Home</span>
+            </div>
+        </div>
+
+        <div class="tooltip-parent">
+            <a href="#projects" class="section-menu-button section-indicator-projects will-be-clicked tooltip-parent">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </a>
+
+            <div class="tooltip tooltip-top">
+                <span>Projects</span>
+            </div>
+        </div>
+
+        <div class="tooltip-parent">
+            <a href="#pages" class="section-menu-button section-indicator-pages will-be-clicked tooltip-parent">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+
+            <div class="tooltip tooltip-top">
+                <span>Pages</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="language-selector-container">
+        <div class="language-selector-icon">
+            <i class="fa-solid fa-language"></i>
+        </div>
+
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+
+    <section id="home"></section>
+    <section id="projects"></section>
+    <section id="pages"></section>
+
+    <script src="/scripts/sectionDetection.js"></script>
+    <script src="/scripts/click.js"></script>
+</body>
+</html>
