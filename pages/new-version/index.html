@@ -57,6 +57,65 @@
                     </div>
                 </div>
             </label>
+
+            <div class="palette-container">
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-blue" checked>
+                <label for="palette-color-blue" class="palette-color-label palette-color-blue">
+                    <div class="palette-color-label-shade-container">
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                    </div>
+
+                    <div class="palette-color-label-info">
+                        <h2 class="palette-color-label-title">Blue</h2>
+
+                        <div class="palette-color-label-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-green" checked>
+                <label for="palette-color-green" class="palette-color-label palette-color-green">
+                    <div class="palette-color-label-shade-container">
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                    </div>
+
+                    <div class="palette-color-label-info">
+                        <h2 class="palette-color-label-title">Green</h2>
+
+                        <div class="palette-color-label-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-purple" checked>
+                <label for="palette-color-purple" class="palette-color-label palette-color-purple">
+                    <div class="palette-color-label-shade-container">
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                    </div>
+
+                    <div class="palette-color-label-info">
+                        <h2 class="palette-color-label-title">Purple</h2>
+
+                        <div class="palette-color-label-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </label>
+            </div>
         </div>
     </div>
 
@@ -97,18 +156,30 @@
             <i class="fa-solid fa-language"></i>
         </div>
 
-        <select id="language-selector">
+        <select id="language-selector" class="will-be-clicked">
             <option value="en">English</option>
             <option value="pt">Português</option>
             <option value="ja">日本語</option>
         </select>
     </div>
 
-    <section id="home"></section>
-    <section id="projects"></section>
-    <section id="pages"></section>
+    <main>
+        <section id="home">
 
+        </section>
+
+        <section id="projects">
+
+        </section>
+
+        <section id="pages">
+            
+        </section>
+    </main>
+
+    <script src="/scripts/language.js"></script>
     <script src="/scripts/themeToggle.js"></script>
+    <script src="/scripts/paletteColor.js"></script>
     <script src="/scripts/sectionDetection.js"></script>
     <script src="/scripts/click.js"></script>
     <script src="/scripts/closeOutside.js"></script>
