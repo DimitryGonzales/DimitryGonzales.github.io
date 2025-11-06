@@ -1,4 +1,108 @@
 :root {
+    /* Light Colors */
+
+    --background: #f7f9ff;
+
+    --error: #ba1a1a;
+
+    --error_container: #ffdad6;
+
+    --inverse_on_surface: #eef1f6;
+
+    --inverse_primary: #9bcbfb;
+
+    --inverse_surface: #2d3135;
+
+    --on_background: #181c20;
+
+    --on_error: #ffffff;
+
+    --on_error_container: #410002;
+
+    --on_primary: #ffffff;
+
+    --on_primary_container: #001d33;
+
+    --on_primary_fixed: #001d33;
+
+    --on_primary_fixed_variant: #0e4a73;
+
+    --on_secondary: #ffffff;
+
+    --on_secondary_container: #0e1d2a;
+
+    --on_secondary_fixed: #0e1d2a;
+
+    --on_secondary_fixed_variant: #3a4857;
+
+    --on_surface: #181c20;
+
+    --on_surface_variant: #42474e;
+
+    --on_tertiary: #ffffff;
+
+    --on_tertiary_container: #231533;
+
+    --on_tertiary_fixed: #231533;
+
+    --on_tertiary_fixed_variant: #504061;
+
+    --outline: #72777f;
+
+    --outline_variant: #c2c7cf;
+
+    --primary: #2f628c;
+
+    --primary_container: #cee5ff;
+
+    --primary_fixed: #cee5ff;
+
+    --primary_fixed_dim: #9bcbfb;
+
+    --scrim: #000000;
+
+    --secondary: #51606f;
+
+    --secondary_container: #d5e4f7;
+
+    --secondary_fixed: #d5e4f7;
+
+    --secondary_fixed_dim: #b9c8da;
+
+    --shadow: #000000;
+
+    --source_color: #306e9f;
+
+    --surface: #f7f9ff;
+
+    --surface_bright: #f7f9ff;
+
+    --surface_container: #eceef3;
+
+    --surface_container_high: #e6e8ee;
+
+    --surface_container_highest: #e0e2e8;
+
+    --surface_container_low: #f1f3f9;
+
+    --surface_container_lowest: #ffffff;
+
+    --surface_dim: #d8dae0;
+
+    --surface_tint: #2f628c;
+
+    --surface_variant: #dee3eb;
+
+    --tertiary: #68587a;
+
+    --tertiary_container: #eedbff;
+
+    --tertiary_fixed: #eedbff;
+
+    --tertiary_fixed_dim: #d3bfe6;
+}
+
+html.dark:root {
     --background: #101418;
 
     --error: #ffb4ab;
@@ -253,9 +357,13 @@ body {
 }
 
 .theme-menu-toggle-label:hover {
-    background-color: var(--surface_bright);
+    background-color: var(--surface_dim);
     
     color: var(--on_surface);
+}
+
+html.dark .theme-menu-toggle-label:hover {
+    background-color: var(--surface_bright);
 }
 
 .theme-menu-toggle-label i {
@@ -279,6 +387,157 @@ body {
 
 #theme-menu-toggle:checked + .tooltip-parent .theme-menu-toggle-label i:nth-of-type(2) {
     transform: scale(1);
+}
+
+.theme-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: var(--surface_container);
+    border-radius: 20px;
+
+    position: fixed;
+    bottom: calc(10px + 50px + 10px);
+    left: 10px;
+
+    padding: 10px;
+
+    height: auto;
+    width: 300px;
+
+    transform: scale(0);
+    transform-origin: bottom left;
+
+    transition: transform 200ms ease;
+}
+
+#theme-menu-toggle:checked ~ .theme-menu {
+    transform: scale(1);
+}
+
+.theme-menu-toggle-label-inside {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    background-color: var(--surface_container_high);
+    border-radius: calc(40px / 2);
+
+    color: var(--on_surface_variant);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    height: 40px;
+    width: fit-content;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.theme-menu-toggle-label-inside:hover {
+    background-color: var(--surface_dim);
+
+    color: var(--on_surface);
+}
+
+html.dark .theme-menu-toggle-label-inside:hover {
+    background-color: var(--surface_bright);
+}
+
+.theme-menu-toggle-label-inside-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--surface_container_highest);
+    border-radius: 100%;
+    
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transition: 
+        background 200ms ease,
+        color 200ms ease;
+}
+
+.theme-menu-toggle-label-inside:hover .theme-menu-toggle-label-inside-icon {
+    background-color: var(--primary);
+
+    color: var(--on_primary);
+}
+
+#theme-toggle {
+    display: none;
+}
+
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--surface_container_high);
+    border-radius: calc((10px * 2) + 30px);
+
+    cursor: pointer;
+    user-select: none;
+
+    padding: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.theme-toggle-container-title {
+    color: var(--on_surface);
+    font-size: 1rem;
+}
+
+.theme-toggle-switch-container {
+    background-color: var(--surface_container_highest);
+    border-radius: calc(30px / 2);
+
+    padding: 5px;
+
+    height: 30px;
+    width: calc((30px * 2) - (5px * 2));
+
+    transition: background 200ms ease;
+}
+
+.theme-toggle-container:hover .theme-toggle-switch-container {
+    background-color: var(--surface_dim);
+}
+
+html.dark .theme-toggle-container:hover .theme-toggle-switch-container {
+    background-color: var(--surface_bright);
+}
+
+.theme-toggle-switch {
+    background-color: var(--primary);
+    border-radius: 100%;
+
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    transition:
+        background 200ms ease,
+        transform 200ms ease;
+}
+
+#theme-toggle:checked + .theme-toggle-container .theme-toggle-switch-container {
+    background-color: var(--primary);
+}
+
+#theme-toggle:checked + .theme-toggle-container .theme-toggle-switch-container .theme-toggle-switch {
+    background-color: var(--on_primary);
+
+    transform: translateX(100%);
 }
 
 .section-menu {
@@ -321,12 +580,17 @@ body {
 }
 
 .section-menu-button:hover {
-    background-color: var(--surface_bright);
+    background-color: var(--surface_dim);
 
     color: var(--on_surface);
 }
 
-.section-menu-button.section-indicator-current {
+html.dark .section-menu-button:hover{
+    background-color: var(--surface_bright);
+}
+
+.section-menu-button.section-indicator-current,
+html.dark .section-menu-button.section-indicator-current {
     background-color: var(--primary_container);
 
     color: var(--on_primary_container);
@@ -388,8 +652,13 @@ body {
 }
 
 #language-selector:hover {
-    background-color: var(--surface_bright);
+    background-color: var(--surface_dim);
+
     color: var(--on_surface);
+}
+
+html.dark #language-selector:hover {
+    background-color: var(--surface_bright);
 }
 
 section {
@@ -401,6 +670,13 @@ section {
     .toolbox {
         top: 10px;
         bottom: auto;
+    }
+
+    .theme-menu {
+        top: calc(10px + 50px + 10px);
+        bottom: auto;
+
+        transform-origin: top left;
     }
 
     .language-selector-container {
