@@ -907,11 +907,21 @@ html.dark .theme-menu-toggle-label-inside:hover {
     height: auto;
     width: 100%;
     flex: 0 0 auto;
+
+    transition: background 200ms ease;
+}
+
+.theme-toggle-container:hover {
+    background-color: var(--surface_dim);
+}
+
+html.dark .theme-toggle-container:hover {
+    background-color: var(--surface_bright);
 }
 
 .theme-toggle-container-title {
     color: var(--on_surface);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .theme-toggle-switch-container {
@@ -924,14 +934,6 @@ html.dark .theme-menu-toggle-label-inside:hover {
     width: calc((30px * 2) - (5px * 2));
 
     transition: background 200ms ease;
-}
-
-.theme-toggle-container:hover .theme-toggle-switch-container {
-    background-color: var(--surface_dim);
-}
-
-html.dark .theme-toggle-container:hover .theme-toggle-switch-container {
-    background-color: var(--surface_bright);
 }
 
 .theme-toggle-switch {
@@ -1003,7 +1005,7 @@ html.dark .palette-color-label:hover {
 .palette-color-label-shade-container {
     display: flex;
 
-    height: 75px;
+    height: 80px;
     width: 100%;
 }
 
@@ -1042,7 +1044,7 @@ html.dark .palette-color-label:hover {
 
 .palette-color-label-title {
     color: var(--on_surface);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
@@ -1245,6 +1247,6 @@ section {
     }
 
     main {
-        padding: calc(10px + 50px + 10px) 20px calc(10px + 60px + 10px) 20px;
+        padding: calc(10px + 50px + 20px) 20px calc(20px + 60px + 10px) 20px;
     }
 }
