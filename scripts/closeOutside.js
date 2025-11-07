@@ -25,5 +25,3 @@ function uncheckOnOutsideClick(checkboxId, containerClass) {
     document.addEventListener('click', handler);
     outsideClickHandlers.set(checkbox, handler);
 }
-
-uncheckOnOutsideClick("theme-menu-toggle", "theme-menu");

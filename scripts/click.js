@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastClicked = null;
 
     document.addEventListener("click", (event) => {
-        const target = event.target.closest(".will-be-clicked");
+        const target = event.target.closest(".when-click");
         if (!target) return;
 
         if (lastClicked && lastClicked !== target) {

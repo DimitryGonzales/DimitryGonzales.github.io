@@ -24,9 +24,9 @@
 
 <body>
     <div class="toolbox">
-        <input type="checkbox" id="theme-menu-toggle">
+        <input type="checkbox" id="theme-menu-toggle" class="toolbox-checkbox">
         <div class="tooltip-parent">
-            <label for="theme-menu-toggle" class="theme-menu-toggle-label will-be-clicked">
+            <label for="theme-menu-toggle" class="toolbox-button when-click">
                 <i class="fa-solid fa-palette"></i>
                 <i class="fa-solid fa-xmark"></i>
             </label>
@@ -70,7 +70,7 @@
                     </div>
                 </label>
 
-                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-green" checked>
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-green">
                 <label for="palette-color-green" class="palette-color-label palette-color-green">
                     <div class="palette-color-label-shade-container">
                         <div class="palette-color-label-shade"></div>
@@ -89,7 +89,7 @@
                     </div>
                 </label>
 
-                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-purple" checked>
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-purple">
                 <label for="palette-color-purple" class="palette-color-label palette-color-purple">
                     <div class="palette-color-label-shade-container">
                         <div class="palette-color-label-shade"></div>
@@ -109,21 +109,81 @@
                 </label>
             </div>
         </div>
+
+        <input type="checkbox" id="search-toggle" class="toolbox-checkbox">
+        <div class="tooltip-parent">
+            <label for="search-toggle" class="toolbox-button when-click">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <div class="tooltip tooltip-right">
+                <span>Search</span>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search" id="search" placeholder="Search" data-i18n-placeholder="search-placeholder">
+
+            <div class="search-result-container">
+                <a href="#me" class="search-result">
+                    <div class="search-result-info">
+                        <div class="search-result-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <span class="search-result-title" data-i18n="section-title-me">
+                            Me
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#projects" class="search-result">
+                    <div class="search-result-info">
+                        <div class="search-result-icon">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+
+                        <span class="search-result-title" data-i18n="section-title-projects">
+                            Projects
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#pages" class="search-result">
+                    <div class="search-result-info">
+                        <div class="search-result-icon">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+
+                        <span class="search-result-title" data-i18n="section-title-pages">
+                            Pages
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
     <nav class="section-menu">
         <div class="tooltip-parent">
-            <a href="#home" class="section-menu-button section-indicator-home will-be-clicked">
-                <i class="fa-solid fa-house"></i>
+            <a href="#me" class="section-menu-button section-indicator-me when-click">
+                <i class="fa-solid fa-user"></i>
             </a>
 
             <div class="tooltip tooltip-top">
-                <span>Home</span>
+                <span>Me</span>
             </div>
         </div>
 
         <div class="tooltip-parent">
-            <a href="#projects" class="section-menu-button section-indicator-projects will-be-clicked tooltip-parent">
+            <a href="#projects" class="section-menu-button section-indicator-projects when-click tooltip-parent">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
             </a>
 
@@ -133,7 +193,7 @@
         </div>
 
         <div class="tooltip-parent">
-            <a href="#pages" class="section-menu-button section-indicator-pages will-be-clicked tooltip-parent">
+            <a href="#pages" class="section-menu-button section-indicator-pages when-click tooltip-parent">
                 <i class="fa-solid fa-globe"></i>
             </a>
 
@@ -148,15 +208,19 @@
             <i class="fa-solid fa-language"></i>
         </div>
 
-        <select id="language-selector" class="will-be-clicked">
+        <select id="language-selector" class="when-click">
             <option value="en">English</option>
             <option value="pt">Português</option>
             <option value="ja">日本語</option>
         </select>
     </div>
 
+    <a href="#" class="go-to-top when-click">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
     <main>
-        <section id="home">
+        <section id="me">
 
         </section>
 
@@ -170,10 +234,23 @@
     </main>
 
     <script src="/scripts/language.js"></script>
+
     <script src="/scripts/themeToggle.js"></script>
+
     <script src="/scripts/paletteColor.js"></script>
+
+    <script src="/scripts/scrollingDirection.js"></script>
+
     <script src="/scripts/sectionDetection.js"></script>
+
     <script src="/scripts/click.js"></script>
+
     <script src="/scripts/closeOutside.js"></script>
+    <script>
+        uncheckOnOutsideClick("theme-menu-toggle", "theme-menu");
+        uncheckOnOutsideClick("search-toggle", "search")
+    </script>
+
+    <script src="/scripts/search.js"></script>
 </body>
 </html>
