@@ -1346,15 +1346,23 @@ html.dark #language-selector:hover {
     height: 50px;
     aspect-ratio: 1/1;
 
+    transform: scale(0);
+    transform-origin: bottom center;
+
     transition: 
         background 200ms ease,
-        color 200ms ease;
+        color 200ms ease,
+        transform 200ms ease;
 }
 
 .go-to-top:hover {
     background-color: var(--surface_dim);
 
     color: var(--on_surface);
+}
+
+.go-to-top.scrolling-up {
+    transform: scale(1);
 }
 
 html.dark .go-to-top:hover {
