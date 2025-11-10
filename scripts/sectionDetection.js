@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section[id]");
-    const indicators = document.querySelectorAll("[class*='section-indicator-']");
+    const sections = document.querySelectorAll("main section[id]");
+    const html = document.documentElement;
 
     const observerOptions = {
         root: null,
@@ -8,35 +8,35 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: buildThresholdList()
     };
 
-    const visibleSections = new Map(); // track visibility ratio of each section
+    const visibleSections = new Map();
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             visibleSections.set(entry.target.id, entry.intersectionRatio);
         });
 
-        // Find which sections are visible
         const fullyVisible = Array.from(visibleSections.entries())
             .filter(([_, ratio]) => ratio >= 0.99); 
         const partiallyVisible = Array.from(visibleSections.entries())
             .filter(([_, ratio]) => ratio > 0);
 
-        // Decide which section to highlight
         let currentSectionId = null;
         if (fullyVisible.length === 1) {
-            currentSectionId = fullyVisible[0][0]; // only one fully visible
+            currentSectionId = fullyVisible[0][0];
         } else if (partiallyVisible.length === 1) {
-            currentSectionId = partiallyVisible[0][0]; // only one visible at all
+            currentSectionId = partiallyVisible[0][0];
         } else {
-            // Choose the one with the highest visibility ratio
             currentSectionId = partiallyVisible.sort((a, b) => b[1] - a[1])[0]?.[0];
         }
 
-        // Update indicators
-        indicators.forEach(indicator => indicator.classList.remove("section-indicator-current"));
+        html.classList.forEach(cls => {
+            if (cls.startsWith("current-section-")) {
+                html.classList.remove(cls);
+            }
+        });
+
         if (currentSectionId) {
-            const activeIndicator = document.querySelector(`.section-indicator-${currentSectionId}`);
-            if (activeIndicator) activeIndicator.classList.add("section-indicator-current");
+            html.classList.add(`current-section-${currentSectionId}`);
         }
     }, observerOptions);
 

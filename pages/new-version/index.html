@@ -39,9 +39,9 @@
         <div class="theme-menu">
             <input type="checkbox" id="theme-toggle">
             <label for="theme-toggle"  class="theme-toggle-container">
-                <h2 class="theme-toggle-container-title">
+                <span class="theme-toggle-container-title">
                     Dark Theme
-                </h2>
+                </span>
 
                 <div class="theme-toggle-switch-container">
                     <div class="theme-toggle-switch">
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="palette-color-label-info">
-                        <h2 class="palette-color-label-title">Blue</h2>
+                        <span class="palette-color-label-title">Blue</span>
 
                         <div class="palette-color-label-check">
                             <i class="fa-solid fa-check"></i>
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="palette-color-label-info">
-                        <h2 class="palette-color-label-title">Green</h2>
+                        <span class="palette-color-label-title">Green</span>
 
                         <div class="palette-color-label-check">
                             <i class="fa-solid fa-check"></i>
@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="palette-color-label-info">
-                        <h2 class="palette-color-label-title">Purple</h2>
+                        <span class="palette-color-label-title">Purple</span>
 
                         <div class="palette-color-label-check">
                             <i class="fa-solid fa-check"></i>
@@ -110,9 +110,9 @@
             </div>
         </div>
 
-        <input type="checkbox" id="search-toggle" class="toolbox-checkbox">
+        <input type="checkbox" id="search-section-toggle" class="toolbox-checkbox">
         <div class="tooltip-parent">
-            <label for="search-toggle" class="toolbox-button when-click">
+            <label for="search-section-toggle" class="toolbox-button when-click">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <i class="fa-solid fa-xmark"></i>
             </label>
@@ -122,46 +122,46 @@
             </div>
         </div>
 
-        <div class="search-container">
-            <input type="text" class="search" id="search" placeholder="Search" data-i18n-placeholder="search-placeholder">
+        <div class="search-section-container">
+            <input type="text" class="search-section" id="search-section" placeholder="Search" data-i18n-placeholder="search-section-placeholder">
 
-            <div class="search-result-container">
-                <a href="#me" class="search-result">
-                    <div class="search-result-info">
-                        <div class="search-result-icon">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-
-                        <span class="search-result-title" data-i18n="section-title-me">
+            <div class="search-section-result-container">
+                <a href="#me" class="search-section-result">
+                    <div class="search-section-result-info">
+                        <span class="search-section-result-title">
                             Me
                         </span>
-                    </div>
 
-                    <i class="fa-solid fa-chevron-right"></i>
-                </a>
-
-                <a href="#projects" class="search-result">
-                    <div class="search-result-info">
-                        <div class="search-result-icon">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        </div>
-
-                        <span class="search-result-title" data-i18n="section-title-projects">
-                            Projects
+                        <span class="search-section-result-action">
+                            Go to section
                         </span>
                     </div>
 
                     <i class="fa-solid fa-chevron-right"></i>
                 </a>
 
-                <a href="#pages" class="search-result">
-                    <div class="search-result-info">
-                        <div class="search-result-icon">
-                            <i class="fa-solid fa-globe"></i>
-                        </div>
+                <a href="#projects" class="search-section-result">
+                    <div class="search-section-result-info">
+                        <span class="search-section-result-title">
+                            Projects
+                        </span>
 
-                        <span class="search-result-title" data-i18n="section-title-pages">
+                        <span class="search-section-result-action">
+                            Go to section
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#pages" class="search-section-result">
+                    <div class="search-section-result-info">
+                        <span class="search-section-result-title">
                             Pages
+                        </span>
+
+                        <span class="search-section-result-action">
+                            Go to section
                         </span>
                     </div>
 
@@ -183,7 +183,7 @@
         </div>
 
         <div class="tooltip-parent">
-            <a href="#projects" class="section-menu-button section-indicator-projects when-click tooltip-parent">
+            <a href="#projects" class="section-menu-button section-indicator-projects when-click">
                 <i class="fa-solid fa-screwdriver-wrench"></i>
             </a>
 
@@ -193,7 +193,7 @@
         </div>
 
         <div class="tooltip-parent">
-            <a href="#pages" class="section-menu-button section-indicator-pages when-click tooltip-parent">
+            <a href="#pages" class="section-menu-button section-indicator-pages when-click">
                 <i class="fa-solid fa-globe"></i>
             </a>
 
@@ -208,14 +208,14 @@
             <i class="fa-solid fa-language"></i>
         </div>
 
-        <select id="language-selector" class="when-click">
+        <select id="language-selector">
             <option value="en">English</option>
             <option value="pt">Português</option>
             <option value="ja">日本語</option>
         </select>
     </div>
 
-    <a href="#" class="go-to-top when-click when-scroll-up">
+    <a href="#" class="go-to-top when-scroll-up">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
@@ -225,11 +225,101 @@
         </section>
 
         <section id="projects">
-
+            
         </section>
 
         <section id="pages">
-            
+            <div class="section-info">
+                <h1 class="section-title">
+                    Pages
+                </h1>
+            </div>
+
+            <div class="page-container">
+                <a href="/pages/face-detection-analysis/" target="_blank" class="page">
+                    <div class="page-info">
+                        <h2 class="page-title">
+                            Face Detection & Analysis
+                        </h2>
+
+                        <div class="page-tag-container">
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-toolbox"></i>
+                                </div>
+
+                                <span>Tool</span>
+                            </div>
+
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+
+                                <span>Web</span>
+                            </div>
+
+                            <div class="page-tag alert">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <span>Wrong design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="page-about">
+                        A web-based tool for real-time face detection and analysis using your device’s camera.
+                    </p>
+                </a>
+
+                <a href="/pages/my-linux-setup/" target="_blank" class="page">
+                    <div class="page-info">
+                        <h2 class="page-title">
+                            My Linux Setup
+                        </h2>
+
+                        <div class="page-tag-container">
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+
+                                <span>Guide</span>
+                            </div>
+
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-brands fa-linux"></i>
+                                </div>
+
+                                <span>Linux</span>
+                            </div>
+
+                            <div class="page-tag alert">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <span>Missing information</span>
+                            </div>
+
+                            <div class="page-tag alert">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <span>Wrong design</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="page-about">
+                        A complete post-installation guide for my personal linux setup. It includes the scripts, software, and configurations I use in my system.
+                    </p>
+                </a>
+            </div>
         </section>
     </main>
 
@@ -248,7 +338,7 @@
     <script src="/scripts/closeOutside.js"></script>
     <script>
         uncheckOnOutsideClick("theme-menu-toggle", "theme-menu");
-        uncheckOnOutsideClick("search-toggle", "search")
+        uncheckOnOutsideClick("search-section-toggle", "search-section")
     </script>
 
     <script src="/scripts/search.js"></script>

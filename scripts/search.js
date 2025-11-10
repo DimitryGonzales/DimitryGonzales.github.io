@@ -1,16 +1,24 @@
-const searchInput = document.getElementById("search");
-const searchResults = document.querySelectorAll(".search-result");
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInputs = document.querySelectorAll("[class^='search-']");
 
-searchInput.addEventListener("input", function () {
-    const query = this.value.toLowerCase();
+    searchInputs.forEach(input => {
+        const match = input.className.match(/search-([^\s]+)/);
+        if (!match) return;
 
-    searchResults.forEach(result => {
-        const title = result.querySelector(".search-result-title").textContent.toLowerCase();
+        const name = match[1];
+        const results = document.querySelectorAll(`.search-${name}-result`);
 
-        if (title.includes(query)) {
-            result.style.display = "flex";
-        } else {
-            result.style.display = "none";
-        }
+        input.addEventListener("input", () => {
+            const query = input.value.trim().toLowerCase();
+
+            results.forEach(el => {
+                const text = el.textContent.toLowerCase();
+                if (text.includes(query) || query === "") {
+                    el.style.display = "flex";
+                } else {
+                    el.style.display = "none";
+                }
+            });
+        });
     });
 });
