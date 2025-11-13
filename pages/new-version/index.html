@@ -215,7 +215,7 @@
         </select>
     </div>
 
-    <a href="#" class="go-to-top when-scroll-up">
+    <a href="#" class="go-to-top when-scroll-up when-click">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
@@ -225,7 +225,81 @@
         </section>
 
         <section id="projects">
-            
+            <div class="section-info">
+                <h1 class="section-title">
+                    Projects
+                </h1>
+            </div>
+
+            <div class="projects-container">
+                <a href="https://github.com/DimitryGonzales/dotfiles" target="_blank" class="project project-dotfiles" id="project-dotfiles">
+                    <div class="project-github">
+                        <div class="project-github-data project-github-stars">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div class="project-github-data project-github-commits">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-tag-tool-container">
+                            <div class="project-tag">
+                                <span>Linux</span>
+                            </div>
+                            
+                            <div class="project-tag">
+                                <span>Hyprland</span>
+                            </div>
+
+                            <div class="project-tag">
+                                <span>Rice</span>
+                            </div>
+                        </div>
+
+                        <h2 class="project-title">
+                            Dotfiles
+                        </h2>
+                    </div>
+                </a>
+
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="project project-website" id="project-DimitryGonzales.github.io">
+                    <div class="project-github">
+                        <div class="project-github-data project-github-stars">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div class="project-github-data project-github-commits">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div class="project-tag-tool-container">
+                            <div class="project-tag">
+                                <span>HTML</span>
+                            </div>
+
+                            <div class="project-tag">
+                                <span>CSS</span>
+                            </div>
+
+                            <div class="project-tag">
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-tag">
+                                <span>Web</span>
+                            </div>
+                        </div>
+
+                        <h2 class="project-title">
+                            Website
+                        </h2>
+                    </div>
+                </a>
+            </div>
         </section>
 
         <section id="pages">
@@ -236,7 +310,7 @@
             </div>
 
             <div class="page-container">
-                <a href="/pages/face-detection-analysis/" target="_blank" class="page">
+                <a href="/pages/face-detection-analysis/" target="_blank" class="page when-click">
                     <div class="page-info">
                         <h2 class="page-title">
                             Face Detection & Analysis
@@ -274,7 +348,7 @@
                     </p>
                 </a>
 
-                <a href="/pages/my-linux-setup/" target="_blank" class="page">
+                <a href="/pages/my-linux-setup/" target="_blank" class="page when-click">
                     <div class="page-info">
                         <h2 class="page-title">
                             My Linux Setup
@@ -342,5 +416,7 @@
     </script>
 
     <script src="/scripts/search.js"></script>
+
+    <script src="/scripts/githubData.js"></script>
 </body>
 </html>
