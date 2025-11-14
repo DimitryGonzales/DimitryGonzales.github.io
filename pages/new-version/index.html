@@ -25,16 +25,10 @@
 <body>
     <div class="toolbox">
         <input type="checkbox" id="theme-menu-toggle" class="toolbox-checkbox">
-        <div class="tooltip-parent">
-            <label for="theme-menu-toggle" class="toolbox-button when-click">
-                <i class="fa-solid fa-palette"></i>
-                <i class="fa-solid fa-xmark"></i>
-            </label>
-
-            <div class="tooltip tooltip-right">
-                <span>Theme Menu</span>
-            </div>
-        </div>
+        <label for="theme-menu-toggle" class="toolbox-button when-click">
+            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </label>
 
         <div class="theme-menu">
             <input type="checkbox" id="theme-toggle">
@@ -111,16 +105,10 @@
         </div>
 
         <input type="checkbox" id="search-section-toggle" class="toolbox-checkbox">
-        <div class="tooltip-parent">
-            <label for="search-section-toggle" class="toolbox-button when-click">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-xmark"></i>
-            </label>
-
-            <div class="tooltip tooltip-right">
-                <span>Search</span>
-            </div>
-        </div>
+        <label for="search-section-toggle" class="toolbox-button when-click">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </label>
 
         <div class="search-section-container">
             <input type="text" class="search-section" id="search-section" placeholder="Search" data-i18n-placeholder="search-section-placeholder">
@@ -221,7 +209,71 @@
 
     <main>
         <section id="me">
+            <div class="me-container">
+                <div class="me-card">
+                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="" class="me-image">
 
+                    <div class="me-info">
+                        <span class="me-name">
+                            Dimitry Gonzales
+                        </span>
+
+                        <span class="me-about">
+                            Exploring web development
+                        </span>
+                    </div>
+
+                    <input type="checkbox" id="me-social-container-toggle">
+                    <label for="me-social-container-toggle" class="me-social-container-toggle-label when-click">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+
+                    <div class="me-social-container">
+                        <div class="tooltip-parent">
+                            <a href="mailto:dimitrygonzales@gmail.com" target="_blank" class="me-social">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+
+                            <div class="tooltip tooltip-bottom">
+                                <span>Email</span>
+                            </div>
+                        </div>
+
+                        <div class="tooltip-parent">
+                            <a href="https://github.com/DimitryGonzales" target="_blank" class="me-social">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <div class="tooltip tooltip-bottom">
+                                <span>Github</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="me-content-container">
+                    <input type="radio" name="me-content-radio" id="me-content-cards-toggle" checked>
+                    <input type="radio" name="me-content-radio" id="me-content-tree-toggle">
+                    <div class="me-content-toggle-container">
+                        <label for="me-content-cards-toggle" class="me-content-toggle me-content-cards-toggle-label">
+                            <span>Cards</span>
+                        </label>
+
+                        <label for="me-content-tree-toggle" class="me-content-toggle me-content-tree-toggle-label">
+                            <span>Tree</span>
+                        </label>
+                    </div>
+
+                    <div class="me-content-cards-container">
+
+                    </div>
+
+                    <div class="me-content-tree-container">
+                        
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
