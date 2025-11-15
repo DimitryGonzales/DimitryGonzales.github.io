@@ -1417,6 +1417,10 @@ section {
     max-width: 1000px;
 }
 
+#me {
+    max-width: 1200px;
+}
+
 .section-info {
     display: flex;
     align-items: center;
@@ -1446,6 +1450,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 
     background-color: var(--surface_container_high);
@@ -1498,6 +1503,7 @@ section {
 
     background-color: var(--surface_container_highest);
     border-radius: 100%;
+    box-shadow: var(--normal-shadow);
 
     color: var(--on_surface_variant);
     font-size: 1rem;
@@ -1655,39 +1661,147 @@ html.dark .me-social:hover {
     background-color: var(--inverse_primary);
 }
 
-#me-content-cards-toggle:checked ~ .me-content-toggle-container .me-content-cards-toggle-label,
-#me-content-tree-toggle:checked ~ .me-content-toggle-container .me-content-tree-toggle-label {
+#me-content-card-container-toggle:checked ~ .me-content-toggle-container .me-content-card-container-toggle-label,
+#me-content-tree-container-toggle:checked ~ .me-content-toggle-container .me-content-tree-container-toggle-label {
     background-color: var(--primary);
     border-radius: calc(40px / 2);
 
     color: var(--on_primary);
 }
 
-.me-content-cards-container {
+.me-content-card-container {
     display: none;
-
-    background-color: red;
-    border-radius: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 
     height: 100%;
     width: 100%;
 }
 
-#me-content-cards-toggle:checked ~ .me-content-cards-container {
+#me-content-card-container-toggle:checked ~ .me-content-card-container {
     display: flex;
+}
+
+.me-content-card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--surface_container_high);
+    border-radius: 20px;
+
+    height: fit-content;
+    max-height: 300px;
+    width: calc((100% - (10px * (2 - 1))) / 2);
+}
+
+.me-content-card-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--surface_container_highest);
+    border-radius: inherit;
+    
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+}
+
+.me-content-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary);
+    border-radius: 100%;
+
+    color: var(--on_primary);
+    font-size: 1rem;
+
+    height: 30px;
+    aspect-ratio: 1/1;
+}
+
+.me-content-card-title {
+    color: var(--on_surface);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.me-content-card-item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.me-content-card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--surface_container_highest);
+    border-radius: calc(50px / 2);
+
+    color: var(--on_surface_variant);
+    font-size: 1rem;
+    font-weight: normal;
+
+    padding: 10px;
+
+    height: auto;
+    width: 100%;
+}
+
+.me-content-card-item-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--on_surface);
+    font-weight: bold;
+
+    height: auto;
+    width: auto;
+}
+
+.me-content-card-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary_container);
+    border-radius: 100%;
+
+    color: var(--on_primary_container);
+    font-size: 1rem;
+
+    height: 30px;
+    aspect-ratio: 1/1;
+}
+
+.me-content-card-item-icon img {
+    height: 75%;
+    width: auto;
 }
 
 .me-content-tree-container {
     display: none;
     
-    background-color: blue;
     border-radius: 20px;
 
     height: 100%;
     width: 100%;
 }
 
-#me-content-tree-toggle:checked ~ .me-content-tree-container {
+#me-content-tree-container-toggle:checked ~ .me-content-tree-container {
     display: flex;
 }
 
@@ -1937,12 +2051,14 @@ html.dark .page:hover {
     z-index: 9998;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1240px) {
     .me-container {
         flex-direction: column;
     }
 
     .me-card {
+        justify-content: start;
+
         flex-direction: row;
 
         height: 150px;
@@ -1968,7 +2084,9 @@ html.dark .page:hover {
 
         flex: 1;
     }
+}
 
+@media (max-width: 1040px) {
     .project {
         width: 100%;
     }
@@ -2055,5 +2173,13 @@ html.dark .page:hover {
         opacity: 1;
 
         transform: scale(1);
+    }
+
+    .me-social {
+        box-shadow: var(--normal-shadow);
+    }
+
+    .me-content-card {
+        width: 100%;
     }
 }
