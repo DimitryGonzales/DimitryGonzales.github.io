@@ -1732,11 +1732,11 @@ html.dark .me-social:hover {
 .me-content-card-item-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 
     overflow-y: auto;
 
-    padding: 20px;
+    padding: 10px;
 
     height: 100%;
     width: 100%;
@@ -1788,7 +1788,7 @@ html.dark .me-social:hover {
 }
 
 .me-content-card-item-icon img {
-    height: 75%;
+    height: 50%;
     width: auto;
 }
 
