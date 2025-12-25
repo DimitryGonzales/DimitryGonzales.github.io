@@ -1,41 +1,28 @@
 {
-    "404-message-1": "ページが見つかりません",
-    "404-message-2": "指定されたページは見つかりませんでした。",
-    "404-homepage-button": "ホームページに戻る",
-    
-    "page-title": "ディミトリーのウェブサイト",
-
-    "search-placeholder": "検索",
-
-    "go-to-top-tooltip": "トップへ戻る",
-
-    "section-title-me": "私について",
+    "theme-toggle-container-title": "ダークテーマ",
+    "palette-color-label-title-blue": "ブルー",
+    "palette-color-label-title-green": "グリーン",
+    "palette-color-label-title-purple": "パープル",
+    "search-section-placeholder": "検索",
+    "section-title-me": "プロフィール",
     "section-title-projects": "プロジェクト",
     "section-title-pages": "ページ",
-
-    "section-header-link-repositories": "リポジトリ",
-    "section-header-link-sources": "ソース",
-
-    "me-about": "現在、ウェブ開発を探求しています。",
-
-    "tooltip-project-data-lastCommit": "最終コミット",
-    "tooltip-project-data-stars": "スター",
-    "tooltip-project-data-commits": "コミット",
-
+    "search-section-result-action": "セクションへ移動",
+    "me-about": "Web 開発を探求中",
+    "me-content-card-container-toggle-label-cards": "カード",
+    "me-content-tree-container-toggle-label-tree": "ツリー",
+    "me-content-card-title-info": "情報",
+    "me-content-card-item-info-title-occupation": "職業",
+    "me-content-card-item-info-occupation": "学生",
+    "me-content-card-title-currently-learning": "学習中",
+    "project-title-dotfiles": "Dotfiles",
     "project-title-website": "ウェブサイト",
-
-    "message-title-about-github-data": "GitHubデータについて",
-    "message-about-github-data": "このセクションでは、GitHubの公開APIを使用して、私のリポジトリから最終コミット、スター数、コミット数などのプロジェクトデータを取得しています。認証されていないリクエストのため、GitHubのレート制限（IPごとに1時間あたり60回）により、データの読み込みが失敗したり更新が遅れる場合があります。",
-
-    "page-name-my-linux-setup": "私のLinux設定",
-    "page-about-my-linux-setup": "私のLinux環境の詳細なガイドと概要。使用しているツール、設定、テーマを紹介します。",
-
-    "page-name-face-detection-and-analysis": "顔検出と分析",
-    "page-about-face-detection-and-analysis": "デバイスのカメラを使用してリアルタイムで顔を検出・分析するウェブツールです。",
-
-    "footer-container-title-fonts": "フォント",
-    "footer-container-title-libraries": "ライブラリ",
-
-    "footer-link-my-github": "私のGitHub",
-    "footer-link-website-source": "ウェブサイトのソース"
+    "page-title-face-detection-and-analysis": "顔検出と解析",
+    "page-tag-tool": "ツール",
+    "page-tag-wrong-design": "デザイン不適切",
+    "page-about-face-detection-and-analysis": "デバイスのカメラを使ってリアルタイムに顔検出と解析を行う Web ベースのツールです。",
+    "page-title-my-linux-setup": "自分の Linux セットアップ",
+    "page-tag-guide": "ガイド",
+    "page-tag-missing-information": "情報不足",
+    "page-about-my-linux-setup": "個人用 Linux セットアップのための、インストール後の完全なガイドです。使用しているスクリプト、ソフトウェア、設定を含みます。"
 }

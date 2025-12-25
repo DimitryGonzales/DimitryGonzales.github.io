@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimitry's Website</title>
+    <title>Document</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
@@ -11,306 +11,542 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!--JetBrains Mono Font-->
+    <!--Inter Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!--Noto Sans Japanese-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <nav id="navbar">
-        <div class="navbar-content">
-            <h1 class="page-title" data-i18n="page-title">
-                Dimitry's Website
-            </h1>
+    <div class="toolbox">
+        <input type="checkbox" id="theme-menu-toggle" class="toolbox-checkbox">
+        <label for="theme-menu-toggle" class="toolbox-button when-click">
+            <i class="fa-solid fa-palette"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </label>
 
-            <div class="navbar-tool-container">
-                <div class="search-container">
-                    <input type="text" id="search" placeholder="Search" data-i18n-placeholder="search-placeholder">
+        <div class="theme-menu">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle"  class="theme-toggle-container">
+                <span class="theme-toggle-container-title" data-i18n="theme-toggle-container-title">
+                    Dark Theme
+                </span>
 
-                    <div class="search-result-container">
-                        <a href="#me" class="search-result">
-                            <span class="search-result-title" data-i18n="section-title-me">
-                                Me
-                            </span>
+                <div class="theme-toggle-switch-container">
+                    <div class="theme-toggle-switch">
 
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-
-                        <a href="#projects" class="search-result">
-                            <span class="search-result-title" data-i18n="section-title-projects">
-                                Projects
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
-
-                        <a href="#pages" class="search-result">
-                            <span class="search-result-title" data-i18n="section-title-pages">
-                                Pages
-                            </span>
-
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </a>
                     </div>
                 </div>
+            </label>
 
-                <div class="language-selector-container">
-                    <select id="language-selector">
-                        <option value="en">English</option>
-                        <option value="pt">Português</option>
-                        <option value="ja">日本語</option>
-                    </select>
-                </div>
+            <div class="palette-container">
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-blue" checked>
+                <label for="palette-color-blue" class="palette-color-label palette-color-blue">
+                    <div class="palette-color-label-shade-container">
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                    </div>
+
+                    <div class="palette-color-label-info">
+                        <span class="palette-color-label-title" data-i18n="palette-color-label-title-blue">Blue</span>
+
+                        <div class="palette-color-label-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-green">
+                <label for="palette-color-green" class="palette-color-label palette-color-green">
+                    <div class="palette-color-label-shade-container">
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                    </div>
+
+                    <div class="palette-color-label-info">
+                        <span class="palette-color-label-title" data-i18n="palette-color-label-title-green">Green</span>
+
+                        <div class="palette-color-label-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </label>
+
+                <input type="radio" name="palette-radio" class="palette-radio" id="palette-color-purple">
+                <label for="palette-color-purple" class="palette-color-label palette-color-purple">
+                    <div class="palette-color-label-shade-container">
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                        <div class="palette-color-label-shade"></div>
+                    </div>
+
+                    <div class="palette-color-label-info">
+                        <span class="palette-color-label-title" data-i18n="palette-color-label-title-purple">Purple</span>
+
+                        <div class="palette-color-label-check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <input type="checkbox" id="search-section-toggle" class="toolbox-checkbox">
+        <label for="search-section-toggle" class="toolbox-button when-click">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </label>
+
+        <div class="search-section-container">
+            <input type="text" class="search-section" id="search-section" placeholder="Search" data-i18n-placeholder="search-section-placeholder">
+
+            <div class="search-section-result-container">
+                <a href="#me" class="search-section-result">
+                    <div class="search-section-result-info">
+                        <span class="search-section-result-title" data-i18n="section-title-me">
+                            Me
+                        </span>
+
+                        <span class="search-section-result-action" data-i18n="search-section-result-action">
+                            Go to section
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#projects" class="search-section-result">
+                    <div class="search-section-result-info">
+                        <span class="search-section-result-title" data-i18n="section-title-projects">
+                            Projects
+                        </span>
+
+                        <span class="search-section-result-action" data-i18n="search-section-result-action">
+                            Go to section
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+
+                <a href="#pages" class="search-section-result">
+                    <div class="search-section-result-info">
+                        <span class="search-section-result-title" data-i18n="section-title-pages">
+                            Pages
+                        </span>
+
+                        <span class="search-section-result-action" data-i18n="search-section-result-action">
+                            Go to section
+                        </span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-menu">
+        <div class="tooltip-parent">
+            <a href="#me" class="section-menu-button section-indicator-me when-click">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+            <div class="tooltip tooltip-top">
+                <span data-i18n="section-title-me">Me</span>
+            </div>
+        </div>
+
+        <div class="tooltip-parent">
+            <a href="#projects" class="section-menu-button section-indicator-projects when-click">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </a>
+
+            <div class="tooltip tooltip-top">
+                <span data-i18n="section-title-projects">Projects</span>
+            </div>
+        </div>
+
+        <div class="tooltip-parent">
+            <a href="#pages" class="section-menu-button section-indicator-pages when-click">
+                <i class="fa-solid fa-globe"></i>
+            </a>
+
+            <div class="tooltip tooltip-top">
+                <span data-i18n="section-title-pages">Pages</span>
             </div>
         </div>
     </nav>
 
-    <a href="#" class="go-to-top tooltip-parent">
-        <i class="fa-solid fa-chevron-up"></i>
-
-        <div class="tooltip tooltip-left">
-            <span data-i18n="go-to-top-tooltip">Go to top</span>
+    <div class="language-selector-container">
+        <div class="language-selector-icon">
+            <i class="fa-solid fa-language"></i>
         </div>
+
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+        </select>
+    </div>
+
+    <a href="#" class="go-to-top when-scroll-up when-click">
+        <i class="fa-solid fa-chevron-up"></i>
     </a>
-    
+
     <main>
         <section id="me">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="section-title-me">
-                    Me
-                </h2>
-            </div>
-
-            <div class="section-container">
+            <div class="me-container">
                 <div class="me-card">
-                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="" class="me-icon">
+                    <img src="https://avatars.githubusercontent.com/u/125162224?v=4" alt="DimitryGonzales's Image" class="me-image">
 
                     <div class="me-info">
-                        <h1 class="me-name">
+                        <span class="me-name">
                             Dimitry Gonzales
-                        </h1>
+                        </span>
 
-                        <p class="me-about" data-i18n="me-about">
-                            Currently exploring web development.
-                        </p>
+                        <span class="me-about" data-i18n="me-about">
+                            Exploring web development
+                        </span>
+                    </div>
+
+                    <input type="checkbox" id="me-social-container-toggle">
+                    <label for="me-social-container-toggle" class="me-social-container-toggle-label when-click">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+
+                    <div class="me-social-container">
+                        <div class="tooltip-parent">
+                            <a href="https://github.com/DimitryGonzales" target="_blank" class="me-social">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <div class="tooltip tooltip-bottom">
+                                <span>Github</span>
+                            </div>
+                        </div>
+
+                        <div class="tooltip-parent">
+                            <a href="mailto:dimitrygonzales@gmail.com" target="_blank" class="me-social">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+
+                            <div class="tooltip tooltip-bottom">
+                                <span>Email</span>
+                            </div>
+                        </div>
+
+                        <div class="tooltip-parent">
+                            <a href="https://discord.com/users/1071590581765161052" target="_blank" class="me-social">
+                                <i class="fa-brands fa-discord"></i>
+                            </a>
+
+                            <div class="tooltip tooltip-bottom">
+                                <span>Discord</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="me-content-container">
+                    <input type="radio" name="me-content-radio" id="me-content-card-container-toggle" checked>
+                    <input type="radio" name="me-content-radio" id="me-content-tree-container-toggle">
+                    <div class="me-content-toggle-container">
+                        <label for="me-content-card-container-toggle" class="me-content-toggle me-content-card-container-toggle-label">
+                            <span data-i18n="me-content-card-container-toggle-label-cards">Cards</span>
+                        </label>
+
+                        <label for="me-content-tree-container-toggle" class="me-content-toggle me-content-tree-container-toggle-label">
+                            <span data-i18n="me-content-tree-container-toggle-label-tree">Tree</span>
+                        </label>
+                    </div>
+
+                    <div class="me-content-card-container">
+                        <div class="me-content-card">
+                            <div class="me-content-card-info">
+                                <div class="me-content-card-icon">
+                                    <i class="fa-solid fa-info"></i>
+                                </div>
+
+                                <h2 class="me-content-card-title" data-i18n="me-content-card-title-info">
+                                    Info
+                                </h2>
+                            </div>
+
+                            <div class="me-content-card-item-container">
+                                <div class="me-content-card-item">
+                                    <div class="me-content-card-item-info">
+                                        <div class="me-content-card-item-icon">
+                                            <i class="fa-solid fa-briefcase"></i>
+                                        </div>
+
+                                        <span data-i18n="me-content-card-item-info-title-occupation">Occupation</span>
+                                    </div>
+
+                                    <span data-i18n="me-content-card-item-info-occupation">Student</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="me-content-card">
+                            <div class="me-content-card-info">
+                                <div class="me-content-card-icon">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+
+                                <h2 class="me-content-card-title" data-i18n="me-content-card-title-currently-learning">
+                                    Currently Learning
+                                </h2>
+                            </div>
+
+                            <div class="me-content-card-item-container">
+                                <div class="me-content-card-item">
+                                    <div class="me-content-card-item-info">
+                                        <div class="me-content-card-item-icon">
+                                            <i class="fa-solid fa-globe"></i>
+                                        </div>
+
+                                        <span>Web</span>
+                                    </div>
+                                </div>
+
+                                <div class="me-content-card-item">
+                                    <div class="me-content-card-item-info">
+                                        <div class="me-content-card-item-icon">
+                                            <i class="fa-brands fa-js"></i>
+                                        </div>
+
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+
+                                <div class="me-content-card-item">
+                                    <div class="me-content-card-item-info">
+                                        <div class="me-content-card-item-icon">
+                                            <img src="/assets/svg/quickshell.svg" alt="Quickshell Logo">
+                                        </div>
+
+                                        <span>QML/Quickshell</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="me-content-tree-container">
+
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="section-title-projects">
+            <div class="section-info">
+                <h1 class="section-title" data-i18n="section-title-projects">
                     Projects
-                </h2>
-
-                <a href="https://github.com/DimitryGonzales?tab=repositories" target="_blank" class="section-header-link">
-                    <span data-i18n="section-header-link-repositories">Repositories</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                </h1>
             </div>
 
-            <div class="section-container">
-                <a href="https://github.com/DimitryGonzales/dotfiles" target="_blank" class="project" id="project-dotfiles">
-                    <div class="project-left">
-                        <div class="project-data-container">
-                            <div class="project-data tooltip-parent">
-                                <div class="cool-indicator"></div>
-
-                                <span id="github-lastCommit-dotfiles"></span>
-
-                                <div class="tooltip tooltip-right">
-                                    <span data-i18n="tooltip-project-data-lastCommit">Last Commit</span>
-                                </div>
-                            </div>
+            <div class="projects-container">
+                <a href="https://github.com/DimitryGonzales/dotfiles" target="_blank" class="project project-dotfiles" id="project-dotfiles">
+                    <div class="project-github">
+                        <div class="project-github-data project-github-stars">
+                            <i class="fa-solid fa-star"></i>
                         </div>
 
-                        <h3 class="project-title">Dotfiles</h3>
+                        <div class="project-github-data project-github-commits">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
                     </div>
 
-                    <div class="project-right">
-                        <div class="project-data tooltip-parent">
-                            <i class="fa-solid fa-star"></i>
+                    <div class="project-info">
+                        <div class="project-tag-tool-container">
+                            <div class="project-tag">
+                                <span>Linux</span>
+                            </div>
 
-                            <span id="github-stars-dotfiles"></span>
+                            <div class="project-tag">
+                                <span>Hyprland</span>
+                            </div>
 
-                            <div class="tooltip tooltip-left">
-                                <span data-i18n="tooltip-project-data-stars">Stars</span>
+                            <div class="project-tag">
+                                <span>Rice</span>
                             </div>
                         </div>
 
-                        <div class="project-data tooltip-parent">
-                            <i class="fa-solid fa-clock-rotate-left"></i>
-
-                            <span id="github-commits-dotfiles"></span>
-
-                            <div class="tooltip tooltip-left">
-                                <span data-i18n="tooltip-project-data-commits">Commits</span>
-                            </div>
-                        </div>
+                        <h2 class="project-title" data-i18n="project-title-dotfiles">
+                            Dotfiles
+                        </h2>
                     </div>
                 </a>
 
-                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="project" id="project-website">
-                    <div class="project-left">
-                        <div class="project-data-container">
-                            <div class="project-data tooltip-parent">
-                                <div class="cool-indicator"></div>
-
-                                <span id="github-lastCommit-dimitrygonzales.github.io"></span>
-
-                                <div class="tooltip tooltip-right">
-                                    <span data-i18n="tooltip-project-data-lastCommit">Last Commit</span>
-                                </div>
-                            </div>
+                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="project project-website" id="project-DimitryGonzales.github.io">
+                    <div class="project-github">
+                        <div class="project-github-data project-github-stars">
+                            <i class="fa-solid fa-star"></i>
                         </div>
 
-                        <h3 class="project-title" data-i18n="project-title-website">Website</h3>
+                        <div class="project-github-data project-github-commits">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
                     </div>
 
-                    <div class="project-right">
-                        <div class="project-data tooltip-parent">
-                            <i class="fa-solid fa-star"></i>
+                    <div class="project-info">
+                        <div class="project-tag-tool-container">
+                            <div class="project-tag">
+                                <span>HTML</span>
+                            </div>
 
-                            <span id="github-stars-dimitrygonzales.github.io"></span>
+                            <div class="project-tag">
+                                <span>CSS</span>
+                            </div>
 
-                            <div class="tooltip tooltip-left">
-                                <span data-i18n="tooltip-project-data-stars">Stars</span>
+                            <div class="project-tag">
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="project-tag">
+                                <span>Web</span>
                             </div>
                         </div>
 
-                        <div class="project-data tooltip-parent">
-                            <i class="fa-solid fa-clock-rotate-left"></i>
-
-                            <span id="github-commits-dimitrygonzales.github.io"></span>
-
-                            <div class="tooltip tooltip-left">
-                                <span data-i18n="tooltip-project-data-commits">Commits</span>
-                            </div>
-                        </div>
+                        <h2 class="project-title" data-i18n="project-title-website">
+                            Website
+                        </h2>
                     </div>
                 </a>
-            </div>
-
-            <div class="message-container">
-                <div class="message-title">
-                    <span data-i18n="message-title-about-github-data">About Github Data</span>
-                </div>
-
-                <div class="message">
-                    <span data-i18n="message-about-github-data">
-                        This section uses the public GitHub API to fetch project data such as last commit, stars, and commits directly from my repositories. Because it’s an unauthenticated request, the data might occasionally fail to load or update slowly due to GitHub’s rate limits(60 requests per hour per IP).
-                    </span>
-                </div>
             </div>
         </section>
 
         <section id="pages">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="section-title-pages">
+            <div class="section-info">
+                <h1 class="section-title" data-i18n="section-title-pages">
                     Pages
-                </h2>
-
-                <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io/tree/main/pages" target="_blank" class="section-header-link">
-                    <span data-i18n="section-header-link-sources">Sources</span>
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                </h1>
             </div>
 
-            <div class="section-container">
-                <a href="/pages/my-linux-setup/" target="_blank" class="page">
+            <div class="page-container">
+                <a href="/pages/face-detection-analysis/" target="_blank" class="page when-click">
                     <div class="page-info">
-                        <h3 class="page-name" data-i18n="page-name-my-linux-setup">
-                            My Linux Setup
-                        </h3>
+                        <h2 class="page-title" data-i18n="page-title-face-detection-and-analysis">
+                            Face Detection & Analysis
+                        </h2>
 
-                        <p class="page-about" data-i18n="page-about-my-linux-setup">
-                            A detailed guide and overview of my Linux setup. Tools, configurations and themes.
-                        </p>
+                        <div class="page-tag-container">
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-toolbox"></i>
+                                </div>
+
+                                <span data-i18n="page-tag-tool">Tool</span>
+                            </div>
+
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+
+                                <span>Web</span>
+                            </div>
+
+                            <div class="page-tag alert">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <span data-i18n="page-tag-wrong-design">Wrong design</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <p class="page-about" data-i18n="page-about-face-detection-and-analysis">
+                        A web-based tool for real-time face detection and analysis using your device’s camera.
+                    </p>
                 </a>
 
-                <a href="/pages/face-detection-analysis/" target="_blank" class="page">
+                <a href="/pages/my-linux-setup/" target="_blank" class="page when-click">
                     <div class="page-info">
-                        <h3 class="page-name" data-i18n="page-name-face-detection-and-analysis">
-                            Face Detection & Analysis
-                        </h3>
+                        <h2 class="page-title" data-i18n="page-title-my-linux-setup">
+                            My Linux Setup
+                        </h2>
 
-                        <p class="page-about" data-i18n="page-about-face-detection-and-analysis">
-                            A web-based tool for real-time face detection and analysis using your device’s camera.
-                        </p>
+                        <div class="page-tag-container">
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+
+                                <span data-i18n="page-tag-guide">Guide</span>
+                            </div>
+
+                            <div class="page-tag">
+                                <div class="page-tag-icon">
+                                    <i class="fa-brands fa-linux"></i>
+                                </div>
+
+                                <span>Linux</span>
+                            </div>
+
+                            <div class="page-tag alert">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <span data-i18n="page-tag-missing-information">Missing information</span>
+                            </div>
+
+                            <div class="page-tag alert">
+                                <div class="page-tag-icon">
+                                    <i class="fa-solid fa-triangle-exclamation"></i>
+                                </div>
+
+                                <span data-i18n="page-tag-wrong-design">Wrong design</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <p class="page-about" data-i18n="page-about-my-linux-setup">
+                        A complete post-installation guide for my personal linux setup. It includes the scripts, software, and configurations I use in my system.
+                    </p>
                 </a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <h2 class="footer-container-title" data-i18n="footer-container-title-fonts">
-                Fonts
-            </h2>
+    <script src="/scripts/language.js"></script>
 
-            <div class="footer-data-container">
-                <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" class="footer-data">
-                    <span>JetBrains Mono</span>
+    <script src="/scripts/themeToggle.js"></script>
 
-                    <i class="fa-brands fa-google"></i>
-                </a>
+    <script src="/scripts/paletteColor.js"></script>
 
-                <a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank" class="footer-data">
-                    <span>Noto Sans Japanese</span>
+    <script src="/scripts/scrollingDirection.js"></script>
 
-                    <i class="fa-brands fa-google"></i>
-                </a>
-            </div>
-        </div>
+    <script src="/scripts/sectionDetection.js"></script>
 
-        <div class="footer-container">
-            <h2 class="footer-container-title" data-i18n="footer-container-title-libraries">
-                Libraries
-            </h2>
+    <script src="/scripts/click.js"></script>
 
-            <div class="footer-data-container">
-                <a href="https://fontawesome.com" target="_blank" class="footer-data">
-                    <span>Font Awesome</span>
+    <script src="/scripts/closeOutside.js"></script>
+    <script>
+        uncheckOnOutsideClick("theme-menu-toggle", "theme-menu");
+        uncheckOnOutsideClick("search-section-toggle", "search-section")
+    </script>
 
-                    <i class="fa-brands fa-font-awesome"></i>
-                </a>
-            </div>
-        </div>
+    <script src="/scripts/search.js"></script>
 
-        <hr class="footer-division">
-
-        <div class="footer-link-container">
-            <a href="https://github.com/DimitryGonzales" target="_blank" class="footer-link">
-                <span data-i18n="footer-link-my-github">My Github</span>
-
-                <i class="fa-brands fa-github"></i>
-            </a>
-
-            <a href="https://github.com/DimitryGonzales/DimitryGonzales.github.io" target="_blank" class="footer-link">
-                <span data-i18n="footer-link-website-source">Website Source</span>
-
-                <i class="fa-brands fa-github"></i>
-            </a>
-        </div>
-    </footer>
-
-    <script src="scripts/language.js"></script>
-    <script src="scripts/scrollingDirection.js"></script>
-    <script src="scripts/search.js"></script>
-    <script src="scripts/githubData.js"></script>
+    <script src="/scripts/githubData.js"></script>
 </body>
 </html>

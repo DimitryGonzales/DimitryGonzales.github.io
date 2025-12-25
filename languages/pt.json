@@ -1,41 +1,28 @@
 {
-    "404-message-1": "Página Não Encontrada",
-    "404-message-2": "A página solicitada não pôde ser encontrada.",
-    "404-homepage-button": "Voltar para a página inicial",
-    
-    "page-title": "Site do Dimitry",
-
-    "search-placeholder": "Pesquisar",
-
-    "go-to-top-tooltip": "Ir para o topo",
-
-    "section-title-me": "Sobre Mim",
+    "theme-toggle-container-title": "Tema escuro",
+    "palette-color-label-title-blue": "Azul",
+    "palette-color-label-title-green": "Verde",
+    "palette-color-label-title-purple": "Roxo",
+    "search-section-placeholder": "Buscar",
+    "section-title-me": "Sobre mim",
     "section-title-projects": "Projetos",
     "section-title-pages": "Páginas",
-
-    "section-header-link-repositories": "Repositórios",
-    "section-header-link-sources": "Fontes",
-
-    "me-about": "Atualmente explorando desenvolvimento web.",
-
-    "tooltip-project-data-lastCommit": "Último Commit",
-    "tooltip-project-data-stars": "Estrelas",
-    "tooltip-project-data-commits": "Commits",
-
+    "search-section-result-action": "Ir para a seção",
+    "me-about": "Explorando desenvolvimento web",
+    "me-content-card-container-toggle-label-cards": "Cartões",
+    "me-content-tree-container-toggle-label-tree": "Árvore",
+    "me-content-card-title-info": "Informações",
+    "me-content-card-item-info-title-occupation": "Ocupação",
+    "me-content-card-item-info-occupation": "Estudante",
+    "me-content-card-title-currently-learning": "Estudando atualmente",
+    "project-title-dotfiles": "Dotfiles",
     "project-title-website": "Site",
-
-    "message-title-about-github-data": "Sobre os Dados do GitHub",
-    "message-about-github-data": "Esta seção usa a API pública do GitHub para obter dados dos projetos, como último commit, estrelas e número de commits diretamente dos meus repositórios. Como a requisição é não autenticada, os dados podem ocasionalmente falhar ao carregar ou atualizar lentamente devido ao limite de taxa do GitHub (60 requisições por hora por IP).",
-
-    "page-name-my-linux-setup": "Minha Configuração Linux",
-    "page-about-my-linux-setup": "Um guia detalhado e uma visão geral da minha configuração Linux. Ferramentas, configurações e temas.",
-
-    "page-name-face-detection-and-analysis": "Detecção e Análise Facial",
+    "page-title-face-detection-and-analysis": "Detecção e análise facial",
+    "page-tag-tool": "Ferramenta",
+    "page-tag-wrong-design": "Design inadequado",
     "page-about-face-detection-and-analysis": "Uma ferramenta web para detecção e análise facial em tempo real usando a câmera do seu dispositivo.",
-
-    "footer-container-title-fonts": "Fontes",
-    "footer-container-title-libraries": "Bibliotecas",
-
-    "footer-link-my-github": "Meu GitHub",
-    "footer-link-website-source": "Código-Fonte do Site"
+    "page-title-my-linux-setup": "Minha configuração Linux",
+    "page-tag-guide": "Guia",
+    "page-tag-missing-information": "Informações incompletas",
+    "page-about-my-linux-setup": "Um guia completo de pós-instalação para a minha configuração pessoal de Linux. Inclui os scripts, softwares e configurações que utilizo no meu sistema."
 }
