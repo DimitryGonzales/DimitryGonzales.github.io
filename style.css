@@ -726,7 +726,7 @@ html.dark .when-click::before {
     border-radius: 20px;
     box-shadow: var(--normal-shadow);
     opacity: 0;
-    
+
     color: var(--on_surface);
     font-size: 1rem;
     font-weight: normal;
@@ -743,7 +743,7 @@ html.dark .when-click::before {
 
     transform: scale(0);
 
-    transition: 
+    transition:
         opacity 200ms ease,
         transform 200ms ease;
 }
@@ -812,7 +812,7 @@ html.dark .when-click::before {
     height: 100%;
     aspect-ratio: 1/1;
 
-    transition: 
+    transition:
         background 200ms ease,
         color 200ms ease;
 }
@@ -820,7 +820,7 @@ html.dark .when-click::before {
 .toolbox-button:hover,
 .toolbox-checkbox:checked + .toolbox-button:hover {
     background-color: var(--surface_dim);
-    
+
     color: var(--on_surface);
 }
 
@@ -836,7 +836,7 @@ html.dark .toolbox-checkbox:checked + .toolbox-button:hover {
 .toolbox-button i {
     position: absolute;
 
-    transition: 
+    transition:
         opacity 200ms ease,
         transform 200ms ease;
 }
@@ -888,7 +888,7 @@ html.dark .toolbox-checkbox:checked + .toolbox-button:hover {
     transform: scale(0);
     transform-origin: bottom left;
 
-    transition: 
+    transition:
         opacity 200ms ease,
         transform 200ms ease;
 }
@@ -980,7 +980,7 @@ html.dark .theme-toggle-container:hover {
 
 .palette-color-label {
     background-color: var(--surface_container_high);
-    border-radius: calc(50px / 2);
+    border-radius: 20px;
 
     cursor: pointer;
 
@@ -1010,7 +1010,11 @@ html.dark .palette-color-label:hover {
 .palette-color-label-shade-container {
     display: flex;
 
-    height: 80px;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    height: 100px;
     width: 100%;
 }
 
@@ -1110,7 +1114,7 @@ html.dark .palette-color-label:hover {
     transform: scale(0);
     transform-origin: bottom left;
 
-    transition: 
+    transition:
         opacity 200ms ease,
         transform 200ms ease;
 }
@@ -1250,7 +1254,7 @@ html.dark .search-section-result:hover {
     height: 100%;
     aspect-ratio: 1/1;
 
-    transition: 
+    transition:
         background 200ms ease,
         color 200ms ease;
 }
@@ -1333,7 +1337,7 @@ html.current-section-pages .section-indicator-pages::before {
     height: 100%;
     width: fit-content;
 
-    transition: 
+    transition:
         background 200ms ease,
         color 200ms ease;
 }
@@ -1375,7 +1379,7 @@ html.dark .language-selector-container:focus-within #language-selector {
     transform: scale(0);
     transform-origin: bottom center;
 
-    transition: 
+    transition:
         background 200ms ease,
         color 200ms ease,
         transform 200ms ease;
@@ -1400,7 +1404,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    
+
     padding: 100px 20px;
 
     height: auto;
@@ -1509,7 +1513,7 @@ section {
     font-size: 1rem;
 
     cursor: pointer;
-    
+
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1517,14 +1521,14 @@ section {
     height: 40px;
     aspect-ratio: 1/1;
 
-    transition: 
+    transition:
         background 200ms ease,
         color 200ms ease;
 }
 
 .me-social-container-toggle-label:hover {
     background-color: var(--surface_dim);
-    
+
     color: var(--on_surface);
 }
 
@@ -1535,7 +1539,7 @@ html.dark .me-social-container-toggle-label:hover {
 .me-social-container-toggle-label i {
     position: absolute;
 
-    transition: 
+    transition:
         opacity 200ms ease,
         transform 200ms ease;
 }
@@ -1588,7 +1592,7 @@ html.dark .me-social-container-toggle-label:hover {
     height: 40px;
     aspect-ratio: 1/1;
 
-    transition: 
+    transition:
         background 200ms ease,
         color 200ms ease;
 }
@@ -1643,7 +1647,7 @@ html.dark .me-social:hover {
     height: 40px;
     width: auto;
 
-    transition: 
+    transition:
         background 200ms ease,
         border-radius 200ms ease,
         color 200ms ease;
@@ -1701,7 +1705,7 @@ html.dark .me-social:hover {
 
     background-color: var(--surface_container_highest);
     border-radius: inherit;
-    
+
     padding: 20px;
 
     height: auto;
@@ -1794,7 +1798,7 @@ html.dark .me-social:hover {
 
 .me-content-tree-container {
     display: none;
-    
+
     border-radius: 20px;
 
     height: 100%;
@@ -1917,7 +1921,7 @@ html.dark .project-title {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     background-color: var(--primary);
     border-radius: calc(35px / 2);
 
@@ -1994,7 +1998,7 @@ html.dark .page:hover {
     display: flex;
     align-items: center;
     gap: 5px;
-    
+
     background-color: var(--primary_container);
     border-radius: calc(35px / 2);
 
@@ -2023,7 +2027,7 @@ html.dark .page:hover {
     border-radius: 100%;
 
     color: var(--on_primary);
-    
+
     height: 100%;
     aspect-ratio: 1/1;
 }
@@ -2106,7 +2110,7 @@ html.dark .page:hover {
         top: calc(10px + 50px + 10px);
         right: 10px;
         bottom: auto;
-        
+
         max-height: calc(100dvh - 10px - 50px - 10px - 60px - 10px - 10px);
         width: auto;
 
@@ -2164,7 +2168,7 @@ html.dark .page:hover {
         transform: scale(0);
         transform-origin: right center;
 
-        transition: 
+        transition:
             opacity 200ms ease,
             transform 200ms ease;
     }
