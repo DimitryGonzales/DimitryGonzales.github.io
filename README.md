@@ -1,6 +1,6 @@
 # 🌐 Dimitry's Website
 
-Personal website with *Material You*-inspired colors, designed to be dynamic, adaptive, and visually consistent.
+Personal website with **Material You**-inspired colors, designed to be dynamic, adaptive, and visually consistent.
 
 It serves as a showcase of who I am as a programmer and developer, bringing together my experiences, projects, and growth, all in one place.
 
